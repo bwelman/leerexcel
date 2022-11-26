@@ -1,0 +1,583 @@
+# Solutions {.unnumbered}
+
+## 06-functions
+
+### form001 - Resultaten computerbedrijf {-#sol-form001}
+
++ Bruto Winst = Opbrengst - Kosten
++ Marge behaald = Bruto Winst / Kosten. Opmaak als percentage zonder decimalen.
++ Voor de bepaling van het resultaat moet van de functie ALS gebruik gemaakt worden. Omdat er op 2 voorwaarden getest moet worden moet er een tweede ALs binnen de eerste ALS komen. Een alternatief is het gebruik van de functie EN binnen de functie ALS.
+  -  `=ALS(D4>Doel_Winst;ALS(E4>Doel_Marge;"goed";"slecht");"slecht")`
+  -  `=ALS(EN(D4>Doel_Winst;E4>Doel_Marge);"goed";"slecht")`
+
+### form002 - Artikelgegevens opzoeken {-#sol-form002}
+
+Zoekresultaat Naam `=VERT.ZOEKEN(artnr;opzoektabel;2;ONWAAR)`
+
+Zoekresultaat Prijs `=VERT.ZOEKEN(artnr;opzoektabel;3;ONWAAR)`
+
+### form003 - Datum rekenen {-#sol-form003}
+
+Formules bij Uitvoer:
+
++ AOW datum `=DATUM(JAAR(geboortedatum)+AOW_Leeftijd;MAAND(geboortedatum);DAG(geboortedatum))`.
++ Huidige datum `=VANDAAG()`.
++ Aantal dagen tot AOW `=AOW_Datum-Huidige_datum` of `=AOW_Datum-VANDAAG()`.
+
+### form004 - Commissie bepalen {-#sol-form004}
+
+Formule commissie `=ALS(Verkoop < VerkoopDoelstelling;CommissieLaag*Verkoop;CommissieHoog*Verkoop)`
+
+### form005 - Geboortedata {-#sol-form005}
+
+Formule Dagen te vroeg. Hier moet op 2 voorwaarden gecontroleerd worden. Allereerst controleren of er een geboorte is door te testen of de geboortedatum ingevuld is. En als er een geboorte is moet er getest worden of de geboortedatum voor de verwachte datum is. Twee mogelijke oplossingen:
+
++ `=ALS(GeboorteDatum><>"";ALS(GeboorteDatum<VerwachtDatum;VerwachtDatum-GeboorteDatum;"");"")`
++ `=ALS(EN(GeboorteDatum<>"";GeboorteDatum<VerwachtDatum);VerwachtDatum-GeboorteDatum;"")`
+
+De laatste variant heeft een lichte voorkeur omdat deze beter leesbaar en te begrijpen is.
+
+Formule Dagen Te laat. Analoog aan hiervoor. Een oplossing:
+
++ `=ALS(EN(geboortedatum<>"";Geboortedatum>Verwachtdatum);Geboortedatum-Verwachtdatum;"")`
+
+Formule Op tijd. Analoog aan hiervoor. Een oplossing:
+
++ `=ALS(EN(Geboortedatum<>"";Geboortedatum=Verwachtdatum);"ja";"")`
+
+Formule Overtijd. Analoog aan hiervoor. Een oplossing:
+
++ `=ALS(EN(Geboortedatum="";Verwachtdatum<RapportDatum);"ja";"")`
+
+De cellen in de kolommen dagen te vroeg en dagen te laat hebben een aangepaste getalopmaak met formaat `## "dagen"`.
+
+### form006 - BTW aangifte {-#sol-form006}
+
+![](exercises/images/ex_form006_solution.png)
+
+Formules bij Berekening:
+
+-   te betalen BTW `=B8*B2`
+-   Voorbelasting `=B3`
+-   In beginsel af te dragen BTW `=B11-B12`
+-   vermindering RKO `=ALS(B13<0;0;ALS(B13>B7;0;ALS(B13<=B6;B13;2,5*(B7-B13))))`
+-   Te betalen `=ABS(B13-B14)`
+-   Formule voor tekst in A15 `=ALS(B13<0;"Terug te ontvangen";"Te betalen")`
+
+### form007 - Prijs kaartje {-#sol-form007}
+
+Te betalen tarief `=ALS(leeftijd > 12;tarief volwassenen;tarief kind)`
+
+### form008 - OZB belasting {-#sol-form008}
+
+Formule bedrag eigenaar `=ALS(eigenaar="ja";tarief_eigenaar*waarde_woning;0)`
+
+Formule bedrag gebruiker `=ALS(gebruiker="ja";tarief_gebruiker*waarde_woning;0)`
+
+Formule totaal `=bedrag_eigenaar + bedrag_gebruiker`
+
+### form009 - Spaardeposito {-#sol-form009}
+
+![](exercises/images/ex_form009_solution.png)
+
+Formules: Rente `=Bedrag*Rentepercentage` en Bedrag `=Bedrag+Rente`.
+
+### form010 - Wet van Joule {-#sol-form010}
+
+![](exercises/images/ex_form010_solution.png)
+
+Formule warmte `=0,24*E7^2*E8*E9`.
+
+### form011 - Investering obligatie {-#sol-form011}
+
+Formule: `=HW(3,5%;5;;300000)`
+
+Het resultaat van deze formule is negatief omdat het geld vertegenwoordigt dat je moet betalen, een uitgave. Om een positief antwoord te krijgen kun je een - voor de formule zetten of de toekomstige waarde als een negatief getal invoeren (-300000).
+
+### form012 - Vermenigvuldigingstabel {-#sol-form012}
+
+Formule: `=B$1*$A2`
+
+### form013 - Prijs olijfolie {-#sol-form013}
+
+|staffel_limiet|20|blikken_totaal|25|
+|prijs_hoog|$ 45|prijs_totaal|$ 1100|
+|prijs_laag|$ 40| | |
+
+Formule prijs_totaal: `=ALS(blikken_totaal<=staffel_limiet; blikken_totaal*prijs_hoog; staffel_limiet*prijs_hoog+(blikken_totaal-staffel_limiet)*prijs_laag)`
+
+## 07-tables
+
+### list001 - Selecteren {-#sol-tables001}
+
+Schakel filter in via [tab Gegevens > Filter (groep Sorteren en filteren)]{.uicontrol}. Klik op de keuzepijl naast cijfer en kies [Getalfilters > Aangepast filter > is kleiner dan of gelijk aan]{.uicontrol} en typ als getal in `3`. Vink daarna aan keuzerondje [Of]{.uicontrol} en kies [is gelijk aan]{.uicontrol} en vul geen getal in. Klik [OK]{.uicontrol}.
+
+### list002 - Tentamencijfers samenvoegen {-#sol-tables002}
+
+Selecteer de cel waar het begin van de uitvoer terecht moet komen. Kies [tab Gegevens > Samenvoegen (groep Hulpmiddelen voor gegevens)]{.uicontrol}. Stel in het dialoogvenster het volgende in:
+
++ Functie `Max`.
++ Voeg de tabellen met de gegevens van het tentamen en de herkansing als verwijzingen toe.
++ Selecteer [Labels gebruiken in Linkerkolom]{.uicontrol}.
+
+### list003 - Verkoopgegevens samenvoegen {-#sol-tables003}
+
+Selecteer de cel waar het begin van de uitvoer terecht moet komen. Kies [tab Gegevens > Samenvoegen (groep Hulpmiddelen voor gegevens)]{.uicontrol}. Ste in het dialoogvenster het volgende in:
+
++ Functie `Som`.
++ Voeg de tabellen met de gegevens van filiaal Noord en filiaal Zuid als verwijzingen toe.
++ Selecteer [Labels gebruiken in Bovenste rij en Linkerkolom]{.uicontrol}.
+
+### list004 - Overzicht auto's filteren {-#sol-tables004}
+
+Schakel filter in via [tab Gegevens > Filter (groep Sorteren en filteren)]{.uicontrol}.
+
++ Selecteer bij [Cilinders]{.varname} de waarde 6.
++ Selecteer bij [Brandstof]{.varname} de waarden S en N.
++ Selecteer keuzepijl bij [Topsnelheid]{.varname} en kies [Getalfilters > Is groter dan of gelijk aan]{.uicontrol} en typ in 180.
+
+
+## 08-arrays
+
+### matr002 - Storingen per district {-#sol-matr002}
+
+Selecteer de cel voor het totaal van Noord en voer de matrixformule in `=SOM(($E$9:$E$18=E23)*($F$9:$H$18))`. Kopieer daarna deze formule naar beneden.
+
+### matr003 - Willekeurige gehele getallen {-#sol-matr003}
+
+1.  Formule in B7 is `=ASELECT.MATRIX(B1;B2;B3;B4;WAAR)`
+2.  Formule in B6 is `=GEMIDDELDE(B7#)`
+
+### matr004 - Willekeurige datums en tijdstippen {-#sol-matr004}
+
+1.  Formule in B5 is `=ASELECT.MATRIX(B3;1;B1;B2;WAAR)`
+2.  Formule in E5 is `=ASELECT.MATRIX(E3;1;E1;E2;ONWAAR)`
+
+### matr005 - Kolommen sorteren {-#sol-matr005}
+
+Formule in J1 is `=SORTEREN(C1:F7;1;-1;WAAR)`
+
+### matr006 - Reeks Romeinse cijfers {-#sol-matr006}
+
+Formule in A1 is `=REEKS(10,10)`
+
+Formule voor Romeinse cijfers is `=ROMEINS(REEKS(10,10))`
+
+
+## 09-charts
+
+### graf001 - Derdegraads grafiek {-#sol-graf001}
+
+Maak allereerst twee kolommen voor de X en Y waarden. De X-waarden lopen van -1 naar +2 met steeds een stapgrootte van 0,1. De Y-waarden moeten berekend worden via de formule `= (X -0,5)^3`.
+
+Maak een grafiek van het type **Spreiding**. Breng daarna de grafiek in de gewenste opmaak.
+
+### graf002 - Reizen {-#sol-graf002}
+
+De totaalbedragen moeten berekend worden met de functie `SOM`.
+
+Omdat de Excel de jaartallen als getallen interpreteert kun je het beste voor het maken van de grafiek de jaartallen niet selecteren en als gegevensgebied alleen de gegevens van de vijf reizen selecteren. Maak daarna de grafiek als volgt:
+
+-   grafiektype Gestapelde kolom
+-   Kies [tab Ontwerpen > Rijen/kolommen omdraaien (groep Gegevens)]{.uicontrol}.
+-   Kies [tab Ontwerpen > Gegevens selecteren (groep Gegevens) > Horizontale aslabels bewerken]{.uicontrol}. Neem voor het Aslabelbereik het gebied met de jaartallen.
+-   Desgewenst kun je de kolommen wat breder maken door de tussenruimte te verkleinen via [selecteer kolom > Rechter muisklik > Gegevensreeks opmaken > verklein tussenruimte]{.uicontrol}.
+
+### graf003 - Verkoopcijfers {-#sol-graf003}
+
+Bereken in de tabel de afwijking met een formule `= (werkelijk - begroot) / begroot`. Geef de waarden een procentopmaak met 0 decimalen.
+
+Maak de grafiek als volgt:
+
+-   Begin met grafiektype Gegroepeerde kolom. Je krijgt dan per kwartaal 2 kolommen naast elkaar, eentje voor begroot en eentje voor werkelijk.
+-   Vervolgens [selecteer kolom werkelijk > rechter muisklik > ander type grafiekreeks > lijndiagram met gegevensmarkering]{.uicontrol}.
+-   Breng layout aanpassingen aan: grafiektitel, plaats legenda, breedte tussenruimte kolommen, schaal verticale as.
+
+### graf004 - Leeftijdsopbouw {-#sol-graf004}
+
+Maak de grafiek als volgt:
+
+-   Begin met grafiektype Lijn met gegevensmarkering.
+-   Om jaartallen op categorieas te krijgen [tab Ontwerpen > Rijen/kolommen omdraaien (groep Gegevens)]{.uicontrol}.
+-   Tekstvak toevoegen voor de bronvermelding.
+-   Getallen verticale as opmaken zonder decimalen.
+
+### graf005 - Relatie productietijd - kostprijs {-#sol-graf005}
+
+Maak de grafiek als volgt:
+
+-   Begin met grafiektype Spreiding.
+-   Layout aanpassingen: schaling assen, legenda, horizontale rasterlijnen.
+-   Lineaire trendlijn aanbrengen en in de grafiek plaatsen.
+
+### graf006 - Telling vliegenzwammen {-#sol-graf006}
+
+Maak de grafiek als volgt:
+
+-   Begin met grafiektype Radar.
+-   Layout aanpassingen: titel, legenda verwijderen, eventueel grootte aanpassen.
+
+
+## 11-scenarios
+
+### scen001 - Winstmarge - Verkoopprijs {-#sol-scen001}
+
+Formules voor de tabel:
+
+-   Marge `=Winstmarge * Inkoopprijs`
+-   Verkoopprijs excl `=Inkoopprijs + Marge`
+-   BTW `=BTWpercentage * Verkoopprijs excl`
+-   Verkoopprijs incl `=Verkoopprijs excl + BTW`
+
+Tip: Het is aan te bevelen om voor de berekening van de marge en de BTW gebruik te maken van een afrondfunctie om de getallen op 2 decimalen af te ronden.
+
+Maak de scenario's via [tab Gegevens > Wat-als-analyse (groep Hulpmiddelen\) > Scenariobeheer]{.term}.
+
+-   Veranderende cel is Winstmarge
+-   Scenariosamenvatting met resultaatcellen de verkoopprijzen incl. van de drie producten.
+
+Tip: Om in het samenvattingsrapport namen in plaats van celadressen te laten vermelden moeten vooraf aan de cellen namen worden toegekend.
+
+### scen002 - Begroting sportvereniging {-#sol-scen002}
+
+Maak de scenario's via [tab Gegevens > Wat-als-analyse (groep Hulpmiddelen\) > Scenariobeheer]{.term}.
+
+-   Veranderende cellen zijn Contributies, Kantine, Materialen en Diversen.
+-   Scenariosamenvatting met resultaatcel de winst.
+
+Tip: Om in het samenvattingsrapport namen in plaats van celadressen te laten vermelden moeten vooraf aan de cellen namen worden toegekend.
+
+### scen003 - Scenario's bedrijfswinst {-#sol-scen003}
+
+Maak de scenario's via [tab Gegevens > Wat-als-analyse (groep Hulpmiddelen\) > Scenariobeheer]{.term}.
+
+-   Veranderende cellen Arbeidsloon en Materiaalkosten.
+-   Scenariosamenvatting met resultaatcel Bedrijfswinst.
+
+Tip: Om in het samenvattingsrapport namen in plaats van celadressen te laten vermelden moeten vooraf aan de cellen namen worden toegekend.
+
+### scen004 - Inkomsten automatiseringsbedrijf {-#sol-scen004}
+
+Formules voor de tabel. De waarden voor 2011 en 2011 moeten met formules berekend worden. In deze formules komen de verwijzingen naar de cellen met de percentages voor.
+
+Maak de scenario's via [tab Gegevens > Wat-als-analyse (groep Hulpmiddelen\) > Scenariobeheer]{.term}.
+
+-   Veranderende cellen zijn Groei, Inflatie, Rente en Belasting.
+-   Scenariosamenvatting met resultaatcellen de winst in 2011 en in 2012.
+
+Tip: Om in het samenvattingsrapport namen in plaats van celadressen te laten vermelden moeten vooraf aan de cellen namen worden toegekend.
+
+
+## 12-datatables
+
+### tabl001 - Aflossing Lening {-#sol-tabl001}
+
+1.  Formule in B4: `=-BET(B2/12;B3;B1)`
+2.  In B7 staat een verwijzing naar deze formule: `=B4`. Kolominvoercel: B3
+3.  In A7 staat een verwijzing naar deze formule: `=B4`. Kolominvoercel: B3. Rij-invoercel: B2
+
+### tabl002 - Verkoopprognose {-#sol-tabl002}
+
+1.  Formule in `B3: =B1*(1+B2)`
+2.  In B5 staat een verwijzing naar deze formule: `=B3`. Kolominvoercel: B2
+
+
+## 13-pivots
+
+### pivo001 - Salaris gemiddeldes {-#sol-pivo001}
+
+Selecteer een willekeurige cel in de tabel en kies [tab Invoegen > Draaitabel (groep Tabellen) > Accepteer het reeds ingevulde bereik > selecteer Bestaand werkblad > Specificeer een cel als start locatie > OK]{.term}.
+
+Plaats de velden als volgt:
+
+|Rapportfilter|Kolomlabels|Rijlabels|Waarden|
+|-------------|-----------|---------|-------|
+| |Divisie|Afdeling|Salaris|
+
+Selecteer een willekeurig getal in de draaitabel en kies dan [tab Opties > Veldinstellingen (groep Actief veld)]{.term}.
+
+Wijzig type berekening in **Gemiddelde** en Getalnotatie in **Financieel**.
+
+Wijzig de layout van het rapport in Overzichtsweergave.
+
+### pivo002 - Salaris totalen {-#sol-pivo002}
+
+Selecteer een willekeurige cel in de tabel en kies [tab Invoegen > Draaitabel (groep Tabellen) > Accepteer het reeds ingevulde bereik > selecteer Bestaand werkblad > Specificeer een cel als start locatie > OK]{.term}.
+
+Plaats de velden als volgt:
+
+|Rapportfilter|Kolomlabels|Rijlabels|Waarden|
+|-------------|-----------|---------|-------|
+|Afdeling|Divisie|Functie|Salaris|
+
+Selecteer een willekeurig getal in de draaitabel en kies dan [tab Opties > Veldinstellingen (groep Actief veld)]{.term}.
+
+Wijzig Getalnotatie in **Financieel met 0 decimalen**.
+
+Wijzig de layout van het rapport in Overzichtsweergave.
+
+### pivo003 - Omzet, reiskosten en provisie {-#sol-pivo003}
+
+Selecteer een willekeurige cel in de tabel en kies [tab Invoegen > Draaitabel (groep Tabellen) > Accepteer het reeds ingevulde bereik > selecteer Bestaand werkblad > Specificeer een cel als start locatie > OK]{.term}.
+
+Plaats de velden als volgt:
+
+|Rapportfilter|Kolomlabels|Rijlabels|Waarden|
+|-------------|-----------|---------|-------|
+|Regio|Maand|Vertegenwoordiger|Omzet Reiskosten Provisie|
+
+Sleep daarna het veld Waarden van Kolomlabels naar Rijlabels onder Vertegenwoordiger.
+
+Selecteer een willekeurig getal in de draaitabel en kies dan [tab Opties > Veldinstellingen (groep Actief veld)]{.term}.
+
+Wijzig Getalnotatie in **Financieel met 0 decimalen**.
+
+Wijzig de layout van het rapport in Overzichtsweergave.
+
+### pivo004 - Gemiddeld cijfer {-#sol-pivo004}
+
+Selecteer een willekeurige cel in de tabel en kies [tab Invoegen > Draaitabel (groep Tabellen) > Accepteer het reeds ingevulde bereik > selecteer Bestaand werkblad > Specificeer een cel als start locatie > OK]{.term}.
+
+Plaats de velden als volgt:
+
+|Rapportfilter|Kolomlabels|Rijlabels|Waarden|
+|-------------|-----------|---------|-------|
+| |geslacht|klas|inf|
+
+Selecteer een willekeurig getal in de draaitabel en kies dan [tab Opties > Veldinstellingen (groep Actief veld)]{.term}.
+
+Wijzig type berekening in **Gemiddelde**.
+
+### pivo005 - Frequentieverdeling cijfers {-#sol-pivo005}
+
+Selecteer een willekeurige cel in de tabel en kies [tab Invoegen > Draaitabel (groep Tabellen) > Accepteer het reeds ingevulde bereik > selecteer Bestaand werkblad > Specificeer een cel als start locatie > OK]{.term}.
+
+Plaats de velden als volgt:
+
+|Rapportfilter|Kolomlabels|Rijlabels|Waarden|
+|-------------|-----------|---------|-------|
+| | |Cijfer|Cijfer|
+
+Selecteer een willekeurig getal in de draaitabel en kies dan [tab Opties > Veldinstellingen (groep Actief veld)]{.term}.
+
+Wijzig type berekening in **Aantal**.
+
+Wijzig de layout van het rapport in Overzichtsweergave.
+
+### pivo006 - Kledingverkoop per regio {-#sol-pivo006}
+
+Selecteer een willekeurige cel in de tabel en kies [tab Invoegen > Draaitabel (groep Tabellen) > Accepteer het reeds ingevulde bereik > selecteer Bestaand werkblad > Specificeer een cel als start locatie > OK]{.term}.
+
+Plaats de velden als volgt:
+
+|Rapportfilter|Kolomlabels|Rijlabels|Waarden|
+|-------------|-----------|---------|-------|
+| |Regio|Jaar Kledingsoort|Verkopen|
+
+Selecteer een willekeurig getal in de draaitabel en kies dan [tab Opties > Veldinstellingen (groep Actief veld)]{.term}.
+
+Wijzig Getalnotatie in **Financieel met 0 decimalen**.
+
+Kies [tab Opties > Opties (groep Draaitabel) > tabblad Weergave]{.term} en schakel uit **Veldbijschriften en filterkeuzelijsten weergeven**.
+
+### pivo007 - Winkelsluiting {-#sol-pivo007}
+
+Selecteer een willekeurige cel in de tabel en kies [tab Invoegen > Draaitabel (groep Tabellen) > Accepteer het reeds ingevulde bereik > selecteer Bestaand werkblad > Specificeer een cel als start locatie > OK]{.term}.
+
+Plaats de velden als volgt:
+
+|Rapportfilter|Kolomlabels|Rijlabels|Waarden|
+|-------------|-----------|---------|-------|
+| |voor/tegen|leeftijd geslacht|voor/tegen|
+
+Selecteer een willekeurig getal in de draaitabel en kies dan [tab Ontwerpen > Rapportindeling (groep Indeling) > Tabelweergave]{.term}.
+
+### pivo008 - Eigen huis en gemiddelde waarde {-#sol-pivo008}
+
+Selecteer een willekeurige cel in de tabel en kies [tab Invoegen > Draaitabel (groep Tabellen) > Accepteer het reeds ingevulde bereik > selecteer Bestaand werkblad > Specificeer een cel als start locatie > OK]{.term}.
+
+Plaats de velden als volgt:
+
+|Rapportfilter|Kolomlabels|Rijlabels|Waarden|
+|-------------|-----------|---------|-------|
+|eigen huis| |studiejaren|eigen huis waarde|
+
+Selecteer een willekeurig getal in de draaitabel en kies dan [tab Opties > Veldinstellingen (groep Actief veld)]{.term}.
+
+Wijzig type berekening in **Gemiddelde** en Getalnotatie in **Financieel met 0 decimalen**.
+
+Kies [tab Ontwerpen > Rapportindeling (groep Indeling) > Overzichtsweergave]{.term}.
+
+### pivo009 - Vervoersonderzoek {-#sol-pivo009}
+
+Maak eerst de extra kolom en bepaal de waarden met de formule `=ALS(celadres afstand>15;"ja";"nee")`
+
+![](exercises/images/pivo009_dataplus.png)
+
+Selecteer een willekeurige cel in de tabel en kies [tab Invoegen > Draaitabel (groep Tabellen) > Accepteer het reeds ingevulde bereik > selecteer Bestaand werkblad > Specificeer een cel als start locatie > OK]{.term}.
+
+Plaats de velden als volgt:
+
+|Rapportfilter|Kolomlabels|Rijlabels|Waarden|
+|-------------|-----------|---------|-------|
+|inwoner auto afstand>15| | |tijd met auto|
+
+Selecteer een willekeurig getal in de draaitabel en kies dan [tab Opties > Veldinstellingen (groep Actief veld)]{.term}.
+
+Wijzig type berekening in **Gemiddelde**.
+
+![](exercises/images/pivo009_report.png)
+
+### pivo010 - Opbrengst koffie per regio {-#sol-pivo010}
+
+Selecteer een willekeurige cel in de tabel en kies [tab Invoegen > Draaitabel (groep Tabellen) > Accepteer het reeds ingevulde bereik > selecteer Bestaand werkblad > Specificeer een cel als start locatie > OK]{.term}.
+
+Plaats de velden als volgt:
+
+|Rapportfilter|Kolomlabels|Rijlabels|Waarden|
+|-------------|-----------|---------|-------|
+|Regio|Produkt|Maand|Opbrengst|
+
+Selecteer een willekeurig getal in de draaitabel en kies dan [tab Opties > Veldinstellingen (groep Actief veld)]{.term}.
+
+Wijzig Getalnotatie in **Financieel met 0 decimalen**.
+
+### pivo011 - Brandstofverbruik auto's {-#sol-pivo011}
+
+Selecteer een willekeurige cel in de tabel en kies [tab Invoegen > Draaitabel (groep Tabellen) > Accepteer het reeds ingevulde bereik > selecteer Bestaand werkblad > Specificeer een cel als start locatie > OK]{.term}.
+
+Plaats de velden als volgt:
+
+|Rapportfilter|Kolomlabels|Rijlabels|Waarden|
+|-------------|-----------|---------|-------|
+| |Brandstof|Merk|Verbruik Verbruik|
+
+Selecteer in de draaitabel een getal behorende bij Verbruik en kies dan [tab Opties > Veldinstellingen (groep Actief veld)]{.term} en wijzig het type berekening in **Max** en de naam in Max verbruik.
+
+Selecteer in de draaitabel een getal behorende bij Verbruik2 en kies dan [tab Opties > Veldinstellingen (groep Actief veld)]{.term} en wijzig het type berekening in **Min** en de naam in Min verbruik.
+
+Sleep in het ontwerpraster het veld Waarden van Kolomlabels naar Rijlabels onder het veld Merk.
+
+Kies [tab Ontwerpen > Eindtotalen (groep Indeling) > Uit voor rijen en kolommen]{.term}.
+
+Wijzig de tekst “Rijlabels” in “Merk” en de tekst “Kolomlabels” in “Brandstof”.
+
+### pivo012 - Hobbyclub {-#sol-pivo012}
+
+1.  Maak een draaitabel met **Kolomlabels** geslacht, **Rijlabels** woonplaats en **Waarden** naam (Aantal). Rapportindeling = Overzichtsweergave en veldkopteksten niet weer laten geven.
+
+2.  Maak een draaitabel met **Kolomlabels** geslacht, **Rijlabels** hobby en **Waarden** naam (Aantal). Kies [tab Opties > Veldinstellingen (groep Actief veld) > tab Waarden weergeven als > % van totaal]{.term}. Getalnotatie in **Percentage met 0 decimalen**. Rapportindeling = Overzichtsweergave en veldkopteksten niet weer laten geven.
+
+3.  Maak een draaitabel met **Kolomlabels** geslacht, **Rijlabels** 2010 en **Waarden** 2010 (Aantal). Selecteer een getal onder Rijlabels en kies [tab Opties > Veld groeperen (groep Groeperen)]{.term} en laat het groeperen beginnen bij 20, eindigen op 49 en oplopen met 10. Rapportindeling = Overzichtsweergave en veldkopteksten niet weer laten geven.
+
+
+## 14-goalseek
+
+### goal001 - Freelancer {-#sol-goal001}
+
+Maak twee invoercellen: provisiepercentage en omzet. Bereken in een andere cel het provisiebedrag via de formule `= provisiepercentage * omzet`.
+
+Kies [tab Gegevens > Wat-als-analyse (groep Hulpmiddelen voor gegevens) > Doelzoeken]{.term}.
+
+De in te stellen cel is de cel met het provisiebedrag. Deze moet ingesteld worden op de waarde 5000 door het wijzigen van de cel met de omzet.
+
+### goal002 - Betaling lening {-#sol-goal002}
+
+Maak het model volgens het voorbeeld. Formule in resultaatcel: `=BET(jaarlijks renteperc /12;aantal maanden;leenbedrag;0;1)`.
+
+Omdat de betalingen per maand gebeuren moet het rente percentage ook per maand worden opgegeven. Vandaar dat in de formule het jaarlijkse rentepercentage door 12 gedeeld moet worden. Het derde argument is 0 omdat na de laatste betaling alles afgelost moet zijn. Het vierde argument is 1 omdat de betaling aan het begin van elke maand gedaan wordt.
+
+Kies [tab Gegevens > Wat-als-analyse (groep Hulpmiddelen voor gegevens) > Doelzoeken]{.term}.
+
+De in te stellen cel is de resultaatcel. Deze moet ingesteld worden op de waarde -750 door het wijzigen van de cel met het leenbedrag.
+
+### goal003 - Break-even bepalen {-#sol-goal003}
+
+Maak een tabel met daarin als eerste kolom de verschillende waarden van Q. Begin met de waarde 0, laat deze steeds oplopen met bijvoorbeeld 0,2 en eindig met de waarde 16. Dus 0,0 0,2 0,4 0,6 ... 16,0. In de tweede kolom worden steeds formules ingevoerd om de waarde van TK te berekenen. En in de derde kolom komen de formules voor de waarden van TO.
+
+Teken een grafiek van het type spreiding en maak deze op volgens het voorbeeld.
+
+De grafiek heb je nodig om een schatting te kunnen maken voor de break-even punten. Voor een break-even punt moeten de twee grafieken elkaar snijden. In de grafiek is te zien dat er een snijpunt is voor een Q-waarde tussen 0 en 1 en nog een snijpunt voor een Q-waarde tussen 11 en 12.
+
+Maak een tweede tabel voor de bepaling van de twee break-even punten. Voor het break-even punt moeten de waarden van TK en TO even hoog zijn, dus het verschil tussen TK en TO is 0. In de doelcel wordt dus het verschil tussen TK en TO berekend.
+
+![](exercises/images/goal003_breakeven.png)
+
+Gebruik voor de waarde van Q voor het eerste punt de startwaarde 0 en voor het tweede punt de startwaarde 11. De waarden voor TK en TO worden weer via de bekende formules berekend. In de cellen voor de laatste kolom wordt de waarde berekend via de formule `= TO - TK`. Het Doelzoeken moet nu twee keer uitgevoerd worden. De eerste keer voor de berekening van punt 1 en de tweede keer voor de berekening van punt 2.
+
+Kies [tab Gegevens > Wat-als-analyse (groep Hulpmiddelen voor gegevens) > Doelzoeken]{.term}.
+
+De in te stellen cel is de cel met de waarde van TO-TK voor punt 1. Deze moet ingesteld worden op de waarde 0 door het wijzigen van de cel met de Q-waarde voor punt 1. Herhaal daarna het proces voor punt 2.
+
+### goal004 - Spaarbedrag {-#sol-goal004}
+
+Maak een tabel volgens het voorbeeld. De waarden in de kolom met jaren typ je in. Voor het jaar 2010 blijft de cel voor de rente leeg en voor de waarde voer je de volgende formule in: = abs. celadres van de cel met het stortingsbedrag.
+
+Voor het jaar 2011 bepaal je de rente via de formule `= abs. celadres rente/jaar * rel. celadres waarde 2010`. De waarde voor het jaar 2011 bepaal je met de formule `= rel. celadres waarde 2010 + rel. celadres rente 2011`. Voor de andere jaren kopieer je de twee formules voor het jaar 2011 naar beneden.
+
+Kies [tab Gegevens > Wat-als-analyse (groep Hulpmiddelen voor gegevens) > Doelzoeken]{.term}.
+
+De in te stellen cel is de cel met de waarde voor het jaar 2020. Deze moet ingesteld worden op de waarde 2500 door het wijzigen van de cel met het stortingsbedrag.
+
+## 15-solver
+
+
+## 16-macro
+
+### macr001 - Achtergrondkleur {-#sol-macr001}
+
+Kies [tab Ontwikkelaars > Macro opnemen (groep Programmacode)]{.term}. Geef de macro een naam en een beschrijving en klik **OK**.
+
+Rechtermuisklik op een cel en kies [Celeigenschappen > tab Opvulling > selecteer grijze kleur > OK]{.term}.
+
+Kies [tab Ontwikkelaars > Opname stoppen (groep Programmacode)]{.term}.
+
+### macr002 - Procentuele opmaak {-#sol-macr002}
+
+Kies [tab Ontwikkelaars > Macro opnemen (groep Programmacode)]{.term}. Geef de macro een naam en een beschrijving en klik **OK**.
+
+Rechtermuisklik op een cel en kies [Celeigenschappen > tab Getal > Percentage met 1 decimaal > tab Uitlijning > Horizontaal gecentreerd > OK]{.term}.
+
+Kies [tab Ontwikkelaars > Opname stoppen (groep Programmacode)]{.term}.
+
+### macr003 - Opmaak cel A1 {-#sol-macr003}
+
+Kies [tab Ontwikkelaars > Macro opnemen (groep Programmacode)]{.term}. Geef de macro een naam en een beschrijving en klik **OK**.
+
+Rechtermuisklik op rij 1 en kies [Rijhoogte > 18 > OK]{.term}.
+
+Rechtermuisklik op kolom 1 en kies [Kolombreedte > 3 > OK]{.term}.
+
+Selecteer cel A1 [Lettertype > Tahoma > Tekengrootte > 14 > Vet > Tekstkleur > Blauw]{.term}.
+
+Kies [tab Ontwikkelaars > Opname stoppen (groep Programmacode)]{.term}.
+
+### macr004 - Rasterlijnen afdrukken {-#sol-macr004}
+
+Kies [tab Ontwikkelaars > Macro opnemen (groep Programmacode)]{.term}. Geef de macro een naam en een beschrijving en klik **OK**.
+
+Kies [tab Pagina-indeling > Pagina-instelling > tab Blad > selecteer Afdrukken Rasterlijnen > OK]{.term}.
+
+Kies [tab Ontwikkelaars > Opname stoppen (groep Programmacode)]{.term}.
+
+## 17-measurements
+
+### meas001 - Lengte en gewicht {-#sol-meas001}
+
+De onafhankelijke variabele (x) is Lengte en de afhankelijke variabele (y) is Gewicht. Bepaal de richtingscoëfficient van de lijn met de functie `RICHTING` en het snijpunt met de y-as met de functie `SNIJPUNT`.
+
+### meas002 - Studietijd en tentamencijfer {-#sol-meas002}
+
+De onafhankelijke variabele (x) is Studietijd en de afhankelijke variabele (y) is Cijfer. Bepaal de richtingscoëfficient van de lijn met de functie `RICHTING` en het snijpunt met de y-as met de functie `SNIJPUNT`.
+
+### meas003 - Krimp en temperatuur {-#sol-meas003}
+
+De onafhankelijke variabele (x) is Temp en de afhankelijke variabele (y) is Krimpperc. Bepaal de richtingscoëfficient van de lijn met de functie `RICHTING` en het snijpunt met de y-as met de functie `SNIJPUNT`.
+
+Formule voor Krimpperc. bij 65^o^C is `= 0,0796*65 - 3,546`
+
+### meas004 - Weerstand en temperatuur {-#sol-meas004}
+
+De onafhankelijke variabele (x) is temp en de afhankelijke variabele (y) is Weerstand. Bepaal de richtingscoëfficient van de lijn met de functie `RICHTING` en het snijpunt met de y-as met de functie `SNIJPUNT`.
+
+Formule voor Weerstand. bij 400^o^C is `= 0,0786*400 + 21,214`

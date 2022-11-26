@@ -1,0 +1,290 @@
+# (APPENDIX) Bijlagen {-}
+
+# Naslag functies {#sec-function-overview}
+
+## Datum en tijd functies {#sec-function-overview-datetime}
+
+#### DAGEN360 {-}
+
+Deze functie berekent het aantal dagen tussen twee datums op basis van een jaar met 360 dagen (12 maanden van 30 dagen).
+
+`DAGEN360(begindatum;einddatum[;methode])`
+
++ [begindatum]{.varname}: Verplicht. Gebruik bij voorkeur de functie DATUM om de datum op te geven.
+
++ [einddatum]{.varname}: Verplicht. Gebruik bij voorkeur de functie DATUM om de datum op te geven.
+
++ [methode]{.varname}: Optioneel. Waarde WAAR voor Europese methode of ONWAAR (default)voor Amerikaanse methode.
+
+#### DATUM {-}
+
+Deze functie zet de opgegeven jaar, maand en dag om naar een datum. Het resultaat wordt als een serieel getal in de cel getoond. Als de celopmaak Standaard is dan wordt het resultaat als een datum weergegeven.
+
+`DATUM(jaar;maand;dag)`
+
++ [jaar]{.varname}: Verplicht. Het jaartal. Gebruik bij voorkeur 4 cijfers voor het jaartal.
+
++ [maand]{.varname}: Verplicht. Het maandnummer.
+
++ [dag]{.varname}: Verplicht. Het dagnummer.
+
+#### NU {-}
+
+Deze functie heeft als resultaat de actuele datum en tijd. Het resultaat wordt als een serieel getal in de cel getoond en wordt steeds bijgewerkt wanneer het werkblad opnieuw wordt doorgerekend. Als de celopmaak Standaard is dan wordt het resultaat als een datum met tijd weergegeven. Een opdracht tot herberekening kan gegeven worden via toets F9. De functie heeft geen argumenten.
+
+`NU()`
+
+## Financiële functies {#sec-function-overview-financial}
+
+#### Afschrijvingen {-}
+
+|Methode|Functie|
+|-------|-------|
+|Lineair|`LIN.AFSCHR(kosten; restwaarde; duur)`|
+|Fixed declining balance methode, ook wel vaste degressieve afschrijvingsmethode genoemd.|`DB(kosten; restwaarde; duur; termijn; [maand])`|
+|Double Declining Balance methode, dubbele degressieve afschrijving|`DDB(kosten;restwaarde; duur; termijn; [factor])`|
+|Sum-Of-Years-Digits methode|`SYD(kosten; restwaarde; duur; termijn)`|
+|Variable declining balance, variabele degressieve afschrijving.|`VDB(kosten; restwaarde; duur; begin-periode; einde-periode; [factor]; [geen-omschakeling])`|
+
+#### Betalingen {-}
+
+|Methode|Functie|
+|-------|-------|
+|Periodieke betaling voor een annuïteit.|`BET(rente; aantal-termijnen; hw;[tw]; [type-getal])`|
+|Rentebetaling voor een investering|`ISBET(rente; termijn; aantal-termijnen; hw)`|
+|Aantal termijnen van een investering.|`NPER(rente; bet; hw; [tw]; [type-getal])`|
+|Afbetaling op de hoofdsom|`PBET(rente; aantal-termijnen; hw; [tw]; [type-getal])`|
+
+#### Investeringen {-}
+
+|Methode|Functie|
+|-------|-------|
+|Huidige waarde van een investering.|`HW(rente; aantal-termijnen; bet;[tw]; [type-getal])`|
+|Toekomstige waarde investering.|`TW(rente; aantal-termijnen; bet; [hw]; [type-getal])`|
+
+#### Rente {-}
+
+|Methode|Functie|
+|-------|-------|
+|Rentepercentage voor afbetaling van een lening.|`RENTE(aantal-termijnen; bet; hw; [tw]; [type-getal]; [schatting])`|
+|Interne rentabiliteit voor een reeks cashflows.|`IR(waarden;[schatting])`|
+
+## Statistische functies {#sec-function-overview-statistical}
+
+#### AANTAL {-}
+
+Deze functie telt het aantal cellen dat getallen (ook datums)bevat.
+
+`AANTAL(Waarde1; [Waarde2], ...)`
+
++ [Waarde1]{.varname}: Verplicht. kan alle soorten getallen of celverwijzingen zijn.
+
++ [Waarde2, Waarde3, ...]{.varname}: Optioneel.
+
+#### AANTAL.ALS {-}
+
+Deze functie telt het aantal cellen in een bereik dat voldoet aan een opgegeven criterium.
+
+`AANTAL.ALS(bereik; criterium)`
+
++ [bereik]{.varname}: Verplicht. Het cellenbereik waarvan je de niet lege cellen wilt tellen.
+
++ [criterium]{.varname}: Verplicht. Een criterium in de vorm van een getal, expressie, celverwijzing of tekst waarmee je opgeeft welke cellen moeten worden geteld.
+
+#### GEMIDDELDE {-}
+
+Deze functie berekent het (rekenkundige)gemiddelde van de argumenten.
+
+`GEMIDDELDE(Getal1, [Getal2], ...)`
+
++ [Getal1]{.varname}: Verplicht. Het eerste getal, de eerste celverwijzing, of het eerste bereik waarvoor je het gemiddelde wilt berekenen.
+
++ [Getal2, ...]{.varname}: Optioneel.
+
+#### MAX {-}
+
+Deze functie bepaalt het grootste getal van een verzameling getallen.
+
+`MAX(Getal1, [Getal2], ...)`
+
++ [Getal1]{.varname}: Verplicht. Het eerste getal, de eerste celverwijzing, of het eerste bereik waarvan je het grootste getal wilt bepalen.
+
++ [Getal2, ...]{.varname}: Optioneel.
+
+#### MIN {-}
+
+Deze functie bepaalt het kleinste getal van een verzameling getallen.
+
+`MIN(Getal1, [Getal2], ...)`
+
++ [Getal1]{.varname}: Verplicht. Het eerste getal, de eerste celverwijzing, of het eerste bereik waarvan je het kleinste getal wilt bepalen.
+
++ [Getal2, ...]{.varname}: Optioneel.
+
+#### RICHTING {-}
+
+Deze functie berekent de richtingscoëfficiënt van een lineaire trendlijn. Deze functie komt vooral van pas bij het verwerken van meetresultaten.
+
+`RICHTING(y-bekend; x-bekend)`
+
++ [y-bekend]{.varname}: Verplicht. De reeks met y-waarden
+
++ [x-bekend]{.varname}: Verplicht. De reeks met x-waarden.
+
+#### SNIJPUNT {-}
+
+Deze functie berekent het punt waarop de trendlijn de y-as snijdt. Deze functie komt vooral van pas bij het verwerken van meetresultaten.
+
+`SNIJPUNT(y-bekend; x-bekend)`
+
++ [y-bekend]{.varname}: Verplicht. De reeks met y-waarden
+
++ [x-bekend]{.varname}: Verplicht. De reeks met x-waarden.
+
+## Tekst functies {#sec-function-overview-text}
+
+#### DEEL {-}
+
+Deze functie geeft als resultaat een gedeelte van een tekst.
+
+`DEEL(tekst;begin-getal;aantal-tekens)`
+
++ [tekst]{.varname}: Verplicht. De tekenreeks waaruit je de tekens wilt ophalen.
+
++ [begin-getal]{.varname}: Verplicht. De plaats van het eerste teken dat je op wilt halen. De telling begint bij 1.
+
++ [aantal-tekens]{.varname}: Verplicht. Het aantal tekens dat je op wilt halen.
+
+#### LENGTE {-}
+
+Deze functie geeft als resultaat het aantal tekens waaruit een tekst bestaat.
+
+`LENGTE(tekst)`
+
++ [tekst]{.varname}: Verplicht. De tekst waarvan je de lengte wilt bepalen.
+
+#### LINKS {-}
+
+Deze functie geeft als resultaat het linkerdeel van een tekst.
+
+`LINKS(tekst; [aantal-tekens])`
+
++ [tekst]{.varname}: Verplicht. De tekst waarvan je het linkerdeel wilt hebben.
+
++ [aantal-tekens]{.varname}: Optioneel. Het aantal tekens van het linkerdeel. Wanneer je de waarde hiervoor weglaat wordt er uitgegaan van 1.
+
+#### RECHTS {-}
+
+Deze functie geeft als resultaat het rechterdeel van een tekst.
+
+`RECHTS(tekst; [aantal-tekens])`
+
++ [tekst]{.varname}: Verplicht. De tekst waarvan je het rechterdeel wilt hebben.
+
++ [aantal-tekens]{.varname}: Optioneel. Het aantal tekens van het rechterdeel. Wanneer je de waarde hiervoor weglaat wordt er uitgegaan van 1.
+
+#### VIND.SPEC {-}
+
+Deze functie zoekt naar de plaats waar een tekst binnen een grotere tekst begint.
+
+`VIND.SPEC(zoeken-tekst;in-tekst; [begin-getal])`
+
++ [zoeken-tekst]{.varname}: Verplicht. De tekst die je zoekt.
+
++ [in-tekst]{.varname}: Verplicht. De tekst waarbinnen gezocht moet worden.
+
++ [begin-getal]{.varname}: Optioneel. De plaats binnen de in-tekst vanaf waar het zoeken moet beginnen. Wanneer je de waarde hiervoor weglaat wordt er uitgegaan van 1.
+
+## Wiskundige functies {#sec-function-overview-math}
+
+#### AFRONDEN {-}
+
+Deze functie rondt een getal af op het opgegeven aantal decimalen.
+
+`AFRONDEN(getal; aantal-decimalen)`
+
++ [getal]{.varname}: Verplicht. Het getal dat afgerond moet worden.
+
++ [aantal-decimalen]{.varname}: Verplicht. Het aantal decimalen waarop je het getal wilt afronden.
+
+#### AFRONDEN OP VEELVOUD NAAR BENEDEN {-}
+
+Deze functie rondt een getal naar beneden af naar het dichtst bijzijnde veelvoud van de significantie.
+
+`AFRONDEN.BENEDEN(getal; significantie)`
+
++ [getal]{.varname}: Verplicht. Het getal dat afgerond moet worden.
+
++ [significantie]{.varname}: Verplicht. Het veelvoud waarop je wilt afronden.
+
+#### AFRONDEN OP VEELVOUD NAAR BOVEN {-}
+
+Deze functie rondt een getal naar boven af naar het dichtst bijzijnde veelvoud van de significantie.
+
+`AFRONDEN.BOVEN(getal; significantie)`
+
++ [getal]{.varname}: Verplicht. Het getal dat afgerond moet worden.
+
++ [significantie]{.varname}: Verplicht. Het veelvoud waarop je wilt afronden.
+
+#### AFRONDEN NAAR BENEDEN {-}
+
+Deze functie rondt een getal naar beneden af op het opgegeven aantal decimalen.
+
+`AFRONDEN.NAAR.BENEDEN(getal; aantal-decimalen)`
+
++ [getal]{.varname}: Verplicht. Het getal dat afgerond moet worden.
+
++ [aantal-decimalen]{.varname}: Verplicht. Het aantal decimalen waarop je het getal wilt afronden.
+
+#### AFRONDEN NAAR BOVEN {-}
+
+Deze functie rondt een getal naar boven af op het opgegeven aantal decimalen.
+
+`AFRONDEN.NAAR.BOVEN(getal; aantal-decimalen)`
+
++ [getal]{.varname}: Verplicht. Het getal dat afgerond moet worden.
+
++ [aantal-decimalen]{.varname}: Verplicht. Het aantal decimalen waarop je het getal wilt afronden.
+
+#### SOM.ALS {-}
+
+Deze functie telt de waarden in een bereik op die voldoen aan een opgegeven criterium.
+
+`SOM.ALS(bereik; criterium; [optelbereik])`
+
++ [bereik]{.varname}: Verplicht. het cellenbereik waarvan je de waarden wilt evalueren. De cellen bevatten getallen of verwijzingen naar getallen. Lege cellen en tekstwaarden worden genegeerd.
+
++ [criterium]{.varname}: Verplicht. Een criterium in de vorm van een getal, expressie, celverwijzing of tekst waarmee je opgeeft welke cellen moeten worden opgeteld.
+
++ [optelbereik]{.varname}: Optioneel. Dit zijn de eigenlijke cellen waarvan de waarden worden opgeteld. De waarden worden alleen opgeteld als de corresponderende cellen in bereik aan het criterium voldoen. Als het optelbereik wordt weggelaten dan worden de cellen in het bereik opgeteld.
+
+## Zoekfuncties {#sec-function-overview-lookup}
+
+#### HORIZ.ZOEKEN {-}
+
+Deze functie zoekt in de eerste rij van een tabel naar een bepaalde waarde en geeft als resultaat de waarde uit dezelfde kolom in een opgegeven rij. Een vereiste is dat de tabel oplopend gesorteerd is in de eerste rij.
+
+`HORIZ.ZOEKEN(zoekwaarde; tabelmatrix; rijindex[; benaderen])`
+
++ [zoekwaarde]{.varname}: Verplicht. De waarde waarnaar gezocht wordt in de eerste rij.
+
++ [tabelmatrix]{.varname}: Verplicht. De tabel waarin naar gegevens gezocht wordt.
+
++ [rijindex]{.varname}: Verplicht. Het nummer van de rij waaruit de waarde moet worden opgehaald. De eerste rij is nummer 1.
+
++ [benadering]{.varname}: Optioneel. Mogelijke waarden: WAAR (zoekt de beste waarde in de eerste rij, default)en ONWAAR (= zoekt exact).
+
+#### VERT.ZOEKEN {-}
+
+Deze functie zoekt in de meest linkse kolomvan een matrix naar een bepaalde waarde en geeft als resultaat de waarde uit dezelfde rij in een opgegeven kolom. Een vereiste is dat de tabel oplopend gesorteerd is in de eerste kolom.
+
+`VERT.ZOEKEN(zoekwaarde; tabelmatrix; kolomindex[; benaderen])`
+
++ [zoekwaarde]{.varname}: Verplicht. De waarde waarnaar gezocht wordt in de meest linkse kolom.
+
++ [tabelmatrix]{.varname}: Verplicht. De tabel waarin naar gegevens gezocht wordt.
+
++ [kolomindex]{.varname}: Verplicht. Het nummer van de kolom waaruit de waarde moet worden opgehaald. De meest linkse kolom is nummer 1.
+
++ [benadering]{.varname}: Optioneel. Mogelijke waarden: WAAR (zoekt de beste waarde in de eerste kolom, default)en ONWAAR (= zoekt exact).

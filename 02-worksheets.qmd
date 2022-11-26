@@ -1,0 +1,313 @@
+# Het werkblad {#sec-worksheets}
+
+::: {.callout-note appearance="simple" icon="false"}
++ Inrichting en gebruik van het werkblad.
++ Het activeren van een werkblad.
++ Het toevoegen, verwijderen, verplaatsen en kopieren van een werkblad.
++ De naam van een werkblad en het wijzigen ervan.
++ Selecteren met de muis.
++ Het belangrijke verschil tussen de inhoud en de opmaak van een cel.
++ Het afdrukken en de afdrukinstellingen.
+:::
+
+
+In een werkmap komen 1 of meerdere werkbladen te staan. Elk werkblad heeft een [tab]{.uicontrol} die onderaan in het venster van de werkmap te zien is. Op de tab staat de naam van het werkblad. In het werkblad worden de gegevens en de formules ingevoerd. De belangrijkste onderwerpen die in dit onderdeel aan bod komen zijn hoe en waar je deze gegevens in het werkblad invoert en hoe ze worden weergegeven.
+
+## Wat is een werkblad? {#sec-ws-over}
+
+Een werkblad bestaat uit rijen en kolommen. Het snijpunt van een rij en een kolom heet de cel. En in een cel worden de gegevens en de formules opgeslagen.
+
+![Indeling van een werkblad: rijen, kolommen en cellen.](images/worksheets/worksheet-layout.png){#fig-worksheet-layout}
+
+De rijen worden genummerd 1, 2, 3, ... De kolommen hebben een letter A, B, C, ... En na de letter Z gaat het verder met AA,AB, ... En na ZZ wordt een derde letter toegevoegd en gaat het verder met AAA, AAB, enz. Een werkblad kan maar liefst 16.384 kolommen en 1.048.576 rijen bevatten. En dat levert meer dan 17 miljard cellen op.
+
+Elke cel hoort bij een bepaalde rij en een bepaalde kolom. De combinatie van de kolomletter en het rijnummer wordt het celadres genoemd. Zo heeft de eerste cel linksboven het adres [A1]{.uicontrol}. Het celadres kan in formules gebruikt worden om verwijzingen naar de inhoud van de cel te maken.
+
+Door met de muis een cel aan te klikken wordt deze cel geselecteerd, het wordt dan de **actieve cel**. Er verschijnt dan een kader om de cel.![Kader actieve cel.](images/worksheets/worksheet-activecell.png)
+
+Er is altijd een actieve cel in het werkblad. Je kunt een andere cel de activeren door deze aan te klikken, maar je kunt ook de actieve cel verplaatsen met de pijltjestoetsen op het toetsenbord. Wanneer een cel geactiveerd is en je begint dan te typen, dan wordt het ingetypte in de cel ingevoerd. Je kunt de invoer van gegevens beëindigen door op de [Enter]{.uicontrol} toets te drukken. Standaard wordt de actieve cel dan 1 cel naar beneden verplaatst.
+
+::: {.callout-note}
+De richting waarin de actieve cel zich verplaatst na het indrukken van de [Enter]{.uicontrol} toets is te wijzigen via de [Bestand > Opties > Geavanceerd]{.uicontrol}. De keuzes zijn: beneden, boven, links en rechts.
+:::
+
+De inhoud van een cel kan bestaan uit:
+
++ tekst
++ getallen
++ formules
+
+In de formules mogen verwijzingen naar andere cellen voorkomen. Wanneer dan de inhoud van deze cellen gewijzigd wordt, dan worden de formules automatisch opnieuw doorgerekend. Dit maakt een spreadsheet erg krachtig.
+
+## Werkblad activeren {#sec-ws-activate}
+
+Een werkmap kan meerdere werkbladen hebben, gekenmerkt door een tab aan de linker onderkant van het venster. Een werkblad moet geactiveerd zijn voordat je er gegevens in kunt zetten. Wanneer er maar één werkblad aanwezig is, dan is deze automatisch geactiveerd. Zijn er meerdere werkbladen dan kun je een bepaald werkblad activeren door op de tab van het werkblad te klikken. De tab van het actieve werkblad heeft een witte achtergrond.
+
+Bij een werkmap met veel werkbladen kan het zijn dat de tab niet zichtbaar is. Gebruik dan de scrollknoppen linksonder.![Tab scroll knoppen](images/worksheets/worksheet-tab-scrollbuttons.png)
+
+::: {#prp-ws-activate}
+[Bestand]{.smallcaps}: `Samenvoegen.xlsx`
+
+1.  Open het bestand.
+
+2.  Klik afwisselend op de tab van een van de werkbladen. Het werkblad wordt zichtbaar en de tab wordt wit.
+
+:::
+
+## Nieuw werkblad toevoegen {#sec-ws-new}
+
+::: {#prp-ws-new}
+
+1.  Begin met een nieuwe werkmap.
+
+2.  Klik op de knop [Nieuw blad]{.uicontrol} ![Knop voor een nieuw werkblad](images/worksheets/worksheet-new-button.png).
+
+Een nieuw werkblad wordt aan het eind toegevoegd en ook geactiveerd. Het nieuwe werkblad krijgt automatisch de naam [Blad]{.varname} gevolgd door een nummer. Uiteraard kun je deze naam wijzigen, zie hiervoor @sec-ws-rename.
+
+:::
+
+## Werkblad verwijderen {#sec-ws-delete}
+
+Het is een goede gewoonte om alleen werkbladen met inhoud in de werkmap te bewaren en lege werkbladen te verwijderen. Elk werkblad kan verwijderd worden, behalve de laatst overgeblevene omdat elke werkmap tenminste één werkblad moet hebben. Wanneer een werkblad gegevens bevat of leeg is gemaakt door alle inhoud te verwijderen, dan vraagt Excel om een extra bevestiging van de verwijderactie. In het andere geval wordt het werkblad direct verwijderd.
+
+::: {#prp-ws-delete}
+
+1.  Rechtermuisklik op de tabnaam en kies dan [Verwijderen]{.uicontrol}.
+
+Er zijn nu twee mogelijkheden:
+
++ Het werkblad wordt direct verwijderd. In dat geval is er geen volgende stap.
++ Er verschijnt een dialoogvenster waarin om een bevestiging van de verwijdering gevraagd wordt.
+
+2.  Klik [Verwijderen]{.uicontrol}.
+
+:::
+
+## Naam werkblad wijzigen {#sec-ws-rename}
+
+Het is aan te bevelen om het werkblad een zinvolle naam te geven en niet de standaard gegenereerde namen als Blad1, Blad2, Blad3, ... te gebruiken.
+
+::: {.practice}
+1.  Selecteer de naam van een werkblad op een van de volgende manieren:
+
+    + Rechtermuisklik op de tabnaam en kies dan [Naam wijzigen]{.uicontrol}.
+    + Dubbelklikken op de tabnaam.
+
+2.  Typ de nieuwe naam in op de tab en sluit af met [Enter]{.uicontrol}.
+:::
+
+## Werkblad kopieren {#sec-ws-copy}
+
+::: {#prp-ws-rename}
+
+1.  Rechtermuisklik op de naam van het werkblad en kies dan [Verplaatsen of kopiëren ...]{.uicontrol}.
+
+![Dialoogvenster Blad verplaatsen of kopiëren.](images/worksheets/worksheet-move-dialogbox.png){#fig-worksheet-move-dialogbox}
+
+2.  Voer naar keuze een of meerdere van de volgende mogelijkheden uit:
+
+   - *Naar map* - Standaard staat hier dezelfde map. Door op de keuzepijl aan het eind te klikken kan gekozen worden uit andere geopende werkmappen of een nieuwe werkmap. In het laatste geval wordt een nieuwe werkmap aangemaakt.
+   - *Voor blad* - Kies de plaats in de doelmap waar de kopie moet komen.
+   - *Kopie maken* - Wanneer deze keuze wordt aangevinkt, dan wordt er een kopie van het werkblad gemaakt. Wordt dit niet aangevinkt, dan wordt het werkblad verplaatst.
+
+:::
+
+## Selecteren met de muis {#sec-worksheet-mouseselections}
+
+Het komt heel veel voor dat een opdracht op een aantal cellen tegelijk moet worden uitgevoerd. Bijvoorbeeld wanneer je de tekst in een aantal cellen wilt centreren, of het lettertype in deze cellen wilt veranderen. Het is daarom erg belangrijk dat je routine krijgt in het selecteren van meerdere cellen tegelijk. In @tbl-mouse-selections zie je de meest gebruikte selecties.
+
+|gewenste selectie|methode                            |
+|-----------------|-----------------------------------|
+|enkele cel                    |Klik op de betreffende cel.|
+|aaneensluitende reeks cellen  |Klik op de eerste cel en sleep dan tot de laatste cel.|
+|een kolom                     |Klik op de kolomletter.|
+|reeks aaneensluitende kolommen|Klik op de eerste kolomletter en sleep tot de laatste kolomletter.|
+|een rij                       |Klik op de rijnummer.|
+|reeks aaneensluitende rijen   |Klik op de eerste rijnummer en sleep tot de laatste rijnummer.|
+|alle cellen in werkblad       |Klik op het knopje boven rijnummer 1 en links van kolom letter A of sneltoets [CTRL A]{.uicontrol}|
+
+:  Meest gebruikte selecties met de muis. {#tbl-mouse-selections}
+
+Bij het selecteren kun je ook gebruik maken van de [SHIFT]{.uicontrol} toets of de [CTRL]{.uicontrol} toets, met de volgende effecten:
+
+[SHIFT]{.uicontrol}
+: Hiermee kun je een aaneensluitend gebied selecteren.
+: + Voor een rechthoekig gebied met cellen klik je op een van de cellen in de hoekpunten, dan [SHIFT]{.uicontrol} toets indrukken en ingedrukt houden, klik dan op de cel in het hoekpunt diagonaal daar tegenover.
+: + Voor een reeks aaneensluitende kolommen selecteer je de eerste kolom, houd de [SHIFT]{.uicontrol} toets ingedrukt en selecteer de laatste kolom.
+: + Voor een reeks aaneensluitende rijen selecteer je de eerste rij, houd de [SHIFT]{.uicontrol} toets ingedrukt en selecteer de laatste rij.
+
+[CTRL]{.uicontrol}
+: Hiermee kun je los van elkaar staande gebieden selecteren. Selecteer de eerste cel, kolom, rij of gebied, houd de [CTRL toets]{.uicontrol} ingedrukt en selecteer de andere cellen, kolommen, rijen of gebieden.
+
+
+::: {.callout-note}
+1. Let er op dat je alleen maar kunt selecteren wanneer de muiscursor de vorm van een kruis heeft: ![Muiscursor vorm kruis](images/common/mouse-pointer-cross.png).
+
+2. Een geselecteerde gebied heeft een gekleurde achtergrond behalve de cel waar je begonnen bent met de selectie. Deze cel is de actieve cel en heeft een witte achtergrond.
+
+3. Wanneer de sleeprichting van boven naar beneden of van links naar rechts is, wil het nog wel eens voorkomen dat je voorbij de laatste cel schiet. Het is dan handiger om in de omgekeerde richting te slepen.
+:::
+
+**Aanduiding van een gebied**
+
+Om een aaneensluitend gebied aan te duiden worden de celadressen gebruikt. Een paar voorbeelden:
+
++ `A2:C7` is een rechthoek cellen van A2 tot en met C7. Voor het adres van een gebied noem je altijd eerst het adres van de linkerbovenhoek, dan een dubbele punt en dan het adres van de rechteronderhoek.
++ `B:E` zijn de kolommen B tot en met E.
++ `3:9` zijn de rijen 3 tot en met 9.
+
+## Cel: Inhoud en opmaak {#sec-ws-cell}
+
+Een cel heeft een inhoud en een opmaak. Het is erg belangrijk dit verschil goed in de gaten te houden! Een slecht begrip hiervan is vaak de bron van fouten.
+
+::: {#exm-ws-cell}
+**Inhoud - Opmaak**
+
+In de cellen `A1:A10` van het werkblad in @fig-worksheet-cell-formats) is steeds hetzelfde getal `40299` ingevoerd. Deze cellen hebben dus de dezelfde inhoud. Toch zien ze er steeds anders uit en dat komt omdat de opmaak van deze cellen steeds anders is.
+
+![Voorbeeld van cellen met gelijke inhoud en verschillende opmaak.](images/worksheets/worksheet-cell-formats.png){#fig-worksheet-cell-formats}
+
+:::
+
+Je kunt aan het uiterlijk bijna nooit de opmaak zien en vaak ook de inhoud niet. Inhoud en opmaak zijn twee verschillende zaken.
+
+::: {.callout-warning}
+Pas op dat je bij het invoeren van gegevens in een cel niet tegelijk ook de opmaak intypt.
+
+Wanneer je bijvoorbeeld in cel `A9` letterlijk intypt `40.299 uren`, dan wordt dat als een stuk tekst gezien in plaats van het getal `40299`. En omdat het tekst is kun je er niet meer mee rekenen.
+
+Het is mogelijk om alleen het getal in te typen en daarna de cel op te maken tot het weergegeven uiterlijk. De inhoud van de cel is dan wel een getal waarmee je berekeningen kunt uitvoeren.
+
+**De aanbevolen methode is om altijd eerst de inhoud van een cel in te typen en daarna de cel de gewenste opmaak geven.**
+::
+
+## Afdrukken werkblad {#sec-ws-print}
+
+De meeste werkbladen worden vaak ook afgedrukt. Bij het afdrukken heb je een aantal opties beschikbaar om de pagina-opmaak aan te passen. Zo kun je bijvoorbeeld kop- en voetteksten specificeren, marges instellen, kiezen voor staand of liggend afdrukken, de indeling van de pagina's, enz.
+
+Het is aan te bevelen om voordat je echt gaat afdrukken eerst een afdrukvoorbeeld op het scherm te bekijken.
+
+Om af te drukken kies je [Bestand > Afdrukken]{.uicontrol}.
+
+Van hieruit selecteer je onder andere de soort printer en de af te drukken werkbladen. Standaard wordt alleen het geselecteerde werkblad afgedrukt. Maar je kunt er ook voor kiezen om meerdere werkbladen en zelfs de hele werkmap af te laten drukken.
+
+### Afdrukvoorbeeld {#sec-ws-print-preview}
+
+Via het afdrukvoorbeeld kun je zien hoe de afgedrukte pagina er uit komt te zien en het geeft je tevens mogelijkheden om een aantal instellingen van de pagina te wijzigen.
+
+::: {#prp-ws-print-preview}
+[Bestand]{.smallcaps}: `Personeel.xlsx`
+
+1.  Open het bestand.
+
+2.  Kies [Bestand > Afdrukken]{.uicontrol}.
+
+Een voorbeeld van de afdruk en mogelijkheden om instellingen te wijzigen, worden getoond.
+
+![Afdrukvoorbeeld.](images/common/print-preview.png){#fig-print-preview}
+
++ Wanneer je de marges wilt zien, klik dan op de knop [Marges weergeven]{.uicontrol} rechtsonder in het scherm.
+
++ Door klikken op de link [Pagina-instelling]{.uicontrol} krijg je een dialoogvenster met tabbladen waarmee je allerlei opties voor de afdruk beschikbaar hebt.
+
+:::
+
+### Pagina Lay-out {#sec-ws-page-layout}
+
+Door te klikken op [Pagina-instelling]{.uicontrol} krijg je een dialoogvenster met vier tabbladen waarmee je allerlei opties voor de afdruk beschikbaar hebt. De meest gebruikte opties worden hier besproken.
+
+#### Pagina {#sec-ws-pagesetup-page .unnumbered}
+
+![Instellingen voor de pagina.](images/worksheets/worksheet-pagesetup-page.png){#fig-worksheet-pagesetup-page}
+
+Van belang is de afdrukstand: staand of liggend.
+
+Erg handig zijn de keuzes in het gedeelte onder Schaal. Met [Verkleinen/vergroten tot]{.uicontrol} kan handmatig het aantal pagina's worden aangepast. Ook is het mogelijk om dit automatisch door Excel te laten doen via [Aanpassen aan]{.uicontrol} door op te geven op hoeveel pagina's de afdruk moet plaatsvinden.
+
+#### Marges {#sec-ws-pagesetup-margins .unnumbered}
+
+![Instellingen marges voor de pagina.](images/worksheets/worksheet-pagesetup-margins.png){#fig-worksheet-pagesetup-margins}
+
+Hier zijn de afmetingen in te stellen van de bovenmarge, ondermarge, linker- en rechtermarge. Verder kan de afstand tot de rand van de kop- en voettekst worden opgegeven. Deze afstanden moeten kleiner zijn dan de corresponderende marges omdat anders de kop- en voetteksten een overlap geven met de gewone afdruk.
+
+#### Koptekst/Voettekst {#sec-ws-pagesetup-headerfooter .unnumbered}
+
+![Instellingen voor kop- en voettekst op de pagina.](images/worksheets/worksheet-pagesetup-headerfooter.png){#fig-worksheet-pagesetup-headerfooter}
+
+Door op de pijltjes aan het eind van de vakken koptekst en voettekst te klikken zijn een aantal voorgedefinieerde teksten te selecteren. Hier zit ook de keuze `(geen)` bij wanneer je geen kop- of voettekst wilt. Wanneer je een eigen ontworpen kop- of voettekst wilt klik je op de knop voor de aangepaste tekst. Je krijgt dan een dialoogvenster waar je de tekst in kunt typen en op kunt maken.
+
+![Inhoud en opmaak van koptekst en voettekst.](images/worksheets/worksheet-pagesetup-headerfooter-content.png){#fig-worksheet-pagesetup-headerfooter-content}
+
+Kop- en voetteksten hebben elk drie secties (links, midden en rechts). In elk deel kun je eigen tekst intypen. Je kunt via de aanwezige knoppen ook voorgedefinieerde inhoud ingeven als:
+
+-   Paginanummer
+-   Aantal pagina's
+-   Datum en tijd
+-   Bestandspad, bestandsnaam en de naam van het werkblad
+
+#### Blad {#sec-ws-pagesetup-sheet .unnumbered}
+
+![Instellingen blad.](images/worksheets/worksheet-pagesetup-sheet.png){#fig-worksheet-pagesetup-sheet}
+
+Vaak staan er titels in de eerste rij(en)of kolom(men)van een werkblad. Wanneer dan het werkblad groter dan 1 afdrukpagina is, kun je aangeven dat deze rij(en)en/of kolom(men)op elke afdrukpagina moeten verschijnen.
+
+Een interessante optie is verder dat je aan kunt geven dat de rasterlijnen van het werkblad moeten worden afgedrukt.
+
+::: {.callout-note}
+De pagina-instellingen kunnen ook uitgevoerd worden via de menukeuze [PAGINA-INDELING > groep Pagina-instelling]{.uicontrol}.
+:::
+
+### Pagina-einden {#sec-ws-page-ends}
+
+Er kunnen maar een beperkt aantal rijen en kolommen op een vel papier worden afgedrukt. Excel voegt automatisch horizontale en verticale pagina-einden in om een werkblad op te delen in passende pagina's. Waar deze pagina-einden geplaatst worden hangt van veel zaken af, zoals bijvoorbeeld papierformaat, marges, rijhoogtes, kolombreedtes, lettergrootte, .. Je kunt ook zelf bepalen waar pagina's moeten beginnen door pagina-eindes in te voegen, te verplaatsen of te verwijderen.
+
+#### Pagina-eindevoorbeeld {#sec-ws-page-preview .unnumbered}
+
+Hoewel je met pagina-einden kunt werken in de weergave [Normaal]{.uicontrol}, is de beste manier om gebruik te maken van de weergave [Pagina-eindevoorbeeld]{.uicontrol}. In deze weergave kun je zien hoe andere wijzigingen die je kunt aanbrengen, zoals in de pagina oriëntatie en opmaak, van invloed zijn op de automatische pagina-einden. Zo kun je zien hoe bijvoorbeeld een verandering van de rijhoogte of kolombreedte de plaatsing van de automatische pagina-einden beïnvloeden.
+
+Kies [Beeld > Pagina-eindevoorbeeld (groep Werkmapweergaven)]{.uicontrol}.
+
+In deze weergave zie je ook de volgorde van de pagina's. Standaard is deze volgorde eerst omlaag en daarna opzij. Deze volgorde is via [Pagina-instelling]{.uicontrol} te wijzigen.
+
+Om pagina-einden te verplaatsen kun je deze met de muis naar de nieuwe plek slepen.
+
+Om weer naar de weergave [Normaal]{.uicontrol} over te schakelen kies je [Beeld > Normaal (groep Werkmapweergaven)]{.uicontrol}.
+
+#### Pagina-einden invoegen {#sec-ws-page-break-insert .unnumbered}
+
+Pagina-einden kunnen ook handmatig aangebracht worden. Ga hiervoor als volgt te werk.
+
++ [Horizontaal pagina-einde]{.term}: Selecteer de rij die op een nieuwe pagina moet beginnen.
+
++ [Verticaal pagina-einde]{.term}: Selecteer de kolom die op een nieuwe pagina moet beginnen.
+
+
+Kies dan [Pagina-indeling > Eindemarkeringen (groep Pagina-instelling) > Pagina-einde invoegen]{.uicontrol}.
+
+#### Pagina-einden verwijderen {#sec-ws-page-break-delete .unnumbered}
+
+De automatisch door Excel gegenereerde pagina-einden kunnen niet verwijderd worden, de handmatig aangebrachte einden wel. Ga hiervoor als volgt te werk.
+
++ [Horizontaal pagina-einde]{.term}: Selecteer de rij onder de pagina-einde.
+
++ [Verticaal pagina-einde]{.term}: Selecteer de kolom rechts van de pagina-einde.
+
+
+Kies dan [Pagina-indeling > Eindemarkeringen (groep Pagina-instelling) > Pagina-einde verwijderen]{.uicontrol}.
+
+## Sneltoetsen celverplaatsingen {#sec-ws-cell-movements}
+
+|Sneltoets|Actieve cel wordt|
+|---------|-----------------|
+|pijl omhoog|1 cel hoger|
+|pijl rechts|1 cel naar rechts|
+|pijl omlaag|1 cel lager|
+|pijl links|1 cel naar links|
+|Ctrl pijl rechts|De meest rechtse cel in het huidige gegevensgebied, anders de laatste cel in de rij|
+|Ctrl pijl links|De meest linkse cel in het huidige gegevensgebied, anders de eerste cel in de rij|
+|Ctrl pijl omhoog|De bovenste cel met gegevens in het huidige gegevensgebied, anders de eerste cel in de kolom|
+|Ctrl pijl omlaag|De onderste cel met gegevens in het huidige gegevensgebied, anders de laatste cel in de kolom|
+|Home|De eerste cel in de rij|
+|Ctrl Home|De eerste cel in het werkblad, dus A1|
+
+:  Sneltoetsen celverplaatsingen. {#tbl-shortcuts-cell-movements}

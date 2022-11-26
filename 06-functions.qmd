@@ -1,0 +1,753 @@
+# Formules en Functies {#sec-functions}
+
+::: {.callout-note appearance="simple" icon="false"}
++ Soorten functies en de syntax van een functie.
++ Invoeren van een functie, via de Wizard en handmatig.
++ Nesten van functies.
+:::
+
+Excel kent meer dan 450 ingebouwde functies voor het uitvoeren van allerlei bewerkingen. En daarnaast kun je ook nog eigen functies maken. De functies zijn verdeeld in een aantal categorieën, zoals
+
++ Database
++ Datum en tijd
++ Financieel
++ Info
++ Logisch
++ Statistisch
++ Technisch
++ Tekst
++ Wiskunde en trigonometrie
++ Zoeken en verwijzen
+
+Een categorie kan handig zijn wanneer je een bepaalde functie zoekt. Wanneer je bijvoorbeeld een functie zoekt waarmee je de aflossing van een lening kunt berekenen, dan is deze functie te vinden in de categorie Financieel. Er zijn ook categorieën Alles, Laatst gebruikt en Door gebruiker gedefinieerd.
+
+Bij de meeste functies moet je aangeven met welke waarden de functie moet rekenen. Deze invoergegevens worden **argumenten** genoemd.
+
+Alle functies in Excel hebben dezelfde opbouw (syntax), zie @fig-function-syntax.
+
+![De opbouw (syntax) van een functie.](images/functions/function-syntax.png){#fig-function-syntax}
+
++ Aan het begin staat het `=` teken.
++ Daarna de naam van de functie.
++ Daarna ronde haakjes `()` waartussen de argumenten staan. De argumenten worden van elkaar gescheiden door het lijstscheidingsteken de puntkomma (`;`).
++ De argumenten kunnen bestaan uit: getallen, teksten, celverwijzingen, bewerkingen en zelfs functies.
+
+::: {.callout-warning}
+1. Het **lijstscheidingsteken** dat Excel gebruikt hangt af van een instelling in Windows. Je kunt deze instelling wijzigen via het configuratiescherm van Windows. Standaard is de instelling
+
+   + Nederlandstalige Windows: puntkomma
+   + Engelstalige Windows: komma
+
+2. De functienaam in Excel hangt af van de gebruikte taalversie van Microsoft Office.
+:::
+
+Een aantal veel gebruikte functies komen via taken in dit hoofdstuk aan de orde.
+
+## Functies invoeren {#sec-function-insert}
+
+Je kunt een functie invoeren via een Wizard, maar ook handmatig intypen. Welke methode je het beste kunt gebruiken hangt vooral af van hoe ervaren je bent en of je naam van de functie en de opbouw ervan al kent. Beide methodes worden hierna uitgelegd. Voor de taken in dit hoofdstuk wordt van de Wizard gebruik gemaakt, maar je kunt uiteraard ook de handmatige methode gebruiken.
+
+### Functie Wizard {#sec-function-wizard}
+
+Beginners en minder ervaren gebruikers kunnen het beste gebruik maken van de [Wizard Functies]{.uicontrol}. Deze Wizard kun je op twee manieren oproepen:
+
++ Door een klik op de knop $f_x$ [Functie invoegen]{.uicontrol} aan het begin van de formulebalk. 
++ Via [tab Formules > Functie invoegen (groep Functiebibliotheek)]{.uicontrol}.
+
+In beide gevallen verschijnt het dialoogvenster ***Functie invoegen***:
+
+![Dialoogvenster functie invoegen.](images/functions/function-insert.png){#fig-function-insert}
+
+Voor het snel vinden van de juiste functie is het handig om eerst een categorie van functies te selecteren door op de selectiepijl in het categorievak te klikken. In het uitrolvenster verschijnen de categorieën. Wanneer je geen idee hebt in welke categorie de functie zit, dan kies je voor [Alles]{.uicontrol}.
+
+Selecteer de gewenste functie, bijvoorbeeld `AANTAL.ALS` en klik op [OK]{.uicontrol}. Hierna verschijnt het dialoogvenster ***Functieargumenten*** voor de geselecteerde functie.
+
+![Functieargumenten voor de functie AANTAL.ALS.](images/functions/function-countif.png){#fig-function-countif1}
+
+In het dialoogvenster kun je de argumenten kunt opgeven. Welk(e)argument(en) je moet gebruiken is afhankelijk van de geselecteerde functie. De argumenten kun je intypen, maar wanneer het om celadressen gaat kun je deze cellen ook met de muis in het werkblad selecteren.
+
+::: {.callout-note}
+Linksonder in het dialoogvenster is een link naar [Help-informatie over deze functie]{.uicontrol}.
+:::
+
+### Automatisch aanvullen {#sec-function-manual}
+
+Wanneer je bekend bent met een bepaalde functie, je kent de juiste spelling en de soorten argumenten die ervoor nodig zijn, kun je ervoor kiezen om de functie en de bijbehorende argumenten gewoon in te typen op de invoerbalk. Vaak is deze methode het meest efficiënt.
+
+Een erg handig hulpmiddel hierbij is **Functies automatisch aanvullen**. Wanneer je een `=` teken en de eerste letter van een functie in een cel of in de invoerbalk typt, geeft Excel een vervolgkeuzelijst weer met alle geldige items die met die letter beginnen. Pictogrammen tonen het type vermelding, zoals een functie of cel/tabelverwijzing. En bij elke functie krijg je een schermtip met een korte beschrijving van de functie.
+
+Je kunt doorgaan met het typen van de functie om de lijst te beperken of de pijltoetsen gebruiken om de functie uit de lijst te selecteren. Nadat je de gewenste functie hebt geselecteerd, drukt je op [Tab]{.uicontrol} om de functie en het openingshaakje in de cel in te voegen.
+
+Nadat je op [Tab]{.uicontrol} hebt gedrukt om de functie en het openingshaakje in te voegen, geeft Excel nog een schermtip weer met de argumenten voor de functie. Het vetgedrukte argument is het argument dat je op dat moment invoert. Argumenten tussen haakjes zijn optioneel.
+
+::: {#exm-autocomplete}
+**Automatisch aanvullen**
+
+In @fig-function-autocomplete zie je een voorbeeld. Bij de eerste afbeelding is één letter, de `a`, ingetypt. De keuzelijst toont alle functies die met `a` beginnen. En in dit geval ook nog een celnaam `Aandelenkapitaal`.
+
+Bij de tweede afbeelding is nog een letter `a` ingetypt. De lijst bestaat nu uit alle items die met `aa` beginnen. Bij de geselecteerde functie `AANTAL.ALS` wordt een schermtip getoond.
+
+Na een druk op [Tab]{.uicontrol} krijg je de derde afbeelding. Deze functie heeft twee argumenten.
+
+![Voorbeeld automatisch aanvullen.](images/functions/function-autocomplete.png){#fig-function-autocomplete}
+
+:::
+
+## Autosom {#sec-function-autosum}
+
+Voor het invoeren van een functie via de Wizard zijn vaak meerdere kliks met de muis nodig. Omdat optellen de meest gebruikte bewerking is heeft Excel daarvoor een afzonderlijke knop, [Autosom]{.uicontrol} geheten, op het lint staan in de [groep Bewerken (tab Home)]{.uicontrol} waardoor je sneller deze functie kunt invoeren.
+
+![](images/functions/button-autosum.png)
+
+Via de pijlpunt aan het eind kun je ook nog een keuzelijstje krijgen voor de functies [Gemiddelde]{.uicontrol}, [Aantal getallen]{.uicontrol}, [Max]{.uicontrol} en [Min]{.uicontrol}, zodat ook deze functies snel bereikbaar zijn.
+
+::: {#prp-function-autosum}
+
+1. Begin met een nieuw werkblad.
+
+2. Voer in de cellen A1:A6 achter elkaar de volgende getallen in: 120, 121, 122, 123, 124 en 125.
+
+3. Selecteer cel A7 en klik dan op knop [Autosom]{.uicontrol}.
+
+![Selectiekader om cellen voor optelling.](images/functions/example-autosum.png){#fig-example-autosum}
+
+Excel plaatst een selectiekader rond cellen die je waarschijnlijk wilt optellen. Wanneer dit niet het goede optelgebied is, selecteer dan met de muis het juiste gebied.
+
+4. Bevestig de keuze op een van de volgende manieren:
+
+   + Klik opnieuw op de knop [Autosom]{.uicontrol}.
+   + Klik op de knop ![](images/functions/enter-function.svg) [Invoeren]{.uicontrol} aan het begin van de formulebalk.
+   + Druk op de [Enter]{.uicontrol} toets op het toetsenbord.
+
+In cel A7 verschijnt het antwoord `735`. De formule in cel A7 is `=SOM(A1:A6)`. Deze formule is korter en overzichtelijker en daardoor beter dan een formule als `=A1+A2+A3+A4+A5+A6`.
+
+:::
+
+## Wiskundige functies {#sec-function-math}
+
+De categorie met wiskundige functie is vrij uitgebreid. Naast de bekende functie `SOM` voor het optellen van getallen, zitten hierin allerlei functies voor diverse rekenwerkzaamheden, zoals machtsverheffen, worteltrekken, berekening van $\pi$, logaritmes, enz. Verder tref je veel goniometrische functies aan. Allemaal functies voor specifieke toepassingen dus.
+
+Algemenere functies zijn die voor het afronden van getallen. Excel kent maar liefst dertien functies hiervoor en het kan dus nogal verwarrend zijn om te bepalen welke functie je in een bepaalde situatie moet gebruiken. Zo is er de functie `AFRONDEN` waarmee je op een bepaald aantal decimalen kunt afronden. Maar er zijn ook functies voor afronden op bepaalde veelvouden, of afronden op gehele waarden.
+
+::: {#prp-function-math}
+[Bestand]{.smallcaps}: `Afronden.xlsx`
+
+In @fig-example-rounding) zijn de resultaten te zien van een een aantal afrondfuncties. In kolom C is aangegeven welke formules voor kolom B gebruikt zijn.
+
+![Voorbeelden van afronden](images/functions/example-rounding.png){#fig-example-rounding}
+
+1. Open het bestand.
+
+2. Voer in de cellen B3:B9 de juiste formules in met de Wizard voor functies.
+
+:::
+
+## Statistische functies {#sec-function-statistical}
+
+In de categorie [Statistisch]{.uicontrol} zitten naast functies voor het uitvoeren van allerlei statistische analyses ook de functies voor gemiddelde, aantal, minimum en maximum.
+
+::: {#prp-function-statistical}
+[Bestand]{.smallcaps}: `Statistiek.xlsx`
+
+![Bestand Statistiek.xlsx voor oefening met statistische functies.](images/functions/example-statistical.png){#fig-example-statistical}
+
+1. Open het bestand.
+
+2. Voer in de cellen B9 t/m B12 de berekeningen uit met behulp van de functies uit onderstaande tabel. De functies zitten in de categorie [Statistisch]{.uicontrol}.
+
+   - B9: `GEMIDDELDE`
+   - B10: `AANTAL`
+   - B11: `MIN`
+   - B12: `MAX`
+
+::: {.callout-note}
+Het argument is steeds het gebied B1:B8. Je kunt dit uiteraard intypen in het dialoogvenster voor de functieargumenten, maar het is handiger om de cursor in het vak voor het eerste argument te plaatsen en daarna met de muis het gebied B1:B8 in het werkblad te selecteren.
+:::
+
+`r hide("Resultaat")`
+![](images/functions/example-statistical-result.png)
+`r unhide()`
+
+:::
+
+## Datum en tijd functies {#sec-function-datetime}
+
+In de categorie [Datum en tijd]{.uicontrol} zitten meerdere functies om bewerkingen uit te voeren op datum en tijd. En omdat een waarde voor datum en een tijd intern in Excel als getallen worden opgeslagen, kun je ook gewoon rekenen met datum- en tijdwaarden.
+
+::: {#prp-function-datetime}
+[Bestand]{.smallcaps}: `Datum.xlsx`
+
+![Bestand Datum.xlsx voor het rekenen met data en tijden.](images/functions/example-datetime.png){#fig-example-datetime}
+
+1. Open het bestand.
+
+Allereerst worden uit de begin- en einddatum de waarden voor jaar, maand en dag bepaald.
+
+2. Bepaal met de functies `JAAR`, `MAAND` en `DAG` de waarden in de cellen C2, D2 en E2. Het argument is steeds cel B2.
+
+3. Selecteer C2:E2 en sleep de vulgreep 1 rij naar beneden.
+
+4. Selecteer cel B4 en voer de formule `=B3-B2` in. Het resultaat wordt 27.
+
+Met de functie `NETTO.WERKDAGEN` kun je het aantal volledige werkdagen bepalen tussen een begindatum en een einddatum. Weekeinden en datums die zijn gedefinieerd als feestdagen gelden niet als werkdagen. In deze functie zit een optioneel argument om vakantiedagen te specificeren.
+
+5. Selecteer cel B5 en bereken het aantal werkdagen. Je hoeft alleen de celadressen voor begindatum en einddatum in te voeren, het vak voor vakantiedagen kun je leeg laten.
+
+6. Bereken op dezelfde wijze als hiervoor de uren minuten en seconden uit de begin- en eindtijd. Gebruik hiervoor de functies `UUR`, `MINUUT` en `SECONDE`.
+
+7. Bereken in B10 via een formule het tijdsverschil.
+
+`r hide("Hint")`
+Je moet de begintijd aftrekken van de eindtijd.
+`r unhide()`
+
+`r hide("Resultaat")`
+
+![](images/functions/example-datetime-result.png)
+`r unhide()`
+
+:::
+
+## Logische functie ALS {#sec-function-logical}
+
+De functies in de categorie [Logisch]{.uicontrol} doen wat met de uitkomsten `WAAR` of `ONWAAR`. De meest bekende en ook meest gebruikte functie uit deze categorie is de functie `ALS`. Simpel gezegd komt de werking van deze functie neer op:
+
+`=ALS(voorwaarde ; doe dit indien waar ; doe dit indien onwaar)`
+
+De voorwaarde is een logische test met als uitkomst `WAAR` of `ONWAAR`.
+
+::: {.callout-note}
+Wanneer je op meer dan één voorwaarde wilt testen, dan kun je een nieuwe `ALS()` functie plaatsen binnen de eerste `ALS()` functie. Dergelijke constructies worden snel ingewikkeld en moeilijk leesbaar. Het is vaak beter om in dat geval op de plaats van de voorwaarde gebruik te maken van de logische functies `EN()`, `OF()`en `NIET()`.
+:::
+
+::: {#prp-function-logical}
+
+In @fig-example-logical-result staan een aantal cijfers met daarnaast de vermelding voldoende of onvoldoende. Deze vermelding moet automatisch bepaald worden uit de waarde van het cijfer. Een resultaat is onvoldoende wanneer het cijfer kleiner is dan 5,5.
+
+![Cijfers met vermelding van het resultaat.](images/functions/example-logical-result.png){#fig-example-logical-result}
+
+1. Begin met een nieuw werkblad en voer de cijfers in zoals in @fig-example-logical-result is weergegeven.
+
+2. Selecteer cel B2 en kies via [Functie invoegen]{.uicontrol} de functie `ALS`.
+
+3. Vul het dialoogvenster in zoals in @fig-example-logical-if is aangegeven. De aanhalingstekens om de teksten mag je intypen, maar hoeft niet, Excel plaatst deze dan automatisch zelf.
+
+![Dialoogvenster functie voor de functie ALS.](images/functions/example-logical-if.png){#fig-example-logical-if}
+
+4. Klik op [OK]{.uicontrol}.
+
+5. Selecteer cel B2} en sleep de vulgreep naar beneden tot B6.
+
+:::
+
+## Tekstfuncties {#sec-function-text}
+
+Ook voor bewerkingen op teksten zijn verschillende functies beschikbaar. Zo kun je de lengte van een tekst bepalen en bepaalde stukken van een tekst uit een grotere tekst halen.
+
+In @fig-example-text-result zie je in kolom A een aantal namen. De bedoeling is om de voor- en achternamen in afzonderlijke kolommen te plaatsen. In de namen in het voorbeeld wordt een voornaam en een achternaam steeds van elkaar gescheiden door een spatie. Hierdoor is het mogelijk om de tekst op deze plek te splitsen. Hiervoor moet je wel de plaats van de spatie weten. Het deel voor de spatie, het linkerdeel van de naam, is dan de voornaam. Het deel na de spatie, het rechterdeel, is de achternaam. Voor de bepaling van het rechterdeel moet je ook de totale lengte van de tekst weten.
+
+Het resultaat van de bewerkingen is in @fig-example-text-result te zien in de kolommen B t/m E. Omdat er steeds met een andere functie gewerkt wordt is de oefening in vier onderdelen opgezet.
+
+![Eindresultaat oefening splitsing namen.](images/functions/example-text-result.png){#fig-example-text-result}
+
+### LENGTE {#sec-function-length}
+
+Bepaling van de lengte van een tekst met de functie `LENGTE`.
+
+::: {#prp-function-text}
+[Bestand]{.smallcaps}: `Namen.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer cel B2 en voeg de functie `LENGTE` in met als argument A2.
+
+3. Sleep de vulgreep in B2 naar beneden tot B5.
+
+In kolom B heb je nu de lengte van de teksten.
+
+:::
+
+### VIND.SPEC {#sec-function-search}
+
+De beginpositie van een teken(reeks), in dit geval een spatie, in een tekst kun je bepalen met de functie `VIND.SPEC`.
+
+::: {#prp-function-search}
+
+1. Selecteer cel C2, voeg de functie `VIND.SPEC` in en specificeer de argumenten zoals in @fig-example-text-search is aangegeven.
+
+![Argumenten voor de functie VIND.SPEC. In het vak Zoeken_tekst voer je een spatie in, Excel plaatst daar zelf automatisch dubbele aanhalingstekens om heen.](images/functions/example-text-search.png){#fig-example-text-search}
+
+2. Klik op [OK]{.uicontrol}.
+
+3. Sleep de vulgreep in C2 naar beneden tot C5.
+
+In kolom C heb je nu staan op welke positie in de tekst de spatie zit.
+
+:::
+
+### LINKS {#sec-function-left}
+
+Het linkergedeelte met een bepaalde lengte van een tekst kun je bepalen met de functie `LINKS`. In dit voorbeeld is de voornaam het linkergedeelte.
+
+::: {#prp-function-left}
+
+1. Selecteer cel D2, voeg de functie `LINKS` in en specificeer de argumenten zoals in @fig-example-text-left is aangegeven.
+
+::: {.callout-note}
+In het vak [Aantal-tekens]{.uicontrol} moet de lengte van het linkerdeel worden opgegeven. Dit is 1 minder dan de plaats van de spatie en die plaats is de waarde in cel C2.
+:::
+
+![Argumenten voor de functie LINKS.](images/functions/example-text-left.png){#fig-example-text-left}
+
+2. Klik op [OK]{.uicontrol}.
+
+3. Sleep de vulgreep in D2 naar beneden tot D5.
+
+In kolom D heb je nu de voornamen.
+
+:::
+
+### RECHTS {#sec-function-right}
+
+Het rechtergedeelte met een bepaalde lengte van een tekst kun je bepalen met de functie `RECHTS`. In dit voorbeeld is de achternaam het rechtergedeelte.
+
+::: {#prp-function-right}
+
+1. Selecteer cel E2, voeg de functie `RECHTS` in en specificeer de argumenten zoals in @fig-example-text-right) is aangegeven.
+
+![Argumenten voor de functie RECHTS.](images/functions/example-text-right.png){#fig-example-text-right}
+
+::: {.callout-note}
+In het vak [Aantal-tekens]{.uicontrol} moet de lengte van het rechterdeel worden opgegeven. Deze wordt geteld vanaf het einde van de tekst. In dit voorbeeld is de lengte van het rechterdeel gelijk aan de totale lengte van de tekst (de waarde in B2) verminderd met de plaats van de spatie (de waarde in C2).
+:::
+
+2. Klik op [OK]{.uicontrol}.
+
+3. Sleep de vulgreep in E2 naar beneden tot E5.
+
+In kolom E heb je nu de achternamen.
+
+:::
+
+## Geneste functies {#sec-function-nesting}
+
+Wanneer voor een argument bij een functie weer een functie gebruikt wordt, dan heet dat een geneste functie. Binnen de haakjes van een functie staat dan opnieuw een functie, dus een functie binnen een andere functie. Een voorbeeld:
+
+`=AFRONDEN.NAAR.BENEDEN(SOM(A1:A5);0)`
+
+Deze geneste functie wordt in de volgende oefening gebruikt.
+
+::: {#prp-function-nesting}
+
+1. Begin met een nieuw werkblad en voer de gegevens in zoals in @fig-example-nesting is weergegeven.
+
+![Invoer voor oefening geneste functie.](images/functions/example-nesting.png){#fig-example-nesting}
+
+2. Selecteer cel A6 en voeg de functie `AFRONDEN.NAAR.BENEDEN` (categorie [Wiskunde en trigonometrie]{.uicontrol}) in.
+
+In het dialoogvenster voor de argumenten van deze functie staat de cursor staat in het vak [Getal]{.uicontrol}. Het is nu handig om eerst het aantal decimalen op te geven en pas daarna het bereik met getallen.
+
+3. Plaats de cursor in het vak `Aantal decimalen]{.uicontrol}, voer [0` in en plaats daarna de cursor terug in het vak [Getal]{.uicontrol}.
+
+![Dialoogvenster.](images/functions/example-nesting-decimals.png){#fig-example-nesting-decimals}
+
+4. Klik nu in het werkblad op de keuzepijl in het naamvak.
+
+![Toevoegen van een nieuwe functie.](images/functions/example-nesting-addfunction.png){#fig-example-nesting-addfunction}
+
+Er verschijnt een uitklapvenster met daarin de namen van de laatst gebruikte functies en onderaan de vermelding [Meer functies]{.uicontrol}.
+
+5. Klik op [Meer functies]{.uicontrol}. Het bekende dialoogvenster Functie invoegen verschijnt.
+
+6. Selecteer categorie [Wiskunde en trigonometrie]{.uicontrol} en de functie `SOM` en klik op [OK]{.uicontrol}.
+
+Het dialoogvenster Functieargumenten verschijnt. Bij het argument [Getal1]{.varname} is reeds A1:A5 ingevuld.
+
+7. Klik [OK]{.uicontrol}.
+
+In cel A6 verschijnt nu het antwoord  en in de formulebalk de gebruikte formule.
+
+![Resultaat geneste functie.](images/functions/example-nesting-result.png){#fig-example-nesting-result}
+
+::: {.callout-note}
+1. Zou je na stap 3 niet eerst het aantal decimalen hebben opgegeven, dan had je tijdens het nesten een waarschuwing gekregen dat er te weinig argumenten zijn ingevoerd. Je had dit dan nog handmatig in de formule moeten corrigeren.
+
+2. Een snellere manier van werken is door handmatig de formule in de formulebalk in te typen. Tijdens dit intypen krijg je hulp bij het invoeren. Je moet dan wel de namen van de te gebruiken functies kennen.
+:::
+
+:::
+
+## Aantal Als {#sec-function-countif}
+
+De functie `AANTAL.ALS` is erg handig bij het maken van frequentietabellen. In @fig-example-countif is een overzicht te zien van campings met de categorie waartoe ze behoren. In kolom E moet het aantal campings van elke categorie komen te staan.
+
+![Campings met indeling naar categorie.](images/functions/example-countif.png){#fig-example-countif}
+
+::: {#prp-function-countif}
+[Bestand]{.smallcaps}: `Campings.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer cel E2, voeg de functie `AANTAL.ALS` in en specificeer de argumenten zoals in @fig-function-countif2 is aangegeven.
+
+![Argumenten voor functie AANTAL.ALS.](images/functions/function-countif.png){#fig-function-countif2}
+
+::: {.callout-note}
+Door voor het bereik de hele kolom B te nemen kunnen er aan de onderkant nieuwe rijen met gegevens worden toegevoegd zonder dat de formules gewijzigd hoeven te worden.
+:::
+
+3. Klik op [OK]{.uicontrol}.
+
+4. Selecteer cel E2 en sleep de vulgreep naar beneden tot en met E5.
+
+`r hide("Resultaat")`
+![](images/functions/example-countif-result.png)
+`r unhide()`
+
+:::
+
+## Som Als {#sec-function-sumif}
+
+De functie `SOM.ALS` kan gebruikt worden om getallen op te tellen onder bepaalde voorwaarden. In een werkblad staat een overzicht van de opbrengst van koffiesoorten per maand en per regio. Het is de bedoeling om de totale opbrensten per regio te bepalen.
+
+::: {#prp-function-sumif}
+[Bestand]{.smallcaps}: `Koffie.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer cel H2, voeg de functie `SOM.ALS` in en specificeer de argumenten zoals in @fig-example-sumif-arguments is aangegeven.
+
+![Argumenten functie SOM.ALS.](images/functions/example-sumif-arguments.png){#fig-example-sumif-arguments}
+
+3. Klik op [OK]{.uicontrol}. In cel H2 verschijnt nu de totaalopbrengst voor de regio Noord 743140
+
+4. Selecteer cel H2 en sleep de vulgreep naar beneden tot en met cel H5.
+
+5. Maak de getallen in H2:H5 op met de financiële getalnotatie.
+
+`r hide("Resultaat")`
+![](images/functions/example-sumif-result.png)
+`r unhide()`
+
+::: {.callout-note}
+Een optelling zoals in dit voorbeeld is veel gemakkelijker te realiseren met behulp van draaitabellen.
+:::
+
+:::
+
+## Aflossing lening berekenen {#sec-function-annuity}
+
+Bij de aflossing van een lening zijn er meerdere methodes om de aflossing te bepalen. In deze oefening wordt berekend hoe groot de maandelijkse aflossing is van een geldlening van € 250.000 bij een vaste jaarrente van 6% over een periode van 15 jaar volgens de annuïteitenmethode. Hiervoor wordt de Excelfunctie `BET` gebruikt. Deze functie berekent de betaling voor een lening, op basis van vaste periodieke betalingen en een vast rentepercentage.
+
+![Invoer voor oefening aflossing lening.](images/functions/example-annuity.png){#fig-example-annuity}
+
+::: {#prp-function-annuity}
+[Bestand]{.smallcaps}: `Aflossing.xlsx`
+
+1. Open het bestand en mMaak de cellen op zoals in @fig-example-annuity is aangegeven.
+
+2. Selecteer cel B4, voeg de functie `BET` (categorie [Financieel]{.uicontrol}) in en specificeer de argumenten zoals in @fig-example-annuity-arguments is aangegeven.
+
+![Argumenten voor de functie BET.](images/functions/example-annuity-arguments.png){#fig-example-annuity-arguments}
+
+::: {.callout-note}
+Omdat de termijn hier een maand is en geen jaar, moet de jaarrente door 12 gedeeld worden en het aantal jaren met 12 vermenigvuldigd worden.
+:::
+
+3. Klik op [OK]{.uicontrol}.
+
+::: {.callout-warning}
+Het antwoord -2109,64 verschijnt. Omdat resultaat een bedrag is dat betaald moet worden, een schuld dus, geeft Excel dit weer als een negatief getal. Dat is in een rood lettertype en met een minteken.
+:::
+
+4. Maak hiervan een positief getal door achter het `=` teken en voor de functienaam een minteken te zetten. De formule wordt dus `=-BET(B2/12;B3*12;B1)`.
+
+:::
+
+## Aantal betalingstermijnen berekenen {#sec-function-nper}
+
+Bij het afsluiten van een persoonlijke lening van € 4000 ben je overeengekomen om maandelijks een bedrag van € 125 af te lossen. Bereken het aantal maanden dat je dit bedrag moet betalen om de lening volledig af te lossen bij een vaste jaarrente van 6%. Gebruik hiervoor de Excelfunctie `NPER`. Deze functie berekent het aantal termijnen voor een investering op basis van periodieke, vaste betalingen en een vast rentepercentage.
+
+::: {.callout-warning}
+Betalingen worden als negatieve getallen ingevoerd.
+:::
+
+![Invoer voor oefening aantal termijnen.](images/functions/example-nper.png){#fig-example-nper}
+
+::: {#prp-function-nper}
+[Bestand]{.smallcaps}: `Termijnen.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer cel B4, voeg de functie `NPER` (categorie [Financieel]{.uicontrol}) in en specificeer de argumenten zoals in @fig-example-nper-arguments) is aangegeven.
+
+![Argumenten voor de functie NPER.](images/functions/example-nper-arguments.png){#fig-example-nper-arguments}
+
+::: {.callout-note}
+Omdat de termijn hier een maand is en geen jaar, moet de jaarrente door 12 gedeeld worden.
+:::
+
+3.  Klik op [OK]{.uicontrol}. Het antwoord 34,95778166 verschijnt, dus bijna 35 maanden.
+
+:::
+
+## Verticaal zoeken {#sec-function-vlookup}
+
+Met de functie `VERT.ZOEKEN` kun je in de eerste kolom van een lijst (tabel)naar een bepaalde waarde zoeken en dan een waarde teruggeven van een cel uit een andere kolom in dezelfde rij.
+
+Syntax: `VERT.ZOEKEN(zoekwaarde; tabelmatrix; kolomindex[; benaderen])`
+
+Het laatste argument is facultatief en kan de waarde ONWAAR of WAAR hebben.
+
++ ONWAAR : Er moet naar een exacte overeenkomst met de zoekwaarde gezocht worden.
++ WAAR : Wanneer geen exacte overeenkomst gevonden kan worden, neem dan de eerste dichtstbijzijnde benadering.
+
+::: {.callout-note}
+Je kunt meestal het beste opgeven dat naar een exacte overeenkomst gezocht moet worden, anders kunnen er onjuiste resultaten getoond worden. Wil je toch een benadering vinden, dan moet je er voor zorgen dat de lijst gesorteerd is voor de eerste kolom.
+:::
+
+In @fig-example-vlookup staat een overzicht van harde schijven, met de artikelnummers in de eerste kolom. Wanneer je het artikelnummer specificeert, dan kun je met behulp van de functie `VERT.ZOEKEN` de bijbehorende capaciteit, type en prijs opzoeken.
+
+![Overzicht harde schijven.](images/functions/example-vlookup.png){#fig-example-vlookup}
+
+Cel D2 is de invoercel voor het artikelnummer waarnaar gezocht moet worden. De formules voor het zoeken komen in D4:D7.
+
+::: {#prp-function-vlookup}
+[Bestand]{.smallcaps}: `Harddisks.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer cel D4 en voer de volgende formule in: `=VERT.ZOEKEN($D$2;$B$11:$E$22;1;ONWAAR)`.
+
+Als resultaat verschijnt er in de cel een foutmelding `#N/B`. Dit komt omdat er nog geen zoekwaarde in cel D2 is ingevuld.
+
+3. Voer in cel D2 de waarde `208` in. In cel D4 verschijnt nu 208, het artikelnummer.
+
+4. Voer nu de juiste zoekformules in de drie andere cellen in.
+
+   + in D5 de formule: `=VERT.ZOEKEN($D$2;$B$11:$E$22;2;ONWAAR)`.
+
+   + in D6 de formule: `=VERT.ZOEKEN($D$2;$B$11:$E$22;3;ONWAAR)`.
+
+   + in D7 de formule: ``=VERT.ZOEKEN($D$2;$B$11:$E$22;4;ONWAAR)`.
+
+![Resultaten VERT.ZOEKEN.](images/functions/example-vlookup-result.png){#fig-example-vlookup-result}
+
+:::
+
+## Horizontaal zoeken {#sec-function-hlookup}
+
+Met de functie `HORIZ.ZOEKEN` kun je in de eerste rij van een lijst (tabel)naar een bepaalde waarde zoeken en dan een waarde teruggeven van een cel uit een andere rij in dezelfde kolom.
+
+Syntax: `HORIZ.ZOEKEN(zoekwaarde; tabelmatrix; rijindex[; benaderen])`
+
+Het laatste argument is facultatief en kan de waarde ONWAAR of WAAR hebben.
+
++ ONWAAR : Er moet naar een exacte overeenkomst met de zoekwaarde gezocht worden.
++ WAAR : Wanneer geen exacte overeenkomst gevonden kan worden, neem dan de eerste dichtstbijzijnde benadering.
+
+::: {.callout-note}
+Je kunt meestal het beste opgeven dat naar een exacte overeenkomst gezocht moet worden, anders kunnen er onjuiste resultaten getoond worden. Wil je toch een benadering vinden, dan moet je er voor zorgen dat de lijst gesorteerd is voor de eerste rij.
+:::
+
+In @fig-example-hlookup staat een overzicht van de schoenmaten van een aantal personen, met de naam in de eerste rij. Wanneer je de naam specificeert, dan kun je met behulp van de functie HORIZ.ZOEKEN de bijbehorende leeftijd, lengte en schoenmaat opzoeken.
+
+![Overzicht schoenmaten.](images/functions/example-hlookup.png){#fig-example-hlookup}
+
+Cel C2 is de invoercel voor de naam waarnaar gezocht moet worden. De formules voor het zoeken komen in C4:C6.
+
+::: {#prp-function-hlookup}
+[Bestand]{.smallcaps}: `Schoenmaat.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer cel C4 en voer de volgende formule in: `=HORIZ.ZOEKEN($C$2;$C$8:$E$11;2;ONWAAR)`.
+
+Als resultaat verschijnt er in de cel een foutmelding `#N/B`. Dit komt omdat er nog geen zoekwaarde in cel C2 is ingevuld.
+
+3. Voer in cel C2 de waarde `Pietersen` in. In cel C4 verschijnt nu de waarde 42, de leeftijd.
+
+4. Voer nu de juiste zoekformules in de twee andere cellen in.
+
+   + in C5 de formule: `=HORIZ.ZOEKEN($C$2;$C$8:$E$11;3;ONWAAR)`.
+
+   + in C6 de formule: `=HORIZ.ZOEKEN($C$2;$C$8:$E$11;4;ONWAAR)`.
+
+![Resultaten HORIZ.ZOEKEN.](images/functions/example-hlookup-result.png){#fig-example-hlookup-result}
+
+:::
+
+## Opgaven {#sec-functions-exercises}
+
+::: {#exr-form001}
+**Resultaten computerbedrijf (form001)**
+
+In onderstaande tabel staan de resultaten over het jaar 2010 van een computerbedrijf. Het bedrijf had als doelstelling dat per productgroep de bruto winst meer dan 5000,- euro moest worden en dat de behaalde marge meer dan 15% moest zijn. Alleen wanneer aan beide doelstellingen voldaan wordt kan het bedrijfsresultaat als goed gekenmerkt worden, in alle andere gevallen als slecht.
+
+![](images/functions/form001_data.png)
+
+Maak dit overzicht in een werkblad. Voor de bepaling van de bruto winst, de behaalde marge en het resultaat moet van formules gebruik gemaakt worden. Ook wanneer de doelstellingen voor de bruto winst en de marge wijzigen, moet het resultaat zich hierbij aanpassen.
+
+[Bestand]{.smallcaps}: `Form001.xlsx`
+:::
+
+::: {#exr-form002}
+**Artikelgegevens opzoeken (form002)**
+
+Een computerwinkel heeft van de artikelen in een tabel de volgende gegevens staan: artikelnr, naam en prijs. Om snel de gegevens van een bepaald artikel op te kunnen zoeken kan in een cel het artikelnummer ingevoerd worden. De bijbehorende naam en prijs worden dan automatisch in de tabel opgezocht.
+
+![](images/functions/form002_data.png)
+
+Maak dit werkblad na en gebruik formules (verticaal zoeken) om de zoekresultaten te bepalen.
+
+[Bestand]{.smallcaps}: `Form002.xlsx`
+:::
+
+::: {#exr-form003}
+**Datum rekenen (form003)**
+
+In de volgende tabel kun je de geboortedatum en de AOW leeftijd (67 jaar) invullen. De datum waarop je AOW krijgt, de huidige datum en het aantal dagen dat je nog te gaan hebt tot de AOW datum moeten met formules berekend worden.
+
+![](images/functions/form003_data.png)
+
+Maak dit overzicht in een werkblad en gebruik formules om de resultaten onder Uitvoer te berekenen.
+
+[Bestand]{.smallcaps}: `Form003.xlsx`
+
+`r hide("Hint")`
+1.  Te gebruiken functies bij deze opgave: `Datum`, `Jaar`, `Maand`, `Dag`, `Vandaag`.
+
+2.  Een datumopmaak als wo 01-3-1967 kan ingesteld worden via de getalopmaak voor de cel. Kies daar [tab Getal > Categorie Aangepast (groep Getal)]{.uicontrol}. In het vak voor [Type]{.uicontrol} kun je dan de gewenste opmaak regelen. De hier gebruikte opmaak is ddd dd-m-jjjj. Gebruik ook eens een opmaak als bijvoorbeeld dddd d-mm-jj en probeer op deze manier te achterhalen hoe de opmaak werkt.
+
+3.  Een datum is in Excel in werkelijkheid gewoon een getal, waarmee dus gerekend kan worden. Om het tijdsverschil tussen twee data te bepalen kun je dus twee data van elkaar aftrekken.
+`r unhide()`
+:::
+
+::: {#exr-form004}
+**Commissie bepalen (form004)**
+
+Een bedrijf met drie vertegenwoordigers heeft als doelstelling dat elke verkoper voor 150.000 euro per jaar verkoopt. Wanneer dat bedrag gehaald wordt bedraagt hun commissie 6,25% van de verkoop. Halen ze dat bedrag niet, dan is de commissie slechts 5,5%. Om de commissie voor elke verkoper te bepalen is het volgende model gemaakt.
+
+![](images/functions/form004_data.png)
+
+Maak dit berekeningsmodel in een werkblad en gebruik formules om de commissie voor elke verkoper te berekenen.
+
+[Bestand]{.smallcaps}: `Form004.xlsx`
+:::
+
+::: {#exr-form005}
+**Geboortedata (form005)**
+
+Een moeder-kind centrum in een ziekenhuis wil dagelijks een overzicht hebben van baby's die te vroeg, te laat en op tijd geboren zijn. Bij te vroeg en te laat wil men ook het aantal dagen te vroeg of te laat kunnen zien. En van baby's die nog geboren moeten worden wil men kunnen zien welke overtijd zijn. Hiervoor is het volgende berekeningsmodel gemaakt.
+
+![](images/functions/form005_data.png)
+
+Maak dit berekeningsmodel in een werkblad. Zorg ook voor een gelijksoortige lay-out.
+
+[Bestand]{.smallcaps}: `Form005.xlsx`
+
+`r hide("Hint")`
+1.  In de laatste vier kolommen hangt het antwoord van één of meerdere voorwaarden af, wat dus inhoudt dat er steeds een `ALS` functie gebruikt moet worden.
+
+2.  Voor het gebruik van twee voorwaarden kun je binnen een `ALS` functie een nieuwe `ALS` functie opnemen. Een alternatief is om binnen de `ALS` functie van de `EN` functie gebruik te maken.
+
+3.  Een geboortedatum is te vroeg wanneer deze eerder dan de verwachte datum is.
+
+4.  Een datum is in Excel in werkelijkheid gewoon een getal, waarmee dus gerekend kan worden. Je kunt dus bepalen of een datum kleiner, groter dan wel hetzelfde is als een andere datum.
+
+5.  Wanneer er nog geen datum bekend is, dan is het betreffende veld leeg. Hierop kun je ook controleren.
+`r unhide()`
+:::
+
+::: {#exr-form006}
+**BTW aangifte (form006)**
+
+Een onderneming koopt goederen in bij leveranciers en betaalt omzetbelasting (BTW)aan deze leveranciers. Vervolgens verkoopt de onderneming goederen aan klanten en brengt de klant BTW in rekening. Elk kwartaal moet deze onderneming met de belastingdienst afrekenen. Het verschil tussen de via verkopen ontvangen BTW en de via inkopen reeds betaalde BTW (de voorbelasting)moet aan de belastingdienst worden afgedragen. Is dit verschil negatief, dan krijgt de onderneming dit verschil van de belastingdienst terug. Een kleine ondernemer kan in aanmerking komen voor vermindering van deze in beginsel af te dragen omzetbelasting via de zogenaamde Regeling Kleine Ondernemers (RKO). In de volgende tabel is deze regeling uitgewerkt.
+
+![](images/functions/form006_rules.png)
+
+1.  Maak een model waarbij de totale verkopen en de voorbelasting kunnen worden ingevoerd. Bereken op basis hiervan de verschuldigde BTW, de eventuele vermindering volgens de RKO en het uiteindelijke bedrag dat betaald moet worden of terug ontvangen wordt. Je mag uitgaan van uitsluitend het BTW percentage van 21%. Bij het eindbedrag moet automatisch vermeld worden of het om een betaling of terugontvangst gaat. Alle bedragen moeten in hele euro’s worden aangegeven.
+2.  Test het model grondig.
+
+[Bestand]{.smallcaps}: `Form006.xlsx`
+:::
+
+::: {#exr-form007}
+**Prijs kaartje (form007)**
+
+In de volgende tabel staan de prijzen van een toegangskaartje voor een sportwedstrijd. Er zijn twee categorieën: kinderen en volwassenen. Daaronder staat een cel waar de leeftijd (in hele jaren) kan worden ingevoerd, waarna de prijs van het keertje automatisch berekend wordt.
+
+![](images/functions/form007_model.png)
+
+Maak dit overzicht in een werkblad. Na het invoeren van de leeftijd moet de prijs via een `ALS` functie bepaald worden. Test de oplossing met verschillende leeftijden.
+:::
+
+::: {#exr-form008}
+**OZB belasting (form008)**
+
+De OZB belasting bestaat uit twee delen: een eigenaarsdeel en een gebruikersdeel. Bewoont de eigenaar zelf het pand, dan moet hij beide delen betalen. Het tarief van beide delen hangt af van de WOZ waarde van de woning. Het OZB tarief voor 2010 in een bepaalde gemeente bedraagt voor de eigenaar 0,1064% en voor de gebruiker 0,1224% van de WOZ-waarde.
+
+![](images/functions/form008_model.png)
+
+Maak dit berekeningsmodel in een werkblad. De berekende bedragen voor eigenaar en gebruiker hangen af van de vraag of er met "ja" of "nee" geantwoord is op de vraag of men eigenaar en bewoner is.
+
+[Bestand]{.smallcaps}: `Form008.xlsx`
+:::
+
+::: {#exr-form009}
+**Spaardeposito (form009)**
+
+Een bedrag van € 20.000 wordt in een spaardeposito een jaar lang vastgezet tegen een rente van 2,75%. Maak een berekeningsmodel waarin zowel de rente als het totale bedrag na 1 jaar wordt berekend.
+
+`r hide("Antwoord")`
+Rente = € 550,00 en Bedrag = € 20.550,00
+`r unhide()`
+:::
+
+::: {#exr-form010}
+**Wet van Joule (form010)**
+
+De hoeveelheid warmte die een bepaalde stroomdraad afgeeft kan berekend worden met de wet van Joule: $Q = 0,24*i^2*R*t$
+
++ `Q`: Hoeveelheid warmte (cal)
++ `i`: Stroomsterkte (amp)
++ `R`: Weerstand (ohm)
++ `t`: Tijd (sec)
+
+Maak een werkblad waarin de stroomsterkte, de weerstand en de tijd ingevuld kan worden. De hoeveelheid warmte moet dan automatisch berekend worden.
+:::
+
+::: {#exr-form011}
+**Investering obligatie (form011)**
+
+Een staatsobligatie met een looptijd van vijf jaar keert jaarlijks 3,5% rente uit. Veronderstel dat je over 5 jaar de beschikking wilt hebben over € 300.000, hoeveel moet je dan in deze obligatie investeren? Gebruik Excels functie voor de huidige waarde (`HW`) om het antwoord te berekenen.
+
+`r hide("Antwoord")`
+€ 252.592
+`r unhide()`
+:::
+
+::: {#exr-form012}
+**Vermenigvuldigingstabel (form012)**
+
+Maak eerst de volgende tabel:
+
+![](images/functions/form012_table.png)
+
+Voer dan in cel B2 een formule in die je naar beneden en naar rechts in de tabel kunt kopieren zo dat de waarde in elke cel de vermenigvuldiging is van het nummer voor de rij en het nummer boven de kolom.
+
+`r hide("Hint")`
+Je hebt een combinatie van absolute en relatieve adressering nodig in de formule.
+`r unhide()`
+:::
+
+::: {#exr-form013}
+**Prijs olijfolie (form013)**
+
+Olijfolie kan gekocht worden in blikken van 5 liter. De prijs hangt af van het aantal blikken:
+
++ $45 per blik voor de eerste 20 blikken
++ $40 voor elk blik meer dan 20
+
+Maar een rekenmodel waar je het totaal aantal blikken kunt invoeren en de totale prijs wordt berekend. Gebruik cellen voor de prijs per blik en de limiet van 20 blikken. Voorzie de cellen ook van namen.
+:::

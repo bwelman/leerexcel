@@ -1,0 +1,419 @@
+# Grafieksoorten {#sec-charttype}
+
+::: {.callout-note appearance="simple" icon="false"}
++ Grafieksoorten.
++ Lijndiagram vs Spreidingsdiagram.
+:::
+
+Grafieken gebruik je om gegevens te visualiseren, om gemakkelijk cijfers te vergelijken. Excel kent een grote variatie aan grafiektypes. Welk type het beste in welke situatie gebruikt kan worden komt hier niet aan de orde.
+
+Ondanks de grote hoeveelheid aan grafieksoorten zijn er in wezen maar een beperkt aantal basisvormen.
+
+![Basisvormen grafieksoorten.](images/charttypes/charttype-basic.png){#fig-charttype-basic}
+
+Al deze basisvormen hebben vele varianten zodat je in het begin snel in verwarring kunt raken. Het is belang om een goede grafieksoort uit te kiezen voor het visualiseren van de gegevens. Stel jezelf vragen als:
+
++ Wat moet de grafiek vertellen?
++ Welke feiten moeten vergeleken worden?
+
+## Taak: Kolomdiagram {#sec-charttype-column}
+
+Kolomdiagrammen worden vooral gebruikt wanneer tijdseenheden als jaren, kwartalen, maanden, weken en dagen een rol spelen. Gebruik niet teveel gegevenspunten weer. Vijf tot zes waarden zijn nog goed te overzien. Wanneer meer dan 6 waarden op de horizontale as uitgezet moeten worden kun je beter voor een lijndiagram kiezen.
+
+In @fig-column-data zie je de marktaandelen van een aantal supermarktketens voor de jaren 2012-2016 in Nederland (bron: Distrifood).
+
+![Marktaandelen voor een aantal supermarktketens in 2012-2016.](images/charttypes/column-data.png){#fig-column-data}
+
+De gegevens moeten in een kolomdiagram worden weergegeven, zoals in @fig-column-result.
+
+![Kolomdiagram marktaandelen supermarktketens.](images/charttypes/column-result.png){#fig-column-result}
+
+::: {#prp-charttype-column}
+[Bestand]{.smallcaps}: `Grafiek_kolom.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer een willekeurige cel in het gegevensgebied.
+
+3. Kies het menu [Invoegen > Kolom- of staafdiagram invoegen (groep Grafieken) > Gegroepeerde kolom]{.uicontrol}.
+
+4. Wijzig titels:
+
+   + Grafiektitel: `Marktaandelen supermarktketens`
+   + Verticale astitel: `Marktaandeel (%)`
+
+5. Kies [Invoegen > Tekst > Tekstvak]{.uicontrol}.
+
+6. Teken met de muis een rechthoek in de hoek rechtsonder en typ de tekst `Bron: Distrifood`.
+
+7. Selecteer tekst, [rechter muisklik > Lettertype > tab Lettertype > Punten 9 > OK]{.uicontrol}
+
+:::
+
+## Taak: Staafdiagram {#sec-charttype-bar}
+
+Staafdiagrammen worden veel gebruikt om verschillen in rangorde duidelijk te maken. Het onderlinge verschil in belang (de prioriteit) van bepaalde zaken op eenzelfde moment worden tot uitdrukking gebracht.
+
+De resultaten worden meestal eerst gesorteerd van hoog naar laag, zodat het hoogste resultaat als eerste staaf wordt weergegeven.
+
+In @fig-bar-data is het percentage rokers per leeftijdscategorie in 2009 weergegeven (bron: CBS).
+
+![Percentage rokers in 2009.](images/charttypes/bar-data.png){#fig-bar-data}
+
+De gegevens moeten in een staafdiagram worden weergegeven, zoals in @fig-bar-result.
+
+![Staafdiagram percentage rokers in 2009.](images/charttypes/bar-result.png){#fig-bar-result}
+
+::: {#prp-charttype-bar}
+[Bestand]{.smallcaps}: `Grafiek_staaf.xlsx`
+
+1. Open het bestand.
+
+2. Sorteer de tabel op percentage rokers van hoog naar laag.
+
+![Percentage rokers in 2009, gesorteerd van hoog naar laag.](images/charttypes/bar-data-sorted.png){#fig-bar-data-sorted}
+
+3. Selecteer een willekeurige cel in het gegevensgebied.
+
+4. Kies [Invoegen > Kolom- of staafdiagram invoegen (groep Grafieken) > Gegroepeerde staaf]{.uicontrol}.
+
+Het staafdiagram verschijnt op het werkblad. Hierin staat de langste staaf onderaan. Dit is de standaard werkwijze van Excel. Deze volgorde moet dus nog gewijzigd worden, naast een aantal andere aanpassingen.
+
+![Standaard staafdiagram met langste staaf onderaan.](images/charttypes/bar-default.png){#fig-bar-default}
+
+5. Selecteer verticale as, [rechter muisklik > As opmaken]{.uicontrol}. Het taakvenster ***As opmaken*** verschijnt.
+
+6. [Opties voor as > selecteer Categorieën in omgekeerde volgorde]{.uicontrol}.
+
+![Taakvenster As opmaken.](images/charttypes/bar-axis-options.png){#fig-bar-axis-options}
+
+7. Wijzig grafiektitel in: `Percentage rokers in 2009`.
+
+:::
+
+## Taak: Cirkeldiagram {#sec-charttype-pie}
+
+Een cirkeldiagram gebruik je om de procentuele verdeling binnen één gegevensreeks (groep)weer te geven.
+
+Cirkeldiagrammen worden vooral gebruikt voor het weergeven van de procentuele verdeling van gegevens binnen één groep, zoals bijvoorbeeld verkiezingsresultaten. Teveel aan informatie kan een cirkeldiagram onoverzichtelijk maken. Om het overzichtelijk te houden moet je hooguit 6 à 7 sectoren in een cirkeldiagram gebruiken.
+
+Aan 150 leerlingen is gevraagd wat hun favoriete huisdier is. In @tbl-survey-pet zie je de resultaten.
+
+|Huisdier|Frequentie|
+|--------|----------|
+|Katten  |70|
+|Honden  |38|
+|Vogels  |22|
+|Vissen  |13|
+|Anders  |7|
+
+:  Resultaten enquête favoriete huisdier. {#tbl-survey-pet}
+
+De gegevens moeten in een cirkeldiagram worden weergegeven, zoals in @fig-pie-result.
+
+![Cirkeldiagram favoriete huisdier.](images/charttypes/pie-result.png){#fig-pie-result}
+
+::: {#prp-charttype-pie}
+[Bestand]{.smallcaps}: `Grafiek_cirkel.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer een willekeurige cel in het gegevensgebied.
+
+3. Kies het menu [Invoegen > Cirkel- of ringdiagram invoegen (groep Grafieken) > Cirkel]{.uicontrol}.
+
+4. Voeg gegevenslabels toe, positie [Einde, buitenkant]{.uicontrol}.
+
+5. Selecteer de gegevenslabels, rechter muisklik en kies dan [Gegevenslabels opmaken]{.uicontrol}. Het taakvenster Gegevenslabels opmaken wordt weergegeven.
+
+6. In het taakvenster selecteer je [Categorienaam]{.uicontrol} en [Percentage]{.uicontrol} en deselecteer je [Waarde]{.uicontrol}.
+
+![Taakvenster Gegevenslabels opmaken.](images/charttypes/pie-label-options.png){#fig-pie-label-options}
+
+7. Verwijder de legenda.
+
+8. Wijzig de tekst van de titel in: `Favoriete huisdier van 150 leerlingen`.
+
+:::
+
+## Taak: Lijndiagram {#sec-charttype-line}
+
+Een lijndiagram gebruik je meestal om het verloop van een variabele in de tijd weer te geven. De tijdeenheid wordt langs de horizontale as, de [categorie-as]{.term}, uitgezet. De gemeten variabele wordt langs de verticale as uitgezet. Tussen de punten in de grafiek kan desgewenst een lijn getrokken worden om het verloop van de variabele in de tijd goed zichtbaar te maken.
+
+In @fig-line-data kun je de jaarlijkse temperaturen (^o^C) vinden voor Amsterdam Luchthaven Schiphol (bron: [Tutiempo Network](https://en.tutiempo.net/climate/ws-62400.html)).
+
++ T = Gemiddelde jaarlijkse temperatuur
++ Tmax = Gemiddelde jaarlijkse maximum temperatuur
++ Tmin = Gemiddelde jaarlijkse maximum temperatuur
+
+![Jaarlijkse temperaturen voor Amsterdam Luchthaven Schiphol.](images/charttypes/line-data.png){#fig-line-data}
+
+De gegevens moeten in een lijndiagram worden weergegeven, bijvoorbeeld zoals in @fig-line-result.
+
+![Lijndiagram met gemiddelde jaarlijkse temperaturen voor Schiphol.](images/charttypes/line-result.png){#fig-line-result}
+
+::: {#prp-charttype-line}
+[Bestand]{.smallcaps}: `Grafiek_lijn.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer een willekeurige cel in het gegevensgebied.
+
+3. Kies het menu [Invoegen > Aanbevolen grafieken (groep Grafieken) > Lijn > OK]{.uicontrol}.
+
+4. Wijzig titels:
+
+   + Grafiektitel: `Jaarlijkse temperaturen Amsterdam Luchthaven Schiphol`
+   + Verticale astitel: `Temperatuur (C)`.
+
+5. Selecteer de grafiek en wijzig de stijl via [tab Grafiekontwerp > Grafiekstijlen]{.uicontrol}. Kies een stijl die je bevalt.
+
+:::
+
+## Taak: Spreidingsdiagram {#sec-charttype-scatter}
+
+Een spreidingsdiagram (XY diagram)kun je gebruiken wanneer je het verband tussen twee numerieke variabelen wilt analyseren en weer wilt geven. Ook kun je hiermee een trendlijn laten bepalen. Hierbij worden de waarden van twee numerieke variabelen tegen elkaar uitgezet. Elk paar getallen levert een punt in het diagram op.
+
+Om te onderzoeken of er een verband is tussen de lichaamslengte en gewicht is zijn deze gegevens bij 10 studenten gemeten. De meetgegevens zijn in @fig-scatter-data weergegeven.
+
+![Onderzoek lichaamslengte - gewicht.](images/charttypes/scatter-data.png){#fig-scatter-data}
+
+De gegevens moeten in een spreidingsdiagram worden weergegeven, zoals in @fig-scatter-result.
+
+![Spreidingsdiagram lengte - gewicht.](images/charttypes/scatter-result.png){#fig-scatter-result}
+
+::: {#prp-charttype-scatter}
+[Bestand]{.smallcaps}: `Grafiek_spreiding.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer een willekeurige cel in het gegevensgebied.
+
+3. Kies het menu [Invoegen > Spreidings- of bellendiagram invoegen (groep Grafieken) > Spreiding]{.uicontrol}.
+
+4. Wijzig titels:
+
+   + Grafiektitel: `Relatie lichaamslengte - gewicht`
+   + Horizontale astitel: `Lengte (cm)`
+   + Verticale astitel: `Gewicht (kg)`.
+
+5. Wijzig de schaal van de horizontale as zo dat deze loopt van 160 t/m 190, steeds oplopend met 5.
+
+6. Wijzig de schaal van de verticale as zo dat deze loopt van 40 t/m 80, steeds oplopend met 10.
+
+`r hide("Hint aanpassing schaal as")`
+[Selecteer de as > Rechter muisknop > As opmaken > Opties voor as]{.uicontrol}
+`r unhide()`
+
+:::
+
+## Lijn- of spreidingsdiagram? {#sec-charttype-line-scatter}
+
+Lijndiagrammen en spreidingsdiagrammen lijken veel op elkaar, vooral wanneer een spreidingsdiagram wordt weergegeven met markeringen en rechte verbindingslijnen. Er zijn echter behoorlijke verschillen in de manier waarop de gegevens worden uitgezet tegen de horizontale as (x-as) en de verticale as (y-as). Je kunt gemakkelijk fouten maken en het is dan ook belangrijk om een goede keuze te kunnen maken.
+
+::: {#exm-charttypes-line-scatter}
+**Jaarlijkse omzet**
+
+In @fig-line-scatter zijn de jaarlijkse omzetten van een bedrijf zowel in een lijndiagram als een spreidingsdiagram weergegeven.
+
+![Omzet per jaar, links in een lijndiagram, rechts in een spreidingsdiagram.](images/charttypes/line-scatter.png){#fig-line-scatter}
+
+Het verschil in schaling kan voor onjuiste conclusies zorgen. In het lijndiagram lijkt het alsof de ontwikkeling in de eerste jaren een forse groei doormaakt en de laatste jaren stagneert. Dit is in werkelijkheid niet het geval. De werkelijke groei is in het spreidingsdiagram te zien.
+
+:::
+
+**Lijndiagram**
+
++ verticaal: *waarde-as*
++ horizontaal: *categorie-as*
+
+De horizontale as heeft gelijk verdeelde gegevenscategorieën (tekst of datums). Een datumas geeft datums in chronologische volgorde weer.
+
+Een lijndiagram is goed voor het weergeven van de verandering van een variabele in de tijd. Voorbeelden zijn de verkoop, de omzet, de winst, de prijs enz. per dag, week, maand, kwartaal, jaar. De tijdseenheid wordt altijd langs de horizontale as uitgezet en de waarde van de gemeten variabele langs de verticale as.
+
+*#### **Spreidingsdiagram**
+
++ verticaal: *waarde-as*
++ horizontaal: *waarde-as*
+
+De horizontale as kan numerieke waarden of datumwaarden weergeven. En je kunt de schaalopties van beide assen wijzigen. Het diagram geeft punten weer op het snijpunt van een x-waarde en een y-waarde.
+
+Een spreidingsdiagram wordt gebruikt om de relatie, het verband, tussen twee variabelen te onderzoeken. Als de ene variabele groter of kleiner wordt, wat gebeurt er dan met de andere variabele, wordt deze dan ook groter of kleiner. De gegevenswaarden worden als losstaande punten in de grafiek weergegeven.
+
+Weliswaar kun je de punten met lijnen met elkaar verbinden, maar dat is eigenlijk niet goed. Dat suggereert nl. dat het verloop volgens deze lijnen is. Beter is het om het verband via een **trendlijn** weer te geven. Dat is een lijn die het verband tussen de twee variabelen het beste weergeeft. De meetwaarden kunnen op deze trendlijn liggen, maar meestal liggen ze verspreid rond (boven of onder)de trendlijn.
+
+Spreidingsdiagrammen worden veel in de wetenschap en de techniek gebruikt. Maar ook in ondernemingsrapporten kom je spreidingsdiagrammen tegen, bijvoorbeeld of er een verband is tussen prijsverhogingen en de verkoop.
+
+## Taak: Ringdiagram {#sec-charttype-doughnut}
+
+Een ringdiagram is een uitbreiding van het cirkeldiagram. Dit diagram kan één of meerdere ringen bevatten en elke ring vertegenwoordigt een gegevensreeks. Een ringdiagram gebruik je wanneer je de procentuele verdeling van meerdere gegevensreeksen weer wilt geven.
+
+In @fig-doughnut-data zijn de verkopen per kwartaal van een bedrijf in de jaren 2008 en 2009 te zien.
+
+![Omzet per kwartaal.](images/charttypes/doughnut-data.png){#fig-doughnut-data}
+
+De gegevens moeten in een cirkeldiagram worden weergegeven, zoals in @fig-doughnut-result.
+
+![Ringdiagram omzet per kwartaal.](images/charttypes/doughnut-result.png){#fig-doughnut-result}
+
+::: {#prp-charttype-doughnut}
+[Bestand]{.smallcaps}: `Grafiek_ring.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer een willekeurige cel in het gegevensgebied.
+
+3. Kies het menu [Invoegen > Cirkel- of ringdiagram invoegen (groep Grafieken) > Ring]{.uicontrol}.
+
+Er moeten nog een aantal aanpassingen gemaakt worden. Een deel van de opmaak wordt bij dit voorbeeld aangebracht door een voorgedefinieerde grafiekstijl toe te passen.
+
+4. Wijzig de grafiektitel in `Verkopen 2008-2009 per kwartaal`.
+
+5. Selecteer de grafiek en wijzig de stijl via [tab Grafiekontwerp > Grafiekstijlen]{.uicontrol}. Kies een stijl die je bevalt.
+
+:::
+
+## Taak: Vlakdiagram (gestapeld) {#sec-charttype-area}
+
+Vlakdiagrammen zijn gebaseerd op lijndiagrammen. Het vlak tussen de as en de lijn wordt vaak gemarkeerd kleuren of arceringen. Net als bij een lijndiagram wordt de grootte van een variabele over een bepaalde tijdsperiode weergegeven. In een gestapeld vlakdiagram zijn meerdere gegevensreeksen boven elkaar geplaatst, zodat tevens de som van de gegevens is af te lezen. Met een vlakdiagram kun je trends goed zichtbaar maken.
+
+Een bedrijf verkoopt drie produkten: A, B en C. In @fig-area-data zijn de verkochte aantallen gedurende het eerste halfjaar te zien.
+
+![Aantallen verkochte produkten per maand.](images/charttypes/area-data.png){#fig-area-data}
+
+De gegevens moeten in een gestapeld vlakdiagram worden weergegeven, zoals in @fig-area-result.
+
+![Gestapeld vlakdiagram voor aantal verkochte artikelen per maand.](images/charttypes/area-result.png){#fig-area-result}
+
+::: {#prp-charttype-area}
+[Bestand]{.smallcaps}: `Grafiek_vlak.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer een willekeurige cel in het gegevensgebied.
+
+3. Kies het menu [Invoegen > Aanbevolen grafieken (groep Grafieken) > Gestapeld vlak > OK]{.uicontrol}.
+
+4. Wijzig de grafiektitel in `Aantal verkochte artikelen`.
+
+5. Wijzig de positie van de legenda van [Onder]{.uicontrol} naar [Rechts]{.uicontrol}.
+
+`r hide("Hint legenda")`
+[Selecteer legenda > Rechter muisknop > Legenda opmaken > Opties voor legenda]{.uicontrol}
+`r unhide()`
+
+:::
+
+## Taak: Bellendiagram {#sec-charttype-bubble}
+
+Een bellendiagram kun je gebruiken wanneer je de relatie tussen drie numerieke variabelen weer wilt geven.
+
+Een bellendiagram is een uitbreiding op een spreidingsdiagram. Bij de laatste worden twee numerieke variabelen (X en Y) tegen elkaar uitgezet. Bij een bellendiagram wordt nog een derde variabele (Z) gebruikt. De punt in het spreidingsdiagram wordt nu vervangen door een bel (of cirkel). Het middelpunt van de bel wordt door de X en Y variabele bepaald en de grootte (straal) van de bel door de Z variabele. Daarnaast kunnen ook andere kenmerken van een bel, zoals de kleur, gebruikt worden om nog extra onderscheidingen aan te brengen. Deze zijn dan op kwalitatieve, niet-numerieke waarden, gebaseerd.
+
+In @fig-bubble-data is te zien hoe het marktaandeel gerelateerd is aan de omzet en het aantal producten.
+
+![Marktaandeel.](images/charttypes/bubble-data.png){#fig-bubble-data}
+
+De gegevens moeten in een bellendiagram worden weergegeven, zoals in @fig-bubble-result.
+
+![bellendiagram voor marktaandeel.](images/charttypes/bubble-result.png){#fig-bubble-result}
+
+::: {#prp-charttype-bubble}
+[Bestand]{.smallcaps}: `Grafiek_bellen.xlsx`
+
+1. Open het bestand.
+
+2. Zorg voor een passende opmaak voor de waarden voor omzet en marktaandeel.
+
+::: {.callout-note}
+Een goede layout van de brongegevens zorgt er voor dat je deze opmaak ook in de grafiek krijgt.
+:::
+
+3. Selecteer een willekeurige cel in het gegevensgebied.
+
+4. Kies het menu [Invoegen > Spreidings- of bellendiagram invoegen (groep Grafieken) > 3D-bel]{.uicontrol}.
+
+5. Breng de volgende wijzigingen aan:
+
+   + Grafiektitel: `Marktaandelen`
+   + Horizontale astitel: `Aantal producten`
+   + Verticale astitel: `Omzet`
+   + Scaling verticale as: 0 t/m 70000
+   + Kleur bellen: oranje/goudachtig
+   + Gegevenslabels: positie gecentreerd, weergave percentage marktaandeel
+   
+De toegevoegde gegevenslabels zijn niet de gewenste. Standaard wordt de Y-waarde (in dit geval van de omzet) weergegeven. Deze moet gewijzigd worden in de belgrootte, welke in dit geval door het marktaandeel bepaald wordt.
+   
+6. Selecteer onder [Label bevat]{.uicontrol} alleen [Belgrootte]{.uicontrol}.  
+   ![](images/charttypes/bubble-labels.png)
+
+:::
+
+## Taak: Radardiagram {#sec-charttype-radar}
+
+In een radardiagram worden meerdere gegevensreeksen (categorieën) uitgezet langs afzonderlijke assen die steeds vanuit een punt in het midden, de oorsprong, vertrekt. Het diagram ziet er daardoor webvormig uit en wordt daarom ook wel **spindiagram** of **sterdiagram** genoemd. De hoeken tussen deze assen zijn gelijk. De gegevenspunten op de assen worden meestal met een lijn verbonden.
+
+In @fig-radar-data zie je de scores van een zelfevaluatie volgens een 5-punts Likert schaal.
+
+![Scores zelfevaluatie op een schaal van 1-5.](images/charttypes/radar-data.png){#fig-radar-data}
+
+De gegevens moeten in een radardiagram worden weergegeven, zoals in @fig-radar-result.
+
+![Radardiagram van de scores zelfevaluatie.](images/charttypes/radar-result.png){#fig-radar-result}
+
+::: {#prp-charttype-radar}
+[Bestand]{.smallcaps}: `Grafiek_radar.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer een willekeurige cel in het gegevensgebied.
+
+3. Kies het menu [Invoegen > Oppervlakdiagram of radardiagram invoegen (groep Grafieken) > Radar]{.uicontrol}.
+
+4. Wijzig de grafiektitel in `Zelfevaluatie`.
+
+:::
+
+## Taak: Paretodiagram {#sec-charttype-pareto}
+
+Een Paretodiagram is een combinatie van een kolomdiagram en een lijndiagram. Voor het kolomdiagram worden de waarden van groot naar klein gesorteerd. Het lijndiagram ligt bovenop de kolommen en geeft het cumulatieve percentage weer. Het kolomdiagram gebruikt de normale Y-as aan de linkerkant. Voor het lijndiagram is er aan de rechterkant een tweede Y-as met waarden van 0% tot 100%.
+
+Een Paretodiagram wordt veel bij de kwalteitscontrole gebruikt om de belangrijkste factoren op te sporen.
+
+@fig-pareto-data toont de belangrijkste doodsoorzaken in het jaar 2009 in Nederland weergegeven (bron CBS).
+
+![Doodsoorzaken 2009 in Nederland.](images/charttypes/pareto-data.png){#fig-pareto-data}
+
+De gegevens moeten in een Paretodiagram worden weergegeven, zoals in @fig-pareto-result.
+
+![Paretodiagram van de doodsoorzaken in 2009.](images/charttypes/pareto-result.png){#fig-pareto-result}
+
+::: {#prp-charttype-pareto}
+[Bestand]{.smallcaps}: `Grafiek_pareto.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer een willekeurige cel in het gegevensgebied.
+
+3. Kies het menu [Invoegen > Aanbevolen grafieken > tab Alle Grafieken > Histogram > Pareto]{.uicontrol}.
+
+4. Wijzig de grafiektitel en voeg gegevenslabels toe.
+
+:::
+
+## Vertaaltabel grafieksoorten {#sec-charttype-translations}
+
+|Nederlands|Engels|Duits|
+|--|--|--|
+|Bellendiagram|Bubble chart|Blasendiagramm|
+|Cirkeldiagram|Pie chart|Kreisdiagramm|
+|Kolomdiagram|Column chart|Säulendiagramm|
+|Lijndiagram|Line chart|Liniendiagramm|
+|Ringdiagram|Doughnut chart|Ringdiagramm|
+|Radardiagram|Radar chart|Netzdiagramm|
+|Spreidingsdiagram|Scatter (XY)chart|Punktdiagramm|
+|Staafdiagram|Bar chart|Balkendiagramm|
+|Vlakdiagram|Area chart|Flächendiagramm|
+|Watervaldiagram|Waterfall chart|Wasserfalldiagramm|
+
+Nederlandse, Engelse en Duitse namen van een aantal grafieksoorten. {#tbl-charttype-translations}

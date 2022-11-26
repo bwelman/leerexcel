@@ -1,0 +1,148 @@
+# Doelzoeken {#sec-goalseek}
+
+::: {.callout-note appearance="simple" icon="false"}
++ Methode Doelzoeken.
++ Toepassingsgebied van Doelzoeken.
++ Tips gebruik Doelzoeken.
+:::
+
+Een formule is uit een of meerdere variabelen opgebouwd. Meestal wil je voor bepaalde waarden van de variabelen weten wat de uitkomst van de formule is. Soms komt ook het omgekeerde voor. Voor een bepaalde uitkomst wil je dan weten welke waarden de variabelen moeten hebben.
+
+Wanneer de uitkomst van een formule maar van één variabele afhangt kun je de methode **Doelzoeken** gebruiken. Met deze methode wordt de waarde van de variabele net zo lang gewijzigd totdat de formule de gewenste uitkomst heeft.
+
+::: {.callout-note}
+Wanneer de uitkomst van een formule van meerdere variabelen afhangt moet je Excels **Oplosser** gebruiken.
+:::
+
+**Dialoogvenster Doelzoeken**
+
+Doelzoeken kun je oproepen via [tab Gegevens > Wat-als-analyse (groep Voorspelling) > Doelzoeken]{.uicontrol}.
+
+![Dialoogscherm Doelzoeken.](images/goalseek/goalseek.png){#fig-goalseek}
+
+In het dialoogvenster moet je drie waarden specificeren:
+
+Cel instellen
+: Het adres van de cel welke de formule bevat waarvoor je een bepaalde uitkomst wilt.
+
+Op waarde
+: De gewenste uitkomst van de formule, het doel dus.
+
+Door wijzigen van cel
+: Het adres van de cel waarvan de waarde gewijzigd moet worden om het doel te behalen. Dit is de cel voor de varabele.
+
+## Break-even koffiebar {#sec-goalseek-stadiumcoffee}
+
+Stel je wilt een koffiestand in een voetbalstadion runnen. De maandelijkse kosten voor huur, personeel en diversen zijn bekend. Je weet ook wat de inkoop- en verkoopprijs voor een kop koffie is. Voor de berekening van het maandelijkse resultaat is een berekeningsmodel gemaakt, zie @fig-stadiumcoffee-model, afhangend van het aantal verkochte koppen koffie.
+
+![Berekeningsmodel voor koffiebar stadion.](images/goalseek/stadiumcoffee-model.png){#fig-stadiumcoffee-model}
+
+Informatiebehoefte
+: Hoeveel koppen koffie moet je maandelijks verkopen om quitte te spelen?
+
+Bij dit eenvoudige voorbeeld kun je het antwoord gemakkelijk met de hand uitrekenen. Echter voor dergelijke vraagstukken is Doelzoeken zeer geschikt.
+
+::: {#prp-goalseek-stadiumcoffee}
+[Bestand]{.smallcaps}: `Stadionkoffie.xlsx`
+
+1. Open het bestand.
+
+2. Kies [tab Gegevens > Wat-als-analyse (groep Voorspelling) > Doelzoeken]{.uicontrol}.
+
+3. Specificeer de waarden voor Doelzoeken.
+
+![Doelzoekwaarden voor de koffiebar.](images/goalseek/stadiumcoffee-goalseek.png){#fig-stadiumcoffee-goalseek}
+
+`r hide("Toelichting")`
++ [Cel instellen]{.uicontrol}: De cel met het maandresultaat, B18.
++ [Op waarde]{.uicontrol}: Voor een break-even is dat 0.
++ [Door wijzigen van cel]{.uicontrol}: Dit is de cel met het aantal koppen koffie dat verkocht moet worden, B16.
+`r unhide()`
+
+4. Klik op [OK]{.uicontrol}.
+
+Excel gaat nu aan het rekenen en vind als waarde 562,5. Omdat je geen halve koppen koffie verkoopt moet je zelf het antwoord afronden op 563.
+:::
+
+## Tips doelzoeken {#sec-goalseek-tips}
+
+Het is mogelijk dat de resultaatfunctie zodanig in elkaar zit dat het gewenste antwoord niet bestaat. Ook is het mogelijk dat het antwoord wel bestaat, maar dat Excel het niet kan vinden. In dat geval verschijnt er een dialoogvenster waarin dat wordt aangegeven.
+
+Bestaat de oplossing wel, maar kan Excel deze niet vinden loop dan de volgende oplossingsmogelijkheden langs:
+
+1. Controleer in het model of de cel waarin het resultaat berekend wordt wel afhangt van de te wijzigen cel. De resultaatcel moet altijd een formule of een functie bevatten.
+2. Controleer dat de te wijzigen cel alleen een waarde bevat en geen formule of functie.
+3. Kies andere beginwaarden voor de te wijzigen cel.
+4. Verhoog het maximum aantal iteraties (standaard is dit 100) via [Bestand > Opties > Formules]{.uicontrol}, zie @fig-workbook-calculation-options
+
+![Berekeningsopties voor doelzoeken.](images/goalseek/workbook-calculation-options.png){#fig-workbook-calculation-options}
+
+## Opgaven {#sec-goalseek-exercises}
+
+::: {#exr-goal001}
+**Freelancer (goal001)**
+
+Stel je wilt als freelancer gaan werken en je hebt je voorgenomen dit alleen te doen wanneer je tenminste € 5000,- per maand kunt verdienen. Voor elke uitgevoerde opdracht krijg je een provisie van 7,8%.
+
+1.  Maak in een werkblad een model waarin het percentage provisie en de omzet kunnen worden ingevoerd en waarin het provisiebedrag berekend wordt.
+2.  Bepaal via Doelzoeken de omzet die gemaakt moet worden zodat een provisie van € 5000 behaald wordt.
+
+`r hide("Antwoord")`
+Omzet € 64102,56
+`r unhide()`
+:::
+
+::: {#exr-goal002}
+**Betaling lening (goal002)**
+
+Met behulp van de functie `BET` kan de periodieke betaling van een lening worden berekend op basis van constante betalingen en een constant rentepercentage. In de volgende afbeelding is een voorbeeld van een dergelijke berekening te zien. Hierbij wordt de betaling aan het begin van elke termijn gedaan en na de laatste termijn is de lening volledig afgelost.
+
+![](images/goalseek/goal002_model.png)
+
+1.  Maak in een werkblad dit model.
+2.  Bepaal met Doelzoeken hoeveel je kunt lenen wanneer je maximaal € 750,- per maand kunt aflossen.
+
+::: {.callout-note}
+Omdat een betaling als een uitgaande kasstroom wordt gezien wordt de uitkomst als een negatief getal weergegeven.
+:::
+
+`r hide("Antwoord")`
+Geleend bedrag € 7280.
+`r unhide()`
+:::
+
+::: {#exr-goal003}
+**Break-even bepalen (goal003)**
+
+Een ondernemer heeft te maken met kosten en opbrengsten die afhankelijk zijn van de geproduceerde hoeveelheid Q. Het verband tussen de totale kosten (TK) resp. de totale opbrengst (TO) en de geproduceerde hoeveelheid Q is als volgt:
+
+$\text{TK} = Q^2 + 8Q + 15$ en $\text{TO} = -5Q^2 + 80Q$
+
+In de grafiek hierna zijn TK en TO uitgezet als functie van Q.
+
+![](images/goalseek/goal003_chart.png)
+
+1. Teken deze grafiek.
+2. Bepaal het break-even punt. Dit is de hoeveelheid Q waarvoor de opbrengsten en de kosten aan elkaar gelijk zijn. De grafiek laat zien dat er twee van deze punten zijn. Bepaal ze beide m.b.v. Doelzoeken en geef de antwoorden op 4 decimalen nauwkeurig.
+
+`r hide("Antwoord")`
+Oplossing 1: Q = 0,2120 en TK = TO = 16,74
+
+Oplossing 2: Q=11,7879 en TK = TO = 248,26
+`r unhide()`
+:::
+
+::: {#exr-goal004}
+**Spaarbedrag (goal004)**
+
+Op 1 januari 2010 wordt een bedrag van € 1000 op een spaarrekening gestort. De renteopbrengst is 2,7% op jaarbasis en deze wordt steeds aan de spaarrekening toegevoegd. In de volgende afbeelding is de ontwikkeling van het bedrag op de spaarrekening voor eerste tien jaar te zien.
+
+![](images/goalseek/goal004_model.png)
+
+1. Maak in een werkblad dit model.
+2. Bepaal met Doelzoeken hoeveel je aan het begin had moeten storten om na 10 jaar € 2500 euro op de spaarrekening te hebben.
+
+`r hide("Antwoord")`
+Storting € 1915,29.
+`r unhide()`
+:::

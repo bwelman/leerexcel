@@ -1,0 +1,218 @@
+# Gegevens invoeren/bewerken {#sec-data}
+
+::: {.callout-note appearance="simple" icon="false"}
++ Invoeren van gegevens in een cel.
++ Taalafhankelijke scheidingstekens bij getallen.
++ Het verschil tussen inhoud en opmaak van een cel.
++ Ongedaan maken van aangebrachte wijzigingen.
++ Invoegen van een rij of kolom in een werkblad.
++ Kopiëren van gegevens naar een andere plek.
++ Snel invoeren van een reeks gegevens waar een patroon in zit.
+:::
+
+Het invoeren van gegevens (teksten, getallen, formules) is een van de belangrijkste werkzaamheden binnen Excel. Het invoeren van gegevens in een cel komt in het kort neer op:
+
+1. Cel selecteren.
+2. Begin met typen.
+3. Eindig met [Enter toets]{.uicontrol}.
+
+::: {.callout-warning}
+Pas op, wanneer de cel al een inhoud heeft wordt deze overschreven.
+:::
+
+Na het gebruik van de [Enter toets]{.uicontrol} gaat de celwijzer automatisch één cel naar beneden.
+
+## Taalafhankelijke getalnotaties {#sec-data-decimal-separator}
+
+Scheidingstekens voor decimalen en duizendtallen zijn afhankelijk van de gebruikte taal van Windwos, maar kunnen in Excel zelf ook gewijzigd worden.
+
+Excel gebruikt standaard de getalnotaties zoals die in Windows zijn vastgelegd. Hierdoor zijn deze notaties afhankelijk van de gebruikte taalversie van Windows. Met name voor het decimaalteken en het scheidingsteken voor duizendtallen kan dit voor verwarring en problemen zorgen. Standaard gebruikt Windows de volgende tekens.
+
+Nederlandstalig
+: Decimaal scheidingsteken **komma**: `12,34`
+: Duizentallen scheidingsteken **punt**: `12.345`
+
+Engelstalig
+: Decimaal scheidingsteken **punt**: `12.34`
+: Duizendtallen scheidingsteken **komma**: `12,345`
+
+Wanneer je deze instellingen permanent wilt veranderen, dan moet je dat via de landinstellingen in het configuratiescherm van Windows doen.
+
+::: {.callout-note}
+Je kunt deze instellingen ook tijdelijk in Excel wijzigen. Ga hiervoor als volgt te werk.
+
+1.  Klik op de [Bestand > Opties > Geavanceerd]{.uicontrol}
+2.  Schakel onder [Opties voor bewerken]{.uicontrol} het selectievakje [Scheidingstekens van systeem gebruiken]{.uicontrol} uit.
+3.  Typ nieuwe scheidingstekens in de invoervakken [Decimaalteken]{.uicontrol} en [Scheidingsteken voor duizendtallen]{.uicontrol}.
+
+Wanneer je de scheidingstekens van het systeem weer wilt gebruiken, schakel je het selectievakje [Scheidingstekens van systeem gebruiken]{.uicontrol} in.
+:::
+
+## Invoer gegevens {#sec-data-entry}
+
+Een eenvoudige oefening in het invoeren van gegevens in een cel.
+
+::: {#prp-data-entry}
+
+1. Selecteer cel A1.
+
+2. Typ in `huis` en druk op [Enter]{.uicontrol}.
+
+Het woord huis staat links uitgelijnd in de cel en de celwijzer heeft zich 1 cel naar beneden verplaatst zodat nu cel A2 de actieve cel is.
+
+3. Typ in `Omzet 1e kwartaal` en druk op [Enter]{.uicontrol}.
+
+De tekst staat links uitgelijnd in de cel, past niet binnen de celgrenzen en lijkt daardoor ook deels in B2 te staan (wat niet waar is). Dat de tekst lijkt door te lopen naar cel B2 komt omdat cel B2 leeg is. De actieve cel is nu A3 geworden.
+
+4. Typ in `89` en druk op [Enter]{.uicontrol}.
+
+Het getal staat rechtsuitgelijnd in de cel. De actieve cel is A4 geworden.
+
+5. Typ in `12,34` en druk op [Enter]{.uicontrol}.
+
+Het getal staat rechtsuitgelijnd in de cel. De actieve cel is A5 geworden.
+
+6. Typ in `5.6` en druk op [Enter]{.uicontrol}.
+
+De celinhoud is links uitgelijnd. Dit komt vanwege de punt tussen 5 en 6. Hierdoor interpreteert Excel de invoer als tekst en wordt daarom links uitgelijnd. De actieve cel is nu A6.
+
+7. Typ in `1-2-2011` en druk op [Enter]{.uicontrol}.
+
+De datum staat rechts uitgelijnd in de cel. Dat komt omdat Excel datums als getallen interpreteert, ze ook zo behandelt, maar ze een speciale datumopmaak geeft. De actieve cel is nu A7.
+
+8. Typ in `=2+3` en druk op [Enter]{.uicontrol}.
+
+In de cel zie je nu het getal 5 staan. Dat komt omdat Excel alle invoer die met `=` begint als een formule opvat, daarvan de uitkomst berekend en dan het resultaat laat zien. De inhoud van de cel blijft steeds de formule en niet het resultaat. De actieve cel is nu A8.
+
+9. Selecteer cel B2, typ in `10%` en druk op [Enter]{.uicontrol}.
+
+In cel B2 verschijnt de inhoud rechts uitgelijnd. Dat komt omdat Excel door het procentteken de invoer heeft geïnterpreteerd als een getal. De werkelijke inhoud van de cel is dan ook `0,1` en deze inhoud wordt in de procentweergave getoond. En omdat cel B2 nu niet meer leeg is, wordt de tekst cel A2 niet meer volledig getoond.
+
+10. Selecteer cel A2.
+
+In de formulebalk is te zien dat de inhoud van de cel nog steeds uit de volledig ingevoerde tekst bestaat.
+
+![De actieve cel is A2 en in de formulebalk zie je de volledige inhoud van deze cel.](images/data/data-entry-example.png){#fig-data-entry-example}
+
+Het is mogelijk om de breedte van de kolom aan te passen zodat alle tekst in cel A2 getoond wordt.
+
+:::
+
+**Samenvatting**
+
++ Tekst wordt standaard links uitgelijnd.
++ Getallen worden standaard rechts uitgelijnd.
++ Er is een belangrijk verschil tussen komma's en punten in getallen.
++ Formules beginnen altijd met het `=` teken.
++ De invoer van een datum wordt behandeld als een getal en opgemaakt als een datum.
++ De invoer van een getal met een procentteken wordt behandeld als een getal en opgemaakt als een percentage. De echte inhoud van de cel wordt het honderdste deel van het ingevoerde getal.
++ Een cel heeft een inhoud en een opmaak. En wat je ziet is niet alijd de werkelijke inhoud.
+
+## Celinhoud wijzigen {#sec-data-edit}
+
+De gegevens in een cel kunnen op een van de volgende manieren bewerkt worden:
+
++ Dubbelklikken op de cel. De cursor komt midden in de cel te staan zodat de inhoud direct binnen de cel bewerkt kan worden.
++ Selecteer de cel en druk dan [F2]{.uicontrol}. De cursor komt dan aan het eind van de celinhoud te staan zodat de inhoud bewerkt kan worden.
++ Selecteer de cel en klik dan op de formulebalk op de plek waar je het bewerken wilt beginnen.
+
+Wanneer de cel in de bewerkingsmodus wordt gezet verandert op de statusbalk helemaal links onderaan de status van de cel van `Gereed` in `Bewerken`. En verder worden drie iconen links op de formulebalk geactiveerd:
+
+![](images/common/formulabar-icons.png)
+
+De eerste voor het ongedaan maken, de tweede om het invoeren te bevestigen en de derde om een functie in te voeren.
+
+De bewerking moet wel worden afgesloten met de [Enter]{.uicontrol} toets zodat de status weer gewijzigd wordt in `Gereed`.
+
+## Wijzigingen ongedaan maken {#sec-data-undo-changes}
+
+Van vrijwel elke actie die je in Excel uitvoert is het mogelijk de effecten van deze actie weer ongedaan te maken. Dit doe je door gebruik te maken van de volgende knoppen op de [Werkbalk Snelle Toegang]{.uicontrol}.
+
+![Ongedaan maken](images/common/button-undo.png) Ongedaan maken
+: Draait de laatst uitgevoerde actie weer terug. Door nogmaals op deze knop te klikken wordt de daarvoor uitgevoerde actie ongedaan gemaakt, enz. Naast deze knop kan zich een pijlpunt bevinden die bij klikken hierop een lijst toont van de meest recente acties. Door hierin een actie aan te klikken worden alle wijzigingen t/m deze ongedaan gemaakt.
+
+![Opnieuw](images/common/button-redo.png) Opnieuw
+: Hiermee kan het ongedaan maken weer teruggedraaid worden. Ook naast deze knop kan zich een pijlpunt bevinden die een lijst met recente acties kan tonen.
+
+## Rij/kolom invoegen {#sec-data-insert-rowcolumn}
+
+Het komt regelmatig voor dat je in een werkblad een rij of een een kolom ergens tussen de gegevens wilt invoegen. De werkwijze is voor rijen en kolommen hetzelfde.
+
+1.  Rechtermuisklik op het rijcijfer of de kolomletter waarvoor je in wilt voegen.
+2.  Kies uit het snelmenu [Invoegen]{.uicontrol}.
+
+Om meerdere rijen/kolommen in te voegen selecteer je het gewenste aantal rijen/kolommen, dan invoegen via het snelmenu. Dan wordt het aantal ingevoegd voor de eerste rij/kolom van de selectie.
+
+## Kopiëren en plakken {#sec-data-copypaste}
+
+Het kopiëren van de inhoud van cellen is een veelvoorkomende actie in Excel. Je kunt zowel één cel als een heel gebied kopiëren. Standaard wordt zowel de inhoud als de opmaak van de cel gekopieerd. Het is echter ook mogelijk om alleen de inhoud of alleen de opmaak te kopiëren. Wanneer de cel een formule met celverwijzingen bevat dan worden deze celverwijzingen in de gekopieerde formule aangepast aan de nieuwe situatie.
+
+::: {#prp-data-copypaste}
+[Bestand]{.smallcaps}: `Celopmaak.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer het gebied `A1:B13`.
+
+3. Kies [Start > Kopiëren (groep Klembord)]{.uicontrol}.
+
+4. Selecteer de begincel van de bestemming, bijv. D20.
+
+5. Kies [Start > Plakken (groep Klembord)]{.uicontrol}.
+::
+
+## Automatisch doorvoeren {#sec-data-autofill}
+
+Exel heeft een aantal mogelijkheden om snel een rij of een kolom met gegevens te vullen. Het automatisch vullen van cellen kan via ingebouwde lijsten. Zo beschikt Excel over ingebouwde lijsten voor de dagen van de week en de maanden van het jaar. Maar je kunt ook zelf aangepaste lijsten maken via de opties van Excel. Een andere mogelijkheid is om een patroon te maken dat Excel herkent. Bij het vullen van de cellen met nieuwe waarden maakt Excel dan van dit patroon gebruik. Vaak zijn twee waarden al voldoende voor de patroonherkenning.
+
+Bij het automatisch doorvoeren van nieuwe waarden kun je het beste gebruik maken van de vulgreep. Dit is het zwarte vierkantje in de rechterbenedenhoek van de selectie. Wanneer je de muisaanwijzer boven de vulgreep plaatst, verandert de aanwijzer van ![](images/common/mouse-shape-select.png) in ![](images/common/mouse-shape-fill.png), daarna kun je slepen.
+
+![Vulgreep.](images/common/mouse-fillhandle.png){#fig-mouse-fillhandle}
+
+In de volgende oefening wordt eerst van een ingebouwde reeks gebruik gemaakt en daarna van een patroonherkenning.
+
+::: {#prp-data-autofill}
+**Ingebouwde reeks**
+
+1. Begin met een nieuw werkblad.
+
+2. Selecteer cel A1 en typ hierin het woord `januari`.
+
+3. Selecteer cel A1 opnieuw. Positioneer de muis boven de vulgreep van cel A1. Druk dan de linker muisknop in en sleep naar cel A12 en laat dan de linker muisknop los.
+
+![](images/data/months-names-long.png).
+
+Het resultaat is dat het gebied A1:A12 de maanden van het jaar bevat. In feite kun je met elke maand beginnen. Wanneer je door blijft slepen herhaalt de reeks zich.
+
+**Patroonherkenning**
+
+4.  Selecteer cel `B1` en typ hierin het getal `1`.
+
+5.  Selecteer cel `B2` en typ hierin het getal `2`.
+
+6.  Selecteer het gebied `B1:B2` en sleep de vulgreep een aantal cellen naar beneden.
+
+![](images/data/numbers-autofill.png).
+
+Het resultaat is dat het gebied gevuld is met de getallen 1, 2, 3, 4, 5, ...
+
+In @tbl-patternrecognition zie je een aantal voorbeelden om mee te experimenteren.
+
+:::
+
+|Beginwaarden|Doorgevoerde reeks|
+|------------|------------------|
+|1, 3|5, 7, 9, 11, ...|
+|2, 4|6, 8, 10, 12, ...|
+|3, 6|9, 12, 15, 18, ...|
+|2010, 2011|2012, 2013, 2014, ...|
+|09:00|10:00, 11:00, 12:00, 13:00, ...|
+|jan|feb, mrt, ...|
+|jan, apr|jul, okt, jan, apr, ...|
+|maandag|dinsdag, woensdag, ...|
+|ma|di, wo, ...|
+|Kw 1|Kw 2, Kw 3, Kw 4, Kw 5, ...|
+|1e periode|2e periode, 3e periode, ...|
+|artikel 1|artikel 2, artikel 3, artikel 4, ...|
+
+:  Voorbeelden van patroonherkenning. {#tbl-patternrecognition}

@@ -1,0 +1,386 @@
+# Macro's {#sec-macros}
+
+::: {.callout-note appearance="simple" icon="false"}
++ Uitleg macro's en het gebruik ervan.
++ Activeren tabblad Ontwikkelaars.
++ Opnemen van een macro met de macrorecorder.
++ Wijzigen van een macro.
++ Opdrachtknop maken.
++ Beveiligingsinstellingen.
+:::
+
+Een taak die je in Microsoft Excel regelmatig moet uitvoeren kun je met een macro automatiseren. Een macro bestaat uit een reeks opdrachten en functies die door één commando of druk op een knop achter elkaar worden uitgevoerd.
+
+Een macro is dus vooral bedoeld om te gebruiken voor veel voorkomende handelingen of voor complexe handelingen. Door van een macro gebruik te maken kan de efficiency verhoogd en de kans op fouten verminderd worden.
+
+Eenvoudige macro's welke uit een aantal achter elkaar uitgevoerde handelingen bestaan, kunnen met de ingebouwde macrorecorder worden opgenomen. Complexe macro's worden geprogrammeerd in de programmeertaal VBA. Alleen eenvoudige macro's komen hier aan bod, hiervoor heb je geen programmeerkennis nodig.
+
+::: {.callout-note}
+De taal waarin de Excel macro's geschreven worden is Visual Basic for Applications (VBA). De opdrachten en functies van de macro worden in een Visual Basic module opgeslagen. En met de Visual Basic editor kun je macro's bewerken, macro's van de ene module naar de andere kopiëren, macro's tussen verschillende werkmappen kopiëren en de modules en macro's een andere naam een andere naam geven.
+:::
+
+## Tab Ontwikkelaars {#sec-tab-developer}
+
+Om macro's op te kunnen nemen, te bewerken en uit te voeren moet het tabblad [Ontwikkelaars]{.uicontrol} zichtbaar gemaakt worden.
+
+Een aantal functies van Excel, waaronder die voor Macro's en VBA, zitten onder het tabblad [Ontwikkelaars]{.uicontrol}. Dit tabblad wordt bij de installatie van Excel standaard niet getoond en zal dus eerst zichtbaar gemaakt moeten worden. Dit is een eenmalige actie.
+
+::: {.callout-warning}
+Controleer eerst of op het lint de tab [Ontwikkelaars]{.uicontrol} aanwezig is. Zoja, dan kun je deze taak overslaan.
+
+![Tab ontwikkelaars.](images/macro/tab-developer.png){#fig-tab-developer}
+
+:::
+
+::: {#prp-tab-developer}
+1. Kies [Bestand > Opties > Lint aanpassen]{.uicontrol}.
+
+![Opties Excel voor weergeven tabblad ontwikkelaars.](images/common/excel-options-developertab.png){#fig-excel-options-developertab}
+
+2. Selecteer onder Hoofdtabbladen [Ontwikkelaars]{.uicontrol} en klik op [OK]{.uicontrol}.
+
+Op het lint moet nu het tabblad [Ontwikkelaars]{.uicontrol} (zie @fig-tab-developer) zichtbaar zijn.
+
+:::
+
+## Macro's opnemen {#sec-macros-recording}
+
+Eenvoudige macro's kunnen gemaakt worden door de handelingen op te nemen met de ingebouwde **macrorecorder**. Na het starten van de recorder worden alle handelingen opgenomen en op de achtergrond omgezet in VBA code. Dit gaat door totdat de recorder gestopt wordt.
+
+::: {.callout-note}
+Om een goed werkende macro te krijgen is het belangrijk om eerst de te verrichten handelingen zonder opname uit te voeren en in volgorde te noteren. Dit script kun je daarna gebruiken om de handelingen met de macrorecorder op te nemen.
+:::
+
+De knop waarmee je het opnemen van macro's kunt starten zit op de [tab Ontwikkelaars]{.uicontrol} in de groep [Programmacode]{.uicontrol}, zie @fig-tab-developer.
+
+Wanneer op deze knop geklikt wordt om de opname van een macro te starten verschijnt eerst een dialoogvenster waarin een aantal eigenschappen van de macro kunnen worden ingevuld.
+
+![Dialoogvenster Macro opnemen.](images/macro/record-macro-dialogbox.png){#fig-record-macro-dialogbox}
+
+**Macronaam**
+
+Elke macro moet verplicht een naam hebben. Standaard vult Excel hiervoor in de tekst `Macro` gevolgd door een cijfer. Deze naam kun je wijzigen door hiervoor een andere naam in te typen.
+
+Het eerste teken van de macronaam moet verplicht een letter zijn. Daarna kun je andere tekens gebruiken zoals letters, cijfers of het onderstrepingsteken. Spaties zijn in een macronaam niet toegestaan. Geef macro's altijd passende namen waaruit blijkt wat de macro gaat doen. Het onderstrepingsteken kan als scheidingsteken tussen woorden gebruikt worden.
+
+**Sneltoets**
+
+Macro's kun je starten via het menu, maar desgewenst ook via zogenaamde sneltoetsen. Dit zijn toetscombinaties van de [CTRL]{.uicontrol} toets met een lettertoets. Wanneer je aan de macro een sneltoets wilt toewijzen dan kun je de te gebruiken letter in het vak typen. Zet je daar bijvoorbeeld de letter A in, dan is de toetscombinatie [CTRL A]{.uicontrol} de sneltoets waarmee je de macro kunt starten.
+
+Het is niet verplicht om aan een macro een sneltoets toe te wijzen, maar voor veel gebruikte macro's kan dit wel handig zijn.
+
+**Macro opslaan in**
+
+De plekken waar een macro kan worden opgeslagen zijn:
+
++ Deze werkmap
++ Nieuwe werkmap
++ Persoonlijke Macrowerkmap
+
+Het is wel belangrijk om hier van te voren goed over na te denken. Wanneer de macro alleen in de actieve werkmap gebruikt gaat worden, dan kies je voor [Deze werkmap]{.uicontrol}. Moet de macro ook in andere werkmappen gebruikt worden, dus eigenlijk altijd beschikbaar zijn, dan is [Persoonlijke Macrowerkmap]{.uicontrol} de beste keuze. De keuze [Nieuwe werkmap]{.uicontrol} wordt eigenlijk nooit gebruikt.
+
+Je moet de opslagplek altijd specificeren. De standaardwaarde is [Deze werkmap]{.uicontrol}.
+
+**Beschrijving**
+
+Het is aan te bevelen om een korte beschrijving te geven van wat de macro doet. Bij het maken van de macro weet je dit wel, maar enige tijd later ben je het misschien vergeten. Het is niet verplicht om een beschrijving op te geven.
+
+::: {.callout-note}
+Alle gemaakte keuzes kunnen in een later stadium altijd gewijzigd worden.
+:::
+
+## Macro Celopmaak {#sec-macros-cellformat}
+
+*Informatiebehoefte*
+
+Maak een macro die een geselecteerde cel opmaakt met het lettertype Comic Sans MS, vet, cursief, 16 pt en rood. Verder moet de kolombreedte aangepast worden aan de breedte van de tekst in de cel. De naam van de macro moet worden [Celopmaak]{.varname}.
+
+::: {#prp-macros-cellformat-record}
+**Macro opnemen**
+
+1. Begin met een nieuwe werkmap en voer in een willekeurige cel een tekst in.
+
+2. Selecteer de cel met de tekst.
+
+3. Kies  [tab Ontwikkelaars > Macro opnemen (groep Programmacode)]{.uicontrol}.
+
+4. Geef in het dialoogvenster de naam voor de macro en voeg een beschrijving toe.
+
+![Eigenschappen macro Celopmaak.](images/macro/record-macro-cellformat.png){#fig-record-macro-cellformat}
+
+5. Klik op [OK]{.uicontrol}.
+
+6. Voer de volgende acties uit op de geselecteerde cel: [Rechter muisklik > Celeigenschappen > tab Lettertype]{.uicontrol} en stel het volgende in:
+
+   + Lettertype: Comic Sans MS
+   + Tekenstijl: Vet en cursief
+   + Punten: 16
+   + Kleur: Rood
+
+7. Kies tab [Start > Opmaak (groep Cellen) > Kolombreedte AutoAanpassen]{.uicontrol}.
+
+8. Kies tab [Ontwikkelaars > Opname stoppen (groep Programmacode)]{.uicontrol}
+
+![Knop om te stoppen met het opnemen van de macro.](images/macro/record-macro-stop.png){#fig-record-macro-stop}
+
+:::
+
+Nu kan de macro getest worden op de juiste werking.
+
+::: {#prp-macros-cellformat-test}
+**Macro testen**
+
+1. Voer in een andere cel een tekst in en selecteer deze cel.
+
+2. Kies [tab Ontwikkelaars > Macro's (groep Programmacode)]{.uicontrol}.
+
+3. Selecteer macro [Celopmaak]{.uicontrol} en klik [Uitvoeren]{.uicontrol}.
+
+![Dialoogvenster macro celopmaak.](images/macro/macro-cellformat-run.png){#fig-macro-cellformat-run}
+
+4. Controleer of de cel correct is opgemaakt.
+
+5. Sla de werkmap op als [Excel-werkmap met macro's (*.xslm)]{.uicontrol} op onder de naam `Celopmaak.xlsm`.
+
+![Opslaan van het werkblad met macro's.](images/macro/macro-cellformat-save.png){#fig-macro-cellformat-save}
+
+:::
+
+::: {.callout-warning}
+Wanneer je een werkmap met macro's wilt opslaan, dan probeert Excel deze standaard op te slaan als een Excel-werkmap met de extensie `.xlsx`. Echter in dit formaat kunnen geen macro's worden opgeslagen. Je moet dit zelf wijzigen in een **Excel-werkmap met macro's** met de extensie `.xlsm`.
+:::
+
+## Wijzigen van een macro {#sec-macros-cellformat-editing}
+
+Om deze taak uit te kunnen voeren is het nodig dat de macro [Celopmaak]{varname} in @prp-macros-cellformat-test gemaakt is.
+
+Een eenmaal gemaakte macro kan gewijzigd worden zonder de macro weer helemaal opnieuw op te nemen. Zowel de opties van de macro als de programmacode kunnen bekeken en gewijzigd worden.
+
+*Informatiebehoefte*
+
+Breng de volgende wijzigingen aan in de macro [Celopmaak]{.varname}:
+
++ Ken sneltoets [Control t]{.uicontrol} toe.
++ Wijzig lettergrootte in 18 pt.
+
+::: {#prp-macros-cellformat-editing}
+Ga verder met het bestand uit @prp-macros-cellformat-test.
+
+1. Open indien nodig het bestand.
+
+2. Kies tab [Ontwikkelaars > Macro's (groep Programmacode)]{.uicontrol}.
+
+Je krijgt nu weer het dialoogvenster met beschikbare macro's, zie @fig-macro-cellformat-run.
+
+3. Selecteer macro [Celopmaak]{.varname} en kies [Opties]{.uicontrol}.
+
+![Opties voor macro celopmaak.](images/macro/macro-cellformat-options.png){#fig-macro-cellformat-options}
+
+4. Zet in het vakje voor de sneltoets de letter `t` en wijzig in de beschrijving 16pt in 18pt. Klik daarna op [OK]{.uicontrol}.
+
+5. Kies nu in het dialoogvenster voor [Bewerken]{.uicontrol}.
+
+Een nieuw venster Microsoft Visual Basic verschijnt nu met in het codescherm de programmacode van de macro. In deze code kom je op twee plaatsen tegen dat de tekstgrootte 16 wordt:
+
++ `Maakt cel op in Comic Sans, 16pt, vet, cursief en rood`
++ `.Size = 16`
+
+6. Wijzig dit op beide plaatsen in `18`.
+
+7. Sluit het venster Microsoft Visual Basic via de sluitknop in de rechterbovenhoek.
+
+8. Test de macro op een cel met tekst via de sneltoets [Ctrl t]{.uicontrol}.
+
+:::
+
+## Opdrachtknop maken {#sec-macros-cellformat-commandbutton}
+
+Je kunt een macro op een van de volgende manieren uitvoeren:
+
++ Via het menu [tab Ontwikkelaars > Macro's > macro selecteren > Uitvoeren]{.uicontrol}.
++ Via een sneltoets wanneer er eentje aan de macro is toegewezen.
++ Via een opdrachtknop voor de macro.
+
+In deze taak wordt voor de eerder gemaakte macro [Celopmaak]{.varname} een opdrachtknop op het werkblad gemaakt.
+
+::: {#prp-macros-cellformat-commandbutton}
+Ga verder met het bestand uit @prp-macros-cellformat-editing.
+
+1. Open indien nodig het bestand.
+
+2. Kies [tab Ontwikkelaars > Invoegen (groep Besturingselementen)]{.uicontrol}.
+
+3. Klik op het besturingselement [Knop (formulierbesturingselement)]{.uicontrol}.
+
+![Besturingselementen, de gemarkeerde is de Knop (formulierbesturingselement).](images/macro/form-controls.png){#fig-form-controls}
+
+De cursor verandert nu in een `+` waarmee je een rechthoek voor de knop op het werkblad kunt tekenen.
+
+4. Druk de linkermuisknop in en teken hiermee ergens op het werkblad een rechthoek voor de gewenste afmetingen van de knop. Laat daarna de linkermuisknop los. Het dialoogvenster ***Macro toewijzen aan object*** verschijnt dan.
+
+![Macro celopmaak koppelen aan knop.](images/macro/macro-cellformat-assign.png){#fig-macro-cellformat-assign}
+
+5. Selecteer macro [Celopmaak]{.uicontrol} en klik op [OK]{.uicontrol}.
+
+De getekende rechthoek verandert in een knop met daarop een tekst als `Knop 1`.
+
+6. Selecteer de tekst op de knop en wijzig deze in een toepasselijker tekst, bijvoorbeeld `Cel opmaken`.
+
+![Opdrachtknop, links de standaardknop, rechts met de gewijzigde tekst op de knop.](images/macro/macro-cellformat-button.png){#fig-macro-cellformat-button}
+
+7. Hef de selectie van de knop op door op een willekeurige plek op het werkblad te klikken.
+
+8. Test de werking van de macro op een cel met tekst via de opdrachtknop.
+
+:::
+
+## Beveiliging macro's {#sec-macros-security}
+
+Een overzicht van de beveiligingsinstellingen en hoe deze te wijzigen.
+
+**Instellingen wijzigen**
+
+Wanneer je de beveiligingsinstellingen van macro's wilt bekijken of wijzigen dan moet je klikken op [tab Ontwikkelaars > Macrobeveiliging (groep Programmacode)]{.uicontrol}.
+
+![Opdrachtknop macrobeveiling op het lint.](images/macro/macro-security-button.png){#fig-macro-security-button}
+
+Dan verschijnt het dialoogvenster ***Vertrouwenscentrum***.
+
+![Macro instellingen in het vertrouwenscentrum.](images/macro/trust-center-macro-settings.png){#fig-trust-center-macro-settings}
+
+
+|Instelling                       |Toelichting                                                                    |
+|---------------------------------|-------------------------------------------------------------------------------|
+|Alle macro's uitschakelen, zonder melding|Kies deze optie wanneer je macro's niet vertrouwt. Alle macro's in documenten worden uitgeschakeld, evenals de beveiligingswaarschuwingen over macro's. Documenten die niet-ondertekende macro's bevatten die je wel vertrouwt, kun je opslaan op een vertrouwde locatie. Documenten op vertrouwde locaties worden uitgevoerd zonder controle door het beveiligingssysteem.|
+|Alle macro's uitschakelen, met melding|Dit is de standaardinstelling. Kies deze optie wanneer je macro's wilt uitschakelen, maar wel beveiligingswaarschuwingen wilt ontvangen als er macro's aanwezig zijn. Op deze manier kun je per macro kiezen of je de desbetreffende macro wilt inschakelen.|
+|Alle macro's uitschakelen, behalve digitaal ondertekende|De maker van een macro kan deze digitaal ondertekenen. Wanneer je deze als een vertrouwde instantie aanmerkt dan wordt de macro zonder waarschuwingen uitgevoerd. Alle niet-ondertekende macro´s worden zonder melding uitgeschakeld.|
+|Alle macro's inschakelen |Kies deze optie wanneer je alle macro's wilt uitvoeren. Deze optie wordt niet aanbevolen want de computer wordt hierdoor kwetsbaar schadelijke macro's.|
+
+:  Overzicht Macro instellingen. {#tbl-macro-security-settings tbl-colwidths="[25,75]"}
+
+
+## Tips {#sec-macros-tips}
+
+### Relatieve verwijzingen {#sec-macros-tips-references}
+
+In opgenomen macro's wordt standaard gebruikgemaakt van absolute celverwijzingen. Dit houdt in dat de exacte locaties van cellen, rijen en kolommen in de programmacode van de macro worden opgenomen. De macro werkt dan altijd op dezelfde adressen.
+
+Wanneer je relatieve verwijzingen in de macro wilt gebruiken dan moet je klikken op de knop [Relatieve verwijzingen]{.uicontrol}.
+
+![Relatieve verwijzingen in macro's.](images/macro/record-macro-relative-references.png){#fig-record-macro-relative-references}
+
+::: {.callout-warning}
+Deze instelling blijft actief totdat je de instelling ongedaan maakt door weer op deze knop te klikken.
+:::
+
+### Macro's verwijderen {#sec-macros-tips-deleting}
+
+Macro's kunnen verwijderd worden via [tab Ontwikkelaars > Macro's (groep Programmacode) > Macro selecteren > Verwijderen]{.uicontrol}.
+
+## Opgaven {#sec-macros-exercises}
+
+::: {#exr-macr001}
+**Achtergrondkleur (macr001)**
+
+Neem een macro op die de actieve cel een grijze achtergrondkleur geeft.
+
+`r hide("Antwoord")`
+Een mogelijke oplossing.
+
+```
+Sub Achtergrond_Grijs()
+'
+' Lichtgrijze achtergrond voor cel
+'
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = -0.14996795556505
+        .PatternTintAndShade = 0
+    End With
+End Sub
+```
+`r unhide()`
+:::
+
+::: {#exr-macr002}
+**Procentuele opmaak (macr002)**
+
+Neem een macro op met de naam ProcentOpmaak die een getal opmaakt als procenten met 1 decimaal en het getal in de cel centreert.
+
+`r hide("Antwoord")`
+Een mogelijke oplossing.
+
+```
+Sub Procentopmaak()
+'
+' Getal als percentage met 1 dec. en horizontaal gecentreerd
+'
+    Selection.NumberFormat = "0.0%"
+    With Selection
+        .HorizontalAlignment = xlCenter
+    End With
+End Sub
+```
+`r unhide()`
+:::
+
+::: {#exr-macr003}
+**Opmaak cel A1 (macr003)**
+
+Neem een macro op die het volgende uitvoert:
+
++ Rijhoogte rij 1 wordt 18
++ Kolombreedte van de eerste kolom wordt 3
++ Tekst in cel A1 wordt Tahoma 14, vet, blauwe kleur
+
+`r hide("Antwoord")`
+Een mogelijke oplossing.
+
+```
+Sub OpmaakA1()
+'
+' opgave macr003
+'
+    Rows("1:1").Select
+    Selection.RowHeight = 18
+    Columns("A:A").Select
+    Selection.ColumnWidth = 3
+    Range("A1").Select
+    With Selection.Font
+        .Name = "Tahoma"
+        .Size = 14
+        .Bold = True
+        .Color = -4165632
+    End With
+End Sub
+```
+`r unhide()`
+:::
+
+::: {#exr-macr004}
+**Rasterlijnen afdrukken (macr004)**
+
+Neem een macro op die er voor zorgt dat bij het afdrukken ook de rasterlijnen worden afgedrukt.
+
+::: {.callout-note}
+Deze eigenschap is te vinden bij [tab Pagina-indeling > Pagina-instelling > tab Blad]{.uicontrol}.
+:::
+
+`r hide("Antwoord")`
+Een mogelijke oplossing.
+
+```
+Sub Print_Rasterlijnen()
+'
+' opgave macr004
+'
+    With ActiveSheet.PageSetup
+        .PrintGridlines = True
+    End With
+End Sub
+```
+`r unhide()`
+:::
+

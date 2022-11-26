@@ -1,0 +1,369 @@
+# Opmaak werkblad en gegevens {#sec-formatting}
+
+::: {.callout-note appearance="simple" icon="false"}
+-   Het belang van eerst selecteren en dan pas opmaken.
+-   Aanpassing kolombreedte en rijhoogte.
+-   Opmaak van getallen en tekst.
+-   Voorgedefinieerde opmaakstijlen.
+-   Kopieren van de opmaak van een cel.
+-   Voorwaardelijke opmaak.
+:::
+
+Excel biedt veel mogelijkheden om het uiterlijk van het werkblad en de gegevens in de cellen op te maken. Hierdoor wordt een werkblad beter leesbaar en presenteerbaar.
+
+Je kunt bepaalde opmaakkenmerken (bijvoorbeeld lettertype)op het hele werkblad aanbrengen, maar ook op afzonderlijke cellen of celreeksen. De werkwijze is meestal hetzelfde, het hangt er maar van af wat geselecteerd is.
+
+::: callout-important
+Eerst selecteren, dan de opdracht voor het opmaken uitvoeren.
+:::
+
+Het gehele werkblad kun je selecteren via de knop links van de eerste kolom en boven de eerste rij: ![Knop gehele werkblad selecteren](images/common/worksheet-select.png)
+
+## Kolombreedte {#sec-formatting-column-width}
+
+Het is mogelijk dat een kolom niet breed genoeg is om de volledige inhoud van een cel te tonen. Wanneer de cel een tekst als inhoud heeft dan kan het zijn dat alleen dat deel van de tekst getoond wordt dat in de cel past. Wanneer de cel een getal als inhoud heeft dan worden "hashes" getoond: `####`.
+
+In een werkblad kun je de kolombreedte opgeven van 0 (nul)tot en met 255. Deze waarde stelt het aantal tekens voor dat kan worden weergegeven in een cel die is opgemaakt met het standaardlettertype. De standaardbreedte van kolommen in Excel is 8,43. Er passen dan 8 tekens van het standaardlettertype in een kolom. Als de breedte van een kolom 0 is, dan wordt de kolom verborgen.
+
+Er zijn verschillende manieren om de breedte van kolommen aan te passen.
+
+-   Dubbelklik op de rechterrand van de kolomkop. De breedte van de kolom wordt nu automatisch ingesteld op de langste tekst in de kolom.
+
+-   Plaats de muisaanwijzer boven de rechterrand van de kolomkop, druk dan de linkermuisknop en sleep de rechterrand naar links of naar rechts tot de kolom de gewenste breedte heeft. Tijdens het slepen toont Excel in een klein infoschermpje de actuele breedte van de kolom.
+
+    ![Kolombreedte aanpassen door slepen](images/formatting/columnwidth-drag.png)
+
+-   Klik met de rechtermuisknop op de kolomkop en kies in het snelmenu voor [Kolombreedte]{.uicontrol}. In het dialoogvenster kun je dan de gewenste breedte invoeren, klik daarna [OK]{.uicontrol}.
+
+    ![Kolombreedte opgeven](images/formatting/columnwidth-set.png)
+
+-   Selecteer een cel in de kolom waarvan de breedte aangepast moet worden. Kies dan [Start \> Opmaak (groep Cellen) \> Kolombreedte]{.uicontrol}. Je krijgt dan hetzelfde dialoogvenster als hiervoor.
+
+::: callout-note
+1.  Je kunt van meerdere kolommen tegelijk de breedte aanpassen. Selecteer eerst deze kolommen eerst te selecteren met hulp van de [SHIFT]{.uicontrol} toets of [CTRL]{.uicontrol} toets.
+
+2.  Je kunt de breedte van alle kolommen in het werkblad aanpassen via [Start \> Opmaak (groep Cellen) \> Standaardbreedte]{.uicontrol}.
+:::
+
+## Rijhoogte {#sec-formatting-row-height}
+
+De mogelijkheden om de hoogte van een rij in te stellen.
+
+Normaal zal de rijhoogte zich automatisch aanpassen aan de grootte van de gegevens in de rij. Maar soms is het voor opmaakdoeleinden nodig om de rijhoogte aan te passen. Je kunt de rijhoogte opgeven van 0 (nul)tot en met 409. Deze waarde geeft de hoogte in punten aan (1 punt is ongeveer gelijk aan 0,035 cm). De standaardrijhoogte bedraagt 12,75 punten (ongeveer 0,4 cm). Als de hoogte van een rij 0 is, wordt de rij verborgen.
+
+Er zijn verschillende manieren om de hoogte van een rij aan te passen.
+
+-   Dubbelklik op de grenslijn onder de rijkop. De hoogte van de rij wordt nu passend gemaakt aan de inhoud van de rij.
+
+-   Plaats de muisaanwijzer boven de onderrand van de rijkop, druk dan de linkermuisknop in en sleep de onderrand naar boven of naar onderen tot de rij de gewenste hoogte heeft. Tijdens het slepen toont Excel in een klein infoschermpje de actuele hoogte van de rij.
+
+    ![Rijhoogte aanpassen door slepen](images/formatting/rowheight-drag.png)
+
+-   Klik met de rechtermuisknop op de rijkop en kies in het snelmenu voor [Rijhoogte]{.uicontrol}. In het dialoogvenster kun je dan de gewenste hoogte invoeren, klik daarna [OK]{.uicontrol}.
+
+    ![Rijhoogte opgeven](images/formatting/rowheight-set.png)
+
+-   Selecteer een cel in de rij waarvan de hoogte aangepast moet worden. Kies dan [Start \> Opmaak (groep Cellen) \> Rijhoogte]{.uicontrol}. Je krijgt dan hetzelfde dialoogvenster als hiervoor.
+
+::: callout-note
+Je kunt van meerdere rijen tegelijk de hoogte aanpassen door deze rijen eerst te selecteren met ingedrukte [Ctrl]{.uicontrol} toets.
+:::
+
+## Lettertype {#sec-formatting-font-group}
+
+De [groep Lettertype (tab Start)]{.uicontrol} kent een aantal knoppen om het uiterlijk van de tekst te wijzigen. Om deze wijzigingen toe te passen moet je eerst de cel(len)selecteren en daarna de opdrachtknop gebruiken. De mogelijkheden in deze groep zijn:
+
+-   ![](images/formatting/font.png): Lettertype, keuzelijst via de pijl.
+
+-   ![](images/formatting/font-size.png): Tekengrootte, keuzelijst via de pijl.
+
+-   ![](images/formatting/font-size-adjust.png): Tekengrootte vergroten/verkleinen, steeds in stapjes van 2 punten.
+
+-   ![](images/formatting/font-style.png): Tekenstijl, achtereenvolgens: vet, cursief, onderstreept. De soort onderstreping kan via de keuzepijl bepaald worden.
+
+-   ![](images/formatting/font-color.png): Tekstkleur, de kleur kan gekozen worden via de keuzepijl.
+
+-   ![](images/formatting/font-fillcolor.png): Opvulkleur, de kleur kan gekozen worden via de keuzepijl.
+
+## Celranden {#sec-formatting-cell-border}
+
+De mogelijkheden om randen rond een cel of celreeks te plaatsen.
+
+Randen worden vaak gebruikt om een groep cellen visueel bij elkaar houden. Ook onder optellingen wordt vaak een lijn onder de getallen gezet en daaronder het totaal. Randen zijn er dus vooral voor lay-out doeleinden.
+
+Om randen rond een cel of een groep van cellen aan te brengen ga je als volgt te werk:
+
+1.  Selecteer de cel of de reeks cellen.
+
+2.  Kies [Start \> pijlpunt knop Randen (groep Lettertype)]{.uicontrol}.![Knop celranden](images/formatting/cell-border-button.png)
+
+3.  Kies de gewenst stijl uit de lijst Randen.
+
+![Lijst met stijlen voor de randen van een cel.](images/formatting/cell-border-list.png){#fig-cell-border-list}
+
+Indien de gewenste randstijl niet in het menu voorkomt, klik dan op [Meer randen...]{.uicontrol}. Excel toont dan het dialoogvenster Celeigenschappen met het [tabblad Rand]{.uicontrol} geselecteerd.
+
+## Uitlijning inhoud cel {#sec-formatting-cell-alignment}
+
+Over horizontale en verticale uitlijning in een cel, maar ook gedraaide tabelkoppen.
+
+Een cel kent een verticale en een horizontale uitlijning. Standaard is de verticale uitlijning voor alle inhoud aan de onderkant van de cel. De standaard horizontale uitlijning is voor tekst links, voor getallen rechts en voor logische waarden (WAAR of ONWAAR)gecentreerd. Je kunt al deze uitlijningen wijzigen zoals in @fig-cell-alignment-example te zien is.
+
+![Voorbeelden van uitlijning.](images/formatting/cell-alignment-example.png){#fig-cell-alignment-example}
+
+Om een bepaalde uitlijning toe te passen selecteer je eerst de cel(len)en klik daarna op een van de knoppen in [Start \> groep Uitlijning]{.uicontrol}.
+
+![Groep uitlijning op het lint.](images/formatting/ribbon-group-alignment.png){#fig-ribbon-group-alignment}
+
+De knoppen spreken voor zich en wanneer je met de muis boven een knop blijft hangen krijg je nog wat meer uitleg.
+
+In het voorbeeld zijn de volgende opties toegepast.
+
+Verticale uitlijning
+
+:   De mogelijkheden zijn: boven, gecentreerd, onder. Toegepast in de cellen A1:A3.
+
+Horizontale uitlijning
+
+:   De mogelijkheden zijn: links, gecentreerd, rechts. Toegepast in de cellen A5:A7.
+
+Inspringen
+
+:   De mogelijkheden zijn: inspringen vergroten, inspringen verkleinen. Toegepast in de cellen A10:A12.
+
+Stand
+
+:   Via de knop krijg je een aantal voorgedefinieerde mogelijkheden. Toegepast in D13:F13 en in B14.
+
+Tekstterugloop
+
+:   De tekst komt op meerdere regels in de cel. Hiervoor wordt de rijhoogte groter gemaakt. Een lange tekst neemt hierdoor minder horizontale ruimte in. Toegepast in D3:F3.
+
+::: callout-note
+Wanneer alle terugloop tekst niet zichtbaar is, dan kan dat komen omdat de rijhoogte op een bepaalde waarde is gezet. Om alle terugloop tekst zichtbaar te maken, kies [Start \> Opmaak (groep Cellen \> Rijhoogte AutoAanpassen]{.uicontrol}.
+:::
+
+Samenvoegen en centreren
+
+:   Cellen worden samengevoegd tot een grotere cel. Dit wordt vaak gebruikt om labels over meerdere rijen of kolommen te laten lopen. Het samenvoegen kan zowel horizontaal als verticaal. Toegepast in B14:B16.
+
+## Opmaak getallen {#sec-formatting-numbers}
+
+Getallen kunnen op allerlei manieren worden weergegeven, met of zonder cijfers achter de komma, met een valutasymbool, met diverse scheidingstekens, in een datum- of tijdnotatie, enz. En wanneer de voorgedefinieerde opmaakmogelijkheden niet voldoen kun je ook nog zelf een opmaak definieren.
+
+Bij de invoer van sommige getallen worden deze automatisch in de juiste opmaak gezet.
+
+-   Wanneer je in een cel intypt `19%` dan herkent Excel het procentsymbool en toont de inhoud als een percentage: 19%. De inhoud van de cel wordt dan 0,19 en niet 19.
+
+-   Wanneer je in een cel intypt `€123,45` dan ziet Excel dat het om een geldbedrag gaat. De inhoud van de cel wordt dan 123,45 en de inhoud wordt rechts uitgelijnd getoond als € 123,45.
+
+-   Wanneer je in een cel intypt `1/2` dan denkt Excel dat het om een datum gaat en wordt de inhoud getoond als 1-feb.
+
+::: callout-note
+Excel slaat datums en tijden op als seriële getallen, te beginnen bij 1 januari 1900 als nummer 1. Nummer 2 is dan 2 januari 1900, enz. En wanneer je 1/2 in een cel intypt, dan voegt Excel daar autmatisch het huidige jaartal aan toe, dus bijvoorbeeld 1-2-2013 en de echte inhoud van de cel is dan 41306.
+:::
+
+Om snel een opmaak aan een getal toe te kennen kun je het beste gebruik maken van de opdrachtknoppen in [Start \> groep Getal]{.uicontrol}
+
+![Groep getal op het lint.](images/formatting/ribbon-group-number.png){#fig-ribbon-group-number}
+
+In het midden staan de opdrachtknoppen voor een paar veel gebruikte opmaakstijlen:
+
+-   ![](images/formatting/number-format-accounting.png): Financiële getalnotatie. De keuzepijl geeft een paar valutasymbolen.
+
+-   ![](images/formatting/number-format-percent.png): Procentnotatie.
+
+-   ![](images/formatting/number-format-thousands.png): Duizendtalnotatie
+
+-   ![](images/formatting/number-format-decimal-increase.png): Meer decimalen.
+
+-   ![](images/formatting/number-format-decimal-decrease.png): Minder decimalen
+
+Bovenaan staat de actuele opmaak van de geselecteerde cel, bijvoorbeeld [Standaard]{.uicontrol}, met daarnaast een keuzepijl om een van de voorgedefinieerde opmaakstijlen te kiezen. In de afbeelding hierna zie je deze lijst voor een cel met als inhoud 0,19. Hieruit kun je dan een andere opmaakstijl kiezen.
+
+![Lijst met opmaakstijlen voor getallen.](images/formatting/number-format-list.png){#fig-number-format-list}
+
+Wanneer de gewenste opmaak niet in de lijst voorkomt dan kun je klikken op [Meer getalnotaties...]{.uicontrol}. Dan verschijnt het dialoogvenster ***Celeigenschappen*** met de [tab Getal]{.uicontrol} geselecteerd. Hier kun je zelf een opmaak definieren.
+
+## Getalopmaak {#sec-formatting-numberformat-task}
+
+In het volgende voorbeeld is een deel van een werkblad te zien met daarin vele toepassingen van getalopmaak. Alle opmaak is met de voorgedefinieerde stijlen en/of de opdrachtknoppen voor getalopmaak aangebracht.
+
+![Voorbeeld van een opmaak van getallen.](images/formatting/number-format-example.png){#fig-number-format-example}
+
+::: {#prp-formatting-numberformat-task}
+[Bestand]{.smallcaps}: `Getalopmaak.xlsx`
+
+1.  Open het bestand.
+
+2.  Maak het werkblad op zoals in de afbeelding te zien is. Gebruik hierbij de mogelijkheden die beschikbaar zijn via de [groep Getal (tabblad Start]{.uicontrol}.
+
+`r hide("Hint")` + Kolom A, getallen opgemaakt als tekst. + Kolom B, financiële notatie. + Kolom C, getallen eerst opgemaakt met duizendtal notatie daarna aantal decimalen verminderen tot 0. + Kolom D, getallen ingevoerd met procentsymbool daarna aantal decimalen aangepast. + Kolom E, datums ingevoerd daarna korte datumnotatie voor de eerste twee en lange datumnotatie voor de laatste twee. `r unhide()`
+
+:::
+
+## Opmaak kopiëren / wissen {#sec-formatting-cell-copy}
+
+De opmaak en inhoud van een cel worden afzonderlijk opgeslagen. Je kunt daarom dan ook inhoud en opmaak afzonderlijk van elkaar kopiëren en/of wissen.
+
+#### Opmaak kopieren {.unnumbered}
+
+De snelste manier om de opmaak van een cel te kopiëren naar een andere cel is door gebruik te maken van de knop [Opmaak kopiëren/plakken]{.uicontrol}.
+
+De werkwijze is als volgt:
+
+1.  Selecteer de cel waarvan je de opmaak wilt kopiëren.
+
+2.  Kies [Start \> ![](images/formatting/format-painter.png) (groep Klembord)]{.uicontrol}. De muisaanwijzer verandert nu in een kwastje (![](images/formatting/mouse-pointer-formatpainter.png)).
+
+3.  Selecteer de cel(len)waarop je de opmaak over wilt brengen.
+
+4.  Laat de muisknop los
+
+::: callout-note
+Wanneer je dubbelklikt op de knop [Opmaak kopiëren/plakken]{.uicontrol} dan kun je meerdere plakbewerkingen achter elkaar uitvoeren. Om deze toestand weer op te heffen kun je opnieuw klikken op de knop [Opmaak kopiëren/plakken]{.uicontrol} of drukken op de toets [Esc]{.uicontrol}.
+:::
+
+#### Opmaak wissen {.unnumbered}
+
+De opmaak van cellen kun je als volgt wissen:
+
+1.  Selecteer de cel(len)waarvan je de opmaak wilt wissen.
+
+2.  Kies [Start \> Wissen (groep Bewerken) \> Opmaak wissen]{.uicontrol}.
+
+![Plek op het lint van de opdracht wissen.](images/formatting/format-clear.png){#fig-format-clear}
+
+::: callout-note
+1.  Via deze weg kun je behalve de opmaak, ook de inhoud of beide wissen.
+
+2.  Met de toets DELETE wis je alleen de inhoud van een cel. De opmaak van de cel (lettertype, kleuren, uitlijning, getalopmaak, enz.)wordt niet gewijzigd en blijft gewoon aanwezig in de lege cel.
+:::
+
+## Tabelstijlen {#sec-formatting-table-style}
+
+Een oefening om een lijst op te maken met een van de voorgedefinieerde stijlen.
+
+Excel kent een aantal voorgedefinieerde stijlen om een lijst (tabel)snel en gemakkelijk op te maken.
+
+::: {#prp-formatting-table-style}
+[Bestand]{.smallcaps}: `Personeel.xlsx`
+
+1.  Open het bestand.
+
+2.  Selecteer een willekeurige cel in het gegevensgebied.
+
+3.  Kies [Start \> Opmaken als tabel (groep Stijlen)]{.uicontrol}.
+
+4.  Kies uit de getoonde voorbeelden een stijl, bijvoorbeeld [Tabelstijl normaal 4]{.uicontrol}.
+
+![Dialoogvenster opmaken als tabel.](images/formatting/tablestyle-dialogbox.png){#fig-tablestyle-dialogbox}
+
+5.  Klik op [OK]{.uicontrol}.
+
+![Resultaat tabelopmaak.](images/formatting/tablestyle-result.png){#fig-tablestyle-result}
+
+:::
+
+## Voorwaardelijke opmaak {#sec-formatting-conditional}
+
+Het is mogelijk om de opmaak van een cel af te laten hangen van bepaalde voorwaarden. Zo zou bijvoorbeeld de achtergrondkleur rood gemaakt kunnen worden wanneer de waarde in de cel kleiner dan 6 is. Dit heet een voorwaardelijke opmaak. De opmaak wordt toegepast wanneer aan de voorwaarde(n)wordt voldaan. Zo niet, dan wordt de "gewone" opmaak toegepast.
+
+Je kunt bij de voorwaardelijke opmaak elke combinatie van de volgende opmaakmogelijkheden toepassen: getalopmaak, lettertype, rand en achtergrond.
+
+Voor de voorwaarde wordt de getalswaarde in de cel(len)vergeleken met een andere waarde. Het is ook mogelijk om de getalswaarde te vergelijken met een reeks andere waarden om zo vast te stellen of er van het gemiddelde afgeweken wordt, of bijvoorbeeld bij de top 3 hoort. Er is geen beperking in het aantal voorwaarden.
+
+### Opmaak met 1 voorwaarde {#sec-formatting-conditional-1-task}
+
+Een docent heeft in een spreadsheet de cijfers van zijn studenten staan en wil alle onvoldoendes (de cijfers lager dan 6)van een lichtrode achtergrond voorzien.
+
+::: {#prp-formatting-conditional-1-task}
+[Bestand]{.smallcaps}: `Cijfers.xlsx`
+
+1.  Open het bestand.
+
+2.  Selecteer alle cijfers.
+
+3.  Kies [Start \> Voorwaardelijke opmaak (Groep Stijlen) \> Markeringsregels voor cellen \> Kleiner dan]{.uicontrol} en breng in het dialoogvenster de gewenste voorwaarde en opmaak aan.
+
+![Dialoogvenster voorwaardelijke opmaak voor cellen met een waarde kleiner dan een bepaalde waarde.](images/formatting/format-conditional-less.png){#fig-format-conditional-less}
+
+4.  Klik op [OK]{.uicontrol}. Alle onvoldoendes hebben nu een lichtrode achtergrondkleur gekregen.
+
+Test de werking van de voorwaardelijke opmaak door de waarde in sommige cellen te veranderen van een onvoldoende in een voldoende en omgekeerd. De achtergrondkleur moet zich dan aanpassen.
+
+:::
+
+### Opmaak met 2 voorwaarden {#sec-formatting-conditional-2-task}
+
+In een spreadsheet wordt de gerealiseerde omzet van de verkopers bijgehouden alsmede de omzet die gehaald moet worden. Sommigen hebben de doelstellingen niet gehaald. De opdracht is om de gerealiseerde omzet van de volgende achtergrondkleur te voorzien: groen wanneer de doelstelling behaald is, rood wanneer de doelstelling niet behaald is.
+
+::: {#prp-formatting-conditional-2-task}
+[Bestand]{.smallcaps}: `Verkopen-kw1.xlsx`
+
+1.  Open het bestand.
+
+2.  Selecteer alle cellen met de behaalde omzet.
+
+3.  Kies [Start \> Voorwaardelijke opmaak (Groep Stijlen) \> Regels beheren]{.uicontrol}.
+
+![Beheer voorwaardelijke opmaak regels](images/formatting/format-conditional-rules-manage.png){#fig-format-conditional-rules-manage}
+
+4.  Klik op [Nieuwe regel]{.uicontrol}. Het dialoogvenster Nieuwe opmaakregel verschijnt.
+
+5.  Selecteer [Alleen cellen opmaken met]{.uicontrol}, specificeer dan Celwaarde kleiner dan =B2 en kies een rode kleur bij [Opmaak]{.uicontrol}.
+
+![Dialoogvenster nieuwe opmaakregel.](images/formatting/format-conditional-rules-new.png){#fig-format-conditional-rules-new}
+
+6.  Klik op [OK]{.uicontrol}. Het dialoogvenster ***Regels voorwaardelijke opmaak beheren*** verschijnt weer.
+
+7.  Klik op [Nieuwe Regel]{.uicontrol} en maak op dezelfde manier een nieuwe regel met de volgende instellingen:
+
+![De tweede regel. De hier opgegeven kleur is Groen.](images/formatting/format-conditional-greater.png){#fig-format-conditional-greater}
+
+8.  Klik op [OK]{.uicontrol}. In het beheerscherm staan nu de volgende twee regels:
+
+![De twee regels voor de voorwaardelijke opmaak.](images/formatting/format-conditional-rules-2.png){#fig-format-conditional-rules-2}
+
+9.  Klik op [OK]{.uicontrol}. De gewenste opmaak is nu aangebracht.
+
+Test de werking van de voorwaardelijke opmaak door wat waarden te veranderen en te controleren of de opmaak dan wijzigt.
+
+:::
+
+### Opmaak voor beste/slechtste 10% {#sec-formatting-conditional-bottom10pct-task}
+
+Het is mogelijk om een voorwaarde te maken die afhangt van alle andere waarden in een reeks. Zo kun je bijvoorbeeld een voorwaardelijke opmaak maken voor de top 3 van een reeks, of de slechtste of beste 10% van de waarden.
+
+In een spreadsheet staan allerlei gegevens van autos. In een van de kolommen staat het brandstofverbruik. De opdracht is om een groene achtergrond te geven aan de 10% auto's met het laagste brandstofverbruik.
+
+::: {#prp-formatting-conditional-bottom10pct-task}
+[Bestand]{.smallcaps}: `Auto.xlsx`
+
+1.  Open het bestand.
+
+2.  Selecteer alle verbruikswaarden in kolom F.
+
+3.  Kies [Start \> Voorwaardelijke opmaak (groep Stijlen) \> Regels voor bovenste/onderste \> onderste 10%]{.uicontrol} en breng in het dialoogvenster de soort opvulling aan.
+
+![Dialoogvenster voorwaardelijk opmaak voor onderste 10%. Hier kan ook een ander percentage dan 10 worden ingesteld.](images/formatting/format-conditional-bottom-10pct.png){#fig-format-conditional-bottom-10pct}
+
+4.  Klik op [OK]{.uicontrol}.
+
+:::
+
+### Voorwaardelijke opmaak verwijderen {#sec-formatting-conditional-delete}
+
+Een voorwaardelijke opmaak kan als volgt verwijderd worden:
+
+1.  Selecteer de cel(len)met de voorwaardelijke opmaak.
+
+2.  Kies [Start \> Voorwaardelijke opmaak (groep Stijlen) \> Regels wissen \> Regels uit geselecteerde cellen verwijderen]{.uicontrol}.
+
+### Voorwaardelijke opmaak zoeken {#sec-formatting-conditional-search}
+
+Soms is het lastig om te zien of er op een werkblad cellen met een voorwaardelijke opmaak zijn. Excel biedt hulp om deze te vinden. Dat gaat als volgt:
+
+Kies [Start \> Zoeken en selecteren (groep Bewerken) \> Voorwaardelijke opmaak]{.uicontrol}.
+
+Alle cellen met een voorwaardelijke opmaak worden nu geselecteerd. Wanneer er geen cellen met een voorwaardelijke opmaak zijn dan geeft Excel de volgende melding: Er zijn geen cellen gevonden..

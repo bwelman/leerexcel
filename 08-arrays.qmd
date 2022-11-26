@@ -1,0 +1,674 @@
+# Matrixformules {#sec-arrays}
+
+::: {.callout-note appearance="simple" icon="false"}
++ Kennismaking met een matrix.
++ Het maken van matrixformules.
++ Frequentieverdeling van gegevens maken met functie iNTERVAL.
++ Dynamische matrices en bijbehorende functies.
++ Wiskundige matrixfuncties.
+:::
+
+Een matrixformule is een formule die meerdere berekeningen kan uitvoeren op een of meer items in een matrix. Matrixformules stonden als erg lastig bekend omdat ze er anders uitzien dan normale formules en je deze formules op een afwijkende manier moest invoeren: met CTRL-SHIFT-ENTER in plaats van gewoon met ENTER. Dat is in Excel 365 niet langer nodig.
+
+::: {.callout-warning}
+1. In Excel 365 is het werken met matrixformules en het gedrag ervan gewijzigd t.o.v. de andere Excel versies. En ook bestaande formules die meerdere resultaten kunnen opleveren gedragen zich in Excel 365 als matrixformules.
+
+2. Aan Excel 365 zijn een aantal nieuwe dynamische matrixformules toegevoegd.
+
+**Hierdoor is de inhoud van dit hoofdstuk grotendeels exclusief voor Excel 365.**
+:::
+
+## Wat is een matrix in Excel? {#sec-arrays-over}
+
+Een **vector** is een lijstje met getallen die of in een rij of in een kolom staan. Je hebt dan respectievelijke een **rijvector** of een **kolomvector**. Excel gebruikt niet de term vector, maar **matrix** (Nederlandstalig )of **array** (Engelstalig).
+
+Een matrix in Excel kan zijn:
+
+-  Een rij met waarden (eigenlijk een rijvector). Dit is een 1-dimensionale horizontale matrix.
+-  Een kolom met waarden (eigenlijk een kolomvector). Dit is een 1-dimensionale verticale matrix.
+-  Een rechthoek van rijen en kolommen met waarden, een gebied dus. Dit is een 2-dimensionale matrix.
+
+@fig-array-examples laat van elk een voorbeeld zien.
+
+![Matrix voorbeelden, met van links naar rechts: rijvector, kolomvector, 2-dim. matrix.](images/arrays/array-examples.png){#fig-array-examples}
+
+Een matrix met constante waarden zoals in de getoonde drie voorbeelden maak je door in een cel te beginnen met het `=` symbool en dan een rijtje waarden tussen accolades `{ }` te plaatsen. De waarden moeten van elkaar gescheiden worden door een speciaal symbool.Het scheidingssymbool hangt af van de taal- en landinstellingen op de computer.
+
++ Nederlandstalige systemen
+  -  Backslash `\` voor nieuwe kolom.
+  -  Puntkomma `;` voor nieuwe rij.
++ Engelstalige systemen
+  -  Komma `,` voor nieuwe kolom.
+  -  Puntkomma `;` voor nieuwe rij.
+
+Verder moet je bij een 2-dimensionale matrix rekening houden met:
+
++ Opsomming in volgorde van rijen.
++ Alle rijen moeten evenveel kolommen hebben.
+
+De drie voorbeelden worden als volgt in Excel ingevoerd.
+
+::: {#exm-arrays-rowvector}
+**Rijvector**
+
+`={1\2\3\4\5}` geeft 1 rij met 5 kolommen.
+
+![1-dimensionale horizontale matrix.](images/arrays/array-1dim-h.png){#fig-array-1dim-h}
+
+:::
+
+::: {#exm-arrays-columnvector}
+**Kolomvector**
+
+`={1;3;6}` geeft 3 rijen met 1 kolom.
+
+![1-dimensionale verticale matrix.](images/arrays/array-1dim-v.png){#fig-array-1dim-v}
+
+:::
+
+::: {#exm-arrays-2dimarray}
+**2-dimensionale matrix**
+
+`={1\2\3\4\5;3\5\7\9\11;6\9\12\15\18}` geeft 3 rijen met 5 kolommen.
+
+![2-dimensionale matrix.](images/arrays/array-2dim.png){#fig-array-2dim}
+
+:::
+
+::: {.callout-warning}
+Voor alle voorbeelden geldt dat alleen de eerste cel bewerkbaar is. Dat is de cel waar de matrix is ingevoerd. Wanneer je een andere cel in het waardengebied selecteert, dan is de inhoud in de formulebalk grijs gekleurd en kun je de waarde niet wijzigen.
+:::
+
+## Eenvoudige matrixformules {#sec-arrays-simple}
+
+Een matrixformule is een formule waarmee je berekeningen uitvoert op matrices. Het resultaat is ook weer een matrix. Om matrixformules te gebruiken moet je van tevoren bedenken hoeveel uitkomsten er zijn en hoe deze uitkomsten zijn gerangschikt (een cel, een rij, een kolom, een tabel).
+
+In @fig-example-numbers is te zien dat een paar keer de som en het produkt van twee getallen is berekend. Dat kan met eenvoudige gewone formules. Zo zou de formule in D2 kunnen zijn `=A2+B2`. En de formule in E2 zou kunnen zijn `=A2*B2`. Wanneer je dan deze formules naar beneden kopieert dan staan de juiste formules ook in D3:E4.
+
+![Som en product van twee getallen via gewone Excel formules.](images/arrays/example-numbers.png){#fig-example-numbers}
+
+Deze berekening is ook met matrixformules uit te voeren. Het is een goede oefening om het gedrag van een matrixformule te leren kennen.
+
+::: {#prp-arrays-simple}
+[Bestand]{.smallcaps}: `Matrix1.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer cel D2 en typ in `=A2:A4+B2:B4` en druk op [ENTER]{.uicontrol}.  
+   De resultaten staan in de cellen D2:D4 en aan het kader om het resultaat kun je zien dat het een matrix is.
+
+![Som van twee kolommen via een matrixformule.](images/arrays/example-column-sum.png){#fig-example-column-sum}
+
+::: {.callout-note}
++ In plaats van het intypen van de celadressen kun je deze ook met de muis selecteren, wat veel handiger is.
+
++ Omdat het resultaat van de optelling uit een kolommetje van drie getallen bestaat zal Excel het resultaat automatisch laten overlopen naar de cellen D3:D4. Je moet dat wel vooraf bedenken en zorgen dat deze cellen leeg zijn, anders volgt de foutmelding `#OVERLOOP!`.
+:::
+
+3. Selecteer cel E2 en typ in `=A2:A4*B2:B4` en druk nu op [ENTER]{.uicontrol}.  
+   De resultaten staan in de cellen E2:E4 en aan het kader om het resultaat kun je zien dat het een matrix is.
+
+![Product van twee kolommen via een matrixformule.](images/arrays/example-column-product.png){#fig-example-column-product}
+
+:::
+
+::: {#prp-arrays-multiplication1}
+**Vermenigvuldiging rijvector met een getal**
+
+In @fig-example-dim1) is te zien hoe een rijtje van drie getallen wordt vermenigvuldigd met het getal 4. Het resultaat bestaat uit een rijtje van drie getallen. Maak dit voorbeeld na.
+
+![Vermenigvuldiging rijvector met een constante.](images/arrays/example-dim1.png){#fig-example-dim1}
+
+`r hide("Hint")`
+Formule in G1: `=A1:C1*E1`
+`r unhide()`
+
+:::
+
+::: {#prp-arrays-multiplication2}
+**vermenigvuldiging 2-dim matrix met een kolomvector**
+
+In @fig-example-dim2 is te zien hoe een 4x3 matrix wordt vermenigvuldigd met een kolom getallen. Het resultaat is ook weer een 4x3 matrix.
+
+Maak dit voorbeeld na. Hierbij kun je gebruik maken van het bestand [Matrix2.xlsx`.
+
+![Vermenigvuldiging van een 2-dimensionale matrix met een kolomvector.](images/arrays/example-dim2.png){#fig-example-dim2}
+
+`r hide("Hint")`
+Formule in G1 wordt `A1:C4*E1:E4`
+`r unhide()`
+
+:::
+
+## Eén resultaat berekenen {#sec-arrays-single}
+
+In dit onderdeel wordt uitgelegd hoe je één matrixformule kunt gebruiken in situaties waar je anders meerdere formules voor nodig hebt.
+
+Je kunt een matrixformule gebruiken wanneer je diverse berekeningen moet uitvoeren om één resultaat te krijgen. Dit type matrixformule kan een werkblad vereenvoudigen doordat meerdere formules worden vervangen door één matrixformule.
+
+In @fig-example-shares is een aandelenportefeuille met koersen te zien. Om nu de totale waarde van de aandelen bij een bepaalde koers te berekenen zou je normaliter voor elk aandeel de waarde moeten berekenen via `aantal * koers` en dan deze waarden optellen. Met een matrixformule kan dit resultaat in één keer berekend worden.
+
+![Koersen van aandelen.](images/arrays/example-shares.png){#fig-example-shares}
+
+::: {#prp-arrays-single}
+[Bestand]{.smallcaps}: `Matrix3.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer cel C6 en voer de volgende formule in `=SOM(B2:B5*C2:C5)`.
+
+3. Herhaal de actie voor cel D6, de formule wordt nu `=SOM(B2:B5*D2:D5)`.
+
+**Vraag**
+
+Je kunt de formule in C6 ook geschikt maken om naar D6 te kopieren. Wat moet je daarvoor in de formule veranderen?
+
+`r hide("Antwoord")`
+De celadressen voor `aantal]{.varname} moet je dan absoluut maken. De formule wordt [=SOM($B$2:$B$5*C2:C5)`.
+`r unhide()`
+
+:::
+
+::: {#prp-arrays-weighted-average1}
+[Bestand]{.smallcaps}: `Matrix4.xlsx`
+
+In deze oefening moet voor elke leerling het gewogen gemiddelde van vier toetsen berekend worden met een matrixformule berekend. Begin met een formule voor Jan en maak deze formule geschikt om naar beneden te kopieren.
+
+![Gewogen gemiddeldes van behaalde cijfers voor vier toetsen.](images/arrays/example-marks.png){#fig-example-marks}
+
+`r hide("Hint")`
+1. Een gewogen gemiddelde voor Jan krijg je door elk toetscijfer van Jan te vermenigvuldigen met de weegfactor voor die toets en dan de som van deze vier uitkomsten te delen door de som van de vier toetsfactoren.
+
+2. Om de formule geschikt te maken om gekopieerd te kunnen worden, moet je nadenken over welke celadressen tijdens het kopieren niet mogen wijzigen. Die celadressen moet je dan absoluut maken.
+`r unhide()`
+
+`r hide("Oplossing")`
+Formule F3: `=SOM(B3:E3*$B$1:$E$1)/SOM($B$1:$E$1)`
+
+Kopieer daarna formule naar F4 en F5.
+`r unhide()`
+
+:::
+
+::: {#prp-arrays-weighted-average2}
+[Bestand]{.smallcaps}: `Matrix5.xlsx`
+
+In @fig-example-studentlength is van een aantal studenten het geslacht en de lengte (cm) vermeld. In de cellen C11 en C12 is de gemiddelde lengte voor respectievelijk de mannelijke en vrouwelijke studenten berekend.
+
+![Gemiddelde lengte van studenten per geslacht.](images/arrays/example-studentlength.png){#fig-example-studentlength}
+
+De matrixformule in deze oefening is wat lastiger omdat je alleen de lengtes voor of man of vrouw moet selecteren. Dat kan met de `ALS` functie.
+
+1. Open het bestand.
+
+2. Selecteer cel C11 en voer de volgende formule in `=GEMIDDELDE(ALS(B2:B9="m";C2:C9))`.
+
+3. Maak nu een formule voor cel C12 door de formule hiervoor aan te passen voor de vrouwelijke studenten.
+
+`r hide("Oplossing")`
+Formule C12: `=GEMIDDELDE(ALS(B2:B9="v";C2:C9))`
+`r unhide()`
+
+:::
+
+## Frequentieverdeling {#sec-arrays-frequency}
+
+Met de functie INTERVAL()kun je een frequentieverdeling maken.
+
+Syntax: `INTERVAL(gegevensmatrix;interval)`.
+
+Het eerste argument is het gebied met waarden. Het tweede argument is het gebied met de intervalgrenzen. Het resultaat is een matrix met de frequenties.
+
+
+::: {#prp-arrays-frequency}
+[Bestand]{.smallcaps}: `Matrix6.xlsx`
+
+![Frequentieverdeling.](images/arrays/array-frequency.png){#fig-array-frequency}
+
+1. Open het bestand.
+
+2. Voer in C2 de volgende formule in `=INTERVAL(A2:A11;B2:B5)`.
+
+::: {.callout-note}
+Het resultaat is een frequentietabel. In de figuur hierna kun je zien hoe de frequenties bepaald zijn.
+
+![](images/arrays/array-frequency-explanation.png)
+:::
+
+:::
+
+## Dynamische matrixformules {#sec-arrays-dynamic}
+
+Een matrixformule die in één cel op het werkblad wordt ingevoerd kan resultaten in meerdere cellen op het werkblad plaatsen. Dit gedrag wordt **overlopen** (Engels: spilling) genoemd en de resultaten verschijnen in een **overloopgebied** (spill-range). Welke en hoeveel cellen gebruikt worden hangt van het resultaat van de formule af. Als de broninhoud van de formule verandert worden de resultaten dynamisch bijgewerkt en kan het zijn dat het overloopgebied groeit of krimpt. Je krijgt een `#OVERLOOP!fout` wanneer het overlopen geblokkeerd wordt door andere gegevens in de cellen.
+
+Om een verwijzing naar een overloopgebied te maken zet je een hash symbool `#` achter het adres van de eerste cel van het overloopgebied. Is bijvoorbeeld het overloopgebied J2:N4, dan verwijs je hiernaar met `=J2#`. Wanneer later de grootte van het overloopgebied verandert, dan verandert ook het resultaat van de formule.
+
+::: {.info data-latex="}
+Wanneer je met matrices gaat rekenen, is het erg handig om deze van een naam te voorzien. Dat kan op dezelfde manier als het toekennen van een naam aan een cel.
+:::
+
+Om het gedrag van dynamische arrays te ondersteunen, zijn er een aantal nieuwe functies vrijgegeven: RANDARRAY, FILTER, SEQUENCE, SORT, SORTBY, UNIQUE, XMATCH en XLOOKUP. 
+
+### ASELECT.MATRIX {#sec-arrays-randarray}
+
+Engelstalige functienaam: RANDARRAY
+
+Retourneert een matrix met willekeurige getallen.
+
+**Syntax**
+
+`ASELECT.MATRIX([rijen];[kolommen];[min];[max];[geheel])`
+
++ `rijen`: het aantal rijen dat geretourneerd moet worden (default=1)
++ `kolommen`: het aantal kolommen dat moet worden (default=1)
++ `min`: de ondergrens van de willekeurige getallen (default=0)
++ `max`: de bovengrens van de willekeurige getallen (default=1)
++ `geheel`: WAAR voor gehele getallen, ONWAAR voor decimale getallen (default ONWAAR)
+
+::: {#exm-array-randarray}
+`=ASELECT.MATRIX(3;4;10;50;WAAR)`
+
+![Genereert een 3x4 matrix met willekeurige gehele getallen tussen 10 en 50.](images/arrays/array-dyn-randarray.png){#fig-array-dyn-randarray}
+
+:::
+
+### FILTER {#sec-arrays-filter}
+
+Engelstalige functienaam: FILTER
+
+Retourneert de gefilterde waarden uit een bereik/matrix.
+
+**Syntax**
+
+`FILTER(matrix;opnemen;[als-leeg])`
+
++ `matrix`: de matrix met waarden
++ `opnemen`: matrix met logische waarden voor de voorwaarden
++ `als-leeg`: te retourneren waarde wanneer er geen resultaten zijn
+
+::: {#exm-array-filter}
+[Bestand]{.smallcaps}: `Dynarray.xlsx`
+
+Extraheer de rijen met geslacht vrouwelijk.
+
+`=FILTER(A2:C11;B2:B11="v";"Geen")`
+
+![Uit een lijst met namen worden die rijen gehaald waarvoor het geslacht vrouwelijk is.](images/arrays/array-dyn-filter.png){#fig-array-dyn-filter}
+
+Vervang in de formule de "v" eens door "m" of "z".
+
+Je kunt ook meerdere criteria toevoegen. Om te filteren op vrouwen met een lengte kleiner dan 170 wijzig je de formule in  
+`=FILTER(A2:C11;(B2:B11="v")*(C2:C11<170);"Geen")`
+
+:::
+
+### REEKS {#sec-arrays-sequence}
+
+Engelstalige functienaam: SEQUENCE
+
+Retourneert een reeks getallen volgens een patroon.
+
+**Syntax**
+
+`REEKS(rijen;[kolommen];[beginnen];[stap])`
+
++ `rijen`: het aantal rijen dat geretourneerd moet worden
++ `kolommen`: het aantal kolommen dat geretourneerd moet worden (default=1)
++ `beginnen`: het eerste getal (default=1)
++ `stap`: de stapgrootte (default=1)
+
+::: {#exm-array-sequence}
+`=REEKS(4;3;5;10)`
+
+![Genereert een 4x3 matrix met gehele getallen, beginnend met 5 en steeds 10 groter.](images/arrays/array-dyn-sequence.png){#fig-array-dyn-sequence}
+
+:::
+
+### SORTEREN {#sec-arrays-sort}
+
+Engelstalige functienaam: SORT
+
+Sorteert de kolomwaarden uit een bereik/matrix.
+
+**Syntax**
+
+`SORTEREN(matrix;[sorteerindex];[sorteervolgorde];[op-kol])`
+
++ `matrix`: de matrix met waarden
++ `sorteerindex`: kolomindex waarop gesorteerd moet worden (default=1)
++ `sorteervolgorde`: de gewenste sorteervolgorde, 1= oplopend, -1 = aflopend (default=1)
++ `op-kol`: WAAR=sorteer kolommen, ONWAAR=sorteer rijen (default=ONWAAR)
+
+::: {#exm-array-sort}
+[Bestand]{.smallcaps}: `Dynarray.xlsx`
+
+Een matrix met gegevens sorteren op de waarden in kolom 3.
+
+`=SORTEREN(A2:C11;3)`
+
+![Een matrix wordt gesorteerd op lengte (= kolom 3).](images/arrays/array-dyn-sort.png){#fig-array-dyn-sort}
+
+:::
+
+### SORTEREN.OP {#sec-arrays-sortby}
+
+Engelstalige functienaam: SORTBY
+
+Sorteert de waarden uit een bereik/matrix op basis van andere waarden.
+
+**Syntax**
+
+`SORTEREN.OP(matrix;op-matrix1;[sorteervolgorde]; ...)`
+
++ `matrix`: de matrix met waarden
++ `op-matrix`: de matrix waarop sortering gebaseerd moet worden
++ `sorteervolgorde`: 1= oplopend (default), -1 = aflopend
+
+::: {#exm-array-sortby}
+[Bestand]{.smallcaps}: `Dynarray.xlsx`
+
+Namen sorteren op basis van lengte.
+
+`=SORTEREN.OP(A2:A11;C2:C11)`
+
+![Een lijst met namen wordt gesorteerd op lengte.](images/arrays/array-dyn-sortby1.png){#fig-array-dyn-sortby1}
+
+Zoals je ziet hoeft de reeks waarop de sortering berust niet in de uitvoer voor te komen.
+
+:::
+
+Een andere toepassing van deze functie is bij het sorteren op twee kolommen.
+
+::: {#exm-array-sortby2}
+[Bestand]{.smallcaps}: `Dynarray.xlsx`
+
+Sorteer de matrix oplopend op basis van geslacht en vervolgens aflopend op lengte.
+
+`=SORTEREN.OP(A2:C11;B2:B11;1;C2:C11;-1)`
+
+![Een matrix wordt oplopend gesorteerd op geslacht en vervolgens aflopend op lengte.](images/arrays/array-dyn-sortby2.png){#fig-array-dyn-sortby2}
+
+:::
+
+### UNIEK {#sec-arrays-unique}
+
+Engelstalige functienaam: UNIQUE
+
+Retourneert een matrix met de unieke waarden uit een bereik/matrix.
+
+**Syntax**
+
+`UNIEK(matrix;[per-kolom];[exact-eenmaal])`
+
++ `matrix`: de matrix met waarden
++ `per-kolom`: WAAR (vergelijking van kolommen, ONWAAR (vergelijking van rijen, default)
++ `exact-eenmaal`: WAAR (retourneert de unieke waarden die precies één keer voorkomen), ONWAAR (retourneert alle unieke waarden, default)
+
+::: {#exm-array-unique}
+`UNIEK(A1:A10)`
+
+Uit een reeks namen worden de unieke waarden gehaald.
+
+![Uit een lijst met fruitnamen zijn de unieke waarden gehaald en in een nieuwe matrix geplaatst.](images/arrays/array-dyn-unique.png){#fig-array-dyn-unique}
+
+:::
+
+### X.VERGELIJKEN {#sec-arrays-xmatch}
+
+Engelstalige functienaam: XMATCH
+
+De functie voert een zoekactie uit en retourneert een positie in verticale of horizontale bereiken. Het is een moderne en uitgebreidere opvolger van de functie `VERGELIJKEN` en wordt meestal gebruikt in combinatie met andere functies.
+
+`X.VERGELIJKEN` ondersteunt benaderende en exacte overeenkomsten, omgekeerd zoeken en jokertekens (`*?`) voor gedeeltelijke overeenkomsten. Het opzoeken van de gegevens kan beginnen bij de eerste waarde of bij de laatste waarde (omgekeerd zoeken). Daarnaast kunnen ook binaire zoekopdrachten uitgevoerd worden.
+
+**Syntax**
+
+`X.VERGELIJKEN(zoekwaarde;zoeken-matrix;[overeenkomstmodus];[zoekmodus])`
+
++ `zoekwaarde`: de op te zoeken waarde
++ `zoeken-matrix`: de matrix waarbinnen gezocht moet worden
++ `overeenkomstmodus`: 0=exacte vergelijking (default), -1=exacte vergelijking of eerst kleinere, 1=exacte vergelijking of eerst grotere, 2=vergelijking met jokers
++ `zoekmodus`: 1=zoeken vanaf eerste (default), -1=vanaf laatste, 2=binair oplopend, -2=binair aflopend
+
+::: {#exm-array-xmatch}
+`=X.VERGELIJKEN(E1;A2:A11)`
+
+Top 10 van het totaal aantal medailles op de Olympische Zomerspelen 2016.
+
+![De positie van het land in cel E1 wordt bepaald.](images/arrays/array-dyn-xmatch.png){#fig-array-dyn-xmatch}
+
+:::
+
+### X.ZOEKEN {#sec-arrays-xlookup}
+
+Engelstalige functienaam: XLOOKUP
+
+Deze functie is een moderne en uitgebreidere vervanging van oudere functies als `VERT.ZOEKEN`, `HORIZ.ZOEKEN` en `ZOEKEN`. Deze flexibele en krachtige functie ondersteunt benaderende en exacte overeenkomsten, jokertekens (`*?`) voor gedeeltelijke overeenkomsten en zoekmogelijkheden in verticale en horizontale bereiken.
+
+**Syntax**
+
+`X.ZOEKEN(zoekwaarde; zoeken-matrix; matrix-retourneren; [indien-niet-gevonden]; [overeenkomstmodus]; [zoekmodus])`
+
++ `zoekwaarde`: de op te zoeken waarde
++ `zoeken-matrix`: de matrix waarbinnen gezocht moet worden
++ `matrix-retourneren`: de matrix die geretourneerd moet worden
++ `indien-niet-gevonden`: waarde die geretourneerd moet worden wanneer er niets gevonden is
++ `overeenkomstmodus`: 0=exacte vergelijking (default), -1=exacte vergelijking of eerst kleinere, 1=exacte vergelijking of eerst grotere, 2=vergelijking met jokers
++ `zoekmodus`: 1=zoeken vanaf eerste (default), -1=vanaf laatste, 2=binair oplopend, -2=binair aflopend
+
+::: {#exm-array-xlookup}
+`=X.ZOEKEN(D2;A2:A7;B2:B7;;-1)`
+
+Een kortingstabel met daarin de kortingspercentages vanaf een bepaalde hoeveelheid.
+
+![Bepaling van het kortingspercentage voor de afnamehoeveelheid in cel D2.](images/arrays/array-dyn-xlookup.png){#fig-array-dyn-xlookup}
+
+::: {.info data-latex="}
+Let goed op de argumenten in deze formule.
+
++ `zoekwaarde`: D2
++ `zoeken-matrix`: A2:A7
++ `matrix-retourneren`: B2:B7
++ `indien-niet-gevonden`: is niet gespecificeerd, vandaar dat er direct weer een puntkomma volgt.
++ `overeenkomstmodus`: -1
++ `zoekmodus`: is niet gespecificeerd, de defaultwaarde wordt dan gebruikt.
+:::
+
+:::
+
+## Tabellen en matrixformules {-#array-tables}
+
+Matrixformules worden in de meeste gevallen gebruikt om acties uit te voeren op een lijst met gegevens, veelal in meerdere kolommen. Het heeft dan veel voordelen om van die gegevenslijst een echte Excel tabel te maken. In de matrixformules kun je dan voor de verwijzingen de tabel- en kolomnaam gebruiken en die daardoor beter leesbaar worden. Een bijkomend voordeel is dat de verwijzingen in orde blijven wanneer er tabelrijen worden toegevoegd of verwijderd.
+
+Voor het verwijzen naar een kolomnaam in een Exceltabel zet je de kolomnaam tussen blokhaken direct achter de tabelnaam, dus `tabelnaam[kolomnaam]`.
+
+::: {#prp-arrays-tables}
+[Bestand]{.smallcaps}: `Personeel.xlsx`
+
+1. Open het bestand.
+
+2. Zet het gegevensbereik om naar een tabel via [tab Invoegen > Tabel]{.uicontrol} en specificeer [tblPersoneel]{.varname} als tabelnaam.
+
+3. Sla het bestand tussentijds op onder de naam [Personeelstabel.xlsx` zodat het oorspronkelijke bestand niet gewijzigd wordt.
+
+4. Voer in een cel buiten het gegevensgebied, bijv. in cel K4, de volgende formule in `=UNIEK(tblPersoneel[Afdeling])`.
+
+Je krijgt nu een lijst met de namen van de afdelingen. Om hiervan een alfabetisch gesorteerde lijst te maken moet je deze formule opnemen binnen de functie SORTEREN.
+
+5. Wijzig de zojuist ingevoerde formule in `=SORTEREN(UNIEK(tblPersoneel[Afdeling]))`.
+
+Je krijgt nu een alfabetisch gesorteerde lijst met afdelingsnamen.
+
+Maak op analoge wijze een gesorteerde lijst met divisienamen.
+
+:::
+
+## Meerdere waarden retourneren {#sec-arrays-xlookup-multiplevalues}
+
+`X.ZOEKEN` kan meer dan één waarde tegelijk retourneren voor dezelfde overeenkomst. In deze taak worden vier waarden geretourneerd met één formule.
+
+::: {#prp-arrays-xlookup-multiplevalues}
+[Bestand]{.smallcaps}: `olympic2016.xlsx`
+
+1. Open het bestand.
+
+2. Zet het gegevensbereik om naar een tabel via [tab Invoegen > Tabel]{.uicontrol} en specificeer [Medailles]{.varname} als tabelnaam.
+
+3. Voeg aan de tabel een kolom [Totaal]{.varname} toe met daarin een formule voor het totaal aantal medailles. Dit gaat als volgt:
+
+   + Typ in cel E1 de tekst `Totaal` en druk op ENTER. Er wordt nu automatisch een nieuwe kolom gemaakt.
+
+   + Selecteer cel E2 en typ `=SOM(]{.userinput}, selecteer dan de cellen B2:D2, typ dan [)` en druk op ENTER.
+   
+In de kolom [Totaal]{.varname} verschijnen nu de waarden. Merk verder op dat Excel in cel E2 de formule heeft gewijzigd in `=SOM(Medailles[@[Goud]:[Brons]])`.
+
+4. Kopieer de teksten in A1:E1 naar G1:K1.
+
+5. Typ in cel G2 de tekst `Nederland`.
+
+6. Selecteer H2 en typ in  
+   `=X.ZOEKEN(G2;Medailles[Land];Medailles[Goud]:Medailles[Totaal])`.
+
+Het resultaat ziet er als volgt uit.
+
+![De formule in H2 retourneert meerdere waarden.](images/arrays/array-xlookup-multiplevalues.png){#fig-}
+
+:::
+
+## Opzoeken in twee richtingen {#sec-arrays-xlookup-2way}
+
+`X.ZOEKEN` kan ook ingezet worden om in twee richtingen te zoeken. Dat kan door een `X.ZOEKEN` functie op te nemen (nesten) binnen een andere `X.ZOEKEN` functie.
+
+In  @fig-array-xlookup-2way staan een aantal koffieprijzen van Starbucks. Aan de hand van zoekcriteria in G1 en G2 moet de bijbehorende prijs in G3 verschijnen.
+
+![Geneste X.ZOEKEN functies.](images/arrays/array-xlookup-2way.png){#fig-array-xlookup-2way}
+
+::: {#prp-arrays-xlookup-2way}
+[Bestand]{.smallcaps}: `Tidy001.xlsx`
+
+1. Open het bestand.
+
+2. Voeg de gegevens in F1:F3 en G1:G2 toe.
+
+3. Plaats in G3 de volgende formule  
+   [=X.ZOEKEN(G2;B1:D1;X.ZOEKEN(G1;A2:A10;B2:D10))]{.userinput.
+
+::: {.callout-note}
++ De binnenste `X.ZOEKEN` zoekt de koffiesoort op in de kolom product en retourneert een rij met de drie prijzen.
+
++ De buitenste `X.ZOEKEN` vindt de juiste grootte en retourneert de overeenkomstige prijs.
+:::
+
+:::
+
+## Wiskundige matrixfuncties {#sec-arrays-math}
+
+Met name in de [lineaire algebra](https://nl.wikipedia.org/wiki/Lineaire-algebra) worden veelvuldig rekenkundige bewerkingen met matrices uitgevoerd. Excel biedt daarvoor ondersteuning met een paar specifieke functies. Het gebruik van deze functies valt buiten het bestek van dit cursusboek.
+
+EENHEIDMAT
+: Eenheidsmatrix. Engelstalige functienaam: MUNIT
+: Retourneert een vierkante eenheidsmatrix voor de opgegeven dimensie. Wordt meestal gebruikt in combinatie met andere matrixfuncties.
+
+PRODUCTMAT
+: Productmatrix. Engelstalige functienaam: MMULT
+: Retourneert het matrixproduct van twee matrices.
+
+INVERSEMAT
+: Inverse matrix. Engelstalige functienaam: MINVERSE
+: Retourneert de inverse van een matrix. Wordt veel gebruikt om stelsels van vergelijkingen met meerdere variabelen op te lossen. Het product van een matrix en zijn inverse is de eenheidsmatrix.
+
+DETERMINANTMAT
+: Determinant. Engelstalige functienaam: MDETERM
+: Berekent de determinant van een matrix. Wordt gebruikt bij het oplossen van stelsels vergelijkingen met meerdere variabelen.
+
+## Opgaven {#sec-arrays-exercises}
+
+::: {#exr-matr001}
+**Matrixoptelling (matr001)**
+
+Voer de volgende optelling uit met behulp van de Excel matrix methode.
+
+![](images/arrays/matr001_data.png)
+:::
+
+::: {#exr-matr002}
+**Storingen per district (matr002)**
+
+Het nutsbedrijf van een stad houdt een lijst bij waarin per district de gemelde storingen aan gas, water en electra worden vermeld. In de volgende afbeelding is deze lijst te zien. De leiding van het bedrijf wil graag een overzicht van het totaal aantal storingen per district zoals onder Samenvatting berekend. Dit gaat het eenvoudigst met matrixformules.
+
+![](images/arrays/matr002_data.png)
+
+[Bestand]{.smallcaps}: `Matr002.xlsx`
+
+Voer in het werkblad de matrixformules in de cellen C16, C17, C18 en C19 in om het totaal aantal storingen per district te berekenen.
+
+`r hide("Hint")`
+1. De formule `(B2:B11)=B16` levert een matrixkolom van 10 rijen. Als de waarde in een cel uit de reeks B2:B11 gelijk is aan de waarde in cel B16 (= Noord), dan is de waarde in de matrix gelijk aan WAAR (=1) en anders ONWAAR (=0).
+
+![](images/arrays/matr002_tip1.png)
+
+2. Door deze kolommatrix te vermenigvuldigen met de matrix {C2:E11} krijg je een nieuwe matrix van 10 rijen en 3 kolommen. De cellen in de rijen die met ONWAAR worden vermenigvuldigd bevatten allemaal een nul. De cellen in de rijen die met WAAR worden vermenigvuldigd behouden de oorspronkelijke waarden:
+
+![](images/arrays/matr002_tip2.png)
+
+3. Door hiervan de som te bepalen krijg je het totaal aantal storingen voor het district NOORD.
+`r unhide()`
+:::
+
+::: {#exr-matr003}
+**Willekeurige gehele getallen (matr003)**
+
+Met de functie `ASELECT.MATRIX` kun je willekeurige getallen genereren. Om hiermee te experimenteren en het gedrag van het dynamische matrixformules te bestuderen maak je een nieuw bestand met de volgende gegevens:
+
+![](images/arrays/matr003_data.png)
+
+1.  Voer in cel B7 de formule in om willekeurige gehele getallen te genereren, waarbij je voor de eerste vier argumenten verwijst naar de cellen in B1 t/m B4.
+2.  Voer in cel B6 een formule in om het gemiddelde van de gegenereerde getallen te berekenen. Gebruik hierbij een verwijzing naar het overloopgebied.
+3.  Experimenteer met andere waarden in de cellen B1 t/m B4. Let er op dat de maximumwaarde niet kleiner dan de minimumwaarde mag zijn.
+:::
+
+::: {#exr-matr004}
+**Willekeurige datums en tijdstippen (matr004)**
+
+Datums en tijdstippen worden intern in Excel als een getal opgeslagen. Zo wordt 30-06-2020 18:00:00 intern opgeslagen als 44012,75. Hierin is het deel voor de komma de datum en het deel achter de komma het tijdstip. Omdat je met de functie `ASELECT.MATRIX` willekeurige getallen kunt genereren, kun je dus hiermee ook datums en tijdstippen genereren. In de figuur hierna zie je een voorbeeld.
+
+![](images/arrays/matr004_data.png)
+
+1.  Voer in een nieuw werkblad de gegevens voor de eerste drie rijen in en zorg voor een juiste opmaak.
+2.  Voer in cel B5 een formule in om de datums te genereren en in cel E5 een formule om de tijdstippen te genereren. Gebruik hierbij de gegevens in de eerste drie rijen. In de uitvoergebieden moet je zelf de juiste opmaak aanbrengen voor datums of tijdstippen want dat gebeurt niet automatisch.
+3.  Experimenteer met verschillende waarden in de eerste drie rijen. Let er op dat de maximumwaarde niet kleiner dan de minimumwaarde mag zijn.
+:::
+
+::: {#exr-matr005}
+**Kolommen sorteren (matr005)**
+
+In de figuur hierna zie je de bevolkingsgrootte van de Benelux landen voor achtereenvolgens de jaren 2000, 2005, 2010 en 2015. Wanneer je deze gegevens voor de jaren in omgekeerde volgorde wilt hebben dan kan dat eenvoudig met de dynamische matrixformule SORTEREN waarmee je ook kolommen kunt sorteren.
+
+![](images/arrays/matr005_data.png)
+
+[Bestand]{.smallcaps}: `Benelux_Populatie.xlsx`
+
+Open het bestand en kopieer de gegevens in de kolommen A en B respectievelijk naar H en I. Voer nu in cel J1 de formule `SORTEREN` in zodat de gegevens voor de jaren in aflopende volgorde verschijnt. Het resultaat moet er als volgt uitzien.
+
+![](images/arrays/matr005_solution.png)
+
+Wanneer je het bestand wilt bewaren, sla het dan op onder de naam [matr005.xlsx` zodat niet het originele bestand gewijzigd wordt.
+:::
+
+::: {#exr-matr006}
+**Reeks Romeinse cijfers (matr006)**
+
+Maak in een nieuw werkblad een matrix met de cijfers 1 t/m 100 zoals in de volgende figuur.
+
+![](images/arrays/matr006_data.png)
+
+Wijzig daarna de formule zodat je Romeinse cijfers krijgt.
+
+`r hide("Hint")`
+De functie `ROMEINS` zet Arabische cijfers om naar Romeinse cijfers, als tekst.
+`r unhide()`
+
+![](images/arrays/matr006_data_r.png)
+
+Wanneer je het bestand wilt bewaren, sla het dan op onder de naam [matr006.xlsx`.
+:::

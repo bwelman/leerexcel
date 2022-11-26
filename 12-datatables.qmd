@@ -1,0 +1,228 @@
+# Gegevenstabellen {#sec-datatables}
+
+::: {.callout-note appearance="simple" icon="false"}
++ Layout en werking van een gegevenstabel met één invoer variabele.
++ Layout en werking van een gegevenstabel met 2 invoer variabelen.
+:::
+
+Een gegevenstabel is een hulpmiddel voor "Wat-Als" analyses. Voor formules met 1 of 2 variabelen kun je snel de resultaten berekenen voor verschillende waarden van de variabelen. Hiermee kun je uitzoeken hoe kleine wijzigingen in de invoerwaarden de uitkomsten van formules beinvloeden die afhankelijk zijn van deze invoerwaarden. Bijvoorbeeld hoe prijswijzigingen van een artikel gevolgen hebben voor de omzet van een bedrijf. Een dergelijke analyse heet ook wel gevoeligheidsanalyse. De enige beperking is dat je maximaal 2 variabelen in de formules kunt gebruiken.
+
+Excel kent twee soorten gegevenstabellen:
+
++ Met één invoer variabele en één of meerdere formules.
++ Met twee invoer variabelen en één formule
+
+Beide soorten tabellen werken op dezelfde manier:
+
++ Definieer een lijst met invoerwaarden voor de variabelen.
++ Bepaal de formules waarvan de uitkomsten afhangen van deze variabelen.
++ Voer de opdracht [Gegevenstabel]{.uicontrol} uit.
+
+Excel substitueert dan elke invoerwaarde in de formules, berekent de resultaten en toont deze in tabelvorm.
+
+## Gegevenstabel met één variabele {#sec-datatables-variable-one}
+
+Wanneer je de uitkomsten van een formule met één variabele voor verschillende waarden wilt berekenen, dan kun je dat doen door twee kolommen te maken, eentje met de waarden voor de variabele en de andere voor de uitkomsten van de formule.
+
+In @fig-formula-example is dit te zien voor de formule $y = 2*x-1$.
+
+![Voorbeeld met formules in elke cel.](images/datatables/formula-example.png){#fig-formula-example}
+
+In dergelijke gevallen is het veel handiger om een gegevenstabel met 1 invoervariabele te maken.
+
+Om van een gegevenstabel met één variabele gebruik te kunnen maken moet de tabel aan een bepaalde layout voldoen. De invoerwaarden voor de variabele moeten onder elkaar staan in een kolom (kolomgeoriënteerd) of naast elkaar in een rij (rijgeoriënteerd\).
+
+Bij een kolomgeoriënteerde tabel zitten de waarden voor de variabele in een kolom en de formule in de rij erboven en één cel rechts van de kolom met waarden. Eventuele volgende formules kunnen in de cellen ernaast getypt worden.
+
+Bij een rijgeoriënteerde gegevenstabel zitten de waarden voor de variabele in een rij en de formule in de cel één kolom links van de eerste waarde één cel onder de rij met invoerwaarden. Eventuele volgende formules kunnen in de cellen eronder getypt worden.
+
+![Algemene layout van een gegevenstabel met 1 invoercel.](images/datatables/datatable-layout1.png){#fig-datatable-layout1}
+
+::: {.callout-note}
+1. De **invoercel** kan een willekeurige cel op het werkblad zijn. Excel gebruikt deze als tijdelijke opslagplaats. De formules moeten een verwijzing naar deze invoercel hebben. De waarden voor de variabele worden naar deze invoercel gestuurd, dan wordt de uitkomst berekend en wordt deze in de tabel geplaatst.
+
+2. In plaats van formules kunnen ook verwijzingen naar formules op andere plekken gebruikt worden.
+:::
+
+## Verhuur zomerhuisje {#sec-datatables-rental-fixed}
+
+Eenvoudig voorbeeld van een gegevenstabel met 1 invoer variabele.
+
+Een zomerhuisje kan voor 450 euro per week verhuurd worden. De onkosten bedragen 175 euro per week. Bereken met behulp van een gegevenstabel de opbrengst voor 5, 10, 15, ..., 50 weken.
+
+![Verhuur zomerhuisje met vaste prijs.](images/datatables/cottage-rental-fixed.png){#fig-cottage-rental-fixed}
+
+De gegevenstabel komt in A7:B17. De formule met een verwijzing naar invoercel B5 komt in B7. De waarden voor de variabele staan in het bereik A8:A17 en de uitkomsten gaan naar B8:B17.
+
+::: {#prp-datatables-rental-fixed}
+[Bestand]{.smallcaps}: `Verhuur_vast.xlsx`
+
+1. Open het bestand.
+
+2. Type in cel B7 de formule `=B5*(B3-B4)`.
+
+3. Selecteer het bereik voor de gegevenstabel A7:B17.
+
+4. Kies [tab Gegevens > Wat-als-analyse (groep Voorspelling) > Gegevenstabel]{.uicontrol}.
+
+![Invoercellen voor gegevenstabel.](images/datatables/datatable-dialogbox.png){#fig-datatable-dialogbox}
+
+5. Zet de cursor in het vak [Kolominvoercel]{.uicontrol} en klik daarna op cel B5.
+
+Excel zet het celadres om in $B$5.
+
+6. Klik op [OK]{.uicontrol}.
+
+De gegevenstabel wordt nu gevuld met de berekende waarden.
+
+In de resultaatcellen is door Excel een matrixformule geplaatst, `{=TABEL(;B5)}`. Controleer dat.
+
+:::
+
+## Meerdere waarden formules berekenen {#sec-datatables-formulas-multiple}
+
+Een voorbeeld waarbij een gegevenstabel met 1 invoercel gebruikt worden om de waarden voor meerdere formules te berekenen.
+
+De opgave is om de y-waarden te berekenen voor vier formules bij verschillende x-waarden.
+
+![Berekeningsmodel voor 4 formules.](images/datatables/datatable-formulas4.png){#fig-datatable-formulas4}
+
+De invoercel wordt B1. Dit is de cel waar de verschillende waarden voor x in geplaatst worden. Welke formules gebruikt gaan worden is te zien in de cellen C2:F2. De formules zelf staan in de cellen C3:F3. De te gebruiken waarden voor x staan in de cellen B4:B9.
+
+::: {#prp-datatables-formulas-multiple}
+[Bestand]{.smallcaps}: `Functiewaarden.xlsx`
+
+1. Open het bestand.
+
+2. Typ de juiste formules in de cellen C3:F3:
+
+   + C3: `=2*B1-1`
+   + D3: `=-3*B1+2`
+   + E3: `=B1^2`
+   + F3: `=B1^2-2*B1+1`
+
+3. Selecteer het bereik voor de gegevenstabel B3:F9.
+
+4. Kies [tab Gegevens > Wat-als-analyse (groep Voorspelling) > Gegevenstabel]{.uicontrol}.
+
+5. Zet de cursor in het vak [Kolominvoercel]{.uicontrol} en klik daarna op cel B1.
+
+6. Klik op [OK]{.uicontrol}.
+
+![Uitkomsten van de formules in een gegevenstabel.](images/datatables/datatable-formulas4-results.png){#fig-datatable-formulas4-results}
+
+In de resultaatcellen is door Excel een matrixformule geplaatst, `{=TABEL(;B1)}`. Controleer dat.
+
+:::
+
+## Gegevenstabel met twee variabelen {#sec-datatables-variable-two}
+
+In een gegevenstabel met twee variabelen wordt een formule gebruikt die twee lijsten met invoerwaarden bevat. De formule moet verwijzen naar twee verschillende invoercellen: de rij-invoercel en de kolominvoercel.
+
+![Algemene layout van een gegevenstabel met 2 invoercellen.](images/datatables/datatable-layout2.png){#fig-datatable-layout2}
+
+De algemene layout lijkt op die van een gegevenstabel met 1 invoercel, maar er zijn een paar belangrijke verschillen:
+
++ Een gegevenstabel met 1 invoercel kan meer dan 1 formule evalueren, terwijl de gegevenstabel met 2 invoercellen maar berekeningen met 1 formule kan uitvoeren.
++ De waarden voor de variabelen staan zowel in een rij als in een kolom.
++ De cel linksboven moet de formule bevatten (of een verwijzing naar een formule).
+
+
+## Verhuur zomerhuisje met variabele prijs {#sec-datatables-rental-variable}
+
+Eenvoudig voorbeeld van een gegevenstabel met 2 invoercellen
+
+De prijzen voor de verhuur van een zomerhuisje varieren, afhankelijk van het seizoen, van 350 euro tot 600 euro per week. De onkosten zijn vast en bedragen 175 euro per week. Bereken met behulp van een gegevenstabel de opbrengsten voor 5, 10, 15, ..., 50 weken en verhuurprijzen 350, 400, 450, ... 600.
+
+![Verhuur zomerhuisje met variabele prijs.](images/datatables/cottage-rental-variable.png){#fig-cottage-rental-variable}
+
+De gegevenstabel wordt A7:G17. De twee invoercellen zijn B3 (prijs)en B5(aantal weken verhuur). In A7 komt de formule met een verwijzing naar de twee invoercellen. De waarden voor invoercel B3 staan in rij B7:G7. De waarden voor invoercel B5 staan in kolom A8:A17.
+
+::: {#prp-datatables-rental-variable}
+[Bestand]{.smallcaps}: `Verhuur_variabel.xlsx`
+
+1. Open het bestand.
+
+2. Typ in cel A7} de formule `=B5*(B3-B4)`.
+
+3. Selecteer het bereik voor de gegevenstabel A7:G17.
+
+4. Kies [tab Gegevens > Wat-als-analyse (groep Voorspelling) > Gegevenstabel]{.uicontrol}.
+
+5. Zet de cursor in het vak [Rij-invoercel]{.uicontrol} en klik daarna op cel B3.
+
+6. Zet de cursor in het vak [Kolominvoercel]{.uicontrol} en klik daarna op cel B5.
+
+7. Klik op [OK]{.uicontrol}.
+
+In de resultaatcellen is door Excel een matrixformule geplaatst, `{=TABEL(B3;B5)}`. Controleer dat.
+
+:::
+
+## Opbrengst reclamecampagne {#sec-datatables-advertising}
+
+Een voorbeeld waarbij een gegevenstabel met 2 invoercellen gebruikt wordt om de opbrengst van een reclamecampagne te berekenen.
+
+Een bedrijf wil een reclamecampagne voeren door folders via direct mail naar potentiële klanten te sturen. In een berekeningsmodel wil men de verwachte winst van deze reclamecampagne berekenen.
+
+![Berekeningsmodel reclamecampagne.](images/datatables/advertising-model.png){#fig-advertising-model}
+
+Het berekeningsmodel gebruikt 2 variabelen: het aantal te versturen folders en het percentage reacties (respons). De druk- en verzendkosten zijn vaste gegevens, evenals de verwachtte opbrengst per respons. Het aantal reacties en de totale opbrengsten, kosten en winst worden via formules berekend.
+
+De gegevenstabel komt in B14:I23. De twee invoercellen zijn B1 en B2. De waarden voor invoercel B1 staan in kolom B15:B23. De waarden dvoor invoercel B2 staan in de rij C14:I14. In B14 is een verwijzing naar de formule voor de totale winst, die weer verwijzingen naar de twee invoercellen bevat.
+
+::: {#prp-datatables-advertising}
+[Bestand]{.smallcaps}: `Reclamecampagne.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer het bereik voor de gegevenstabel B14:I23.
+
+3. Kies [tab Gegevens > Wat-als-analyse (groep Voorspelling) > Gegevenstabel]{.uicontrol}.
+
+4. Zet de cursor in het vak [Rij-invoercel]{.uicontrol} en klik daarna op cel B2.
+
+5. Zet de cursor in het vak [Kolominvoercel]{.uicontrol} en klik daarna op cel B1.
+
+6. Klik op [OK]{.uicontrol}.
+
+![Resultaten reclamecampagne.](images/datatables/advertising-results.png){#fig-advertising-results}
+
+In de resultaatcellen is door Excel een matrixformule geplaatst, `{=TABEL(B2;B1)}`. Controleer dat.
+
+:::
+
+## Opgaven {#sec-datatables-exercises}
+
+::: {#exr-tabl001}
+**Aflossing Lening (tabl001)**
+
+Een lening van € 10.000 moet in een aantal maandelijkse termijnen terugbetaald worden bij een jaarlijkse rente van 5%. Het te betalen maandelijkse bedrag wordt met de functie `BET` berekend. In de volgende afbeelding is dit te zien voor een aflossingstermijn van 36 maanden.
+
+![Berekening maandbedrag aflossing lening](images/datatables/tabl001_data.png)
+
+1.  Maak bovenstaand model in een nieuw werkblad en stel een formule voor de maandbetaling op.
+2.  Maak via een gegevenstabel een overzicht van de maandbedragen voor aflossingstermijnen van 12, 18, 24, 30, ..., 72 maanden.
+3.  Maak een nieuwe gegevenstabel met een overzicht van de maandbedragen voor aflossingstermijnen van 12, 18, 24, 30, ..., 72 maanden en jaarlijkse rentepercentages van 3%, 3½%, 4%, 4½% ... 6%.
+
+`r hide("Antwoord")`
+![Gegevenstabel maandbetalingen voor verschillende aflossingstermijnen](images/datatables/tabl001_result1.png)
+
+![Gegevenstabel maandbetalingen voor verschillende aflossingstermijnen en rentepercentages](images/datatables/tabl001_result2.png)
+`r unhide()`
+:::
+
+::: {#exr-tabl002}
+**Verkoopprognose (tabl002)**
+
+In een werkblad wordt een prognose van de verkoop in 2014 berekend op basis van de verkoop in 2013 en een geschatte groei van de verkoop.
+
+![Prognose verkoop](images/datatables/tabl002_data.png)
+
+1.  Maak bovenstaand model in een nieuw werkblad en stel een formule voor de prognose van de verkoop in 2014.
+2.  Maak via een gegevenstabel een overzicht van de verkoopprognose voor groeifactoren van 1%, 2%, ... 10%.
+
+`r hide("Antwoord")`
+![Gegevenstabel verkoopprognose](images/datatables/tabl002_result.png)
+`r unhide()`
+:::

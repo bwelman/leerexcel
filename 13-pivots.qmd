@@ -1,0 +1,666 @@
+# Draaitabellen {#sec-pivots}
+
+::: {.callout-note appearance="simple" icon="false"}
++ Mogelijkheden van een draaitabel.
++ Draaitabel maken.
++ Brongegevens van een draaitabel.
++ Groeperen van dataum/tijd gegevens.
++ Het filteren van een draaitabel met rapportfilters, slicers en tijdlijnen.
++ Draaigrafiek maken.
+:::
+
+Een draaitabel is een hulpmiddel om gegevens samen te vatten. Het is een interactieve dynamische tabel waarin je snel en gemakkelijk grote hoeveelheden gegevens kunt samenvatten, combineren en vergelijken. Het is wel noodzakelijk dat de gegevens goed geordend in een werkblad staan. 
+
+Een draaitabel is vooral erg geschikt wanneer variabelen uitgezet moet worden tegen andere variabelen, waardoor je antwoorden kunt krijgen op vragen als:
+
++ Welk produkt levert de hoogste winstbijdrage?
++ Welke verkoper maakt de hoogste omzet?
++ Welke afdeling maakt de meeste kosten?
++ ...
+
+::: {#exm-supermarket}
+**Omzet per categorie**
+
+In de draaitabel in @fig-supermarket-productcategory-town kun je eenvoudig de omzet in de drie productcategorieën met elkaar vergelijken.
+
+![Voorbeeld van een draaitabel waarin de produktcategorie is uitgezet tegen de plaats.](images/pivots/supermarket-productcategory-town.png){#fig-supermarket-productcategory-town}
+
+In een draaitabel worden minimaal twee soorten gegevens tegen elkaar uitgezet. Het ene gegevensoort zet je dan in het kolomveld, hier [productcategorie]{.varname}, het andere in het rijveld, hier [plaats]{.varname}. Daarnaast moet nog een gegevensoort waarvan je de resultaten wilt zien, in het waardenveld geplaatst worden, hier [Omzet]{.varname}.
+
+Omdat deze resultaten worden samengevat moet ook nog aangegeven worden welke bereking daarbij gebruikt moet worden, hier `Som`, de standaardkeuze.
+
+:::
+
+Een draaitabel heeft vier gebieden waarin je velden kunt plaatsen:
+
+|Gebied  |Toelichting                                                                                                    |
+|--------|---------------------------------------------------------------------------------------------------------------|
+|Waarden |De velden met numerieke gegevens die je wilt samenvatten, mestal voor de berekening van totalen en gemiddeldes.|
+|Rijen   |Deze velden worden gebruikt om afzonderlijke groepen te maken. De informatie voor elke groep wordt in een aparte rij gezet.|
+|Kolommen|Deze velden worden ook gebruikt om afzonderlijke groepen te maken. Ze worden meestal gebruikt wanneer de gegevens in de rijen wilt onderverdelen. Deze groepen worden in afzonderlijke kolommen weergegeven. Neem velden die niet teveel groepen geven, anders wordt de tabel erg breed.|
+|Filters |Deze velden kunnen gebruikt worden om de gegevens te filteren.|
+
+:  Gebieden in een draaitabel. {#tbl-pivotareas}
+
+## Draaitabellen maken {#sec-pivots-creating}
+
+In het bestand bij deze taak staan de maandelijkse verkopen in 2016 van drie supermarkten voor verschillende producten, zie @fig-supermarket-sales-data. Deze producten zijn in drie productgroepen verdeeld: agf (aardappelen, groente, fruit), vlees en zuivel. Deze gegevens worden geanalyseerd met behulp van een draaitabel. 
+
+![Tabel met omzetgegevens.](images/pivots/supermarket-sales-data.png){#fig-supermarket-sales-data}
+
+**Informatiebehoefte**: Wat is de totale omzet per plaats per productcategorie?.
+
+::: {#prp-pivots-creating}
+[Bestand]{.smallcaps}: `Supermarkt.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer een cel ergens in de tabel, bijv. C3. Kies [tab Invoegen > Draaitabel (groep Tabellen) > van Tabel/Bereik]{.uicontrol}.
+
+Het dialoogvenster Draaitabel maken verschijnt. Het bereik van de tabel is hierin reeds ingevuld.
+
+![Gegevens voor draaitabel selecteren.](images/pivots/supermarket-pivot-create.png){#fig-supermarket-pivot-create}
+
+3. Bij deze oefening moet de draaitabel in het bestaande werkblad verschijnen. Selecteer [Bestaand werkblad]{.uicontrol} en klik in het werkblad op een lege plek, bijv. cel G3.
+
+![Locatie voor het draaitabelrapport specificeren.](images/pivots/pivottable-location.png){#fig-pivottable-location}
+
+4. Klik op [OK]{.uicontrol}.
+
+Op het werkblad wordt een lege Draaitabel aangemaakt en aan de rechterkant verschijnt een taakvenster met de draaitabelvelden waarin je velden aan het rapport kunt toevoegen.
+
+supermarket-pivot-empty
+
+::: {#fig-supermarket-pivot layout-ncol=2}
+
+![Lege draaitabel op het werkblad.](images/pivots/pivottable-empty.png){#fig-pivottable-empty}
+
+![Taakvenster Draaitabelvelden.](images/pivots/supermarket-pivotfields.png){#fig-pivottable-fields}
+
+Creatie van een draaitabel.
+
+:::
+
+::: {.callout-note appearance="minimal"}
+Het taakvenster met de lijst van velden wordt getoond wanneer een cel in de draaitabel de actieve cel is. Wanneer je op een cel buiten de draaitabel klikt, verdwijnt het taakvenster. Het taakvenster verschijnt weer wanneer je op een cel binnen de draaitabel klikt.
+:::
+
+5. Sleep in het Taakvenster veld [plaats]{.varname} naar het vak [Rijen]{.uicontrol}, het veld [productcategorie]{.varname} naar het vak [Kolommen]{.uicontrol} en veld [omzet]{.varname} naar het vak [Waarden]{.uicontrol}. Bij de laatste actie wordt automatisch de berekeningsmethode `Som` van de omzet toegepast.
+
+![Gebruikte velden voor de draaitabel.](images/pivots/supermarket-productcategory-town-fields.png){#fig-supermarket-productcategory-town-fields}
+
+::: {.callout-note appearance="minimal"}
+Je kunt een veld uit de draaitabel verwijderen door deze uit het vak te slepen of door het veld te deselecteren in de lijst met velden.
+:::
+
+De draaitabel op het werkblad wordt met de gegevens gevuld.
+
+![Draaitabelrapport voor totale omzet per plaats per productcategorie.](images/pivots/supermarket-pivotreport.png){#fig-supermarket-pivotreport}
+
+:::
+
+Het draaitabelrapport is nu in principe gereed, maar kan nog wel een aantal verbeteringen voor de opmaak gebruiken.
+
+::: {#prp-pivots-accountingnumbers}
+**omzettotalen opmaken met de getalnotatie financieel**
+
+1. Selecteer een numerieke waarde in de draaitabel. Kies [Tab Draaitabel Analyseren > Veldinstellingen (groep Actief veld]{.uicontrol}.
+
+![Dialoogvenster waardeveldinstellingen.](images/pivots/supermarket-pivot-fieldsettings.png){#fig-supermarket-pivot-fieldsettings}
+
+::: {.callout-note appearance="minimal"}
+Het dialoogvenster ***Waardeveldinstellingen*** is erg belangrijk bij het maken van draaitabelrapportages. Je kunt hier diverse zaken regelen, zoals:
+
++ de weer te geven naam via het tekstvak [Aangepaste naam]{.uicontrol}.
++ de berekeningsmethode, standaard `Som`. Andere mogelijkheden zijn: `Aantal`, `Gemiddelde`, `Min`, `Max`, `Product`, `Stdev`, `Stdevp`, `Var`, `Varp`.
++ hoe je de waarden wilt weergeven, bijvoorbeeld als percentages van het rij- of kolomtotaal.
+:::
+
+2. Klik op de knop [Getalnotatie]{.uicontrol}. Het dialoogvenster Celeigenschappen verschijnt.
+
+3. Kies [Categorie Financieel > Decimalen: 0 > Symbool: €]{.uicontrol}.
+
+![Opmaak van het veld som van omzet.](images/pivots/cellformat-accounting.png){#fig-cellformat-accounting}
+
+4. Klik [OK > OK]{.uicontrol}.
+
+De waardevelden in de draaitabel verschijnen in de gespecificeerde opmaak.
+
+:::
+
+::: {#prp-pivots-columnlabels}
+**Kolom- en rijlabels in de draaitabel vervangen door de veldnaam**
+
+Selecteer een willekeurige cel in de draaitabel. Kies [tab Ontwerpen > Rapportindeling (groep Indeling) > Overzichtsweergave]{.uicontrol}.
+
+![Draaitabel met opmaak: omzet per plaats per productcategorie.](images/pivots/supermarket-productcategory-town-formatted.png){#fig-supermarket-productcategory-town-formatted}
+
+:::
+
+Met de nu gemaakte draaitabel kun je snel en eenvoudig andere analyses maken. Zoals hoe is de totale omzet van elk product binnen de productcategorie per plaats.
+
+::: {#prp-pivots-productcategory}
+**Analyseren van de producten binnen elke productcategorie**
+
+1. Sleep het veld [productcategorie]{.varname} van Kolommen naar Rijen en het veld [plaats]{.varname} van Rijen naar Kolommen. Sleep daarna het veld [product]{.varname} naar Rijen en wel onder het veld [productcategorie]{.varname}.
+
+![Gebruikte velden.](images/pivots/supermarket-cat-products-town-fields.png){#fig-supermarket-cat-products-town-fields}
+
+![Draaitabelrapport met twee velden voor de rijen.](images/pivots/supermarket-cat-products-town.png){#fig-supermarket-cat-products-town}
+
+In plaats van omzettotalen kun je ook andere waarden berekenen, bijvoorbeeld de gemiddelde maandelijkse omzetten.
+
+2. Selecteer een numerieke waarde in de draaitabel en wijzig via het dialoogvenster ***Waardeveldinstellingm***, zie @fig-supermarket-pivot-fieldsettings het berekeningstype in `Gemiddelde`.
+
+:::
+
+::: {#prp-pivots-top3}
+**Top 3 producten**
+
+Probeer nu zelf  met behulp van draaitabellen de volgende vraag te beantwoorden:
+
+Welke drie producten zorgen voor de meeste omzet?
+
+`r hide("Hint")`
+Gebruik [product]{.varname} als rijvariabele. Een kolomvariabele is er in dit geval niet. Sorteer in het draaitabelrapport de omzet van hoog naar laag.
+
+![](images/pivots/supermarket-products.png)
+`r unhide()`
+
+:::
+
+## Brongegevens opsporen {#sec-pivots-datasources}
+
+Een draaitabel bevat samengevatte gegevens. In deze oefening leer je hoe je hiervan de brongegevens kunt vinden.
+
+In een werkblad staan een aantal gegevens van buitendienstmedewerkers zoals omzet, reiskosten en provisie per maand en per regio. In een ander werkblad is van deze gegevens een draaitabel gemaakt met daarin de omzet per regio per medewerker.
+
+![Omzet per regio per medewerker.](images/pivots/sales-pivot.png){#fig-sales-pivot}
+
+Wanneer je wilt weten uit welke individuele waarden een resultaat is bepaald dan kun je die vrij eenvoudig vinden. Door dubbel te klikken op een resultaat in de draaitabel wordt een nieuw werkblad aangemaakt met daarin een tabel met de brongegevens.
+
+::: {#prp-pivots-datasources}
+[Bestand]{.smallcaps}: `Omzet.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer het werkblad draaitabel en dubbelklik op de resultaten van [Jansen]{.uicontrol} in de regio [Oost]{.uicontrol}.
+
+Een nieuw werkblad met daarin een lijst met alle gegevens van Jansen in de regio Oost wordt gemaakt.
+
+![Gegegevens van Jansen in de regio Oost.](images/pivots/sales-pivot-datasource.png){#fig-sales-pivot-datasource}
+
+:::
+
+## Groeperen van gegevens {#sec-pivots-grouping-data}
+
+Een onoverzichtelijker lijst met gegevens kun je geschikter maken voor analyse door de gegevens te groeperen. Dat is met name het geval wanneerin de gegevens een datum zit. Datums kun je vaak groeperen tot jaren, kwartalen of maanden. In een draaitabel kun je dan de gegevens bekijken per jaar, per kwartaal of per maand.
+
+::: {#exm-grouping-data}
+**Omzet per verkoper**
+
+@fig-invoices-ungrouped-grouped toont een deel van een draaitabel met de omzet per verkoper. In de linkerafbeelding de omzet op volgorde van datum (ongegroepeerd). In de rechterafbeelding is de omzet gegroepeerd per kwartaal en per maand.
+
+![Omzet verkoper. In de linkerfiguur ongegroepeerd, in de rechterfiguur gegroepeerd.](images/pivots/invoices-ungrouped-grouped.png){#fig-invoices-ungrouped-grouped}
+
+:::
+
+Vanaf versie 2016 beschikt Excel over de functie **tijdgroepering**. Hiermee worden tijdgerelateerde velden automatisch ontdekt en gegroepeerd. Bij het toevoegen van zo'n veld aan een draaitabel worden automatisch nieuwe relevante velden aangemaakt, zoals [Jaren]{.varname}, [Kwartalen]{.varname} en [Maanden]{.varname}.
+
+Welke datum/tijd velden worden toegevoegd hangt af van het detailniveau van het datum-/tijdveld in de gegevenstabel. Bijvoorbeeld als de datumgegevens in dagen zijn en over meer dan een jaar gaan, dan worden er extra velden gemaakt voor maanden, kwartalen en jaren.
+
+Zodra de velden zijn toegevoegd kun je beginnen met het analyseren van de gegevens over de verschillende tijdsperiodes met inzoom mogelijkheden. Op deze manier kun je soms extra inzichten vinden.
+
+::: {#exm-grouping-data2}
+**Kwartaalvergelijking per jaar**
+
+Zo kun je om een kwartaalvergelijking over meerdere jaren te krijgen het veld [Jaren]{.varname} in het vak [Kolommen]{.uicontrol} plaatsen en het veld [Kwartalen]{.varname} in het vak [Rijen]{.uicontrol}.
+
+De [+]{.uicontrol} knop in de draaitabel duidt op een samengevouwen niveau. Wanneer je hierop klikt worden alle elementen in de draaitabel uitgevouwen tot het volgende niveau, hier [Maanden]{.varname}. De [+]{.uicontrol} knop verandert dan in een  [-]{.uicontrol} knop waarmee je de groep weer kunt samenvouwen. Dit heet ook wel **inzoomen**.
+
+![Omzet per kwartaal per jaar.](images/pivots/invoices-quarters-years.png){#fig-invoices-quarters-years}
+
+:::
+
+Aangepast groeperen
+: Het groeperen kun je aanpassen via een rechtermuisklik op een datum/tijdveld in de draaitabel en dan kiezen voor [Groeperen]{.uicontrol}. In het dialoogvenster Groeperen dat dan verschijnt, kun je andere tijdniveaus toevoegen of verwijderen.
+
+Groepering opheffen
+: Een groepering kun je opheffen via een rechtermuisklik op een gegroepeerd veld in de draaitabel en dan kiezen voor [Groep opheffen]{.uicontrol}.
+
+## Voorbeeld Groeperen {#sec-pivots-grouping-example}
+
+Een voorbeeld van het groeperen van gegevens op basis van een datumveld.
+
+::: {#prp-pivots-grouping-example}
+[Bestand]{.smallcaps}: `Facturen.xlsx`
+
+1. Open het bestand.
+
+Het bestand bevat een tabel met de tabelnaam [Verkoopdata]{.varname} en de kolommen [Regio]{.varname}, [Verkoper]{.varname}, [Factuurnr]{.varname}, [Factuurdatum]{.varname}, [Productcategorie]{.varname} en [Factuurbedrag]{.varname}.
+
+Allereerst wordt met een draaitabel de omzet per verkoper per productcategorie gemaakt.
+
+2. Selecteer een cel in de tabel. Kies [tab Invoegen > Draaitabel (groep Tabellen) > van Tabel/Bereik]{.uicontrol}.
+
+![Specificeer het gegevensgebied en de locatie voor de draaitabel.](images/pivots/invoices-pivot-create.png){#fig-invoices-pivot-create}
+
+::: {.callout-note appearance="minimal"}
++ Omdat het gegevensgebied hier een tabel is met de naam [Verkoopdata]{.varname}, wordt deze naam automatisch ingevuld en niet de celadressen.
+
++ Om de draaitabel op een nieuw werkblad te laten verschijnen accepteer je de standaardkeuze [Nieuw Werkblad]{.uicontrol}.
+:::
+
+3. Klik [OK]{.uicontrol}.
+
+4. Maak een draaitabel volgens het ontwerp in @fig-invoices-pivot-design en geef de bedragen een valutanotatie. Het resultaat is te zien in @fig-invoices-sales-salesman.
+
+![Ontwerp draaitabel.](images/pivots/invoices-pivot-design.png){#fig-invoices-pivot-design}
+
+![Omzet per verkoper per productcategorie. Merk op dat er grote verschillen per verkoper zijn.](images/pivots/invoices-sales-salesman.png){#fig-invoices-sales-salesman}
+
+5. Sleep veld [Factuurdatum]{.varname} naar het gebied [Rijen]{.uicontrol} en wel onder het veld [Verkoper]{.varname}. De automatische tijdgroepering van Excel maakt nu twee berekende velden aan, [Jaren]{.varname} en [Kwartalen]{.varname}.
+
+![Door het toevoegen van Factuurdatum worden automatisch de velden Kwartalen en Jaren aangemaakt.](images/pivots/invoices-pivot-datefields.png){#fig-invoices-pivot-datefields}
+
+In de draaitabel (@fig-invoices-sales-grouped) zijn de bedragen nu gegroepeerd per jaar. Hierdoor is ook zien dat Brown als verkoper is begonnen in 2011 en niet in 2010, wat een mogelijke verklaring zou kunnen zijn voor de lagere bedragen.
+
+![Omzet per verkoper per productcategorie, gegroepeerd per jaar.](images/pivots/invoices-sales-grouped.png){#fig-invoices-sales-grouped}
+
+6. Klik bij een willekeurige verkoper op de [+]{.uicontrol} (plus)knop voor het jaar 2010. Hierdoor wordt voor alle verkopers het jaar opengevouwen naar de kwartalen.
+
+7. Klik bij een willekeurige verkoper op de [+]{.uicontrol} (plus)knop voor Kwrt1. Hierdoor wordt voor alle verkopers het kwartaal opengevouwen naar de maanden.
+
+![Opengevouwde niveaus voor jaar 2010 en kwartaal 1.](images/pivots/invoices-pivot-drilldown.png){#fig-invoices-pivot-drilldown}
+
+8. Experimenteer met het openvouwen en weer dichtvouwen van niveaus.
+
+9.  Sleep het veld [Productcategorie]{.varname} uit het vak [Kolommen]{.uicontrol}, het veld [Kwartalen]{.varname} van vak [Rijen]{.uicontrol} naar vak [Kolommen]{.uicontrol} en de velden [Jaren]{.varname} en [Factuurdatum]{.varname} uit het vak [Rijen]{.uicontrol}. Het ontwerp komt er nu uit te zien zoals in @fig-invoices-pivot-quarters. Het resultaat zie je in @fig-invoices-sales-salesman-quarter.
+
+![Omzet per verkoper per kwartaal.](images/pivots/invoices-pivot-quarters.png){#fig-invoices-pivot-quarters}
+
+![Verkopen per verkoper per kwartaal.](images/pivots/invoices-sales-salesman-quarter.png){#fig-invoices-sales-salesman-quarter}
+
+Om de waarden gemakkelijker te vergelijken kun je er ook voor kiezen om ze weer te geven als percentages (van rijtotaal, kolomtotaal of eindtotaal)
+
+10. Selecteer een numerieke waarde in de draaitabel en kies [tab Draaitabel Analyseren > Veldinstellingen (groep Actief veld)]{.uicontrol}. In het dialoogvenster kies je tab [Waarden weergeven als]{.uicontrol} en selecteer [% van rijtotaal]{.uicontrol}.
+
+![Waarden weer laten gegeven als % van rijtotaal.](images/pivots/invoices-fieldsettings-pct-rowtotal.png){#fig-invoices-fieldsettings-pct-rowtotal}
+
+11. Klik [OK]{.uicontrol}.
+
+![Percentage verkopen per verkoper per kwartaal.](images/pivots/invoices-sales-salesman-quarter-pct.png){#fig-invoices-sales-salesman-quarter-pct}
+
+12. Laat vervolgens de waarden weergeven als [% van kolomtotaal]{.uicontrol}.
+
+:::
+
+**Vragen**
+
+Gebruik de mogelijkheden van draaitabellen om de volgende vragen te beantwoorden. Er zijn meerdere wegen om de antwoorden te vinden.
+
+```{r salesman, echo=FALSE}
+verkoper <- c("Anderson","Brown", "Gonzalez", "Hernandez", "Johnson", "King", "Lewis", "Miller", "Phillips", "Smith", "Williams")
+names(verkoper)[9] = "answer"
+maand <- c("jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec")
+names(maand)[1] = "answer"
+```
+
+
+1. Welke verkoper heeft het meeste verkocht in december 2010?  
+   Verkoper `r mcq(verkoper)`
+
+2. In welke maand van welk jaar was de verkoop van software het grootst?  
+   Jaar `r mcq(c(2010, answer=2011))`, Maand `r mcq(maand)`
+
+3. Bekijk de verkooppercentages voor hard- en software per regio. Wat is het percentage voor software in de regio Zuid?  
+   Afgerond tot geheel getal: `r fitb(answer = c(46,47), num=TRUE)`
+
+4. In welk kwartaal van welk jaar waren de verkopen van Anderson het laagst?  
+   Jaar `r mcq(c(2010, answer=2011))`, Kwartaal `r mcq(c(1, 2, answer = 3, 4))`
+
+5. Bekijk de verkopen van Brown in kwartaal 2 van 2011. Valt je iets bijzonders op?
+`r hide("Antwoord")`
+Alleen omzet in de maand juni. Niets in april en mei.
+`r unhide()`
+
+## Filteren {#sec-pivots-filters}
+
+Om de gegevens in een draaitabel te filteren kun je hiervoor in het taakvenster een veld (of meerdere velden) in het vak [Filters]{.uicontrol} plaatsen. Maar wanneer je op meerdere items filtert, dan kun je niet gemakkelijk zien waarop je filtert.
+
+Een gebruikersvriendelijker manier is om **slicers** te gebruiken. Deze bevatten een aantal knoppen waarmee je snel de gegevens in een draaitabel filtert. En alleen voor het filteren van tijdgegevens kun je ook nog **tijdlijnen** gebruiken, welke identiek zijn aan slicers.
+
+Het gebruik van slicers en tijdlijnen zie je veel in zogenaamde dashboards omdat je deze aan meerdere draaitabellen en draaigrafieken kunt koppelen.
+
+In drie subtaken wordt het maken van rapportfilters, slicers en tijdlijnen besproken. Hierbij wordt gebruik gemaakt van het bestand [Supermarket.xlsx`, hetzelfde bestand als in @sec-pivots-creating, welke de maandelijkse verkoopgegevens in 2016 bevat van een aantal producten, welke in drie productgroepen zijn ondergebracht: agf, vlees en zuivel.
+
+### Rapportfilters {#sec-pivots-reportfilters}
+
+::: {#prp-pivots-reportfilters}
+[Bestand]{.smallcaps}: `Supermarket.xlsx`
+
+1. Open het bestand.
+
+2. Voeg voor de gegevens een draaitabel in op een nieuw werkblad.
+
+3. Plaats het veld [productcategorie]{.varname} in [Kolommen]{.uicontrol}, het veld [omzet]{.varname} in [Waarden]{.uicontrol} en het veld [datum]{.varname} in [Rijen]{.uicontrol}.
+
+::: {.callout-note appearance="minimal"}
+De automatische tijdgroepering van Excel voegt het berekend veld Maanden toe aan de [Rijen]{.uicontrol}. Er worden geen andere velden zoals kwartalen en jaren toegevoegd, omdat alle datums alleen de laatste dag van de maand in één jaar zijn.
+:::
+
+4. Sleep het veld [datum]{.varname} uit [Rijen]{.uicontrol} zodat hier alleen het veld [Maanden]{.varname} komt te staan.
+
+5. Plaats het veld [plaats]{.varname} in het vak [Filters]{.uicontrol}. Hierdoor komt er een rapportfilter in de draaitabel.
+
+![Draaitabelrapport met een filter voor plaats. Standaard worden alle waarden getoond.](images/pivots/supermarket-reportfilter-all.png){#fig-supermarket-reportfilter-all}
+
+6. Klik op de keuzepijl en selecteer `Amsterdam`.
+
+![Draaitabelrapport met de gegevens gefilterd op de plaats Amsterdam. Dat de gegevens gefilterd zijn is te zien aan het symbool filter.](images/pivots/supermarket-reportfilter-amsterdam.png){#fig-supermarket-reportfilter-amsterdam}
+
+7. Klik op de keuzepijl, vink aan [Meerdere items selecteren]{.uicontrol} en selecteer dan `Amsterdam` en `Rotterdam`.
+
+De gegevens voor beide plaatsen worden nu weergegeven. Helaas geeft het filter nu alleen maar aan dat er meerdere items geselecteerd zijn, maar niet welke items. Voor dit scenario zijn slicers een beter alternatief.
+
+![Draaitabelrapport met de gegevens gefilterd op meerdere plaatsen. Welke dat zijn kun je alleen zien door op de keuzepijl te klikken.](images/pivots/supermarket-reportfilter-multiple.png){#fig-supermarket-reportfilter-multiple}
+
+8. Klik op de keuzepijl en selecteer de optie [(Alle)]{.uicontrol}.
+
+9. Verwijder het veld [plaats]{.varname} uit het vak [Filters]{.uicontrol}.
+
+:::
+
+### Slicers {#sec-pivots-slicers}
+
+::: {#prp-pivots-slicers}
+Ga verder met het bestand uit @prp-pivots-reportfilters.
+
+1. Klik met de rechtermuisknop in de lijst met draaitabelvelden op veld [plaats]{.varname}  en kies [Toevoegen als slicer]{.uicontrol}.
+
+Op het werkblad wordt vervolgens een slicer gemaakt.
+
+![Slicer voor het veld plaats.](images/pivots/supermarket-slicer-town.png){#fig-supermarket-slicer-town}
+
+2. Experimenteer met de slicer door items te kiezen. Je kunt meerdere items selecteren met behulp van de [Ctrl]{.uicontrol} toets of via de knop ![Knop meervoudige selectie](images/pivots/slicer-button-multiple-items.png)
+
+Een andere manier om slicers te maken is via het menu. Je kunt dan meerdere slicers tegelijk maken.
+
+3. Klik ergens in het draaitabelrapport en kies [tab Draaitabel Analyseren > Slicer invoegen (groep Filter)]{.uicontrol}
+
+![Dialoogvenster slicers invoegen.](images/pivots/slicer-insert-dialogbox.png){#fig-slicer-insert-dialogbox}
+
+4. Selecteer [Maanden]{.varname} and click [OK]{.uicontrol}.
+
+Via het lint [tab Slicers)]{.uicontrol} kun je de opmaak van een slicer wijzigen, zoals stijl, kleur, ...
+
+5. Experimenteer met het filteren van de gegevens met de twee slicers.
+
+6. Verwijder alle slicers door eerst een slicer te selecteren en dan op de toets [Delete]{.uicontrol} te drukken.
+
+:::
+
+### Tijdlijnen {#sec-pivots-timelines}
+
+Tijdlijnen zijn als slicers. Hiermee kun je ook gegevens filteren maar ze zijn specifiek voor gebruik met datum-/tijdvelden. De datums verschijnen in een horizontale lijn van oud naar nieuw terwijl je van links naar rechts op de tijdlijn gaat.
+
+::: {#prp-pivots-timelines}
+Ga verder met het bestand uit @prp-pivots-slicers.
+
+1. Klik ergens in het draaitabelrapport en kies [tab Draaitabel Analyseren > Tijdlijn invoegen (groep Filter)]{.uicontrol}
+
+Het dialoogvenster ***Tijdlijn invoegen*** toont alleen het veld [datum]{.varname} omdat dit het enige datum/tijd veld is.
+
+2. Selecteer [datum]{.varname} en klik [OK]{.uicontrol}.
+
+::: {.callout-note appearance="minimal"}
+
+![Tijdlijn voor het veld datum.](images/pivots/supermarket-timeline-months.png){#fig-supermarket-timeline-months}
+
++ Een schuifbalk voor de zichtbare periode.
++ Handgrepen om de periode te selecteren waarop gefilterd moet worden.
++ Keuze voor de weer te geven tijdsperiode (Jaren, Kwartalen, Maanden, Dagen).
++ Wanneer je een tijdlijn selecteert krijg je op de randen handgrepen waarmee je het gebied groter/kleiner kunt maken.
+:::
+
+3. Selecteer een paar maanden en bekijk de resultaten.
+
+4. Klik op de keuzepijl rechtsboven voor de tijdsperiode en selecteer [Kwartalen]{.uicontrol}.
+
+![Tijdlijn met kwartalen.](images/pivots/supermarket-timeline-quarters.png){#fig-supermarket-timeline-quarters}
+
+5. Selecteer een paar kwartalen en bekijk de resultaten.
+
+6. Verwijder de tijdlijn door deze te selecteren en dan op de toets [Delete]{.uicontrol} te drukken.
+
+:::
+
+## Draaigrafieken {#sec-pivots-charts}
+
+Een draaigrafiek toont gegevensreeksen, categorieën en assen op dezelfde manier als een gewone grafiek. Maar je krijgt tevens mogelijkheden voor interactieve filtering direct op de grafiek zodat je snel een subset van de gegevens kunt bekijken. En je kunt ook slicers gebruiken voor de filtering.
+
+::: {#prp-pivots-charts}
+[Bestand]{.smallcaps}: `Omzet.xlsx`
+
+1. Open het bestand.
+
+2. Selecteer in het werkblad [draaitabel]{.varname} een cel in de draaitabel.
+
+3. Kies [tab Invoegen > Draaigrafiek (groep Grafieken) > Draaigrafiek > Gegroepeerde kolom > OK]{.uicontrol}.
+
+![Kolomgrafiek, gekoppeld aan een draaitabel.](images/pivots/sales-chart-clustered-column.png){#fig-sales-chart-clustered-column}
+
+In de draaigrafiek zijn filters voor [Regio]{.varname} en [Vertegenwoordiger]{.varname}. Wanneer je een filter in de grafiek gebruikt, dan worden ook de gegevens in de draaitabel gefilterd.
+
+4. Experimenteer met filtering op vertegenwoordiger en bekijk de resultaten. Eindig met het tonen van de gegevens voor alle vertegenwoordigers.
+
+5. Voeg een slicer toe voor [Maand]{.varname} en experimenteer hiermee.
+
+:::
+
+## Opties draaitabel {#sec-pivots-options}
+
+Er zijn diverse instelmogelijkheden voor draaitabellen. Kies hiervoor een willekeurige cel in een draaitabel en vervolgens [tab Draaitabel Analyseren > Opties (groep Draaitabel)]{.uicontrol}. Via tabbladen (zie hierna) heb je meerdere instelmogelijkheden.
+
+![Tabblad Indeling & opmaak.](images/pivots/pivottable-options-layout-format.png){#fig-pivottable-options-layout-format}
+
+![Tabblad Totalen en filters.](images/pivots/pivottable-options-totals-filter.png){#fig-pivottable-options-totals-filter}
+
+![Tabblad Weergave.](images/pivots/pivottable-options-display.png){#fig-pivottable-options-display}
+
+![Tabblad Afdrukken.](images/pivots/pivottable-options-printing.png){#fig-pivottable-options-printing}
+
+![Tabblad Gegevens.](images/pivots/pivottable-options-data.png){#fig-pivottable-options-data}
+
+![Tabblad Alt tekst.](images/pivots/pivottable-options-alttext.png){#fig-pivottable-options-alttext}
+
+## Opgaven {#sec-pivots-exercises}
+
+::: {#exr-pivo001}
+**Salaris gemiddeldes (pivo001)**
+
+Maak een draaitabelrapport om het gemiddelde salaris per afdeling en per divisie te bepalen. Het rapport moet er uitzien zoals hierna is aangegeven.
+
+![](images/pivots/pivo001_report.png)
+
+[Bestand]{.smallcaps}: `Personeel.xlsx`
+:::
+
+::: {#exr-pivo002}
+**Salaris totalen (pivo002)**
+
+Maak een draaitabelrapport om het totale salaris per functie en per divisie te bepalen. Verder moet er op afdeling gefilterd kunnen worden. Het rapport moet er uitzien zoals hierna is aangegeven.
+
+![](images/pivots/pivo002_report.png)
+
+[Bestand]{.smallcaps}: `Personeel.xlsx`
+:::
+
+::: {#exr-pivo003}
+**Omzet, reiskosten en provisie (pivo003)**
+
+In een werkblad zijn voor elke buitendienstmedewerker de volgende gegevens bijgehouden: Maand, Regio, Vertegenwoordiger, Omzet, Reiskosten en Provisie.
+
+Maak één draaitabelrapport waarmee je de totale omzet, reiskosten en provisie kunt verkrijgen per maand, per vertegenwoordiger en per regio.
+
+[Bestand]{.smallcaps}: `Pivo003.xlsx`
+
+`r hide("Antwoord")`
+![](images/pivots/pivo003_report.png)
+`r unhide()`
+:::
+
+::: {#exr-pivo004}
+**Gemiddeld cijfer (pivo004)**
+
+In de volgende tabel staan de cijfers voor het vak informatica van een aantal studenten uit twee verschillende klassen.
+
+![](images/pivots/pivo004_data.png)
+
+Bepaal met behulp van een draaitabel het gemiddelde per klas en per geslacht.
+
+[Bestand]{.smallcaps}: `Pivo004.xlsx`
+
+`r hide("Antwoord")`
+![](images/pivots/pivo004_report.png)
+`r unhide()`
+:::
+
+::: {#exr-pivo005}
+**Frequentieverdeling cijfers (pivo005)**
+
+In de volgende tabel staan de cijfers van een aantal leerlingen.
+
+![](images/pivots/pivo005_data.png)
+
+Maak met behulp van een draaitabel een frequentieverdeling van de cijfers.
+
+[Bestand]{.smallcaps}: `Pivo005.xlsx`
+
+`r hide("Antwoord")`
+![](images/pivots/pivo005_report.png)
+`r unhide()`
+:::
+
+::: {#exr-pivo006}
+**Kledingverkoop per regio (pivo006)**
+
+In de volgende tabel staan de verkopen aan dames- en herenkleding in de vier regio’s voor de jaren 2009 en 2010.
+
+![](images/pivots/pivo006_data.png)
+
+Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel de totale verkopen per jaar in de vier regio’s, uitgesplitst naar dames- en herenkleding.
+
+[Bestand]{.smallcaps}: `Pivo006.xlsx`
+
+`r hide("Antwoord")`
+![](images/pivots/pivo006_report.png)
+`r unhide()`
+:::
+
+::: {#exr-pivo007}
+**Winkelsluiting (pivo007)**
+
+In opdracht van de winkeliersvereniging is een enquête uitgevoerd naar de avondopenstelling van winkels. De resultaten van de geïnterviewde personen zijn in de volgende tabel te zien.
+
+![](images/pivots/pivo007_data.png)
+
+Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel het aantal voor- en tegenstanders per leeftijdscategorie en deze weer uitgesplitst per geslacht.
+
+[Bestand]{.smallcaps}: `Pivo007.xlsx`
+
+`r hide("Antwoord")`
+![](images/pivots/pivo007_report.png)
+`r unhide()`
+:::
+
+::: {#exr-pivo008}
+**Eigen huis en gemiddelde waarde (pivo008)**
+
+In de volgende tabel staat van een aantal personen aangegeven hoeveel jaren studie ze na de basisschool gevolgd hebben, of ze al dan niet een eigen huis hebben en zoja wat daarvan de waarde is.
+
+![](images/pivots/pivo008_data.png)
+
+Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel het aantal personen met een eigen huis en de gemiddelde waarde ervan als functie van het aantal jaren studie.
+
+[Bestand]{.smallcaps}: `Pivo008.xlsx`
+
+`r hide("Antwoord")`
+![](images/pivots/pivo008_report.png)
+`r unhide()`
+:::
+
+::: {#exr-pivo009}
+**Vervoersonderzoek (pivo009)**
+
+Onder de bezoekers van een stadcentrum is een marktonderzoek uitgevoerd naar het gebruik van de auto en het gebruik van de bus. In de volgende tabel staan de gegevens van de geënquêteerden die ondervraagd zijn over hun manier van verplaatsen naar het centrum om te gaan winkelen. Gingen ze met de auto, met de bus, hoe ver ze wonen ze van het centrum (in km.)en de reistijd (in min.\).
+
+![](images/pivots/pivo009_data.png)
+
+Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel de gemiddelde tijd met de auto voor inwoners die verder dan 15 km van het centrum wonen.
+
+`r hide("Hint")`
+Maak een extra kolom waarin bepaald wordt of de afstand tot het centrum meer dan 15 km is.
+`r unhide()`
+
+[Bestand]{.smallcaps}: `Pivo009.xlsx`
+
+`r hide("Antwoord")`
+28,5 min.
+`r unhide()`
+:::
+
+::: {#exr-pivo010}
+**Opbrengst koffie per regio (pivo010)**
+
+In een werkblad staan de opbrengsten van een aantal soorten koffie per maand per gebied. Het management wil graag op een eenvoudige wijze de totale opbrengst van de producten per regio kunnen bepalen. Maak een draaitabel waaruit per maand de opbrengst per koffiesoort berekend is. De regio moet met een rapportfilter gekozen kunnen worden.
+
+[Bestand]{.smallcaps}: `Koffie.xlsx`
+
+`r hide("Antwoord")`
+![](images/pivots/pivo010_report.png)
+`r unhide()`
+:::
+
+::: {#exr-pivo011}
+**Brandstofverbruik auto's (pivo011)**
+
+Bepaal per merk en per brandstofsoort het minimum en het maximum verbruik met behulp van een draaitabel.
+
+[Bestand]{.smallcaps}: `Auto.xlsx`
+
+`r hide("Antwoord")`
+![](images/pivots/pivo011_report.png)
+`r unhide()`
+:::
+
+::: {#exr-pivo012}
+**Hobbyclub (pivo012)**
+
+In een werkblad staan in de laatste twee kolommen het aantal bezochte clubavonden in 2009 en 2010. Maak m.b.v. draaitabellen de volgende overzichten.
+
+1.  Het aantal leden van de club per woonplaats en per geslacht.
+2.  Het percentage leden per hobby en per geslacht.
+3.  Een overzicht van de aanwezigheid in 2010 per geslacht, waarbij het bezochte aantal clubavonden in drie groepen verdeeld is zoals in het volgende overzicht:
+
+    ![](images/pivots/pivo012_meetings_count.png)
+
+
+[Bestand]{.smallcaps}: `Pivo012.xlsx`
+
+`r hide("Antwoord")`
+
+1.  Aantal leden per plaats en per geslacht
+
+![](images/pivots/pivo012_members_count.png)
+
+2.  Percentage leden per hobby en per geslacht
+
+![](images/pivots/pivo012_members_percent.png)
+
+3.  Deelname leden in 2010 per geslacht
+
+![](images/pivots/pivo012_meetings_count.png)
+
+`r unhide()`
+:::

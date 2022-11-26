@@ -1,0 +1,56 @@
+# Voorwoord {.unnumbered}
+
+Dit leerboek is bedoeld als een grondige kennismaking met Microsoft Excel en ontwikkeld voor met name studenten in het middelbaar en hoger onderwijs en gebruikers van Microsoft Excel. 
+Dit studieboek verschilt op meerdere manieren van andere studieboeken.
+
++ De onderdelen zijn ontwikkeld om je te leren hoe je een bepaalde taak kunt uitvoeren en beheersen, niet meer en niet minder. Dat heeft geresulteerd in concrete stapsgewijs opgebouwde taken zonder overbodige informatie die alleen maar voor afleiding kan zorgen. In de hoofdstukken worden deze taken duidelijk aangegeven doordat de titel ervan begint met [Taak:]{.term}, zodat het duidelijk is dat iets uitgevoerd moet worden.
+
++ Het studieboek bevat interactieve elementen die studenten kunnen gebruiken bij zelfgestuurd leren. Hiervoor is een browser met Javascript nodig.
+
++ Aan het einde van de meeste hoofdstukken staat een serie opgaven. De titel van een opgave begint steeds met een unieke code en een korte omschrijving.
+
++ De inhoud van de taken en opgaven is vooral bepaald door competenties die het hoger onderwijs stelt. Veel van de opgaven zijn voortgekomen uit ervaringen van studenten in de beroepspraktijk tijdens stages en afstuderen.
+
+## Organisatie studieboek {.unnumbered}
+
+Inhoud van de hoofdstukken.
+
++ Hoofdstuk @sec-introductie: Kennismaking met spreadsheets en Excel. Wanneer je al gewend bent om met Excel te werken kun je dit hoofdstuk overslaan.
+
++ Hoofdstuk @sec-worksheets: Gebruik van werkbladen.
+
++ Hoofdstuk @sec-data: Invoer van gegevens en het verschil tussen inhoud en opmaak uit.
+
++ Hoofdstuk @sec-formatting: Opmaak van werkblad en cellen, alsmede voorwaardelijke opmaak.
+
++ Hoofdstuk @sec-calculations: Formules, absolute en relatieve adressering, kopieren en naamgeving en het opzetten van een berekeningsmodel.
+
++ Hoofdstuk @sec-functions: Ingebouwde functies.
+
++ Hoofdstuk @sec-tables: Tabellen en bewerkingen.
+
++ Hoofdstuk @sec-arrays: Matrixformules en dynamische matrices.
+
++ Hoofdstuk @sec-charts: Grafieken maken.
+
++ Hoofdstuk @sec-charttype: Grafieksoorten.
+
++ Hoofdstuk @sec-scenarios: Scenario's.
+
++ Hoofdstuk @sec-datatables: Gegevenstabellen.
+
++ Hoofdstuk @sec-pivots: Draaitabellen, draaigrafieken, slicers en tijdlijnen.
+
++ Hoofdstuk @sec-goalseek: Doelzoeken
+
++ Hoofdstuk @sec-solver: Oplosser
+
++ Hoofdstuk @sec-macros: Macro's
+
++ Hoofdstuk @sec-measurements: Meetresultaten verwerken, lineaire relaties.
+
+## Software {.unnumbered}
+
+In dit studieboek wordt gewerkt met **Excel 365 NL**, een product dat voortdurend evolueert, met nieuwe functies die bij elke nieuwe versie verschijnen. Een belangrijk kenmerk is de introductie van dynamische matrices en functies in de release van juli 2020. Dit heeft ervoor gezorgd dat Excel 365 verschilt van andere Excelversies, waaronder de versies 2016 en 2019. Dynamische matrices zijn niet compatibel met alle andere Excelversies.
+
+Betekent dit dat je dit leerboek niet kunt gebruiken met Excel 2016 en later? Nee, alleen het matrix hoofdstuk is niet geschikt, maar alle andere hoofdstukken geven geen problemen. Dat geldt grotendeels ook voor de oudere Excelversies 2010 en 2007.

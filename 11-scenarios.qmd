@@ -1,0 +1,195 @@
+# Scenario's {#sec-scenarios}
+
+::: {.callout-note appearance="simple" icon="false"}
++ Wat is een scenario.
++ Scenario maken.
+:::
+
+Een scenario is een model waarmee je [wat-als]{.term} analyses kunt uitvoeren. Hiermee kun je verschillende situaties (scenario's) verkennen en doorrekenen zonder de waarden in het werkblad te veranderen.
+
+In een scenario geef je een aantal variabele cellen (de zogenaamde **veranderende cellen**) verschillende waarden en berekent vervolgens het effect van deze wijzigingen in een of meerdere zogenaamde **resultaatcellen**. De resultaatcellen bevatten formules met verwijzingen naar de veranderende cellen.
+
+Je wilt bijvoorbeeld de jaarlijkse winst van een koffiebar, afhankelijk van een aantal kostenposten, via een meest positief en een meest negatief scenario met elkaar vergelijken. De resultaatcel is dan de cel waarin de jaarlijkse winst berekend wordt. En de veranderende cellen zijn de cellen met de kostenposten.
+
+Het identificeren van de resultaatcellen en de veranderende cellen is de sleutel voor het maken van scenario's.
+:::
+
+Met Excel's scenariobeheer kun je verschillende verzamelingen van invoergegevens maken waarmee de bijbehorende resultaten worden berekend. Zo'n scenario kun je onder een passende naam (zoals Meest Positief, Meest Negatief, ...) bewaren. De verschillende resultaten kun je eenvoudig vergelijken in een geproduceerd samenvattingsrapport. Dit rapport toont zowel de invoerwaarden voor de veranderende cellen als de waarden van de resultaatcellen.
+
+::: {.callout-note}
+Het is aan te raden om altijd de huidige situatie in een scenario op te slaan, bijv. onder de naam [Huidig]{.varname}.
+:::
+
+## Koffiebar {#sec-scenarios-coffeebar}
+
+In @fig-coffeebar-model zie je een calculatiemodel van koffiebar "De Bruine Boon". De grijs gekleurde cellen zijn de variabelen, veranderende cellen.
+
+![Calculatiemodel koffiebar.](images/scenarios/coffeebar-model.png){#fig-coffeebar-model}
+
+De eigenaar van de koffiebar wil naast de huidige waarden voor twee andere scenario's doorrekenen wat het effect hiervan is op de winst.
+
+Hogere prijzen, minder salaris en reclame
+: Een scenario met 10% hogere prijzen en minder investeringen in salarissen (€ 30000 minder) en reclame (€ 5000 minder)
+
+Hogere prijzen, lagere kosten en meer reclame
+: Een scenario met 5% hogere prijzen, 5% lagere orderkosten en meer reclame (€ 2000 meer)
+
+::: {#prp-scenarios-coffeebar}
+[Bestand]{.smallcaps}: `BruineBoon.xlsx`
+
+1. Open het bestand.
+
+Bestudeer het model. Identificeer de veranderende cellen en de resultaatcel. Bestudeer de gebruikte formules en ga na dat alle cellen namen gekregen hebben.
+
+::: {.callout-note}
+Door cellen zinvolle namen te geven zullen deze namen in het samenvattingsrapport gebruikt worden in plaats van de adressen. Het rapport wordt hierdoor veel beter leesbaar.
+:::
+
+2. Kies [tab Gegevens > Wat als -analyse (groep Voorspelling) > Scenariobeheer]{.uicontrol}.
+
+![Dialoogvenster scenariobeheer.](images/scenarios/scenario-manager.png){#fig-scenario-manager}
+
+3. Klik op [Toevoegen]{.uicontrol}.
+
+4. Vul het dialoogvenster in zoals in @fig-coffeebar-scen-current is aangegeven. Maak bij het specificeren van de [Veranderende cellen]{.uicontrol} gebruik van de [CTRL]{.uicontrol} toets om meerdere gebieden te selecteren.
+
+![Dialoogvenster om de huidige situatie in een scenario vast te leggen.](images/scenarios/coffeebar-scen-current.png){#fig-coffeebar-scen-current}
+
+5. Klik op [OK]{.uicontrol}. Het venster ***Scenariowaarden*** verschijnt waarin de waarden voor de veranderende cellen zijn ingevuld.
+
+![Dialoogvenster met de waarden van de veranderende cellen voor het scenario Huidig.](images/scenarios/coffeebar-scen-current-values.png){#fig-coffeebar-scen-current-values}
+
+6. Klik op [Toevoegen]{.uicontrol} om een nieuw scenario in te voeren.
+
+7. Geef het volgende scenario de naam [Hogere prijzen, minder salaris en reclame]{.varname}. Geef een korte toelichting in het vak [Opmerkingen]{.uicontrol} en klik dan op [OK]{.uicontrol}.
+
+Het dialoogvenster Scenariowaarden verschijnt met daarin nog steeds de huidige waarden van de veranderende cellen.
+
+8. Typ nu de nieuwe waarden in de cellen die voor dit scenario wijzigen.
+
+In plaats van deze zelf uit te rekenen kan ook een formule (beginnend met =)ingetypt worden. Excel rekent dan automatisch de nieuwe waarde uit.
+
+   + Opbrengst-per-Order: `=1,1*2,5`
+   + Salarissen: `=300000-30000`
+   + Reclame: `=20000-5000`
+
+9. Klik op [OK]{.uicontrol}.
+
+::: {.callout-warning}
+Wanneer je formules hebt gebruikt verschijnt er een waarschuwingsscherm dat de ingevoerde formules vervangen worden door de uitkomsten van de formules.
+
+Bevestig dit met [OK]{.uicontrol}.
+:::
+
+10. Maak op analoge wijze nog een scenario met de naam `Hogere prijzen, lagere kosten en meer reclame` en pas de waarden voor dit scenario aan.
+
+Nadat het laatst scenario is toegevoegd kom je weer in het dialoogvenster ***Scenariobeheer*** waarin nu drie scenario's zitten (@fig-coffeebar-scenarios)
+
+![Dialoogvenster scenariobeheer met drie scenario's.](images/scenarios/coffeebar-scenarios.png){#fig-coffeebar-scenarios}
+
+11. Selecteer achtereenvolgens elk scenario en klik dan op [Weergeven]{.uicontrol}.
+
+In het werkblad worden de waarden in de veranderende cellen en de cellen die daarvan afhankelijk zijn, aangepast voor het geselecteerde scenario.
+
+12. Klik op [Samenvatting]{.uicontrol} om een rapport te maken.
+
+Er verschijnt een dialoogvenster (@fig-coffeebar-scen-reporttype)) waarin je de soort samenvatting kunt kiezen. Ook de resultaatcel (de cel met de winst)is reeds door Excel ingevuld.
+
+![Dialoogvenster scenariosamenvatting.](images/scenarios/coffeebar-scen-reporttype.png){#fig-coffeebar-scen-reporttype}
+
+13. Klik op [OK]{.uicontrol}.
+
+In een nieuw werkblad komt nu een samenvattingsrapport te staan. Merk op dat de linkerkolom de toegekende namen van de cellen bevat en niet de adressen, waardoor het rapport beter leesbaar is.
+
+![Samenvattingsrapport voor de koffiebar scenario's.](images/scenarios/coffeebar-scen-summary.png){#fig-coffeebar-scen-summary}
+
+:::
+
+## Opgaven {#sec-scenarios-exercises}
+
+::: {#exr-scen001}
+**Winstmarge - Verkoopprijs (scen001)**
+
+Neem de volgende tabel zo nauwkeurig mogelijk over. Gebruik formules voor de bepaling van de marge, BTW en de verkoopprijzen.
+
+![](images/scenarios/scen001_data.png)
+
+Bepaal via Scenario manager de verkoopprijzen (incl. btw) voor een winstmarge van achtereenvolgens: 15%, 20%, 25% en 30%. De uitvoer moet er ongeveer als volgt uitzien:
+
+![](images/scenarios/scen001_report.png)
+
+[Bestand]{.smallcaps}: `Scen001.xlsx`
+:::
+
+::: {#exr-scen002}
+**Begroting sportvereniging (scen002)**
+
+In de volgende afbeelding is een vereenvoudigde begroting van een sportvereniging weergegeven. De huur is precies bekend. Van de andere posten kan redelijk goed een onder- en een bovengrens aangegeven worden:
+
++ De contributieopbrengsten liggen tussen de 1800 en 2400 euro.
++ De kantineopbrengsten liggen tussen de 600 en 800 euro.
++ De materiaalkosten liggen tussen de 500 en 800 euro.
++ De diverse kosten tussen de 400 en 700 euro..
+
+![](images/scenarios/scen002_data.png)
+
+Maak met de scenariomanager een meest positieve en een meest negatieve scenario. De uitvoer moet er ongeveer als volgt uitzien:
+
+![](images/scenarios/scen002_report.png)
+
+[Bestand]{.smallcaps}: `Scen002.xlsx`
+:::
+
+::: {#exr-scen003}
+**Scenario's bedrijfswinst (scen003)**
+
+Een bedrijf maakt drie producten (A, B en C). Om deze producten te maken is een verschillend aantal arbeidsuren en hoeveelheid materialen nodig. In volgende afbeelding zijn de tarieven voor arbeidsloon en materiaalkosten alsmede de benodigde hoeveelheden om deze producten te maken. Tevens zijn de kosten en opbrengsten berekend bij de huidige productieaantallen.
+
+![](images/scenarios/scen003_data.png)
+
+Voer het model in een werkblad in. Zorg voor de juiste formules in de cellen waarvan de uitkomst berekend moet worden.
+
+Het management wil een voorspelling van de bedrijfswinst, maar er is nog wat onzekerheid over de hoogte van het arbeidsloon en de materiaalkosten. Voor de voorspelling zijn daarom drie scenario’s bedacht: het meest gunstige geval, het meest slechte geval en het huidige (meest waarschijnlijke)geval. De verschillende tarieven zijn in de volgende tabel te zien.
+
+|scenario|arbeidsloon|materiaalkosten|
+|--------|-----------|---------------|
+|gunstig|€ 60|€ 114|
+|slecht|€ 76|€ 124|
+|huidig|€ 68|€ 118|
+
+Maak met behulp van de scenariomanager een samenvattingsrapport voor deze drie scenario’s.
+
+[Bestand]{.smallcaps}: `Scen003.xlsx`
+
+`r hide("Antwoord")`
+![](images/scenarios/ex_scen003_report.png)
+`r unhide()`
+:::
+
+::: {#exr-scen004}
+**Inkomsten automatiseringsbedrijf (scen004)**
+
+De inkomsten en uitgaven van een automatiseringsbedrijf voor 2010 zijn in de volgende afbeelding te zien. De directie wil graag een winstverwachting voor de jaren 2011 en 2012. De inkomsten en uitgaven voor deze twee jaren worden beïnvloed door de volgende factoren.
+
++ Een stijging van alle inkomsten met een groeifactor welke op dit moment 10% is.
++ Een stijging van alle uitgaven behalve de rente met een inflatiefactor welke op dit moment 3% is.
++ De hoogte van de rente welke op dit moment 8% is.
++ Het belastingpercentage, op dit moment 35%.
+
+![](images/scenarios/scen004_data.png)
+
+Zet deze model in een werkblad. De inkomsten en uitgaven voor 2010 liggen vast, voor 2011 en 2012 moeten deze berekend worden. Zorg voor de juiste formules in de cellen waarvan de uitkomst berekend moet worden.
+
+Het management wil een voorspelling van de winstverwachting, maar er is nog wat onzekerheid over de ontwikkeling van een aantal factoren die de winst beïnvloeden. Het centraal planbureau heeft voorspellingen van deze factoren uitgebracht. Op basis hiervan zijn drie scenario's berekend:
+
+![](images/scenarios/scen004_scenarios.png)
+
+Maak met behulp van de scenariomanager een samenvattingsrapport voor deze drie scenario’s.
+
+[Bestand]{.smallcaps}: `Scen004.xlsx`
+
+`r hide("Antwoord")`
+![](images/scenarios/scen004_report.png)
+`r unhide()`
+:::
+
