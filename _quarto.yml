@@ -9,7 +9,8 @@ book:
   date-format: long
   google-analytics: "G-1C2YS9QSEK"
   site-url: https://leerexcel.netlify.app/
-
+  repo-url: https://github.com/bwelman/leerexcel
+  repo-actions: [issue]
   description: "Een taakgericht studieboek."
 
   chapters:
