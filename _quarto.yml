@@ -5,7 +5,7 @@ project:
 book:
   title: "Leer Microsoft Excel"
   author: "Ben Welman"
-  date: today
+  date: last-modified
   date-format: long
   google-analytics: "G-1C2YS9QSEK"
   site-url: https://leerexcel.netlify.app/
