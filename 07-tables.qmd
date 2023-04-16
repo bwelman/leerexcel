@@ -1,5 +1,8 @@
 # Tabellen {#sec-tables}
 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
 ::: {.callout-note appearance="simple" icon="false"}
 + Kenmerken van tabellen (lijsten).
 + Knop Formulier.
@@ -512,9 +515,12 @@ Breng nu een filter aan zodat alleen die rijen getoond worden van leerlingen die
 
 [Bestand]{.smallcaps}: `List001.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/tables/list001_solution.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-list002}
@@ -554,7 +560,10 @@ Maak een lijst van alle auto's met de bijbehorende gegevens die aan deze voorwaa
 
 [Bestand]{.smallcaps}: `Auto.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/tables/list004_solution.png)
 `r unhide()`
+:::
+
 :::

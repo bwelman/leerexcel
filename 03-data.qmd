@@ -159,7 +159,7 @@ Het kopiëren van de inhoud van cellen is een veelvoorkomende actie in Excel. Je
 4. Selecteer de begincel van de bestemming, bijv. D20.
 
 5. Kies [Start > Plakken (groep Klembord)]{.uicontrol}.
-::
+:::
 
 ## Automatisch doorvoeren {#sec-data-autofill}
 

@@ -1,5 +1,8 @@
 # Macro's {#sec-macros}
 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
 ::: {.callout-note appearance="simple" icon="false"}
 + Uitleg macro's en het gebruik ervan.
 + Activeren tabblad Ontwikkelaars.
@@ -284,6 +287,7 @@ Macro's kunnen verwijderd worden via [tab Ontwikkelaars > Macro's (groep Program
 
 Neem een macro op die de actieve cel een grijze achtergrondkleur geeft.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Een mogelijke oplossing.
 
@@ -304,11 +308,14 @@ End Sub
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-macr002}
 **Procentuele opmaak (macr002)**
 
 Neem een macro op met de naam ProcentOpmaak die een getal opmaakt als procenten met 1 decimaal en het getal in de cel centreert.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Een mogelijke oplossing.
 
@@ -326,6 +333,8 @@ End Sub
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-macr003}
 **Opmaak cel A1 (macr003)**
 
@@ -335,6 +344,7 @@ Neem een macro op die het volgende uitvoert:
 + Kolombreedte van de eerste kolom wordt 3
 + Tekst in cel A1 wordt Tahoma 14, vet, blauwe kleur
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Een mogelijke oplossing.
 
@@ -359,6 +369,8 @@ End Sub
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-macr004}
 **Rasterlijnen afdrukken (macr004)**
 
@@ -368,6 +380,7 @@ Neem een macro op die er voor zorgt dat bij het afdrukken ook de rasterlijnen wo
 Deze eigenschap is te vinden bij [tab Pagina-indeling > Pagina-instelling > tab Blad]{.uicontrol}.
 :::
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Een mogelijke oplossing.
 
@@ -382,5 +395,7 @@ Sub Print_Rasterlijnen()
 End Sub
 ```
 `r unhide()`
+:::
+
 :::
 

@@ -1,5 +1,8 @@
 # Draaitabellen {#sec-pivots}
 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
 ::: {.callout-note appearance="simple" icon="false"}
 + Mogelijkheden van een draaitabel.
 + Draaitabel maken.
@@ -35,7 +38,7 @@ Een draaitabel heeft vier gebieden waarin je velden kunt plaatsen:
 
 |Gebied  |Toelichting                                                                                                    |
 |--------|---------------------------------------------------------------------------------------------------------------|
-|Waarden |De velden met numerieke gegevens die je wilt samenvatten, mestal voor de berekening van totalen en gemiddeldes.|
+|Waarden |De velden met numerieke gegevens die je wilt samenvatten, meestal voor de berekening van totalen en gemiddeldes.|
 |Rijen   |Deze velden worden gebruikt om afzonderlijke groepen te maken. De informatie voor elke groep wordt in een aparte rij gezet.|
 |Kolommen|Deze velden worden ook gebruikt om afzonderlijke groepen te maken. Ze worden meestal gebruikt wanneer de gegevens in de rijen wilt onderverdelen. Deze groepen worden in afzonderlijke kolommen weergegeven. Neem velden die niet teveel groepen geven, anders wordt de tabel erg breed.|
 |Filters |Deze velden kunnen gebruikt worden om de gegevens te filteren.|
@@ -161,11 +164,13 @@ Probeer nu zelf  met behulp van draaitabellen de volgende vraag te beantwoorden:
 
 Welke drie producten zorgen voor de meeste omzet?
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 Gebruik [product]{.varname} als rijvariabele. Een kolomvariabele is er in dit geval niet. Sorteer in het draaitabelrapport de omzet van hoog naar laag.
 
 ![](images/pivots/supermarket-products.png)
 `r unhide()`
+:::
 
 :::
 
@@ -299,30 +304,26 @@ Om de waarden gemakkelijker te vergelijken kun je er ook voor kiezen om ze weer 
 
 Gebruik de mogelijkheden van draaitabellen om de volgende vragen te beantwoorden. Er zijn meerdere wegen om de antwoorden te vinden.
 
-```{r salesman, echo=FALSE}
+```{r}
+#| label: salesman
+#| echo: false
+#| eval: false
+
 verkoper <- c("Anderson","Brown", "Gonzalez", "Hernandez", "Johnson", "King", "Lewis", "Miller", "Phillips", "Smith", "Williams")
 names(verkoper)[9] = "answer"
 maand <- c("jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec")
 names(maand)[1] = "answer"
 ```
 
-
 1. Welke verkoper heeft het meeste verkocht in december 2010?  
-   Verkoper `r mcq(verkoper)`
 
 2. In welke maand van welk jaar was de verkoop van software het grootst?  
-   Jaar `r mcq(c(2010, answer=2011))`, Maand `r mcq(maand)`
 
 3. Bekijk de verkooppercentages voor hard- en software per regio. Wat is het percentage voor software in de regio Zuid?  
-   Afgerond tot geheel getal: `r fitb(answer = c(46,47), num=TRUE)`
 
 4. In welk kwartaal van welk jaar waren de verkopen van Anderson het laagst?  
-   Jaar `r mcq(c(2010, answer=2011))`, Kwartaal `r mcq(c(1, 2, answer = 3, 4))`
 
 5. Bekijk de verkopen van Brown in kwartaal 2 van 2011. Valt je iets bijzonders op?
-`r hide("Antwoord")`
-Alleen omzet in de maand juni. Niets in april en mei.
-`r unhide()`
 
 ## Filteren {#sec-pivots-filters}
 
@@ -505,9 +506,12 @@ Maak één draaitabelrapport waarmee je de totale omzet, reiskosten en provisie 
 
 [Bestand]{.smallcaps}: `Pivo003.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/pivots/pivo003_report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo004}
@@ -521,9 +525,12 @@ Bepaal met behulp van een draaitabel het gemiddelde per klas en per geslacht.
 
 [Bestand]{.smallcaps}: `Pivo004.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/pivots/pivo004_report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo005}
@@ -537,9 +544,12 @@ Maak met behulp van een draaitabel een frequentieverdeling van de cijfers.
 
 [Bestand]{.smallcaps}: `Pivo005.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/pivots/pivo005_report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo006}
@@ -553,9 +563,12 @@ Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel de to
 
 [Bestand]{.smallcaps}: `Pivo006.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/pivots/pivo006_report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo007}
@@ -569,9 +582,12 @@ Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel het a
 
 [Bestand]{.smallcaps}: `Pivo007.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/pivots/pivo007_report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo008}
@@ -585,9 +601,12 @@ Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel het a
 
 [Bestand]{.smallcaps}: `Pivo008.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/pivots/pivo008_report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo009}
@@ -599,15 +618,20 @@ Onder de bezoekers van een stadcentrum is een marktonderzoek uitgevoerd naar het
 
 Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel de gemiddelde tijd met de auto voor inwoners die verder dan 15 km van het centrum wonen.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 Maak een extra kolom waarin bepaald wordt of de afstand tot het centrum meer dan 15 km is.
 `r unhide()`
+:::
 
 [Bestand]{.smallcaps}: `Pivo009.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 28,5 min.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo010}
@@ -617,9 +641,12 @@ In een werkblad staan de opbrengsten van een aantal soorten koffie per maand per
 
 [Bestand]{.smallcaps}: `Koffie.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/pivots/pivo010_report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo011}
@@ -629,9 +656,12 @@ Bepaal per merk en per brandstofsoort het minimum en het maximum verbruik met be
 
 [Bestand]{.smallcaps}: `Auto.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/pivots/pivo011_report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-pivo012}
@@ -648,6 +678,7 @@ In een werkblad staan in de laatste twee kolommen het aantal bezochte clubavonde
 
 [Bestand]{.smallcaps}: `Pivo012.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 
 1.  Aantal leden per plaats en per geslacht
@@ -663,4 +694,6 @@ In een werkblad staan in de laatste twee kolommen het aantal bezochte clubavonde
 ![](images/pivots/pivo012_meetings_count.png)
 
 `r unhide()`
+:::
+
 :::

@@ -1,5 +1,8 @@
 # Doelzoeken {#sec-goalseek}
 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
 ::: {.callout-note appearance="simple" icon="false"}
 + Methode Doelzoeken.
 + Toepassingsgebied van Doelzoeken.
@@ -53,11 +56,13 @@ Bij dit eenvoudige voorbeeld kun je het antwoord gemakkelijk met de hand uitreke
 
 ![Doelzoekwaarden voor de koffiebar.](images/goalseek/stadiumcoffee-goalseek.png){#fig-stadiumcoffee-goalseek}
 
+::: {.content-visible when-format="html:js"}
 `r hide("Toelichting")`
-+ [Cel instellen]{.uicontrol}: De cel met het maandresultaat, B18.
-+ [Op waarde]{.uicontrol}: Voor een break-even is dat 0.
-+ [Door wijzigen van cel]{.uicontrol}: Dit is de cel met het aantal koppen koffie dat verkocht moet worden, B16.
+-   [Cel instellen]{.uicontrol}: De cel met het maandresultaat, B18.
+-   [Op waarde]{.uicontrol}: Voor een break-even is dat 0.
+-   [Door wijzigen van cel]{.uicontrol}: Dit is de cel met het aantal koppen koffie dat verkocht moet worden, B16.
 `r unhide()`
+:::
 
 4. Klik op [OK]{.uicontrol}.
 
@@ -87,9 +92,12 @@ Stel je wilt als freelancer gaan werken en je hebt je voorgenomen dit alleen te 
 1.  Maak in een werkblad een model waarin het percentage provisie en de omzet kunnen worden ingevoerd en waarin het provisiebedrag berekend wordt.
 2.  Bepaal via Doelzoeken de omzet die gemaakt moet worden zodat een provisie van € 5000 behaald wordt.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Omzet € 64102,56
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-goal002}
@@ -106,9 +114,12 @@ Met behulp van de functie `BET` kan de periodieke betaling van een lening worden
 Omdat een betaling als een uitgaande kasstroom wordt gezien wordt de uitkomst als een negatief getal weergegeven.
 :::
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Geleend bedrag € 7280.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-goal003}
@@ -125,11 +136,14 @@ In de grafiek hierna zijn TK en TO uitgezet als functie van Q.
 1. Teken deze grafiek.
 2. Bepaal het break-even punt. Dit is de hoeveelheid Q waarvoor de opbrengsten en de kosten aan elkaar gelijk zijn. De grafiek laat zien dat er twee van deze punten zijn. Bepaal ze beide m.b.v. Doelzoeken en geef de antwoorden op 4 decimalen nauwkeurig.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Oplossing 1: Q = 0,2120 en TK = TO = 16,74
 
 Oplossing 2: Q=11,7879 en TK = TO = 248,26
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-goal004}
@@ -142,7 +156,10 @@ Op 1 januari 2010 wordt een bedrag van € 1000 op een spaarrekening gestort. De
 1. Maak in een werkblad dit model.
 2. Bepaal met Doelzoeken hoeveel je aan het begin had moeten storten om na 10 jaar € 2500 euro op de spaarrekening te hebben.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Storting € 1915,29.
 `r unhide()`
+:::
+
 :::

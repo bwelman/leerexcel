@@ -1,5 +1,8 @@
 # Grafieksoorten {#sec-charttype}
 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
 ::: {.callout-note appearance="simple" icon="false"}
 + Grafieksoorten.
 + Lijndiagram vs Spreidingsdiagram.
@@ -172,7 +175,7 @@ De gegevens moeten in een lijndiagram worden weergegeven, bijvoorbeeld zoals in 
 
 ## Taak: Spreidingsdiagram {#sec-charttype-scatter}
 
-Een spreidingsdiagram (XY diagram)kun je gebruiken wanneer je het verband tussen twee numerieke variabelen wilt analyseren en weer wilt geven. Ook kun je hiermee een trendlijn laten bepalen. Hierbij worden de waarden van twee numerieke variabelen tegen elkaar uitgezet. Elk paar getallen levert een punt in het diagram op.
+Een spreidingsdiagram (XY diagram) kun je gebruiken wanneer je het verband tussen twee numerieke variabelen wilt analyseren en weer wilt geven. Ook kun je hiermee een trendlijn laten bepalen. Hierbij worden de waarden van twee numerieke variabelen tegen elkaar uitgezet. Elk paar getallen levert een punt in het diagram op.
 
 Om te onderzoeken of er een verband is tussen de lichaamslengte en gewicht is zijn deze gegevens bij 10 studenten gemeten. De meetgegevens zijn in @fig-scatter-data weergegeven.
 
@@ -201,9 +204,11 @@ De gegevens moeten in een spreidingsdiagram worden weergegeven, zoals in @fig-sc
 
 6. Wijzig de schaal van de verticale as zo dat deze loopt van 40 t/m 80, steeds oplopend met 10.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint aanpassing schaal as")`
 [Selecteer de as > Rechter muisknop > As opmaken > Opties voor as]{.uicontrol}
 `r unhide()`
+:::
 
 :::
 
@@ -231,7 +236,7 @@ De horizontale as heeft gelijk verdeelde gegevenscategorieën (tekst of datums).
 
 Een lijndiagram is goed voor het weergeven van de verandering van een variabele in de tijd. Voorbeelden zijn de verkoop, de omzet, de winst, de prijs enz. per dag, week, maand, kwartaal, jaar. De tijdseenheid wordt altijd langs de horizontale as uitgezet en de waarde van de gemeten variabele langs de verticale as.
 
-*#### **Spreidingsdiagram**
+**Spreidingsdiagram**
 
 + verticaal: *waarde-as*
 + horizontaal: *waarde-as*
@@ -298,9 +303,11 @@ De gegevens moeten in een gestapeld vlakdiagram worden weergegeven, zoals in @fi
 
 5. Wijzig de positie van de legenda van [Onder]{.uicontrol} naar [Rechts]{.uicontrol}.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint legenda")`
 [Selecteer legenda > Rechter muisknop > Legenda opmaken > Opties voor legenda]{.uicontrol}
 `r unhide()`
+:::
 
 :::
 
@@ -416,4 +423,4 @@ De gegevens moeten in een Paretodiagram worden weergegeven, zoals in @fig-pareto
 |Vlakdiagram|Area chart|Flächendiagramm|
 |Watervaldiagram|Waterfall chart|Wasserfalldiagramm|
 
-Nederlandse, Engelse en Duitse namen van een aantal grafieksoorten. {#tbl-charttype-translations}
+: Nederlandse, Engelse en Duitse namen van een aantal grafieksoorten. {#tbl-charttype-translations}

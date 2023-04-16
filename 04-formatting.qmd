@@ -1,5 +1,8 @@
 # Opmaak werkblad en gegevens {#sec-formatting}
 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
 ::: {.callout-note appearance="simple" icon="false"}
 -   Het belang van eerst selecteren en dan pas opmaken.
 -   Aanpassing kolombreedte en rijhoogte.
@@ -185,8 +188,6 @@ Bovenaan staat de actuele opmaak van de geselecteerde cel, bijvoorbeeld [Standaa
 
 Wanneer de gewenste opmaak niet in de lijst voorkomt dan kun je klikken op [Meer getalnotaties...]{.uicontrol}. Dan verschijnt het dialoogvenster ***Celeigenschappen*** met de [tab Getal]{.uicontrol} geselecteerd. Hier kun je zelf een opmaak definieren.
 
-## Getalopmaak {#sec-formatting-numberformat-task}
-
 In het volgende voorbeeld is een deel van een werkblad te zien met daarin vele toepassingen van getalopmaak. Alle opmaak is met de voorgedefinieerde stijlen en/of de opdrachtknoppen voor getalopmaak aangebracht.
 
 ![Voorbeeld van een opmaak van getallen.](images/formatting/number-format-example.png){#fig-number-format-example}
@@ -198,7 +199,15 @@ In het volgende voorbeeld is een deel van een werkblad te zien met daarin vele t
 
 2.  Maak het werkblad op zoals in de afbeelding te zien is. Gebruik hierbij de mogelijkheden die beschikbaar zijn via de [groep Getal (tabblad Start]{.uicontrol}.
 
-`r hide("Hint")` + Kolom A, getallen opgemaakt als tekst. + Kolom B, financiële notatie. + Kolom C, getallen eerst opgemaakt met duizendtal notatie daarna aantal decimalen verminderen tot 0. + Kolom D, getallen ingevoerd met procentsymbool daarna aantal decimalen aangepast. + Kolom E, datums ingevoerd daarna korte datumnotatie voor de eerste twee en lange datumnotatie voor de laatste twee. `r unhide()`
+::: {.content-visible when-format="html:js"}
+`r hide("Hint")`
+-   Kolom A, getallen opgemaakt als tekst.
+-   Kolom B, financiële notatie.
+-   Kolom C, getallen eerst opgemaakt met duizendtal notatie daarna aantal decimalen verminderen tot 0.
+-   Kolom D, getallen ingevoerd met procentsymbool daarna aantal decimalen aangepast.
+-   Kolom E, datums ingevoerd daarna korte datumnotatie voor de eerste twee en lange datumnotatie voor de laatste twee.
+`r unhide()`
+:::
 
 :::
 

@@ -1,5 +1,8 @@
 # Oplosser {#sec-solver}
 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
 ::: {.callout-note appearance="simple" icon="false"}
 + Hulpprogramma Oplosser activeren.
 + Toepassingsgebied van Oplosser.
@@ -108,7 +111,7 @@ Het model moet nu in Excel worden ingevoerd zodat het probleem straks met Oploss
 
 ![Voorbeeld berekeningsmodel WeatherLeather.](images/solver/weatherleather-model.png){#fig-weatherleather-model}
 
-Er is niet één goede manier om een dergelijk model in Excel te bouwen. Wel zijn er een aantal richtlijnen te geven. Deze richtlijnen worden hierna besproken aan de hand van @fig-weatherleather-model. Je kunt uiteraard het model met behulp van deze aanwijzingen en de afbeelding nabouwen, maar het is ook in het bestand [WeatherLeather.xlsx` beschikbaar.
+Er is niet één goede manier om een dergelijk model in Excel te bouwen. Wel zijn er een aantal richtlijnen te geven. Deze richtlijnen worden hierna besproken aan de hand van @fig-weatherleather-model. Je kunt uiteraard het model met behulp van deze aanwijzingen en de afbeelding nabouwen, maar het is ook in het bestand `WeatherLeather.xlsx` beschikbaar.
 
 ### Richtlijnen voor een Oplossermodel in Excel {#sec-solver-case-guidelines}
 
@@ -233,11 +236,11 @@ Er zijn nu twee mogelijkheden:
 
 Je weet in de meeste gevallen nooit met zekerheid welke situatie aan de hand is. Er zijn wel een paar richtlijnen om te onderzoeken of er alsnog een oplossing door de Oplosser gevonden kan worden.
 
-#### Wijziging beginwaarden veranderende cellen {#sec-solver-startvalues}
+#### Wijziging beginwaarden veranderende cellen {-}
 
 Of de Oplosser een bestaande oplossing kan vinden hangt onder andere af van de beginwaarden voor de veranderende cellen. Door met andere beginwaarden te experimenteren kan uitgezocht worden of dan wel een oplossing gevonden kan worden.
 
-#### Wijziging instellingen Oplosser {#sec-solver-options}
+#### Wijziging instellingen Oplosser {-}
 
 Het vinden van een oplossing hangt ook van de wijze waarop de Oplosser dit doet. Het zoeken naar een oplossing verloopt volgens een zogenaamd iteratief proces. Een iteratie is een herhaalde herberekening van het werkblad totdat aan een bepaalde voorwaarde is voldaan. De Oplosser kent een aantal instellingen voor dit iteratieproces. Door te klikken op de knop [Opties]{.uicontrol} in het dialoogvenster Parameters Oplosser verschijnt een venster waar je verschillende opties van de Oplosser kunt wijzigen.
 
@@ -286,6 +289,7 @@ Een bekende bonbonfabrikant wil een assortimentdoos uitbrengen met 2 soorten bon
 
 5.  Bepaal met de Oplosser het optimale aantal bonbons per doos van elke soort.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 1. Twee beslissingsvariabelen: 
    -   Aantal kersenbonbons per doos (= K)
@@ -302,6 +306,8 @@ Een bekende bonbonfabrikant wil een assortimentdoos uitbrengen met 2 soorten bon
 
 Optimale inhoud doos: aantal kersenbonbons = 10, aantal hazelnootbonbons = 40. De winst per doos is dan € 10,80 en aan alle restricties wordt voldaan.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv002}
@@ -322,6 +328,7 @@ Alle nieuw te bouwen vestigingen kunnen voor het komende boekjaar gereed zijn. D
 
 5. Bepaal met de Oplosser het optimale het optimale aantal winkels van elke type.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 1.  Vier beslissingsvariabelen: Aantal winkels type A (= A), type B (= B), type C (= C)en type D (= D).
 2.  Doelfunctie is de totale omzet (= O): `O = 24*A + 20*B + 11*C + 5*D`
@@ -332,6 +339,8 @@ Alle nieuw te bouwen vestigingen kunnen voor het komende boekjaar gereed zijn. D
 
 Optimale aantal winkels type A = 0, aantal type B = 4, aantal type C = 1, aantal type D = 0. De totale omzet = 91 miljoen EUR.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv003}
@@ -355,6 +364,7 @@ Bereken met de oplosser de optimale productieaantallen en de maximale winst per 
 
 5. Bepaal met de Oplosser het optimale aantal modellen en de maximale winst per week.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 1.  Drie beslissingsvariabelen: Aantal model Runner per week (= R), aantal model Lady T per week (= T)en aantal model Super A per week (= A).
 2.  Doelfunctie is de maximale winst per week (= W): `W = 6*R + 5*T + 4*A`
@@ -372,6 +382,8 @@ Optimaal aantal Runner = 111, aantal lady T = 400, aantal Super A = 142. De wins
 `r unhide()`
 :::
 
+:::
+
 ::: {#exr-solv004}
 **Productie aluminium ladders (solv004)**
 
@@ -383,9 +395,12 @@ De totaal beschikbare productiecapaciteit is 80 voor zagen, 100 voor assemblage 
 
 Bepaal met behulp van de oplosser hoeveel ladders van elk type geproduceerd moeten worden opdat de winst maximaal is.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Aantal type 1 = 0, aantal type 2 = 4, aantal type 3 = 10, winst = € 1080.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv005}
@@ -395,9 +410,12 @@ Er zijn twee soorten hondevoer te koop: gewoon en speciaal. Een zak gewoon voer 
 
 Bepaal met behulp van de oplosser welke hoeveelheden van beide zakken gekocht moeten worden om de maaltijdkosten zo laag mogelijk te houden.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Aantal zakken gewoon = 14, aantal zakken speciaal = 4, maaltijdkosten = € 168.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv006}
@@ -411,9 +429,12 @@ In een vaktijdschrift zijn de minimale dagbehoeftes (MDB)in milligram per dier v
 
 Hoeveel kg van elk type moet de boer elke dag verstrekken om de kosten zo laag mogelijk te krijgen en toch te voldoen aan de minimale dagbehoefte?
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Per dag: type 1 = 7,500 kg, type 2 = 1,397 kg, type 3 = 1,426 kg , kosten = € 68,37.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv007}
@@ -421,9 +442,12 @@ Per dag: type 1 = 7,500 kg, type 2 = 1,397 kg, type 3 = 1,426 kg , kosten = € 
 
 Een voedingsdeskundige beveelt een patient de volgende minimale dagbehoeftes vitamine B en C aan: 400 eenheden vitamine B en 800 eenheden vitamine C. De plaatselijke apotheek kan twee verschillende vitaminetabletten leveren, merk Y en merk Z. Een vitaminetablet van merk Y bevat 75 eenheden vitamine B en 100 eenheden vitamine C en kost € 0,10. Een vitaminetablet van merk Z bevat 50 eenheden vitamine B en 200 eenheden vitamine C en kost € 0,08. Hoeveel vitaminetabletten van elk soort moeten elke dag genuttigd worden tegen zo laag mogelijke kosten?
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Per dag: aantal per merk Y = 4, aantal merk Z = 2, kosten = € 0,56.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv008}
@@ -444,9 +468,12 @@ Maak met behulp van de oplosser een zodanige vervoersplanning te maken dat de ko
 
 [Bestand]{.smallcaps}: `Solv008.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/solver/solv008_result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv009}
@@ -462,10 +489,12 @@ Los met behulp van de oplosser het volgende stelsel vergelijkingen op.
   1,1x_1 - 3,0x_2 + 2,4x_3 - 13x_4 + 3,5x_5 &= 3,5
 \end{align*}
 
-
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/solver/solv009_result.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-solv010}
@@ -489,6 +518,7 @@ De jaarlijkse opbrengst van elk type lening is in de volgende tabel weergegeven.
 
 Bepaal met de oplosser hoeveel geld (in veelvouden van € 1000,-) voor elk van de vier typen leningen uitgegeven moet worden zodat de opbrengst zo hoog mogelijk wordt.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 |Type lening|Bedrag|
 |-----------|------|
@@ -499,5 +529,7 @@ Bepaal met de oplosser hoeveel geld (in veelvouden van € 1000,-) voor elk van 
 
 Totale opbrengst 422 K€. Bij weergave op eurocent nauwkeurig kunnen er afrondingsverschillen zijn.
 `r unhide()`
+:::
+
 :::
 

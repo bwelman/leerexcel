@@ -1,5 +1,8 @@
 # Matrixformules {#sec-arrays}
 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
 ::: {.callout-note appearance="simple" icon="false"}
 + Kennismaking met een matrix.
 + Het maken van matrixformules.
@@ -119,24 +122,28 @@ In @fig-example-dim1) is te zien hoe een rijtje van drie getallen wordt vermenig
 
 ![Vermenigvuldiging rijvector met een constante.](images/arrays/example-dim1.png){#fig-example-dim1}
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 Formule in G1: `=A1:C1*E1`
 `r unhide()`
+:::
 
 :::
 
 ::: {#prp-arrays-multiplication2}
-**vermenigvuldiging 2-dim matrix met een kolomvector**
+**Vermenigvuldiging 2-dim matrix met een kolomvector**
 
 In @fig-example-dim2 is te zien hoe een 4x3 matrix wordt vermenigvuldigd met een kolom getallen. Het resultaat is ook weer een 4x3 matrix.
 
-Maak dit voorbeeld na. Hierbij kun je gebruik maken van het bestand [Matrix2.xlsx`.
+Maak dit voorbeeld na. Hierbij kun je gebruik maken van het bestand `Matrix2.xlsx`.
 
 ![Vermenigvuldiging van een 2-dimensionale matrix met een kolomvector.](images/arrays/example-dim2.png){#fig-example-dim2}
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 Formule in G1 wordt `A1:C4*E1:E4`
 `r unhide()`
+:::
 
 :::
 
@@ -163,9 +170,11 @@ In @fig-example-shares is een aandelenportefeuille met koersen te zien. Om nu de
 
 Je kunt de formule in C6 ook geschikt maken om naar D6 te kopieren. Wat moet je daarvoor in de formule veranderen?
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 De celadressen voor `aantal]{.varname} moet je dan absoluut maken. De formule wordt [=SOM($B$2:$B$5*C2:C5)`.
 `r unhide()`
+:::
 
 :::
 
@@ -176,6 +185,7 @@ In deze oefening moet voor elke leerling het gewogen gemiddelde van vier toetsen
 
 ![Gewogen gemiddeldes van behaalde cijfers voor vier toetsen.](images/arrays/example-marks.png){#fig-example-marks}
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 1. Een gewogen gemiddelde voor Jan krijg je door elk toetscijfer van Jan te vermenigvuldigen met de weegfactor voor die toets en dan de som van deze vier uitkomsten te delen door de som van de vier toetsfactoren.
 
@@ -187,6 +197,7 @@ Formule F3: `=SOM(B3:E3*$B$1:$E$1)/SOM($B$1:$E$1)`
 
 Kopieer daarna formule naar F4 en F5.
 `r unhide()`
+:::
 
 :::
 
@@ -205,15 +216,17 @@ De matrixformule in deze oefening is wat lastiger omdat je alleen de lengtes voo
 
 3. Maak nu een formule voor cel C12 door de formule hiervoor aan te passen voor de vrouwelijke studenten.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Oplossing")`
 Formule C12: `=GEMIDDELDE(ALS(B2:B9="v";C2:C9))`
 `r unhide()`
+:::
 
 :::
 
 ## Frequentieverdeling {#sec-arrays-frequency}
 
-Met de functie INTERVAL()kun je een frequentieverdeling maken.
+Met de functie `INTERVAL()` kun je een frequentieverdeling maken.
 
 Syntax: `INTERVAL(gegevensmatrix;interval)`.
 
@@ -551,7 +564,7 @@ In  @fig-array-xlookup-2way staan een aantal koffieprijzen van Starbucks. Aan de
 2. Voeg de gegevens in F1:F3 en G1:G2 toe.
 
 3. Plaats in G3 de volgende formule  
-   [=X.ZOEKEN(G2;B1:D1;X.ZOEKEN(G1;A2:A10;B2:D10))]{.userinput.
+   `=X.ZOEKEN(G2;B1:D1;X.ZOEKEN(G1;A2:A10;B2:D10))`.
 
 ::: {.callout-note}
 + De binnenste `X.ZOEKEN` zoekt de koffiesoort op in de kolom product en retourneert een rij met de drie prijzen.
@@ -602,6 +615,7 @@ Het nutsbedrijf van een stad houdt een lijst bij waarin per district de gemelde 
 
 Voer in het werkblad de matrixformules in de cellen C16, C17, C18 en C19 in om het totaal aantal storingen per district te berekenen.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 1. De formule `(B2:B11)=B16` levert een matrixkolom van 10 rijen. Als de waarde in een cel uit de reeks B2:B11 gelijk is aan de waarde in cel B16 (= Noord), dan is de waarde in de matrix gelijk aan WAAR (=1) en anders ONWAAR (=0).
 
@@ -613,6 +627,8 @@ Voer in het werkblad de matrixformules in de cellen C16, C17, C18 en C19 in om h
 
 3. Door hiervan de som te bepalen krijg je het totaal aantal storingen voor het district NOORD.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-matr003}
@@ -664,11 +680,13 @@ Maak in een nieuw werkblad een matrix met de cijfers 1 t/m 100 zoals in de volge
 
 Wijzig daarna de formule zodat je Romeinse cijfers krijgt.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 De functie `ROMEINS` zet Arabische cijfers om naar Romeinse cijfers, als tekst.
 `r unhide()`
+:::
 
 ![](images/arrays/matr006_data_r.png)
 
-Wanneer je het bestand wilt bewaren, sla het dan op onder de naam [matr006.xlsx`.
+Wanneer je het bestand wilt bewaren, sla het dan op onder de naam `matr006.xlsx`.
 :::

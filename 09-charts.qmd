@@ -1,5 +1,8 @@
 # Grafieken {#sec-charts}
 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
 ::: {.callout-note appearance="simple" icon="false"}
 + Onderdelen van een grafiek.
 + Het maken van grafieken.
@@ -203,7 +206,7 @@ Als je tijdens het slepen de [Alt]{.uicontrol} toets ingedrukt houdt wordt de gr
 
 5. Selecteer de grafiek opnieuw en kies [Grafiekontwerp > Grafiek verplaatsen (groep Locatie)]{.uicontrol}.
 
-![[Dialoogvenster grafiek verplaatsen.](images/charts/chart-move-window.png){#fig-chart-move-window}
+![Dialoogvenster grafiek verplaatsen.](images/charts/chart-move-window.png){#fig-chart-move-window}
 
 6. Selecteer [Nieuw blad]{.uicontrol}, geef de naam van het nieuwe blad in en klik dan op [OK]{.uicontrol}.
 
@@ -238,6 +241,7 @@ De afmetingen van de grafiek kunnen gewijzigd worden door aan de formaatgrepen t
 
 ::: {.callout-note appearance="minimal"}
 Als je tijdens het slepen de [Alt]{.uicontrol} toets ingedrukt houdt wordt de grafiek uitgelijnd op de rasterlijnen van het werkblad.
+:::
 
 Voor exacte afmetingen:
 
@@ -341,7 +345,7 @@ Via de knop ![](images/common/button-chart-elements.png) [Grafiekelementen]{.uic
 
 1. Voeg astitels voor beide assen toe.
 
-2. Wijzig de horizontale titel in [Tijd].
+2. Wijzig de horizontale titel in `Tijd`.
 
 3. Wijzig de verticale titel in `Omzet (x 1000 euro)`.
 
@@ -358,7 +362,7 @@ Voor gegevenslabels zijn de volgende opties beschikbaar:
 
 ![Opties voor gegevenslabels.](images/charts/datalabels-options.png){#fig-datalabels-options}
 
-Experimenteer met de plaatsingsmogelijkheden voor gegevenslabels. In @fig-bakery-datalabels) zie je de weergave voor de keuze [Einde, buitenkant]{.uicontrol}.
+Experimenteer met de plaatsingsmogelijkheden voor gegevenslabels. In @fig-bakery-datalabels zie je de weergave voor de keuze [Einde, buitenkant]{.uicontrol}.
 
 ![Gegevenslabels aan de buitenkant van de kolommen geven de omzet voor het betreffende kwartaal weer.](images/charts/bakery-datalabels.png){#fig-bakery-datalabels}
 
@@ -418,7 +422,7 @@ Beide technieken zullen in dit onderdeel gebruikt worden.
 
 1. Open het bestand.
 
-2. Voeg de nieuwe gegevens voor het jaar 2011 toe in het gebied E1:E5 zoals in @fig-bakery-data-2011) te zien is.
+2. Voeg de nieuwe gegevens voor het jaar 2011 toe in het gebied E1:E5 zoals in @fig-bakery-data-2011 te zien is.
 
 ![Omzetgegevens bakkerij aangevuld voor het jaar 2011.](images/charts/bakery-data-2011.png){#fig-bakery-data-2011}
 
@@ -471,7 +475,7 @@ Een alternatief is [Ontwerpen > Gegevens selecteren (groep Gegevens)]{.uicontrol
 
 5. Klik [OK]{.uicontrol}.
 
-In de grafiek en in het dialoogvenster [Gegevensbron selecteren] is de gegevensreeks 2008 toegevoegd. Echter deze gegevensreeks is achteraan toegevoegd, waardoor de volgorde niet meer logisch is.
+In de grafiek en in het dialoogvenster [Gegevensbron selecteren]{.uicontrol} is de gegevensreeks 2008 toegevoegd. Echter deze gegevensreeks is achteraan toegevoegd, waardoor de volgorde niet meer logisch is.
 
 ![Dialoogvenster gegevensbron selecteren.](images/charts/bakery-datasource-moveup.png){#fig-bakery-datasource-moveup}
 
@@ -508,7 +512,7 @@ Het grafiektype kan eenvoudig gewijzigd worden. In deze oefening wordt het kolom
 
 [Bestand]{.smallcaps}: `Aandelen.xlsx]{.filetype}
 
-Van een viertal bedrijven is de gemiddelde maandkoers voor de maanden januari t/m maart in @fig-case-data) weergegeven:
+Van een viertal bedrijven is de gemiddelde maandkoers voor de maanden januari t/m maart in @fig-case-data weergegeven:
 
 ![Gemiddelde maandkoersen.](images/charts/case-data.png){#fig-case-data}
 
@@ -524,17 +528,19 @@ Het eindresultaat dient er als volgt uit te zien:
 
 ![Grafiek gemiddelde maandkoersen april.](images/charts/case-chart.png){#fig-case-chart}
 
+::: {.content-visible when-format="html:js"}
 `r hide("Aanwijzingen")`
 
-+ Grafiektype is een lijndiagram (lijn met gegevensmarkeringen)
-+ Bij het maken van de grafiek neemt Excel de rijen als gegevensreeksen i.p.v. de kolommen. Deze situatie wijzigen door Rijen/kolommen omdraaien.
-+ Grafiektitel toevoegen. De tekst van de titel opmaken in Palatino, 14 pt, vet.
-+ Titel langs verticale as toevoegen.
-+ Schaling verticale as aanpassen zodat de primaire eenheid 10 wordt.
-+ Legenda onder de horizontale as plaatsen en deze uitrekken zodat de legendateksten in een rij komen te staan.
-+ Horizontale gestippelde rasterlijnen
-+ Afmeting grafiek: 10 cm breed en 10 cm hoog.
+-   Grafiektype is een lijndiagram (lijn met gegevensmarkeringen)
+-   Bij het maken van de grafiek neemt Excel de rijen als gegevensreeksen i.p.v. de kolommen. Deze situatie wijzigen door Rijen/kolommen omdraaien.
+-   Grafiektitel toevoegen. De tekst van de titel opmaken in Palatino, 14 pt, vet.
+-   Titel langs verticale as toevoegen.
+-   Schaling verticale as aanpassen zodat de primaire eenheid 10 wordt.
+-   Legenda onder de horizontale as plaatsen en deze uitrekken zodat de legendateksten in een rij komen te staan.
+-   Horizontale gestippelde rasterlijnen
+-   Afmeting grafiek: 10 cm breed en 10 cm hoog.
 `r unhide()`
+:::
 
 ## Opgaven {#sec-charts-exercises}
 
@@ -545,9 +551,12 @@ Maak de volgende grafiek. Maak ook de opmaak zo goed mogelijk na.
 
 ![](images/charts/graf001_chart.png)
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 Maak eerst in een werkblad twee kolommen met waarden voor X en berekende waarden voor Y. Maak dan een spreidingsdiagram en pas vervolgens de opmaak aan.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-graf002}
@@ -604,9 +613,11 @@ Bij een fabriek van speelgoed heeft men het vermoeden dat de prijs van speelgoed
 
 [Bestand]{.smallcaps}: `Graf005.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/charts/graf005_chart.png)
 `r unhide()`
+:::
 
 :::
 

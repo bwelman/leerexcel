@@ -1,5 +1,8 @@
 # Formules en Functies {#sec-functions}
 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
 ::: {.callout-note appearance="simple" icon="false"}
 + Soorten functies en de syntax van een functie.
 + Invoeren van een functie, via de Wizard en handmatig.
@@ -164,9 +167,11 @@ In de categorie [Statistisch]{.uicontrol} zitten naast functies voor het uitvoer
 Het argument is steeds het gebied B1:B8. Je kunt dit uiteraard intypen in het dialoogvenster voor de functieargumenten, maar het is handiger om de cursor in het vak voor het eerste argument te plaatsen en daarna met de muis het gebied B1:B8 in het werkblad te selecteren.
 :::
 
+::: {.content-visible when-format="html:js"}
 `r hide("Resultaat")`
 ![](images/functions/example-statistical-result.png)
 `r unhide()`
+:::
 
 :::
 
@@ -197,6 +202,7 @@ Met de functie `NETTO.WERKDAGEN` kun je het aantal volledige werkdagen bepalen t
 
 7. Bereken in B10 via een formule het tijdsverschil.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 Je moet de begintijd aftrekken van de eindtijd.
 `r unhide()`
@@ -205,6 +211,7 @@ Je moet de begintijd aftrekken van de eindtijd.
 
 ![](images/functions/example-datetime-result.png)
 `r unhide()`
+:::
 
 :::
 
@@ -400,9 +407,11 @@ Door voor het bereik de hele kolom B te nemen kunnen er aan de onderkant nieuwe 
 
 4. Selecteer cel E2 en sleep de vulgreep naar beneden tot en met E5.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Resultaat")`
 ![](images/functions/example-countif-result.png)
 `r unhide()`
+:::
 
 :::
 
@@ -425,9 +434,11 @@ De functie `SOM.ALS` kan gebruikt worden om getallen op te tellen onder bepaalde
 
 5. Maak de getallen in H2:H5 op met de financiële getalnotatie.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Resultaat")`
 ![](images/functions/example-sumif-result.png)
 `r unhide()`
+:::
 
 ::: {.callout-note}
 Een optelling zoals in dit voorbeeld is veel gemakkelijker te realiseren met behulp van draaitabellen.
@@ -614,6 +625,7 @@ Maak dit overzicht in een werkblad en gebruik formules om de resultaten onder Ui
 
 [Bestand]{.smallcaps}: `Form003.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 1.  Te gebruiken functies bij deze opgave: `Datum`, `Jaar`, `Maand`, `Dag`, `Vandaag`.
 
@@ -621,6 +633,8 @@ Maak dit overzicht in een werkblad en gebruik formules om de resultaten onder Ui
 
 3.  Een datum is in Excel in werkelijkheid gewoon een getal, waarmee dus gerekend kan worden. Om het tijdsverschil tussen twee data te bepalen kun je dus twee data van elkaar aftrekken.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-form004}
@@ -646,6 +660,7 @@ Maak dit berekeningsmodel in een werkblad. Zorg ook voor een gelijksoortige lay-
 
 [Bestand]{.smallcaps}: `Form005.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 1.  In de laatste vier kolommen hangt het antwoord van één of meerdere voorwaarden af, wat dus inhoudt dat er steeds een `ALS` functie gebruikt moet worden.
 
@@ -657,6 +672,8 @@ Maak dit berekeningsmodel in een werkblad. Zorg ook voor een gelijksoortige lay-
 
 5.  Wanneer er nog geen datum bekend is, dan is het betreffende veld leeg. Hierop kun je ook controleren.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-form006}
@@ -699,9 +716,12 @@ Maak dit berekeningsmodel in een werkblad. De berekende bedragen voor eigenaar e
 
 Een bedrag van € 20.000 wordt in een spaardeposito een jaar lang vastgezet tegen een rente van 2,75%. Maak een berekeningsmodel waarin zowel de rente als het totale bedrag na 1 jaar wordt berekend.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 Rente = € 550,00 en Bedrag = € 20.550,00
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-form010}
@@ -722,9 +742,12 @@ Maak een werkblad waarin de stroomsterkte, de weerstand en de tijd ingevuld kan 
 
 Een staatsobligatie met een looptijd van vijf jaar keert jaarlijks 3,5% rente uit. Veronderstel dat je over 5 jaar de beschikking wilt hebben over € 300.000, hoeveel moet je dan in deze obligatie investeren? Gebruik Excels functie voor de huidige waarde (`HW`) om het antwoord te berekenen.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 € 252.592
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-form012}
@@ -736,9 +759,12 @@ Maak eerst de volgende tabel:
 
 Voer dan in cel B2 een formule in die je naar beneden en naar rechts in de tabel kunt kopieren zo dat de waarde in elke cel de vermenigvuldiging is van het nummer voor de rij en het nummer boven de kolom.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 Je hebt een combinatie van absolute en relatieve adressering nodig in de formule.
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-form013}

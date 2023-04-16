@@ -179,7 +179,7 @@ Wanneer je bijvoorbeeld in cel `A9` letterlijk intypt `40.299 uren`, dan wordt d
 Het is mogelijk om alleen het getal in te typen en daarna de cel op te maken tot het weergegeven uiterlijk. De inhoud van de cel is dan wel een getal waarmee je berekeningen kunt uitvoeren.
 
 **De aanbevolen methode is om altijd eerst de inhoud van een cel in te typen en daarna de cel de gewenste opmaak geven.**
-::
+:::
 
 ## Afdrukken werkblad {#sec-ws-print}
 

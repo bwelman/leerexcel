@@ -1,5 +1,8 @@
 # Berekeningen opzetten {#sec-calculations}
 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
 ::: {.callout-note appearance="simple" icon="false"}
 + Formules  maken.
 + Opzetten van een calculatiemodel.
@@ -206,7 +209,7 @@ In @fig-example-insurance is een lijst met premies voor autoverzekeringen te zie
 
 1. Open het bestand.
 
-2. Maak de geldbedragen op met de knop voor de financiële getalnotatie (Start > knop Financiële getalnotatie (groep Getal)]{.uicontrol}. Pas ook de breedte van de kolommen aan zodat alle inhoud past.
+2. Maak de geldbedragen op met de knop voor de financiële getalnotatie [Start > knop Financiële getalnotatie (groep Getal)]{.uicontrol}. Pas ook de breedte van de kolommen aan zodat alle inhoud past.
 
 3. Voer in cel A6 de formule `=A5+$B$1`.
 
@@ -292,7 +295,7 @@ Regels voor naamgeving:
 
 ### Namen maken {#sec-calculation-names-create}
 
-In deze taak leert u een aantal manieren om namen aan cellen toe te wijzen en deze in formules te gebruiken. 
+In deze taak leer je een aantal manieren om namen aan cellen toe te wijzen en deze in formules te gebruiken. 
 
 Er zijn verschillende manieren om een naam aan een cel toe te kennen. De in de praktijk gebruikte methode hangt meestal af van de voorkeur van de gebruiker en de snelheid waarmee het invoeren gaat. In deze oefening komen twee manieren aan de orde om een naam toe te kennen aan een cel en drie manieren waarop de naam in een formule gebruikt kan worden. Dezelfde manieren kunnen gebruikt worden om een naam aan een reeks van cellen toe te kennen.
 
@@ -404,6 +407,7 @@ Een winkel op de internationale luchthaven verkoopt de artikelen zowel belasting
 
 ![Prijstabel.](images/calculations/example-prices.png){#fig-example-prices}
 
+::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
 1.  De dollarkoers en het BTW percentage zijn inputvariabelen voor de berekening en worden daarom gescheiden van de prijstabel in het bovenste deel van het werkblad gezet. Een toelichtende tekst staat in de cellen ervoor.
 
@@ -417,3 +421,4 @@ Een winkel op de internationale luchthaven verkoopt de artikelen zowel belasting
 
 6.  Tot slot moeten alle eurobedragen opgemaakt worden in de financiële notatie.
 `r unhide()`
+:::

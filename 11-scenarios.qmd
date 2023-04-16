@@ -1,5 +1,8 @@
 # Scenario's {#sec-scenarios}
 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
 ::: {.callout-note appearance="simple" icon="false"}
 + Wat is een scenario.
 + Scenario maken.
@@ -12,7 +15,6 @@ In een scenario geef je een aantal variabele cellen (de zogenaamde **veranderend
 Je wilt bijvoorbeeld de jaarlijkse winst van een koffiebar, afhankelijk van een aantal kostenposten, via een meest positief en een meest negatief scenario met elkaar vergelijken. De resultaatcel is dan de cel waarin de jaarlijkse winst berekend wordt. En de veranderende cellen zijn de cellen met de kostenposten.
 
 Het identificeren van de resultaatcellen en de veranderende cellen is de sleutel voor het maken van scenario's.
-:::
 
 Met Excel's scenariobeheer kun je verschillende verzamelingen van invoergegevens maken waarmee de bijbehorende resultaten worden berekend. Zo'n scenario kun je onder een passende naam (zoals Meest Positief, Meest Negatief, ...) bewaren. De verschillende resultaten kun je eenvoudig vergelijken in een geproduceerd samenvattingsrapport. Dit rapport toont zowel de invoerwaarden voor de veranderende cellen als de waarden van de resultaatcellen.
 
@@ -161,9 +163,12 @@ Maak met behulp van de scenariomanager een samenvattingsrapport voor deze drie s
 
 [Bestand]{.smallcaps}: `Scen003.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
-![](images/scenarios/ex_scen003_report.png)
+![](images/scenarios/scen003_report.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-scen004}
@@ -188,8 +193,11 @@ Maak met behulp van de scenariomanager een samenvattingsrapport voor deze drie s
 
 [Bestand]{.smallcaps}: `Scen004.xlsx`
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/scenarios/scen004_report.png)
 `r unhide()`
+:::
+
 :::
 

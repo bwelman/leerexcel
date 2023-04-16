@@ -1,5 +1,8 @@
 # Gegevenstabellen {#sec-datatables}
 
+```{r, file = "R/webex.R", include = FALSE}
+```
+
 ::: {.callout-note appearance="simple" icon="false"}
 + Layout en werking van een gegevenstabel met één invoer variabele.
 + Layout en werking van een gegevenstabel met 2 invoer variabelen.
@@ -205,11 +208,14 @@ Een lening van € 10.000 moet in een aantal maandelijkse termijnen terugbetaald
 2.  Maak via een gegevenstabel een overzicht van de maandbedragen voor aflossingstermijnen van 12, 18, 24, 30, ..., 72 maanden.
 3.  Maak een nieuwe gegevenstabel met een overzicht van de maandbedragen voor aflossingstermijnen van 12, 18, 24, 30, ..., 72 maanden en jaarlijkse rentepercentages van 3%, 3½%, 4%, 4½% ... 6%.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![Gegevenstabel maandbetalingen voor verschillende aflossingstermijnen](images/datatables/tabl001_result1.png)
 
 ![Gegevenstabel maandbetalingen voor verschillende aflossingstermijnen en rentepercentages](images/datatables/tabl001_result2.png)
 `r unhide()`
+:::
+
 :::
 
 ::: {#exr-tabl002}
@@ -222,7 +228,10 @@ In een werkblad wordt een prognose van de verkoop in 2014 berekend op basis van 
 1.  Maak bovenstaand model in een nieuw werkblad en stel een formule voor de prognose van de verkoop in 2014.
 2.  Maak via een gegevenstabel een overzicht van de verkoopprognose voor groeifactoren van 1%, 2%, ... 10%.
 
+::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![Gegevenstabel verkoopprognose](images/datatables/tabl002_result.png)
 `r unhide()`
+:::
+
 :::
