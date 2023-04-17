@@ -78,14 +78,14 @@ Hoeveel korte en lange jacks moet je per week produceren om een maximale winst t
 
 Stel de beslissingsvariabelen vast. Dit zijn de veranderende cellen waarvoor je een waarde moet vaststellen die tot het optimale resultaat leiden. In dit voorbeeld zijn er twee beslissingsvariabelen welke gemakshalve met een letter worden aangeduid:
 
-+ $K$ = aantal korte jacks per week
-+ $L$ = aantal lange jacks per week
++ $\mathrm{K}$ = aantal korte jacks per week
++ $\mathrm{L}$ = aantal lange jacks per week
 
 ### Doelfunctie {#sec-solver-case-objective}
 
-Er moet een formule bepaald worden waarvan de uitkomst de optimale waarde moet krijgen. In deze formule komen de beslissingsvariabelen voor. In dit voorbeeld is de doelfunctie de behaalde winst per week en deze hangt af van het aantal geproduceerde korte jacks ($K$) en lange jacks ($L$):
+Er moet een formule bepaald worden waarvan de uitkomst de optimale waarde moet krijgen. In deze formule komen de beslissingsvariabelen voor. In dit voorbeeld is de doelfunctie de behaalde winst per week en deze hangt af van het aantal geproduceerde korte jacks ($\mathrm{K}$) en lange jacks ($\mathrm{L}$):
 
-$Winst = 90 \times K + 144 \times L$ (deze moet gemaximaliseerd worden)
+$\mathrm{Winst = 90 \times K + 144 \times L}$ (deze moet gemaximaliseerd worden)
 
 ::: {.callout-note}
 Bij wat ingewikkelder modellen is het soms lastig om het probleem zo te formuleren dat één doelfunctie verkregen wordt. Dan kan het gebeuren dat de beslissingsvariabelen niet rechtstreeks in de doelfunctie voorkomen, maar via een omweg. In de doelfunctie komen dan variabelen voor waarvan de waarden uiteindelijk weer afhangen van de beslissingsvariabelen.
@@ -101,11 +101,11 @@ Daarnaast zijn er vaak algemene restricties die te maken hebben met het gegevens
 
 Dit alles leidt tot de formulering van de volgende restricties:
 
-+ Restrictie snijtijd per week: $1 \times K + 2 \times L \le 32$
-+ Restrictie naaitijd per week: $3 \times K + 4 \times L \le 84$
-+ Restrictie marktvraag lange jacks: $L \le 12$
-+ Restricties positieve waarden: $K \ge 0$ en $L \ge 0$
-+ Restricties gehele waarden: $K = integer$ en $L = integer$
++ Restrictie snijtijd per week: $\mathrm{1 \times K + 2 \times L \le 32}$
++ Restrictie naaitijd per week: $\mathrm{3 \times K + 4 \times L \le 84}$
++ Restrictie marktvraag lange jacks: $\mathrm{L \le 12}$
++ Restricties positieve waarden: $\mathrm{K \ge 0}$ en $\mathrm{L \ge 0}$
++ Restricties gehele waarden: $\mathrm{K = integer}$ en $\mathrm{L = integer}$
 
 ### Model in Excel {#sec-solver-case-model}
 

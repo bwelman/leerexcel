@@ -129,7 +129,7 @@ Geleend bedrag € 7280.
 
 Een ondernemer heeft te maken met kosten en opbrengsten die afhankelijk zijn van de geproduceerde hoeveelheid Q. Het verband tussen de totale kosten (TK) resp. de totale opbrengst (TO) en de geproduceerde hoeveelheid Q is als volgt:
 
-$\text{TK} = Q^2 + 8Q + 15$ en $\text{TO} = -5Q^2 + 80Q$
+$\mathrm{TK = Q^2 + 8Q + 15}$ en $\mathrm{TO = -5Q^2 + 80Q}$
 
 In de grafiek hierna zijn TK en TO uitgezet als functie van Q.
 
