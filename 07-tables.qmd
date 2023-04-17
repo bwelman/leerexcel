@@ -3,7 +3,9 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
+**Doelstellingen**
+
 + Kenmerken van tabellen (lijsten).
 + Knop Formulier.
 + Samenvoegen (consolideren)van gegevens.

@@ -16,9 +16,7 @@ Het script gebruikt [7-zip](https://www.7-zip.org/) dat op de computer en in het
 
 De interactieve delen zijn antwoorden op vragen, tips, oplossingen, ... Deze worden aangemaakt door functies in pakket [webexercises](https://psyteachr.github.io/webexercises/) en dit pakket moet geïnstalleerd zijn.
 
-Om weboefeningen met Quarto te gebruiken, moet het bestand `webex.css` en `webex.js` worden toegevoegd aan de html format optie in het bestand `_quarto.yml`.
-
-Om de functies in alle hoofdstukken beschikbaar te maken, wordt het benodigde script `webex.R` uitgevoerd via R-code in bestand `.Rprofile`. Dit is de gemakkelijkste methode, anders moet de code aan het begin van elk hoofdstuk worden opgenomen.
+Deze interactieve inhoud komt alleen in uitvoerformaat html terecht.
 
 ## Aangepaste CSS
 

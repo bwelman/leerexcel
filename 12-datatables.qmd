@@ -3,7 +3,9 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
+**Doelstellingen**
+
 + Layout en werking van een gegevenstabel met één invoer variabele.
 + Layout en werking van een gegevenstabel met 2 invoer variabelen.
 :::

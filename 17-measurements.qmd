@@ -3,7 +3,9 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
+**Doelstellingen**
+
 + Uitleg lineaire relaties.
 + Toevoegen van een lineaire trendlijn aan een spreidingsdiagram.
 + Werkbladfuncties RICHTING en SNIJPUNT.

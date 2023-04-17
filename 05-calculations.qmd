@@ -3,7 +3,9 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
+**Doelstellingen**
+
 + Formules  maken.
 + Opzetten van een calculatiemodel.
 + Kopiëren van formules en absolute en relatieve celadressen.

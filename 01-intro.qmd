@@ -1,6 +1,8 @@
 # Beginnen met Excel {#sec-introductie}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
+**Doelstellingen**
+
 -   Over wat rekenbladen (spreadsheets)zijn.
 -   Het opstarten en afsluiten van Excel.
 -   De indeling van het programmavenster van Excel.

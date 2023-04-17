@@ -3,7 +3,9 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
+**Doelstellingen**
+
 -   Het belang van eerst selecteren en dan pas opmaken.
 -   Aanpassing kolombreedte en rijhoogte.
 -   Opmaak van getallen en tekst.

@@ -3,7 +3,9 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
+**Doelstellingen**
+
 + Hulpprogramma Oplosser activeren.
 + Toepassingsgebied van Oplosser.
 + Opzetten van een berekeningsmodel.

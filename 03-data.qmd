@@ -1,6 +1,8 @@
 # Gegevens invoeren/bewerken {#sec-data}
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
+**Doelstellingen**
+
 + Invoeren van gegevens in een cel.
 + Taalafhankelijke scheidingstekens bij getallen.
 + Het verschil tussen inhoud en opmaak van een cel.

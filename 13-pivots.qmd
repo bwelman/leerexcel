@@ -3,7 +3,9 @@
 ```{r, file = "R/webex.R", include = FALSE}
 ```
 
-::: {.callout-note appearance="simple" icon="false"}
+::: callout
+**Doelstellingen**
+
 + Mogelijkheden van een draaitabel.
 + Draaitabel maken.
 + Brongegevens van een draaitabel.
@@ -304,26 +306,37 @@ Om de waarden gemakkelijker te vergelijken kun je er ook voor kiezen om ze weer 
 
 Gebruik de mogelijkheden van draaitabellen om de volgende vragen te beantwoorden. Er zijn meerdere wegen om de antwoorden te vinden.
 
-```{r}
-#| label: salesman
-#| echo: false
-#| eval: false
+1. Welke verkoper heeft het meeste verkocht in december 2010?
 
-verkoper <- c("Anderson","Brown", "Gonzalez", "Hernandez", "Johnson", "King", "Lewis", "Miller", "Phillips", "Smith", "Williams")
-names(verkoper)[9] = "answer"
-maand <- c("jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec")
-names(maand)[1] = "answer"
-```
+::: {.content-visible when-format="html:js"}
+Verkoper `r mcq(c("Anderson","Brown", "Gonzalez", "Hernandez", "Johnson", "King", "Lewis", "Miller", answer="Phillips", "Smith", "Williams"))`
+:::
 
-1. Welke verkoper heeft het meeste verkocht in december 2010?  
+2. In welke maand van welk jaar was de verkoop van software het grootst?
 
-2. In welke maand van welk jaar was de verkoop van software het grootst?  
+::: {.content-visible when-format="html:js"}
+Jaar `r mcq(c(2010, answer=2011))` Maand `r mcq(c(answer="jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"))`
+:::
 
-3. Bekijk de verkooppercentages voor hard- en software per regio. Wat is het percentage voor software in de regio Zuid?  
+3. Bekijk de verkooppercentages voor hard- en software per regio. Wat is het percentage voor software in de regio Zuid?
 
-4. In welk kwartaal van welk jaar waren de verkopen van Anderson het laagst?  
+::: {.content-visible when-format="html:js"}
+Afgerond tot geheel getal: `r fitb(answer = c(46, 47), num=TRUE)`
+:::
+
+4. In welk kwartaal van welk jaar waren de verkopen van Anderson het laagst?
+
+::: {.content-visible when-format="html:js"}
+Jaar `r mcq(c(2010, answer=2011))` Kwartaal `r mcq(c(1, 2, answer=3, 4))`
+:::
 
 5. Bekijk de verkopen van Brown in kwartaal 2 van 2011. Valt je iets bijzonders op?
+
+::: {.content-visible when-format="html:js"}
+`r hide("Antwoord")`
+Alleen omzet in de maand juni. Niets in april en mei.
+`r unhide()`
+:::
 
 ## Filteren {#sec-pivots-filters}
 
