@@ -5,7 +5,7 @@ project:
 book:
   title: "Leer Microsoft Excel"
   author: "Ben Welman"
-  date: last-modified
+  date: today
   date-format: long
   google-analytics: "G-1C2YS9QSEK"
   site-url: https://leerexcel.netlify.app/
@@ -58,6 +58,9 @@ format:
     code-fold: false
     link-external-newwindow: true
     callout-appearance: simple
+    author-meta: "Ben Welman"
+    description-meta: "Met dit taakgericht studieboek leer je te werken met Excel."
+    keywords: ["Excel", "Power Query", "berekeningen", "functies", "tabellen", "grafieken", "arrays", "scenario", "draaitabellen", "doelzoeken", "oplosser"]
 
 knitr:
   opts_chunk:
