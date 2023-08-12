@@ -60,7 +60,7 @@ format:
     callout-appearance: simple
     author-meta: "Ben Welman"
     description-meta: "Met dit taakgericht studieboek leer je te werken met Excel."
-    keywords: ["Excel", "Power Query", "berekeningen", "functies", "tabellen", "grafieken", "arrays", "scenario", "draaitabellen", "doelzoeken", "oplosser"]
+    # keywords: ["Excel", "Power Query", "berekeningen", "functies", "tabellen", "grafieken", "arrays", "scenario", "draaitabellen", "doelzoeken", "oplosser"]
 
 knitr:
   opts_chunk:
