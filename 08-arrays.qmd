@@ -491,7 +491,7 @@ Let goed op de argumenten in deze formule.
 
 :::
 
-## Tabellen en matrixformules {-#array-tables}
+## Tabellen en matrixformules {#sec-array-tables}
 
 Matrixformules worden in de meeste gevallen gebruikt om acties uit te voeren op een lijst met gegevens, veelal in meerdere kolommen. Het heeft dan veel voordelen om van die gegevenslijst een echte Excel tabel te maken. In de matrixformules kun je dan voor de verwijzingen de tabel- en kolomnaam gebruiken en die daardoor beter leesbaar worden. Een bijkomend voordeel is dat de verwijzingen in orde blijven wanneer er tabelrijen worden toegevoegd of verwijderd.
 
