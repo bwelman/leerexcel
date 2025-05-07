@@ -509,13 +509,13 @@ Het totale salaris is € 4.874.037,39.
 ::: {#exr-list001}
 **Selecteren (list001)**
 
+[Bestand]{.smallcaps}: `List001.xlsx`
+
 In de volgende tabel staan de cijfers van een aantal leerlingen.
 
 ![](images/tables/list001_data.png)
 
 Breng nu een filter aan zodat alleen die rijen getoond worden van leerlingen die geen cijfer hebben of waar het cijfer 3 of lager is. Voor deze opgave is de tabel klein gehouden. Voor de oplossing moet je rekening houden met veel grotere tabellen.
-
-[Bestand]{.smallcaps}: `List001.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
@@ -528,29 +528,31 @@ Breng nu een filter aan zodat alleen die rijen getoond worden van leerlingen die
 ::: {#exr-list002}
 **Tentamencijfers samenvoegen (list002)**
 
+[Bestand]{.smallcaps}: `List002.xlsx`
+
 In de volgende tabel staan de resultaten van een groep studenten voor een tentamen en een herkansing. Verder is via het samenvoegen van gegevens het eindresultaat bepaald. Dit eindresultaat is het hoogst behaalde cijfer.
 
 ![](images/tables/list002_data.png)
 
 Voer in een werkblad de gegevens voor het tentamen en de herkansing in. Laat via het samenvoegen van gegevens het eindresultaat ontstaan.
-
-[Bestand]{.smallcaps}: `List002.xlsx`
 :::
 
 ::: {#exr-list003}
 **Verkoopgegevens samenvoegen (list003)**
+
+[Bestand]{.smallcaps}: `List003.xlsx`
 
 In de volgende tabel staan de verkoopaantallen van broodsoorten in de filialen Noord en Zuid van een winkelbedrijf. Verder zijn via het samenvoegen van gegevens de totalen van beide filialen bepaald.
 
 ![](images/tables/list003_data.png)
 
 Voer in een werkblad de gegevens voor de twee filialen in. Laat via het samenvoegen van gegevens het totaal ontstaan.
-
-[Bestand]{.smallcaps}: `List003.xlsx`
 :::
 
 ::: {#exr-list004}
 **Overzicht auto's filteren (list004)**
+
+[Bestand]{.smallcaps}: `Auto.xlsx`
 
 In een werkblad staat een aantal gegevens van auto’s. Een klant is geïnteresseerd in auto’s die voldoen aan de volgende voorwaarden:
 
@@ -559,8 +561,6 @@ In een werkblad staat een aantal gegevens van auto’s. Een klant is geïnteress
 -   benzine (super of normaal)als brandstof
 
 Maak een lijst van alle auto's met de bijbehorende gegevens die aan deze voorwaarden voldoen.
-
-[Bestand]{.smallcaps}: `Auto.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`

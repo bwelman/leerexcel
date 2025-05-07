@@ -455,6 +455,8 @@ Per dag: aantal per merk Y = 4, aantal merk Z = 2, kosten = € 0,56.
 ::: {#exr-solv008}
 **Transportkosten minimaliseren (solv008)**
 
+[Bestand]{.smallcaps}: `Solv008.xlsx`
+
 Een bedrijf heeft winkels in 6 plaatsen (Amersfoort, Eindhoven, Enschede, Lelystad, Tiel, Zwolle). De bevoorrading van de winkels gebeurt vanuit drie distributiecentra (DC) in Coevorden, Venlo en Woerden. Wekelijks maken de winkels een afzetprognose voor de week erop en geven het benodigde aantal produkten door aan het hoofdkantoor. Op het hoofdkantoor maakt men aan de hand van de beschikbare voorraden in de DC’s een vervoersplanning om de winkels van het benodigde aantal produkten te voorzien.
 
 ![](images/solver/solv008_model.png)
@@ -467,8 +469,6 @@ Toelichting:
 -   De rij "Beginvoorraad" bevat het aantal producten dat op dit moment in het DC in voorraad is.
 
 Maak met behulp van de oplosser een zodanige vervoersplanning te maken dat de kosten minimaal zijn.
-
-[Bestand]{.smallcaps}: `Solv008.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`

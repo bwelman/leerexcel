@@ -595,37 +595,37 @@ Als resultaat verschijnt er in de cel een foutmelding `#N/B`. Dit komt omdat er 
 ::: {#exr-form001}
 **Resultaten computerbedrijf (form001)**
 
+[Bestand]{.smallcaps}: `Form001.xlsx`
+
 In onderstaande tabel staan de resultaten over het jaar 2010 van een computerbedrijf. Het bedrijf had als doelstelling dat per productgroep de bruto winst meer dan 5000,- euro moest worden en dat de behaalde marge meer dan 15% moest zijn. Alleen wanneer aan beide doelstellingen voldaan wordt kan het bedrijfsresultaat als goed gekenmerkt worden, in alle andere gevallen als slecht.
 
 ![](images/functions/form001_data.png)
 
 Maak dit overzicht in een werkblad. Voor de bepaling van de bruto winst, de behaalde marge en het resultaat moet van formules gebruik gemaakt worden. Ook wanneer de doelstellingen voor de bruto winst en de marge wijzigen, moet het resultaat zich hierbij aanpassen.
-
-[Bestand]{.smallcaps}: `Form001.xlsx`
 :::
 
 ::: {#exr-form002}
 **Artikelgegevens opzoeken (form002)**
+
+[Bestand]{.smallcaps}: `Form002.xlsx`
 
 Een computerwinkel heeft van de artikelen in een tabel de volgende gegevens staan: artikelnr, naam en prijs. Om snel de gegevens van een bepaald artikel op te kunnen zoeken kan in een cel het artikelnummer ingevoerd worden. De bijbehorende naam en prijs worden dan automatisch in de tabel opgezocht.
 
 ![](images/functions/form002_data.png)
 
 Maak dit werkblad na en gebruik formules (verticaal zoeken) om de zoekresultaten te bepalen.
-
-[Bestand]{.smallcaps}: `Form002.xlsx`
 :::
 
 ::: {#exr-form003}
 **Datum rekenen (form003)**
+
+[Bestand]{.smallcaps}: `Form003.xlsx`
 
 In de volgende tabel kun je de geboortedatum en de AOW leeftijd (67 jaar) invullen. De datum waarop je AOW krijgt, de huidige datum en het aantal dagen dat je nog te gaan hebt tot de AOW datum moeten met formules berekend worden.
 
 ![](images/functions/form003_data.png)
 
 Maak dit overzicht in een werkblad en gebruik formules om de resultaten onder Uitvoer te berekenen.
-
-[Bestand]{.smallcaps}: `Form003.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
@@ -642,25 +642,25 @@ Maak dit overzicht in een werkblad en gebruik formules om de resultaten onder Ui
 ::: {#exr-form004}
 **Commissie bepalen (form004)**
 
+[Bestand]{.smallcaps}: `Form004.xlsx`
+
 Een bedrijf met drie vertegenwoordigers heeft als doelstelling dat elke verkoper voor 150.000 euro per jaar verkoopt. Wanneer dat bedrag gehaald wordt bedraagt hun commissie 6,25% van de verkoop. Halen ze dat bedrag niet, dan is de commissie slechts 5,5%. Om de commissie voor elke verkoper te bepalen is het volgende model gemaakt.
 
 ![](images/functions/form004_data.png)
 
 Maak dit berekeningsmodel in een werkblad en gebruik formules om de commissie voor elke verkoper te berekenen.
-
-[Bestand]{.smallcaps}: `Form004.xlsx`
 :::
 
 ::: {#exr-form005}
 **Geboortedata (form005)**
+
+[Bestand]{.smallcaps}: `Form005.xlsx`
 
 Een moeder-kind centrum in een ziekenhuis wil dagelijks een overzicht hebben van baby's die te vroeg, te laat en op tijd geboren zijn. Bij te vroeg en te laat wil men ook het aantal dagen te vroeg of te laat kunnen zien. En van baby's die nog geboren moeten worden wil men kunnen zien welke overtijd zijn. Hiervoor is het volgende berekeningsmodel gemaakt.
 
 ![](images/functions/form005_data.png)
 
 Maak dit berekeningsmodel in een werkblad. Zorg ook voor een gelijksoortige lay-out.
-
-[Bestand]{.smallcaps}: `Form005.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
@@ -681,6 +681,8 @@ Maak dit berekeningsmodel in een werkblad. Zorg ook voor een gelijksoortige lay-
 ::: {#exr-form006}
 **BTW aangifte (form006)**
 
+[Bestand]{.smallcaps}: `Form006.xlsx`
+
 Een onderneming koopt goederen in bij leveranciers en betaalt omzetbelasting (BTW)aan deze leveranciers. Vervolgens verkoopt de onderneming goederen aan klanten en brengt de klant BTW in rekening. Elk kwartaal moet deze onderneming met de belastingdienst afrekenen. Het verschil tussen de via verkopen ontvangen BTW en de via inkopen reeds betaalde BTW (de voorbelasting)moet aan de belastingdienst worden afgedragen. Is dit verschil negatief, dan krijgt de onderneming dit verschil van de belastingdienst terug. Een kleine ondernemer kan in aanmerking komen voor vermindering van deze in beginsel af te dragen omzetbelasting via de zogenaamde Regeling Kleine Ondernemers (RKO). In de volgende tabel is deze regeling uitgewerkt.
 
 ![](images/functions/form006_rules.png)
@@ -688,7 +690,6 @@ Een onderneming koopt goederen in bij leveranciers en betaalt omzetbelasting (BT
 1.  Maak een model waarbij de totale verkopen en de voorbelasting kunnen worden ingevoerd. Bereken op basis hiervan de verschuldigde BTW, de eventuele vermindering volgens de RKO en het uiteindelijke bedrag dat betaald moet worden of terug ontvangen wordt. Je mag uitgaan van uitsluitend het BTW percentage van 21%. Bij het eindbedrag moet automatisch vermeld worden of het om een betaling of terugontvangst gaat. Alle bedragen moeten in hele euro’s worden aangegeven.
 2.  Test het model grondig.
 
-[Bestand]{.smallcaps}: `Form006.xlsx`
 :::
 
 ::: {#exr-form007}
@@ -704,13 +705,13 @@ Maak dit overzicht in een werkblad. Na het invoeren van de leeftijd moet de prij
 ::: {#exr-form008}
 **OZB belasting (form008)**
 
+[Bestand]{.smallcaps}: `Form008.xlsx`
+
 De OZB belasting bestaat uit twee delen: een eigenaarsdeel en een gebruikersdeel. Bewoont de eigenaar zelf het pand, dan moet hij beide delen betalen. Het tarief van beide delen hangt af van de WOZ waarde van de woning. Het OZB tarief voor 2010 in een bepaalde gemeente bedraagt voor de eigenaar 0,1064% en voor de gebruiker 0,1224% van de WOZ-waarde.
 
 ![](images/functions/form008_model.png)
 
 Maak dit berekeningsmodel in een werkblad. De berekende bedragen voor eigenaar en gebruiker hangen af van de vraag of er met "ja" of "nee" geantwoord is op de vraag of men eigenaar en bewoner is.
-
-[Bestand]{.smallcaps}: `Form008.xlsx`
 :::
 
 ::: {#exr-form009}
@@ -720,7 +721,9 @@ Een bedrag van € 20.000 wordt in een spaardeposito een jaar lang vastgezet teg
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
+
 Rente = € 550,00 en Bedrag = € 20.550,00
+
 `r unhide()`
 :::
 
@@ -746,7 +749,9 @@ Een staatsobligatie met een looptijd van vijf jaar keert jaarlijks 3,5% rente ui
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
+
 € 252.592
+
 `r unhide()`
 :::
 
@@ -763,7 +768,9 @@ Voer dan in cel B2 een formule in die je naar beneden en naar rechts in de tabel
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Hint")`
+
 Je hebt een combinatie van absolute en relatieve adressering nodig in de formule.
+
 `r unhide()`
 :::
 

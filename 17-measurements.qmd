@@ -113,13 +113,13 @@ De waarde van de richtingscoëfficient: 2,95503212 en de waarde van snijpunt is 
 ::: {#exr-meas001}
 **Lengte en gewicht (meas001)**
 
+[Bestand]{.smallcaps}: `Meas001.xlsx`
+
 Van een aantal schoolkinderen zijn lengte en gewicht bepaald. In de figuur hierna staan de meetresultaten.
 
 ![Resultaten lengte en gewicht](images/measurements/meas001_data.png)
 
 Veronderstel een lineair verband en bepaal de vergelijking waarbij het gewicht een functie is van de lengte.
-
-[Bestand]{.smallcaps}: `Meas001.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
@@ -132,13 +132,13 @@ Gewicht = 1,65*Lengte - 153,3
 ::: {#exr-meas002}
 **Studietijd en tentamencijfer (meas002)**
 
+[Bestand]{.smallcaps}: `Meas002.xlsx`
+
 Van een zestal studenten is het aantal studie-uren bijgehouden dat zij aan een bepaald vak hebben besteed en verder het tentamencijfer dat voor dat vak behaald is. In de figuur hierna staan de resultaten.
 
 ![Resultaten behaald cijfer en de studietijd](images/measurements/meas002_data.png)
 
 Veronderstel een lineair verband en bepaal de vergelijking waarbij het cijfer verklaard kan worden uit de studietijd.
-
-[Bestand]{.smallcaps}: `Meas002.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
@@ -151,14 +151,14 @@ Cijfer = 0,2038*Studietijd + 3,3637
 ::: {#exr-meas003}
 **Krimp en temperatuur (meas003)**
 
+[Bestand]{.smallcaps}: `Meas003.xlsx`
+
 Een fabrikant van synthetische vezels onderzoekt of het krimpen van de vezels samenhangt met de temperatuur waarbij ze gewassen worden. Er worden 8 experimenten uitgevoerd waarbij de vezels bij verschillende temperaturen worden gewassen. De gemeten krimp is hierna weergegeven in procenten van de oorspronkelijke lengte.
 
 ![Resultaten krimppercentage en wastemperatuur](images/measurements/meas003_data.png)
 
 1. Veronderstel een lineair verband en bepaal de vergelijking waarbij het krimppercentage verklaard kan worden uit de temperatuur.
 2. Voorspel met behulp hiervan de krimp bij een temperatuur van 65^o^C.
-
-[Bestand]{.smallcaps}: `Meas003.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
@@ -173,14 +173,14 @@ Bij een temperatuur van 65^o^C is het voorspelde krimppercentage 1,6%.
 ::: {#exr-meas004}
 **Weerstand en temperatuur (meas004)**
 
+[Bestand]{.smallcaps}: `Meas004.xlsx`
+
 De weerstand van een metalen blokje hangt o.a. af van de temperatuur. In de afbeelding hierna is de de gemeten weerstand te zien bij een zevental temperaturen.
 
 ![Resultaten weerstand en temperatuur](images/measurements/meas004_data.png)
 
 1. Veronderstel een lineair verband en bepaal de vergelijking waarbij de weerstand verklaard kan worden uit de temperatuur.
 2. Voorspel met behulp hiervan de weerstand van het blokje bij een temperatuur van 400^o^C.
-
-[Bestand]{.smallcaps}: `Meas004.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`

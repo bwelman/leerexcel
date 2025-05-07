@@ -114,6 +114,8 @@ In een nieuw werkblad komt nu een samenvattingsrapport te staan. Merk op dat de 
 ::: {#exr-scen001}
 **Winstmarge - Verkoopprijs (scen001)**
 
+[Bestand]{.smallcaps}: `Scen001.xlsx`
+
 Neem de volgende tabel zo nauwkeurig mogelijk over. Gebruik formules voor de bepaling van de marge, BTW en de verkoopprijzen.
 
 ![](images/scenarios/scen001_data.png)
@@ -122,11 +124,12 @@ Bepaal via Scenario manager de verkoopprijzen (incl. btw) voor een winstmarge va
 
 ![](images/scenarios/scen001_report.png)
 
-[Bestand]{.smallcaps}: `Scen001.xlsx`
 :::
 
 ::: {#exr-scen002}
 **Begroting sportvereniging (scen002)**
+
+[Bestand]{.smallcaps}: `Scen002.xlsx`
 
 In de volgende afbeelding is een vereenvoudigde begroting van een sportvereniging weergegeven. De huur is precies bekend. Van de andere posten kan redelijk goed een onder- en een bovengrens aangegeven worden:
 
@@ -141,11 +144,12 @@ Maak met de scenariomanager een meest positieve en een meest negatieve scenario.
 
 ![](images/scenarios/scen002_report.png)
 
-[Bestand]{.smallcaps}: `Scen002.xlsx`
 :::
 
 ::: {#exr-scen003}
 **Scenario's bedrijfswinst (scen003)**
+
+[Bestand]{.smallcaps}: `Scen003.xlsx`
 
 Een bedrijf maakt drie producten (A, B en C). Om deze producten te maken is een verschillend aantal arbeidsuren en hoeveelheid materialen nodig. In volgende afbeelding zijn de tarieven voor arbeidsloon en materiaalkosten alsmede de benodigde hoeveelheden om deze producten te maken. Tevens zijn de kosten en opbrengsten berekend bij de huidige productieaantallen.
 
@@ -163,8 +167,6 @@ Het management wil een voorspelling van de bedrijfswinst, maar er is nog wat onz
 
 Maak met behulp van de scenariomanager een samenvattingsrapport voor deze drie scenario’s.
 
-[Bestand]{.smallcaps}: `Scen003.xlsx`
-
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
 ![](images/scenarios/scen003_report.png)
@@ -175,6 +177,8 @@ Maak met behulp van de scenariomanager een samenvattingsrapport voor deze drie s
 
 ::: {#exr-scen004}
 **Inkomsten automatiseringsbedrijf (scen004)**
+
+[Bestand]{.smallcaps}: `Scen004.xlsx`
 
 De inkomsten en uitgaven van een automatiseringsbedrijf voor 2010 zijn in de volgende afbeelding te zien. De directie wil graag een winstverwachting voor de jaren 2011 en 2012. De inkomsten en uitgaven voor deze twee jaren worden beïnvloed door de volgende factoren.
 
@@ -192,8 +196,6 @@ Het management wil een voorspelling van de winstverwachting, maar er is nog wat 
 ![](images/scenarios/scen004_scenarios.png)
 
 Maak met behulp van de scenariomanager een samenvattingsrapport voor deze drie scenario’s.
-
-[Bestand]{.smallcaps}: `Scen004.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`

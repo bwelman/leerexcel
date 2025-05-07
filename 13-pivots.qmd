@@ -493,31 +493,33 @@ Er zijn diverse instelmogelijkheden voor draaitabellen. Kies hiervoor een willek
 ::: {#exr-pivo001}
 **Salaris gemiddeldes (pivo001)**
 
+[Bestand]{.smallcaps}: `Personeel.xlsx`
+
 Maak een draaitabelrapport om het gemiddelde salaris per afdeling en per divisie te bepalen. Het rapport moet er uitzien zoals hierna is aangegeven.
 
 ![](images/pivots/pivo001_report.png)
 
-[Bestand]{.smallcaps}: `Personeel.xlsx`
 :::
 
 ::: {#exr-pivo002}
 **Salaris totalen (pivo002)**
 
+[Bestand]{.smallcaps}: `Personeel.xlsx`
+
 Maak een draaitabelrapport om het totale salaris per functie en per divisie te bepalen. Verder moet er op afdeling gefilterd kunnen worden. Het rapport moet er uitzien zoals hierna is aangegeven.
 
 ![](images/pivots/pivo002_report.png)
 
-[Bestand]{.smallcaps}: `Personeel.xlsx`
 :::
 
 ::: {#exr-pivo003}
 **Omzet, reiskosten en provisie (pivo003)**
 
+[Bestand]{.smallcaps}: `Pivo003.xlsx`
+
 In een werkblad zijn voor elke buitendienstmedewerker de volgende gegevens bijgehouden: Maand, Regio, Vertegenwoordiger, Omzet, Reiskosten en Provisie.
 
 Maak één draaitabelrapport waarmee je de totale omzet, reiskosten en provisie kunt verkrijgen per maand, per vertegenwoordiger en per regio.
-
-[Bestand]{.smallcaps}: `Pivo003.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
@@ -530,13 +532,13 @@ Maak één draaitabelrapport waarmee je de totale omzet, reiskosten en provisie 
 ::: {#exr-pivo004}
 **Gemiddeld cijfer (pivo004)**
 
+[Bestand]{.smallcaps}: `Pivo004.xlsx`
+
 In de volgende tabel staan de cijfers voor het vak informatica van een aantal studenten uit twee verschillende klassen.
 
 ![](images/pivots/pivo004_data.png)
 
 Bepaal met behulp van een draaitabel het gemiddelde per klas en per geslacht.
-
-[Bestand]{.smallcaps}: `Pivo004.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
@@ -549,13 +551,13 @@ Bepaal met behulp van een draaitabel het gemiddelde per klas en per geslacht.
 ::: {#exr-pivo005}
 **Frequentieverdeling cijfers (pivo005)**
 
+[Bestand]{.smallcaps}: `Pivo005.xlsx`
+
 In de volgende tabel staan de cijfers van een aantal leerlingen.
 
 ![](images/pivots/pivo005_data.png)
 
 Maak met behulp van een draaitabel een frequentieverdeling van de cijfers.
-
-[Bestand]{.smallcaps}: `Pivo005.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
@@ -568,13 +570,14 @@ Maak met behulp van een draaitabel een frequentieverdeling van de cijfers.
 ::: {#exr-pivo006}
 **Kledingverkoop per regio (pivo006)**
 
+[Bestand]{.smallcaps}: `Pivo006.xlsx`
+
 In de volgende tabel staan de verkopen aan dames- en herenkleding in de vier regio’s voor de jaren 2009 en 2010.
 
 ![](images/pivots/pivo006_data.png)
 
 Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel de totale verkopen per jaar in de vier regio’s, uitgesplitst naar dames- en herenkleding.
 
-[Bestand]{.smallcaps}: `Pivo006.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
@@ -587,13 +590,13 @@ Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel de to
 ::: {#exr-pivo007}
 **Winkelsluiting (pivo007)**
 
+[Bestand]{.smallcaps}: `Pivo007.xlsx`
+
 In opdracht van de winkeliersvereniging is een enquête uitgevoerd naar de avondopenstelling van winkels. De resultaten van de geïnterviewde personen zijn in de volgende tabel te zien.
 
 ![](images/pivots/pivo007_data.png)
 
 Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel het aantal voor- en tegenstanders per leeftijdscategorie en deze weer uitgesplitst per geslacht.
-
-[Bestand]{.smallcaps}: `Pivo007.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
@@ -606,13 +609,13 @@ Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel het a
 ::: {#exr-pivo008}
 **Eigen huis en gemiddelde waarde (pivo008)**
 
+[Bestand]{.smallcaps}: `Pivo008.xlsx`
+
 In de volgende tabel staat van een aantal personen aangegeven hoeveel jaren studie ze na de basisschool gevolgd hebben, of ze al dan niet een eigen huis hebben en zoja wat daarvan de waarde is.
 
 ![](images/pivots/pivo008_data.png)
 
 Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel het aantal personen met een eigen huis en de gemiddelde waarde ervan als functie van het aantal jaren studie.
-
-[Bestand]{.smallcaps}: `Pivo008.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
@@ -625,7 +628,9 @@ Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel het a
 ::: {#exr-pivo009}
 **Vervoersonderzoek (pivo009)**
 
-Onder de bezoekers van een stadcentrum is een marktonderzoek uitgevoerd naar het gebruik van de auto en het gebruik van de bus. In de volgende tabel staan de gegevens van de geënquêteerden die ondervraagd zijn over hun manier van verplaatsen naar het centrum om te gaan winkelen. Gingen ze met de auto, met de bus, hoe ver ze wonen ze van het centrum (in km.)en de reistijd (in min.\).
+[Bestand]{.smallcaps}: `Pivo009.xlsx`
+
+Onder de bezoekers van een stadcentrum is een marktonderzoek uitgevoerd naar het gebruik van de auto en het gebruik van de bus. In de volgende tabel staan de gegevens van de geënquêteerden die ondervraagd zijn over hun manier van verplaatsen naar het centrum om te gaan winkelen. Gingen ze met de auto, met de bus, hoe ver ze wonen ze van het centrum (in km.)en de reistijd (in min.).
 
 ![](images/pivots/pivo009_data.png)
 
@@ -636,8 +641,6 @@ Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel de ge
 Maak een extra kolom waarin bepaald wordt of de afstand tot het centrum meer dan 15 km is.
 `r unhide()`
 :::
-
-[Bestand]{.smallcaps}: `Pivo009.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
@@ -650,9 +653,9 @@ Maak een extra kolom waarin bepaald wordt of de afstand tot het centrum meer dan
 ::: {#exr-pivo010}
 **Opbrengst koffie per regio (pivo010)**
 
-In een werkblad staan de opbrengsten van een aantal soorten koffie per maand per gebied. Het management wil graag op een eenvoudige wijze de totale opbrengst van de producten per regio kunnen bepalen. Maak een draaitabel waaruit per maand de opbrengst per koffiesoort berekend is. De regio moet met een rapportfilter gekozen kunnen worden.
-
 [Bestand]{.smallcaps}: `Koffie.xlsx`
+
+In een werkblad staan de opbrengsten van een aantal soorten koffie per maand per gebied. Het management wil graag op een eenvoudige wijze de totale opbrengst van de producten per regio kunnen bepalen. Maak een draaitabel waaruit per maand de opbrengst per koffiesoort berekend is. De regio moet met een rapportfilter gekozen kunnen worden.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
@@ -665,9 +668,10 @@ In een werkblad staan de opbrengsten van een aantal soorten koffie per maand per
 ::: {#exr-pivo011}
 **Brandstofverbruik auto's (pivo011)**
 
+[Bestand]{.smallcaps}: `Auto.xlsx`
+
 Bepaal per merk en per brandstofsoort het minimum en het maximum verbruik met behulp van een draaitabel.
 
-[Bestand]{.smallcaps}: `Auto.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
@@ -680,16 +684,15 @@ Bepaal per merk en per brandstofsoort het minimum en het maximum verbruik met be
 ::: {#exr-pivo012}
 **Hobbyclub (pivo012)**
 
+[Bestand]{.smallcaps}: `Pivo012.xlsx`
+
 In een werkblad staan in de laatste twee kolommen het aantal bezochte clubavonden in 2009 en 2010. Maak m.b.v. draaitabellen de volgende overzichten.
 
 1.  Het aantal leden van de club per woonplaats en per geslacht.
 2.  Het percentage leden per hobby en per geslacht.
 3.  Een overzicht van de aanwezigheid in 2010 per geslacht, waarbij het bezochte aantal clubavonden in drie groepen verdeeld is zoals in het volgende overzicht:
 
-    ![](images/pivots/pivo012_meetings_count.png)
-
-
-[Bestand]{.smallcaps}: `Pivo012.xlsx`
+![](images/pivots/pivo012_meetings_count.png)
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`

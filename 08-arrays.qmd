@@ -609,11 +609,11 @@ Voer de volgende optelling uit met behulp van de Excel matrix methode.
 ::: {#exr-matr002}
 **Storingen per district (matr002)**
 
+[Bestand]{.smallcaps}: `Matr002.xlsx`
+
 Het nutsbedrijf van een stad houdt een lijst bij waarin per district de gemelde storingen aan gas, water en electra worden vermeld. In de volgende afbeelding is deze lijst te zien. De leiding van het bedrijf wil graag een overzicht van het totaal aantal storingen per district zoals onder Samenvatting berekend. Dit gaat het eenvoudigst met matrixformules.
 
 ![](images/arrays/matr002_data.png)
-
-[Bestand]{.smallcaps}: `Matr002.xlsx`
 
 Voer in het werkblad de matrixformules in de cellen C16, C17, C18 en C19 in om het totaal aantal storingen per district te berekenen.
 
@@ -660,11 +660,11 @@ Datums en tijdstippen worden intern in Excel als een getal opgeslagen. Zo wordt 
 ::: {#exr-matr005}
 **Kolommen sorteren (matr005)**
 
+[Bestand]{.smallcaps}: `Benelux_Populatie.xlsx`
+
 In de figuur hierna zie je de bevolkingsgrootte van de Benelux landen voor achtereenvolgens de jaren 2000, 2005, 2010 en 2015. Wanneer je deze gegevens voor de jaren in omgekeerde volgorde wilt hebben dan kan dat eenvoudig met de dynamische matrixformule SORTEREN waarmee je ook kolommen kunt sorteren.
 
 ![](images/arrays/matr005_data.png)
-
-[Bestand]{.smallcaps}: `Benelux_Populatie.xlsx`
 
 Open het bestand en kopieer de gegevens in de kolommen A en B respectievelijk naar H en I. Voer nu in cel J1 de formule `SORTEREN` in zodat de gegevens voor de jaren in aflopende volgorde verschijnt. Het resultaat moet er als volgt uitzien.
 

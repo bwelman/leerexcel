@@ -564,6 +564,8 @@ Maak eerst in een werkblad twee kolommen met waarden voor X en berekende waarden
 ::: {#exr-graf002}
 **Reizen (graf002)**
 
+[Bestand]{.smallcaps}: `Graf002.xlsx`
+
 In de volgende tabel staan de gegevens over de reisboekingen in de jaren 2008 t/m 2010.
 
 ![](images/charts/graf002_data.png)
@@ -572,11 +574,12 @@ Zet de gegevens in een werkblad en gebruik formules voor de totalen. Maak daarna
 
 ![](images/charts/graf002_chart.png)
 
-[Bestand]{.smallcaps}: `Graf002.xlsx`
 :::
 
 ::: {#exr-graf003}
 **Verkoopcijfers (graf003)**
+
+[Bestand]{.smallcaps}: `Graf003.xlsx`
 
 In de volgende tabel zijn de begrootte en werkelijke verkoopcijfers over 2010 per kwartaal weergegeven, alsmede de afwijking tussen werkelijk en begroot. Van de afwijkingspercentages is tevens het gemiddelde bepaald.
 
@@ -586,11 +589,12 @@ Zet de gegevens in een werkblad en gebruik formules voor de afwijkingen en het g
 
 ![](images/charts/graf003_chart.png)
 
-[Bestand]{.smallcaps}: `Graf003.xlsx`
 :::
 
 ::: {#exr-graf004}
 **Leeftijdsopbouw (graf004)**
+
+[Bestand]{.smallcaps}: `Graf004.xlsx`
 
 In de tabel staat voor de jaren 1950-2010 de procentuele leeftijdsopbouw van de bevolking Nederland, verdeeld over negen leeftijdsklassen (bron: CBS).
 
@@ -600,11 +604,12 @@ Maak uit deze gegevens de volgende grafiek.
 
 ![](images/charts/graf004_chart.png)
 
-[Bestand]{.smallcaps}: `Graf004.xlsx`
 :::
 
 ::: {#exr-graf005}
 **Relatie productietijd - kostprijs (graf005)**
+
+[Bestand]{.smallcaps}: `Graf005.xlsx`
 
 Bij een fabriek van speelgoed heeft men het vermoeden dat de prijs van speelgoed voor een groot deel afhangt van de productietijd. Om dit te onderzoeken wordt de productie van speelgoed gemeten. De resultaten en de bijbehorende kostprijs staan in de volgende afbeelding.
 
@@ -612,8 +617,6 @@ Bij een fabriek van speelgoed heeft men het vermoeden dat de prijs van speelgoed
 
 1. Teken een grafiek waarbij de kostprijs uitgezet wordt tegen de productietijd (de onafhankelijke variabele).
 2. Voeg aan de grafiek een lineaire trendlijn toe. Laat ook de vergelijking van deze trendlijn in de grafiek zetten.
-
-[Bestand]{.smallcaps}: `Graf005.xlsx`
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
@@ -626,6 +629,8 @@ Bij een fabriek van speelgoed heeft men het vermoeden dat de prijs van speelgoed
 ::: {#exr-graf006}
 **Telling vliegenzwammen (graf006)**
 
+[Bestand]{.smallcaps}: `Graf006.xlsx`
+
 In een bepaald gebied wordt jaarlijks het aantal vliegenzwammen geteld. In de volgende afbeelding is het aantal vliegenzwammen per hectare voor een aantal jaren weergegeven.
 
 ![](images/charts/graf006_data.png)
@@ -634,5 +639,4 @@ Maak uit deze gegevens de volgende grafiek.
 
 ![](images/charts/graf006_chart.png)
 
-[Bestand]{.smallcaps}: `Graf006.xlsx`
 :::
