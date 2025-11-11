@@ -305,7 +305,7 @@ Er zijn verschillende manieren om een naam aan een cel toe te kennen. De in de p
 
 1. Begin met een nieuw werkblad.
 
-2. Typ in A1 het getal `100` en in A2 het getal [275]{.userinput.
+2. Typ in A1 het getal `100` en in A2 het getal `275`.
 
 3. Selecteer A1 en kies [Formules > Naam definiëren (groep Gedefinieerde namen)]{.uicontrol}.
 
