@@ -346,7 +346,7 @@ Een gebruikersvriendelijker manier is om **slicers** te gebruiken. Deze bevatten
 
 Het gebruik van slicers en tijdlijnen zie je veel in zogenaamde dashboards omdat je deze aan meerdere draaitabellen en draaigrafieken kunt koppelen.
 
-In drie subtaken wordt het maken van rapportfilters, slicers en tijdlijnen besproken. Hierbij wordt gebruik gemaakt van het bestand [Supermarket.xlsx`, hetzelfde bestand als in @sec-pivots-creating, welke de maandelijkse verkoopgegevens in 2016 bevat van een aantal producten, welke in drie productgroepen zijn ondergebracht: agf, vlees en zuivel.
+In drie subtaken wordt het maken van rapportfilters, slicers en tijdlijnen besproken. Hierbij wordt gebruik gemaakt van het bestand `Supermarket.xlsx`, hetzelfde bestand als in @sec-pivots-creating, welke de maandelijkse verkoopgegevens in 2016 bevat van een aantal producten, welke in drie productgroepen zijn ondergebracht: agf, vlees en zuivel.
 
 ### Rapportfilters {#sec-pivots-reportfilters}
 

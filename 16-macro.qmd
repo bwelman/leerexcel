@@ -176,7 +176,7 @@ Wanneer je een werkmap met macro's wilt opslaan, dan probeert Excel deze standaa
 
 ## Wijzigen van een macro {#sec-macros-cellformat-editing}
 
-Om deze taak uit te kunnen voeren is het nodig dat de macro \[Celopmaak\]{varname} in @prp-macros-cellformat-test gemaakt is.
+Om deze taak uit te kunnen voeren is het nodig dat de macro [Celopmaak]{.varname} in @prp-macros-cellformat-test gemaakt is.
 
 Een eenmaal gemaakte macro kan gewijzigd worden zonder de macro weer helemaal opnieuw op te nemen. Zowel de opties van de macro als de programmacode kunnen bekeken en gewijzigd worden.
 

@@ -356,7 +356,7 @@ Deze geneste functie wordt in de volgende oefening gebruikt.
 
 In het dialoogvenster voor de argumenten van deze functie staat de cursor staat in het vak [Getal]{.uicontrol}. Het is nu handig om eerst het aantal decimalen op te geven en pas daarna het bereik met getallen.
 
-3. Plaats de cursor in het vak `Aantal decimalen]{.uicontrol}, voer [0` in en plaats daarna de cursor terug in het vak [Getal]{.uicontrol}.
+3. Plaats de cursor in het vak [Aantal decimalen]{.uicontrol}, voer `0` in en plaats daarna de cursor terug in het vak [Getal]{.uicontrol}.
 
 ![Dialoogvenster.](images/functions/example-nesting-decimals.png){#fig-example-nesting-decimals}
 

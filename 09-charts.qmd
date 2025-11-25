@@ -512,7 +512,7 @@ Het grafiektype kan eenvoudig gewijzigd worden. In deze oefening wordt het kolom
 
 ## Casus Aandelenkoersen {#sec-charts-case}
 
-[Bestand]{.smallcaps}: `Aandelen.xlsx]{.filetype}
+[Bestand]{.smallcaps}: `Aandelen.xlsx`
 
 Van een viertal bedrijven is de gemiddelde maandkoers voor de maanden januari t/m maart in @fig-case-data weergegeven:
 

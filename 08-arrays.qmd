@@ -174,7 +174,7 @@ Je kunt de formule in C6 ook geschikt maken om naar D6 te kopieren. Wat moet je 
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")`
-De celadressen voor `aantal]{.varname} moet je dan absoluut maken. De formule wordt [=SOM($B$2:$B$5*C2:C5)`.
+De celadressen voor [aantal]{.varname} moet je dan absoluut maken. De formule wordt `=SOM($B$2:$B$5*C2:C5)`.
 `r unhide()`
 :::
 
@@ -533,7 +533,7 @@ Maak op analoge wijze een gesorteerde lijst met divisienamen.
 
    + Typ in cel E1 de tekst `Totaal` en druk op ENTER. Er wordt nu automatisch een nieuwe kolom gemaakt.
 
-   + Selecteer cel E2 en typ `=SOM(]{.userinput}, selecteer dan de cellen B2:D2, typ dan [)` en druk op ENTER.
+   + Selecteer cel E2 en typ `=SOM(`, selecteer dan de cellen B2:D2, typ dan `)` en druk op ENTER.
    
 In de kolom [Totaal]{.varname} verschijnen nu de waarden. Merk verder op dat Excel in cel E2 de formule heeft gewijzigd in `=SOM(Medailles[@[Goud]:[Brons]])`.
 
@@ -670,7 +670,7 @@ Open het bestand en kopieer de gegevens in de kolommen A en B respectievelijk na
 
 ![](images/arrays/matr005_solution.png)
 
-Wanneer je het bestand wilt bewaren, sla het dan op onder de naam [matr005.xlsx` zodat niet het originele bestand gewijzigd wordt.
+Wanneer je het bestand wilt bewaren, sla het dan op onder de naam `matr005.xlsx` zodat niet het originele bestand gewijzigd wordt.
 :::
 
 ::: {#exr-matr006}
