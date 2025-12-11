@@ -89,18 +89,18 @@ Er zijn nu twee mogelijkheden:
 
 Het is aan te bevelen om het werkblad een zinvolle naam te geven en niet de standaard gegenereerde namen als Blad1, Blad2, Blad3, ... te gebruiken.
 
-::: {.practice}
-1.  Selecteer de naam van een werkblad op een van de volgende manieren:
+::: {#prp-ws-rename}
+1.  Wijzig de naam van een werkblad op een van de volgende manieren:
 
     + Rechtermuisklik op de tabnaam en kies dan [Naam wijzigen]{.uicontrol}.
-    + Dubbelklikken op de tabnaam.
+    + Dubbelklikken op de tabnaam van het werkblad.
 
 2.  Typ de nieuwe naam in op de tab en sluit af met [Enter]{.uicontrol}.
 :::
 
 ## Werkblad kopieren {#sec-ws-copy}
 
-::: {#prp-ws-rename}
+::: {#prp-ws-copy}
 
 1.  Rechtermuisklik op de naam van het werkblad en kies dan [Verplaatsen of kopiëren ...]{.uicontrol}.
 

@@ -37,7 +37,7 @@ In @tbl-calculation-operators kun je de symbolen (operatoren) vinden voor het ut
 
 :  Operators. {#tbl-calculation-operators}
 
-::: {.practice}
+::: {#prp-calculation-operators}
 Probeer deze voorbeelden in een werkblad uit.
 :::
 
@@ -118,7 +118,7 @@ Er zijn een paar richtlijnen bij het invoeren van een model in Excel:
 
 1.  Breng een scheiding aan tussen input, berekening en output. Bij kleinere modellen kan dat op afzonderlijke plaatsen in het werkblad, bijvoorbeeld de input bovenaan het werkblad. Bij grote modellen is het beter om dit in afzonderlijke werkbladen te doen.
 
-![Ontwerp van een berekeningsmodel. Links 1 werkblad, rechts 3 werkbladen.](images/calculations/calculation-model.svg){#fig-calculation-model}
+![Ontwerp van een berekeningsmodel. Links 1 werkblad, rechts 3 werkbladen.](images/calculations/calculation-model.png){#fig-calculation-model}
 
 2.  Probeer er voor te zorgen dat een werkblad net als een boek gelezen kan worden: van boven naar beneden en van links naar rechts.
 
@@ -357,7 +357,7 @@ Om meerdere namen te selecteren moet je de [Ctrl]{.uicontrol} toets ingedrukt ho
 
 :::
 
-### Taak: Namen beheren {#sec-calculation-names-manager}
+### Namen beheren {#sec-calculation-names-manager}
 
 Excel kent beheersmogelijkheden voor namen, zodat je een overzicht van alle namen in een werkmap kunt krijgen, een naam kunt wijzigen en ook een naam kunt verwijderen. Zeker bij de grotere werkmappen waar vaak veel namen in voorkomen is dit een onmisbaar middel voor het beheer van de namen.
 
@@ -384,11 +384,11 @@ Via het dialoogvenster ***Namen beheren*** kun je diverse bewerkingen op de name
 + **Nieuwe naam maken**: Kies [Nieuw]{.uicontrol}.
 :::
 
-### Taak: Namen documenteren {#sec-calculation-names-list}
+### Namen documenteren {#sec-calculation-names-list}
 
 Bij het documenteren van een spreadsheet hoort ook een overzicht van alle in gebruik zijnde namen en de cellen waar deze namen bijhoren. Excel kan zo'n lijst voor je maken en op een werkblad plaatsen, maar de manier waarop je dat moet doen is niet zo voor de hand liggend. Zo'n lijst met namen kun je het beste op een nieuw werkblad plaatsen.
 
-::: {.practice}
+::: {#prp-calculation-names-list}
 [Bestand]{.smallcaps}: `Uitgaven.xlsx`
 
 1. Open het bestand.

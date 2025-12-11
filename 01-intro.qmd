@@ -10,7 +10,9 @@
 -   De bestandsformaten van Excel.
 :::
 
-## Wat kun je met een spreadsheet (rekenblad)? {#sec-intro-over}
+## Wat is Excel? {#sec-intro-over}
+
+Excel maakt deel uit van het Microsoft Office-pakket. Hiermee kun je berekeningen uitvoeren in spreadsheets. Dit hoofdstuk biedt een inleiding tot spreadsheets in het algemeen, met specifieke aandacht voor Excel.
 
 Een spreadsheet is een computerprogramma waarin je gegevens (teksten, getallen, ...) kunt vastleggen in (tab)bladen die bestaan uit rijen en kolommen. Naast het vastleggen van gegevens kun je daar ook allerlei bewerkingen mee uitvoeren. Microsoft Excel is zo'n programma voor rekenbladen.
 
@@ -28,14 +30,12 @@ Daarnaast is het niet moeilijk om mooie grafieken te maken met Excel.
 
 De mogelijkheden om Excel op te starten hangen af van de manier waarop het systeem geïnstalleerd is. Deze cursus gaat uit van een standaard installatie van Microsoft Office 365 NL op een systeem met Windows 10. Op bijna alle computers kan Excel via de startknop van Windows gestart worden. Ook handig is om hiervoor een snelkoppeling op het bureaublad te maken of een knop op de taakbalk.
 
-::: {#prp-intro-start-excel}
-
+::::: {#prp-intro-start-excel}
 1.  Kies [Start \> Excel]{.uicontrol}.
 
 Het opstartscherm van Excel verschijnt. In het linkerdeel staan de laatst geopende bestanden en in het rechterdeel een overzicht van beschikbare sjablonen.
 
 2.  Klik op het sjabloon [Lege werkmap]{.uicontrol}. Er verschijnt een nieuwe werkmap met de naam [Map1]{.varname} en een leeg werkblad met de naam [Blad1]{.varname}.
-
 
 ::: {.callout-note appearance="minimal"}
 **Startscherm uitschakelen**
@@ -57,8 +57,7 @@ Er zijn twee manieren om Excel af te sluiten:
 ::: {.callout-note appearance="minimal"}
 Voor beide methodes geldt dat wanneer er in de werkmap iets gewijzigd is, er bij het afsluiten een dialoogvenster verschijnt waarin gevraagd wordt of de wijzigingen al dan niet moeten worden opgeslagen.
 :::
-
-:::
+:::::
 
 ## Het Excel venster {#sec-intro-excel-window}
 
@@ -128,11 +127,9 @@ Je kunt het lint niet verwijderen, maar je kunt het lint wel minimaliseren met d
 Je kunt op elk moment een nieuwe werkmap aanmaken. Dit kan een lege werkmap zijn, maar je kunt ook een nieuwe werkmap maken die op een bepaald sjabloon gebaseerd is.
 
 ::: {#prp-intro-document-new}
-
 1.  Klik op [Bestand \> Nieuw]{.uicontrol}. In het rechterdeel verschijnt een lijst met beschikbare sjablonen.
 
 2.  Klik op het sjabloon [Lege werkmap]{.uicontrol}. Er verschijnt een nieuwe werkmap met één werkblad.
-
 :::
 
 ## Werkmap openen {#sec-intro-document-open}
@@ -155,7 +152,6 @@ Via de aangeboden keuzes kun je naar het te openen bestand bladeren. Bij het bla
 1.  Start indien nodig Excel op.
 
 2.  Open het bestand.
-
 :::
 
 ## Werkmap opslaan {#sec-intro-document-save}
@@ -168,7 +164,6 @@ De meest gebruikte methodes om een werkmap op te slaan zijn die via
 Wanneer je een bestaande werkmap opnieuw opslaat wordt de vorige versie van de werkmap overschreven. Wanneer je een werkmap voor de eerste keer gaat opslaan toont Excel het dialoogvenster [Opslaan als]{.uicontrol}.
 
 ::: {#prp-document-save}
-
 1.  Sla de werkmap op met een van de hiervoor genoemde methodes.
 
 Er kunnen zich nu twee situaties voordoen, afhankelijk van of de werkmap al eens een keer is opgeslagen en dus al bestaat.
@@ -179,7 +174,6 @@ Er kunnen zich nu twee situaties voordoen, afhankelijk van of de werkmap al eens
 2.  Selecteer de gewenste opslagplaats.
 
 3.  Typ in het vak [Bestandsnaam]{.uicontrol} de gewenste naam van het bestand in en klik op [Opslaan]{.uicontrol}.
-
 :::
 
 ## Werkmap opslaan als {#sec-intro-document-saveas}

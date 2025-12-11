@@ -12,6 +12,8 @@ book:
   repo-url: https://github.com/bwelman/leerexcel
   repo-actions: [issue]
   description: "Een taakgericht studieboek."
+  favicon: images/favicon-excel.png
+  downloads: [pdf]
 
   chapters:
     - index.qmd
@@ -61,6 +63,20 @@ format:
     author-meta: "Ben Welman"
     description-meta: "Met dit taakgericht studieboek leer je te werken met Excel."
     # keywords: ["Excel", "Power Query", "berekeningen", "functies", "tabellen", "grafieken", "arrays", "scenario", "draaitabellen", "doelzoeken", "oplosser"]
+
+  pdf:
+    documentclass: scrbook
+    classoption: oneside
+    papersize: a4
+    geometry:
+     - top=25mm
+     - bottom=25mm
+     - left=25mm
+     - right=25mm
+    cite-method: biblatex
+    links-as-notes: true
+    author: [Ben Welman]
+    date: \today
 
 knitr:
   opts_chunk:
