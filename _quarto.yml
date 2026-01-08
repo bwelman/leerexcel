@@ -78,12 +78,12 @@ format:
     author: [Ben Welman]
     date: \today
 
-  epub:
-    cover-image: images/cover-excel.svg
-    css: include/epub-styles.css
-    metadata:
-      title: "Leer Microsoft Excel"
-    toc: true
+  # epub:
+  #   cover-image: images/cover-excel.svg
+  #   css: include/epub-styles.css
+  #   metadata:
+  #     title: "Leer Microsoft Excel"
+  #   toc: true
 
 knitr:
   opts_chunk:

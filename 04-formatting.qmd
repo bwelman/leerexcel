@@ -314,7 +314,7 @@ In een spreadsheet wordt de gerealiseerde omzet van de verkopers bijgehouden als
 
 1.  Open het bestand.
 
-2.  Selecteer alle cellen met de behaalde omzet.
+2.  Selecteer alle cellen met de behaalde omzet, dus cel C2 t/m cel C15.
 
 3.  Kies [Start \> Voorwaardelijke opmaak (Groep Stijlen) \> Regels beheren]{.uicontrol}.
 
