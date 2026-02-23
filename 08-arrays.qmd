@@ -3,9 +3,7 @@
 ```{r, file = "R/webex-nl.R", include = FALSE}
 ```
 
-::: callout
-**Doelstellingen**
-
+::: callout-intro
 -   Kennismaking met een matrix.
 -   Het maken van matrixformules.
 -   Frequentieverdeling van gegevens maken met functie iNTERVAL.
@@ -15,7 +13,7 @@
 
 Een matrixformule is een formule die meerdere berekeningen kan uitvoeren op een of meer items in een matrix. Matrixformules stonden als erg lastig bekend omdat ze er anders uitzien dan normale formules en je deze formules op een afwijkende manier moest invoeren: met CTRL-SHIFT-ENTER in plaats van gewoon met ENTER. Dat is in Excel 365 niet langer nodig.
 
-::: callout-warning
+::: {.callout-important title="Matrixformules in Excel 365"}
 1.  In Excel 365 is het werken met matrixformules en het gedrag ervan gewijzigd t.o.v. de andere Excel versies. En ook bestaande formules die meerdere resultaten kunnen opleveren gedragen zich in Excel 365 als matrixformules.
 
 2.  Aan Excel 365 zijn een aantal nieuwe dynamische matrixformules toegevoegd.
@@ -77,7 +75,7 @@ De drie voorbeelden worden als volgt in Excel ingevoerd.
 ![2-dimensionale matrix.](images/arrays/array-2dim.png){#fig-array-2dim}
 :::
 
-::: callout-warning
+::: {.callout-important title="Bewerkbaarheid van cellen in een matrix"}
 Voor alle voorbeelden geldt dat alleen de eerste cel bewerkbaar is. Dat is de cel waar de matrix is ingevoerd. Wanneer je een andere cel in het waardengebied selecteert, dan is de inhoud in de formulebalk grijs gekleurd en kun je de waarde niet wijzigen.
 :::
 
@@ -101,7 +99,7 @@ Deze berekening is ook met matrixformules uit te voeren. Het is een goede oefeni
 
 ![Som van twee kolommen via een matrixformule.](images/arrays/example-column-sum.png){#fig-example-column-sum}
 
-::: callout-note
+::: {.callout-tip title="Matrixformules invoeren"}
 -   In plaats van het intypen van de celadressen kun je deze ook met de muis selecteren, wat veel handiger is.
 
 -   Omdat het resultaat van de optelling uit een kolommetje van drie getallen bestaat zal Excel het resultaat automatisch laten overlopen naar de cellen D3:D4. Je moet dat wel vooraf bedenken en zorgen dat deze cellen leeg zijn, anders volgt de foutmelding `#OVERLOOP!`.
@@ -222,11 +220,9 @@ Het eerste argument is het gebied met waarden. Het tweede argument is het gebied
 
 2.  Voer in C2 de volgende formule in `=INTERVAL(A2:A11;B2:B5)`.
 
-::: callout-note
 Het resultaat is een frequentietabel. In de figuur hierna kun je zien hoe de frequenties bepaald zijn.
 
 ![](images/arrays/array-frequency-explanation.png)
-:::
 ::::
 
 ## Dynamische matrixformules {#sec-arrays-dynamic}
@@ -235,7 +231,7 @@ Een matrixformule die in één cel op het werkblad wordt ingevoerd kan resultate
 
 Om een verwijzing naar een overloopgebied te maken zet je een hash symbool `#` achter het adres van de eerste cel van het overloopgebied. Is bijvoorbeeld het overloopgebied J2:N4, dan verwijs je hiernaar met `=J2#`. Wanneer later de grootte van het overloopgebied verandert, dan verandert ook het resultaat van de formule.
 
-::: callout-tip
+::: {.callout-tip title="Naamgeving van matrices"}
 Wanneer je met matrices gaat rekenen, is het erg handig om deze van een naam te voorzien. Dat kan op dezelfde manier als het toekennen van een naam aan een cel.
 :::
 
@@ -447,7 +443,7 @@ Een kortingstabel met daarin de kortingspercentages vanaf een bepaalde hoeveelhe
 
 ![Bepaling van het kortingspercentage voor de afnamehoeveelheid in cel D2.](images/arrays/array-dyn-xlookup.png){#fig-array-dyn-xlookup}
 
-::: callout-tip
+::: {.callout-note title="Argumenten in X.ZOEKEN"}
 Let goed op de argumenten in deze formule.
 
 -   `zoekwaarde`: D2
@@ -534,7 +530,7 @@ In @fig-array-xlookup-2way staan een aantal koffieprijzen van Starbucks. Aan de 
 3.  Plaats in G3 de volgende formule\
     `=X.ZOEKEN(G2;B1:D1;X.ZOEKEN(G1;A2:A10;B2:D10))`.
 
-::: callout-note
+::: {.callout-note title="Uitleg van de geneste formule"}
 -   De binnenste `X.ZOEKEN` zoekt de koffiesoort op in de kolom product en retourneert een rij met de drie prijzen.
 
 -   De buitenste `X.ZOEKEN` vindt de juiste grootte en retourneert de overeenkomstige prijs.

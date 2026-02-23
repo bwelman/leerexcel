@@ -3,12 +3,10 @@
 ```{r, file = "R/webex-nl.R", include = FALSE}
 ```
 
-::: callout
-**Doelstellingen**
-
-+ Uitleg lineaire relaties.
-+ Toevoegen van een lineaire trendlijn aan een spreidingsdiagram.
-+ Werkbladfuncties RICHTING en SNIJPUNT.
+::: callout-intro
+-   Uitleg lineaire relaties.
+-   Toevoegen van een lineaire trendlijn aan een spreidingsdiagram.
+-   Werkbladfuncties RICHTING en SNIJPUNT.
 :::
 
 Onderzoekers willen graag een antwoord hebben op de vraag of de waarde van een variabele afhangt van de waarde van een andere variabele. Om daar achter te komen voeren zij metingen uit. Bij het uitvoeren van de metingen wordt de waarde van één variabele steeds gewijzigd (de onafhankelijke variabele)en wordt de waarde van een andere variabele (de afhankelijke variabele) gemeten.
@@ -19,7 +17,7 @@ Een relatie tussen variabelen wordt weergegeven door een wiskundige functie en a
 
 Bij het grafisch weergeven van meetresultaten zal er bijna nooit een lijn zijn die precies past bij alle meetpunten. Met behulp van statistische technieken zijn programma's als Excel in staat om de best passende lijn bij deze meetpunten te bepalen. Zo'n lijn wordt ook wel **regressielijn** genoemd. De rekenmethode om de best passende lijn te vinden staat bekend als de **kleinste kwadratenmethode**.
 
-::: {.callout-note}
+::: {.callout-tip title="Data Analyse met Excel"}
 In het (gratis) online studieboek [Data Analyse met Excel](https://excelanalyse.netlify.app/) wordt meer aandacht besteed aan de achtergronden van deze methode en de verschillende trendlijnen die je met Excel kunt maken
 :::
 
@@ -27,12 +25,12 @@ In het (gratis) online studieboek [Data Analyse met Excel](https://excelanalyse.
 
 Wanneer tussen twee variabelen $x$ en $y$ een lineair verband bestaat dan kan de relatie tussen deze twee variabelen worden weergegeven met de vergelijking
 
-$y = ax + b$ 
+$y = ax + b$
 
-+ $y$ is de afhankelijke variabele
-+ $x$ is de onafhankelijke variabele
-+ $a$ is de richtingscoëfficiënt, een constante
-+ $b$ is het snijpunt met de y-as, een constante
+-   $y$ is de afhankelijke variabele
+-   $x$ is de onafhankelijke variabele
+-   $a$ is de richtingscoëfficiënt, een constante
+-   $b$ is het snijpunt met de y-as, een constante
 
 ::: {#exm-meas-linear}
 $y = 2x + 3$
@@ -40,53 +38,50 @@ $y = 2x + 3$
 De grafiek van $y=2x+3$ is een rechte lijn. De richtingscoëfficiënt van de lijn, $a$, is 2, en het snijpunt met de y-as, $b$, is 3.
 
 ![Rechte lijn bij een lineaire relatie.](images/measurements/chart-linear.png){#fig-chart-linear}
-
 :::
 
 Wanneer een aantal meetresultaten bekend zijn, dan kun je met Excel
 
-+ een grafiek tekenen.
-+ de trendlijn tekenen (de best passende lijn).
-+ de vergelijking van de trendlijn bepalen.
-+ de richtingscoeëfficiënt en het snijpunt met de y-as bepalen met Excel functies.
+-   een grafiek tekenen.
+-   de trendlijn tekenen (de best passende lijn).
+-   de vergelijking van de trendlijn bepalen.
+-   de richtingscoeëfficiënt en het snijpunt met de y-as bepalen met Excel functies.
 
 ## Lineaire trendlijn {#sec-meas-trendline-linear}
 
 In een houtfabriek wordt een groot aantal gelijksoortige artikelen gefabriceerd, die hoofdzakelijk verschillen vertonen in hun afmetingen en gewicht. Om te onderzoeken of de productietijd van deze artikelen afhangt van het gewicht ervan, worden een aantal metingen uitgevoerd. Er wordt een linair verband verondersteld.
 
-::: {#prp-meas-trendline-linear}
+:::: {#prp-meas-trendline-linear}
 [Bestand]{.smallcaps}: `Productietijd_Gewicht.xlsx`
 
-1. Open het bestand.
+1.  Open het bestand.
 
-2. Selecteer het gebied met de meetresultaten, A2:B11.
+2.  Selecteer het gebied met de meetresultaten, A2:B11.
 
-3. Kies [tab Invoegen > Aanbevolen grafieken (groep Grafieken) > Spreiding > OK]{.uicontrol}.
+3.  Kies [tab Invoegen \> Aanbevolen grafieken (groep Grafieken) \> Spreiding \> OK]{.uicontrol}.
 
-4. Voeg een lineaire trendlijn toe.
+4.  Voeg een lineaire trendlijn toe.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Hint")`
-Je kunt op de volgende manieren een trendlijn toevoegen.
+`r hide("Hint")` Je kunt op de volgende manieren een trendlijn toevoegen.
 
 -   Selecteer de punten in de grafiek, dan rechter muisklik en kies [Trendlijn toevoegen]{.uicontrol}.
--   Selecteer het grafiekgebied en klik op de knop ![](images/common/button-chart-elements.png) naast de grafiek en kies [Trendlijn > Lineair]{.uicontrol}.
-`r unhide()`
+-   Selecteer het grafiekgebied en klik op de knop ![](images/common/button-chart-elements.png) naast de grafiek en kies [Trendlijn \> Lineair]{.uicontrol}. `r unhide()`
 :::
 
-5. Selecteer trendlijn, [Rechter muisklik > Trendlijn opmaken]{.uicontrol}.
+5.  Selecteer trendlijn, [Rechter muisklik \> Trendlijn opmaken]{.uicontrol}.
 
-6. Selecteer in het taakvenster ***Trendlijn opmaken*** de optie [Vergelijking in grafiek weergeven]{.uicontrol}.
+6.  Selecteer in het taakvenster ***Trendlijn opmaken*** de optie [Vergelijking in grafiek weergeven]{.uicontrol}.
 
 ![Trendlijn opties.](images/measurements/trendline-options.png){#fig-trendline-options}
 
-7. Maak de volgende aanpassingen (zie het voorbeeld in @fig-prodtime-chart-xy):
+7.  Maak de volgende aanpassingen (zie het voorbeeld in @fig-prodtime-chart-xy):
 
-   + Voeg grafiektitel en astitels toe.
-   + Pas de schaling van de assen aan.
-   + Geen decimalen in de getallen langs de assen.
-   + Maak van de trendlijn een getrokken rode lijn.
-   + Versleep de vergelijking naar een beter zichtbare plek.
+    -   Voeg grafiektitel en astitels toe.
+    -   Pas de schaling van de assen aan.
+    -   Geen decimalen in de getallen langs de assen.
+    -   Maak van de trendlijn een getrokken rode lijn.
+    -   Versleep de vergelijking naar een beter zichtbare plek.
 
 ![Spreidingsdiagram van de meetresultaten met lineaire trendlijn.](images/measurements/prodtime-chart-xy.png){#fig-prodtime-chart-xy}
 
@@ -98,19 +93,19 @@ $\text{Productietijd} = 2,955 \times \text{Gewicht} + 41,99$
 
 De richtingscoëfficiënt van de trendlijn en het snijpunt met de y-as kunnen ook berekend worden met de functies `RICHTING` en `SNIJPUNT` uit de categorie Statistisch.
 
-8. Selecteer een lege cel op het werkblad en voer de functie `RICHTING` in. Specificeer hierbij
+8.  Selecteer een lege cel op het werkblad en voer de functie `RICHTING` in. Specificeer hierbij
 
-   + [y-bekend]{.uicontrol}: B2:B11
-   + [x-bekend]{.uicontrol}: A2:A11
+    -   [y-bekend]{.uicontrol}: B2:B11
+    -   [x-bekend]{.uicontrol}: A2:A11
 
 9.  Bepaal op dezelfde manier in een andere cel de waarde van `SNIJPUNT`.
 
 De waarde van de richtingscoëfficient: 2,95503212 en de waarde van snijpunt is 41,99036403. Hiermee zijn de gegevens voor de vergelijking van de trendlijn bekend.
-:::
+::::
 
 ## Opgaven {#sec-measurements-exercises}
 
-::: {#exr-meas001}
+:::: {#exr-meas001}
 **Lengte en gewicht (meas001)**
 
 [Bestand]{.smallcaps}: `Meas001.xlsx`
@@ -122,14 +117,11 @@ Van een aantal schoolkinderen zijn lengte en gewicht bepaald. In de figuur hiern
 Veronderstel een lineair verband en bepaal de vergelijking waarbij het gewicht een functie is van de lengte.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-Gewicht = 1,65*Lengte - 153,3
-`r unhide()`
+`r hide("Antwoord")` Gewicht = 1,65\*Lengte - 153,3 `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-meas002}
+:::: {#exr-meas002}
 **Studietijd en tentamencijfer (meas002)**
 
 [Bestand]{.smallcaps}: `Meas002.xlsx`
@@ -141,14 +133,11 @@ Van een zestal studenten is het aantal studie-uren bijgehouden dat zij aan een b
 Veronderstel een lineair verband en bepaal de vergelijking waarbij het cijfer verklaard kan worden uit de studietijd.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-Cijfer = 0,2038*Studietijd + 3,3637
-`r unhide()`
+`r hide("Antwoord")` Cijfer = 0,2038\*Studietijd + 3,3637 `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-meas003}
+:::: {#exr-meas003}
 **Krimp en temperatuur (meas003)**
 
 [Bestand]{.smallcaps}: `Meas003.xlsx`
@@ -157,20 +146,17 @@ Een fabrikant van synthetische vezels onderzoekt of het krimpen van de vezels sa
 
 ![Resultaten krimppercentage en wastemperatuur](images/measurements/meas003_data.png)
 
-1. Veronderstel een lineair verband en bepaal de vergelijking waarbij het krimppercentage verklaard kan worden uit de temperatuur.
-2. Voorspel met behulp hiervan de krimp bij een temperatuur van 65^o^C.
+1.  Veronderstel een lineair verband en bepaal de vergelijking waarbij het krimppercentage verklaard kan worden uit de temperatuur.
+2.  Voorspel met behulp hiervan de krimp bij een temperatuur van 65^o^C.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-Krimpperc = 0,0796*Temp - 3,546
+`r hide("Antwoord")` Krimpperc = 0,0796\*Temp - 3,546
 
-Bij een temperatuur van 65^o^C is het voorspelde krimppercentage 1,6%.
-`r unhide()`
+Bij een temperatuur van 65^o^C is het voorspelde krimppercentage 1,6%. `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-meas004}
+:::: {#exr-meas004}
 **Weerstand en temperatuur (meas004)**
 
 [Bestand]{.smallcaps}: `Meas004.xlsx`
@@ -179,16 +165,12 @@ De weerstand van een metalen blokje hangt o.a. af van de temperatuur. In de afbe
 
 ![Resultaten weerstand en temperatuur](images/measurements/meas004_data.png)
 
-1. Veronderstel een lineair verband en bepaal de vergelijking waarbij de weerstand verklaard kan worden uit de temperatuur.
-2. Voorspel met behulp hiervan de weerstand van het blokje bij een temperatuur van 400^o^C.
+1.  Veronderstel een lineair verband en bepaal de vergelijking waarbij de weerstand verklaard kan worden uit de temperatuur.
+2.  Voorspel met behulp hiervan de weerstand van het blokje bij een temperatuur van 400^o^C.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-Weerstand = 0,0786*Temp + 21,214
+`r hide("Antwoord")` Weerstand = 0,0786\*Temp + 21,214
 
-Bij een temperatuur van 400^o^C is de voorspelde weerstand 52,6 Ohm.
-`r unhide()`
+Bij een temperatuur van 400^o^C is de voorspelde weerstand 52,6 Ohm. `r unhide()`
 :::
-
-:::
-
+::::

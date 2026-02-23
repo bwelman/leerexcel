@@ -3,9 +3,7 @@
 ```{r, file = "R/webex-nl.R", include = FALSE}
 ```
 
-::: callout
-**Doelstellingen**
-
+::: callout-intro
 -   Soorten functies en de syntax van een functie.
 -   Invoeren van een functie, via de Wizard en handmatig.
 -   Nesten van functies.
@@ -37,7 +35,7 @@ Alle functies in Excel hebben dezelfde opbouw (syntax), zie @fig-function-syntax
 -   Daarna ronde haakjes `()` waartussen de argumenten staan. De argumenten worden van elkaar gescheiden door het lijstscheidingsteken de puntkomma (`;`).
 -   De argumenten kunnen bestaan uit: getallen, teksten, celverwijzingen, bewerkingen en zelfs functies.
 
-::: callout-warning
+::: {.callout-important title="Lijstscheidingsteken"}
 1.  Het **lijstscheidingsteken** dat Excel gebruikt hangt af van een instelling in Windows. Je kunt deze instelling wijzigen via het configuratiescherm van Windows. Standaard is de instelling
 
     -   Nederlandstalige Windows: puntkomma
@@ -71,7 +69,7 @@ Selecteer de gewenste functie, bijvoorbeeld `AANTAL.ALS` en klik op [OK]{.uicont
 
 In het dialoogvenster kun je de argumenten kunt opgeven. Welk(e)argument(en) je moet gebruiken is afhankelijk van de geselecteerde functie. De argumenten kun je intypen, maar wanneer het om celadressen gaat kun je deze cellen ook met de muis in het werkblad selecteren.
 
-::: callout-note
+::: {.callout-tip title="Hulp voor de functie"}
 Linksonder in het dialoogvenster is een link naar [Help-informatie over deze functie]{.uicontrol}.
 :::
 
@@ -161,7 +159,7 @@ In de categorie [Statistisch]{.uicontrol} zitten naast functies voor het uitvoer
     -   B11: `MIN`
     -   B12: `MAX`
 
-::: callout-note
+::: {.callout-tip title="Selecteren celbereik"}
 Het argument is steeds het gebied B1:B8. Je kunt dit uiteraard intypen in het dialoogvenster voor de functieargumenten, maar het is handiger om de cursor in het vak voor het eerste argument te plaatsen en daarna met de muis het gebied B1:B8 in het werkblad te selecteren.
 :::
 
@@ -208,13 +206,13 @@ Met de functie `NETTO.WERKDAGEN` kun je het aantal volledige werkdagen bepalen t
 
 ## Logische functie ALS {#sec-function-logical}
 
-De functies in de categorie [Logisch]{.uicontrol} doen wat met de uitkomsten `WAAR` of `ONWAAR`. De meest bekende en ook meest gebruikte functie uit deze categorie is de functie `ALS`. Simpel gezegd komt de werking van deze functie neer op:
+De functies in de categorie [Logisch]{.uicontrol} doen wat met de uitkomsten `WAAR` of `ONWAAR`. De meest bekende en ook meest gebruikte functie in deze categorie is de functie `ALS`. Simpel gezegd komt de werking van deze functie neer op:
 
 `=ALS(voorwaarde ; doe dit indien waar ; doe dit indien onwaar)`
 
 De voorwaarde is een logische test met als uitkomst `WAAR` of `ONWAAR`.
 
-::: callout-note
+::: {.callout-note title="Meerdere voorwaarden"}
 Wanneer je op meer dan één voorwaarde wilt testen, dan kun je een nieuwe `ALS()` functie plaatsen binnen de eerste `ALS()` functie. Dergelijke constructies worden snel ingewikkeld en moeilijk leesbaar. Het is vaak beter om in dat geval op de plaats van de voorwaarde gebruik te maken van de logische functies `EN()`, `OF()`en `NIET()`.
 :::
 
@@ -285,7 +283,7 @@ Het linkergedeelte met een bepaalde lengte van een tekst kun je bepalen met de f
 :::: {#prp-function-left}
 1.  Selecteer cel D2, voeg de functie `LINKS` in en specificeer de argumenten zoals in @fig-example-text-left is aangegeven.
 
-::: callout-note
+::: {.callout-note title="Aantal tekens"}
 In het vak [Aantal-tekens]{.uicontrol} moet de lengte van het linkerdeel worden opgegeven. Dit is 1 minder dan de plaats van de spatie en die plaats is de waarde in cel C2.
 :::
 
@@ -307,7 +305,7 @@ Het rechtergedeelte met een bepaalde lengte van een tekst kun je bepalen met de 
 
 ![Argumenten voor de functie RECHTS.](images/functions/example-text-right.png){#fig-example-text-right}
 
-::: callout-note
+::: {.callout-note title="Aantal tekens"}
 In het vak [Aantal-tekens]{.uicontrol} moet de lengte van het rechterdeel worden opgegeven. Deze wordt geteld vanaf het einde van de tekst. In dit voorbeeld is de lengte van het rechterdeel gelijk aan de totale lengte van de tekst (de waarde in B2) verminderd met de plaats van de spatie (de waarde in C2).
 :::
 
@@ -357,7 +355,7 @@ In cel A6 verschijnt nu het antwoord en in de formulebalk de gebruikte formule.
 
 ![Resultaat geneste functie.](images/functions/example-nesting-result.png){#fig-example-nesting-result}
 
-::: callout-note
+::: {.callout-tip title="Geneste functies"}
 1.  Zou je na stap 3 niet eerst het aantal decimalen hebben opgegeven, dan had je tijdens het nesten een waarschuwing gekregen dat er te weinig argumenten zijn ingevoerd. Je had dit dan nog handmatig in de formule moeten corrigeren.
 
 2.  Een snellere manier van werken is door handmatig de formule in de formulebalk in te typen. Tijdens dit intypen krijg je hulp bij het invoeren. Je moet dan wel de namen van de te gebruiken functies kennen.
@@ -379,7 +377,7 @@ De functie `AANTAL.ALS` is erg handig bij het maken van frequentietabellen. In @
 
 ![Argumenten voor functie AANTAL.ALS.](images/functions/function-countif.png){#fig-function-countif2}
 
-::: callout-note
+::: {.callout-tip title="Bereik hele kolom"}
 Door voor het bereik de hele kolom B te nemen kunnen er aan de onderkant nieuwe rijen met gegevens worden toegevoegd zonder dat de formules gewijzigd hoeven te worden.
 :::
 
@@ -415,7 +413,7 @@ De functie `SOM.ALS` kan gebruikt worden om getallen op te tellen onder bepaalde
 `r hide("Resultaat")` ![](images/functions/example-sumif-result.png) `r unhide()`
 :::
 
-::: callout-note
+::: {.callout-note title="Draaitabellen"}
 Een optelling zoals in dit voorbeeld is veel gemakkelijker te realiseren met behulp van draaitabellen.
 :::
 :::::
@@ -435,13 +433,13 @@ Bij de aflossing van een lening zijn er meerdere methodes om de aflossing te bep
 
 ![Argumenten voor de functie BET.](images/functions/example-annuity-arguments.png){#fig-example-annuity-arguments}
 
-::: callout-note
+::: {.callout-note title="Termijn en rente per periode"}
 Omdat de termijn hier een maand is en geen jaar, moet de jaarrente door 12 gedeeld worden en het aantal jaren met 12 vermenigvuldigd worden.
 :::
 
 3.  Klik op [OK]{.uicontrol}.
 
-::: callout-warning
+::: {.callout-note title="Negatief getal"}
 Het antwoord -2109,64 verschijnt. Omdat resultaat een bedrag is dat betaald moet worden, een schuld dus, geeft Excel dit weer als een negatief getal. Dat is in een rood lettertype en met een minteken.
 :::
 
@@ -452,7 +450,7 @@ Het antwoord -2109,64 verschijnt. Omdat resultaat een bedrag is dat betaald moet
 
 Bij het afsluiten van een persoonlijke lening van € 4000 ben je overeengekomen om maandelijks een bedrag van € 125 af te lossen. Bereken het aantal maanden dat je dit bedrag moet betalen om de lening volledig af te lossen bij een vaste jaarrente van 6%. Gebruik hiervoor de Excelfunctie `NPER`. Deze functie berekent het aantal termijnen voor een investering op basis van periodieke, vaste betalingen en een vast rentepercentage.
 
-::: callout-warning
+::: {.callout-important title="Betalingen"}
 Betalingen worden als negatieve getallen ingevoerd.
 :::
 
@@ -467,7 +465,7 @@ Betalingen worden als negatieve getallen ingevoerd.
 
 ![Argumenten voor de functie NPER.](images/functions/example-nper-arguments.png){#fig-example-nper-arguments}
 
-::: callout-note
+::: {.callout-note title="Termijn en rente per periode"}
 Omdat de termijn hier een maand is en geen jaar, moet de jaarrente door 12 gedeeld worden.
 :::
 
@@ -485,7 +483,7 @@ Het laatste argument is facultatief en kan de waarde ONWAAR of WAAR hebben.
 -   ONWAAR : Er moet naar een exacte overeenkomst met de zoekwaarde gezocht worden.
 -   WAAR : Wanneer geen exacte overeenkomst gevonden kan worden, neem dan de eerste dichtstbijzijnde benadering.
 
-::: callout-note
+::: {.callout-tip title="Exacte overeenkomst of benadering"}
 Je kunt meestal het beste opgeven dat naar een exacte overeenkomst gezocht moet worden, anders kunnen er onjuiste resultaten getoond worden. Wil je toch een benadering vinden, dan moet je er voor zorgen dat de lijst gesorteerd is voor de eerste kolom.
 :::
 
@@ -528,7 +526,7 @@ Het laatste argument is facultatief en kan de waarde ONWAAR of WAAR hebben.
 -   ONWAAR : Er moet naar een exacte overeenkomst met de zoekwaarde gezocht worden.
 -   WAAR : Wanneer geen exacte overeenkomst gevonden kan worden, neem dan de eerste dichtstbijzijnde benadering.
 
-::: callout-note
+::: {.callout-tip title="Exacte overeenkomst of benadering"}
 Je kunt meestal het beste opgeven dat naar een exacte overeenkomst gezocht moet worden, anders kunnen er onjuiste resultaten getoond worden. Wil je toch een benadering vinden, dan moet je er voor zorgen dat de lijst gesorteerd is voor de eerste rij.
 :::
 

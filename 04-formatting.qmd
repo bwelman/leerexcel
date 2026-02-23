@@ -3,9 +3,7 @@
 ```{r, file = "R/webex-nl.R", include = FALSE}
 ```
 
-::: callout
-**Doelstellingen**
-
+::: callout-intro
 -   Het belang van eerst selecteren en dan pas opmaken.
 -   Aanpassing kolombreedte en rijhoogte.
 -   Opmaak van getallen en tekst.
@@ -44,7 +42,7 @@ Er zijn verschillende manieren om de breedte van kolommen aan te passen.
 
 -   Selecteer een cel in de kolom waarvan de breedte aangepast moet worden. Kies dan [Start \> Opmaak (groep Cellen) \> Kolombreedte]{.uicontrol}. Je krijgt dan hetzelfde dialoogvenster als hiervoor.
 
-::: callout-note
+::: {.callout-tip title="Meerdere kolommen tegelijk aanpassen"}
 1.  Je kunt van meerdere kolommen tegelijk de breedte aanpassen. Selecteer eerst deze kolommen eerst te selecteren met hulp van de [SHIFT]{.uicontrol} toets of [CTRL]{.uicontrol} toets.
 
 2.  Je kunt de breedte van alle kolommen in het werkblad aanpassen via [Start \> Opmaak (groep Cellen) \> Standaardbreedte]{.uicontrol}.
@@ -70,7 +68,7 @@ Er zijn verschillende manieren om de hoogte van een rij aan te passen.
 
 -   Selecteer een cel in de rij waarvan de hoogte aangepast moet worden. Kies dan [Start \> Opmaak (groep Cellen) \> Rijhoogte]{.uicontrol}. Je krijgt dan hetzelfde dialoogvenster als hiervoor.
 
-::: callout-note
+::: {.callout-tip title="Meerdere rijen tegelijk aanpassen"}
 Je kunt van meerdere rijen tegelijk de hoogte aanpassen door deze rijen eerst te selecteren met ingedrukte [Ctrl]{.uicontrol} toets.
 :::
 
@@ -144,7 +142,7 @@ Tekstterugloop
 
 :   De tekst komt op meerdere regels in de cel. Hiervoor wordt de rijhoogte groter gemaakt. Een lange tekst neemt hierdoor minder horizontale ruimte in. Toegepast in D3:F3.
 
-::: callout-note
+::: {.callout-note title="Tekstterugloop niet zichtbaar"}
 Wanneer alle terugloop tekst niet zichtbaar is, dan kan dat komen omdat de rijhoogte op een bepaalde waarde is gezet. Om alle terugloop tekst zichtbaar te maken, kies [Start \> Opmaak (groep Cellen \> Rijhoogte AutoAanpassen]{.uicontrol}.
 :::
 
@@ -164,7 +162,7 @@ Bij de invoer van sommige getallen worden deze automatisch in de juiste opmaak g
 
 -   Wanneer je in een cel intypt `1/2` dan denkt Excel dat het om een datum gaat en wordt de inhoud getoond als 1-feb.
 
-::: callout-note
+::: {.callout-note title="Datums en tijden worden als getallen opgeslagen"}
 Excel slaat datums en tijden op als seriële getallen, te beginnen bij 1 januari 1900 als nummer 1. Nummer 2 is dan 2 januari 1900, enz. En wanneer je 1/2 in een cel intypt, dan voegt Excel daar autmatisch het huidige jaartal aan toe, dus bijvoorbeeld 1-2-2013 en de echte inhoud van de cel is dan 41306.
 :::
 
@@ -231,7 +229,7 @@ De werkwijze is als volgt:
 
 4.  Laat de muisknop los
 
-::: callout-note
+::: {.callout-tip title="Pas de opmaak toe op meerdere cellen"}
 Wanneer je dubbelklikt op de knop [Opmaak kopiëren/plakken]{.uicontrol} dan kun je meerdere plakbewerkingen achter elkaar uitvoeren. Om deze toestand weer op te heffen kun je opnieuw klikken op de knop [Opmaak kopiëren/plakken]{.uicontrol} of drukken op de toets [Esc]{.uicontrol}.
 :::
 
@@ -245,7 +243,7 @@ De opmaak van cellen kun je als volgt wissen:
 
 ![Plek op het lint van de opdracht wissen.](images/formatting/format-clear.png){#fig-format-clear}
 
-::: callout-note
+::: {.callout-note title="Cel wissen"}
 1.  Via deze weg kun je behalve de opmaak, ook de inhoud of beide wissen.
 
 2.  Met de toets DELETE wis je alleen de inhoud van een cel. De opmaak van de cel (lettertype, kleuren, uitlijning, getalopmaak, enz.)wordt niet gewijzigd en blijft gewoon aanwezig in de lege cel.

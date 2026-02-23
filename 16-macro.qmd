@@ -3,9 +3,7 @@
 ```{r, file = "R/webex-nl.R", include = FALSE}
 ```
 
-::: callout
-**Doelstellingen**
-
+::: callout-intro
 -   Uitleg macro's en het gebruik ervan.
 -   Activeren tabblad Ontwikkelaars.
 -   Opnemen van een macro met de macrorecorder.
@@ -20,7 +18,7 @@ Een macro is dus vooral bedoeld om te gebruiken voor veel voorkomende handelinge
 
 Eenvoudige macro's welke uit een aantal achter elkaar uitgevoerde handelingen bestaan, kunnen met de ingebouwde macrorecorder worden opgenomen. Complexe macro's worden geprogrammeerd in de programmeertaal VBA. Alleen eenvoudige macro's komen hier aan bod, hiervoor heb je geen programmeerkennis nodig.
 
-::: callout-note
+::: {.callout-note title="Macro's en VBA"}
 De taal waarin de Excel macro's geschreven worden is Visual Basic for Applications (VBA). De opdrachten en functies van de macro worden in een Visual Basic module opgeslagen. En met de Visual Basic editor kun je macro's bewerken, macro's van de ene module naar de andere kopiëren, macro's tussen verschillende werkmappen kopiëren en de modules en macro's een andere naam een andere naam geven.
 :::
 
@@ -30,7 +28,7 @@ Om macro's op te kunnen nemen, te bewerken en uit te voeren moet het tabblad [On
 
 Een aantal functies van Excel, waaronder die voor Macro's en VBA, zitten onder het tabblad [Ontwikkelaars]{.uicontrol}. Dit tabblad wordt bij de installatie van Excel standaard niet getoond en zal dus eerst zichtbaar gemaakt moeten worden. Dit is een eenmalige actie.
 
-::: callout-warning
+::: {.callout-important title="Controleer aanwezigheid Tab Ontwikkelaars"}
 Controleer eerst of op het lint de tab [Ontwikkelaars]{.uicontrol} aanwezig is. Zoja, dan kun je deze taak overslaan.
 
 ![Tab ontwikkelaars.](images/macro/tab-developer.png){#fig-tab-developer}
@@ -73,7 +71,7 @@ Dan verschijnt het dialoogvenster ***Vertrouwenscentrum***.
 
 Eenvoudige macro's kunnen gemaakt worden door de handelingen op te nemen met de ingebouwde **macrorecorder**. Na het starten van de recorder worden alle handelingen opgenomen en op de achtergrond omgezet in VBA code. Dit gaat door totdat de recorder gestopt wordt.
 
-::: callout-note
+::: {.callout-tip title="Macro's ontwerpen"}
 Om een goed werkende macro te krijgen is het belangrijk om eerst de te verrichten handelingen zonder opname uit te voeren en in volgorde te noteren. Dit script kun je daarna gebruiken om de handelingen met de macrorecorder op te nemen.
 :::
 
@@ -111,8 +109,8 @@ Je moet de opslagplek altijd specificeren. De standaardwaarde is [Deze werkmap]{
 
 Het is aan te bevelen om een korte beschrijving te geven van wat de macro doet. Bij het maken van de macro weet je dit wel, maar enige tijd later ben je het misschien vergeten. Het is niet verplicht om een beschrijving op te geven.
 
-::: callout-note
-Alle gemaakte keuzes kunnen in een later stadium altijd gewijzigd worden.
+::: {.callout-note title="Eigenschappen macro"}
+Al deze keuzes (naam, snelkoppeling, opslaglocatie, beschrijving) kunnen later worden gewijzigd.
 :::
 
 ## Macro Celopmaak {#sec-macros-cellformat}
@@ -170,7 +168,7 @@ Nu kan de macro getest worden op de juiste werking.
 ![Opslaan van het werkblad met macro's.](images/macro/macro-cellformat-save.png){#fig-macro-cellformat-save}
 :::
 
-::: callout-warning
+::: {.callout-warning title="Bestandsextensie voor macro's"}
 Wanneer je een werkmap met macro's wilt opslaan, dan probeert Excel deze standaard op te slaan als een Excel-werkmap met de extensie `.xlsx`. Echter in dit formaat kunnen geen macro's worden opgeslagen. Je moet dit zelf wijzigen in een **Excel-werkmap met macro's** met de extensie `.xlsm`.
 :::
 
@@ -266,8 +264,8 @@ Wanneer je relatieve verwijzingen in de macro wilt gebruiken dan moet je klikken
 
 ![Relatieve verwijzingen in macro's.](images/macro/record-macro-relative-references.png){#fig-record-macro-relative-references}
 
-::: callout-warning
-Deze instelling blijft actief totdat je de instelling ongedaan maakt door weer op deze knop te klikken.
+::: {.callout-important title="Relatieve verwijzingen"}
+De modus "Relatieve verwijzingen gebruiken" is een schakelaar. Deze blijft actief (of inactief) totdat je opnieuw op de knop klikt om de status te wijzigen. Controleer altijd de status voordat je gaat opnemen als het referentietype belangrijk is.
 :::
 
 ### Macro's verwijderen {#sec-macros-tips-deleting}
@@ -365,11 +363,7 @@ End Sub
 ::: {#exr-macr004}
 **Rasterlijnen afdrukken (macr004)**
 
-Neem een macro op die er voor zorgt dat bij het afdrukken ook de rasterlijnen worden afgedrukt.
-
-::: callout-note
-Deze eigenschap is te vinden bij [tab Pagina-indeling \> Pagina-instelling \> tab Blad]{.uicontrol}.
-:::
+Neem een macro op die er voor zorgt dat bij het afdrukken ook de rasterlijnen worden afgedrukt. Deze eigenschap is te vinden bij [tab Pagina-indeling \> Pagina-instelling \> tab Blad]{.uicontrol}.
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")` Een mogelijke oplossing.

@@ -1,8 +1,6 @@
 # Beginnen met Excel {#sec-introductie}
 
-::: callout
-**Doelstellingen**
-
+::: callout-intro
 -   Over wat rekenbladen (spreadsheets)zijn.
 -   Het opstarten en afsluiten van Excel.
 -   De indeling van het programmavenster van Excel.
@@ -37,9 +35,7 @@ Het opstartscherm van Excel verschijnt. In het linkerdeel staan de laatst geopen
 
 2.  Klik op het sjabloon [Lege werkmap]{.uicontrol}. Er verschijnt een nieuwe werkmap met de naam [Map1]{.varname} en een leeg werkblad met de naam [Blad1]{.varname}.
 
-::: {.callout-note appearance="minimal"}
-**Startscherm uitschakelen**
-
+::: {.callout-note title="Startschem uitschakelen"}
 Wanneer je Excel opent wordt als eerste het startscherm getoond. Het startscherm toont een lijst met recente documenten en de beschikbare sjablonen. Dat kan in sommige gevallen handig zijn, maar het is ook mogelijk om Excel op te starten met een leeg document.
 
 Start eerst Excel op en kies dan [Bestand \> Opties \> tabblad Algemeen]{.uicontrol} en schakel het vinkje uit bij [Startscherm weergeven wanneer deze toepassing wordt gestart]{.uicontrol}.
@@ -54,7 +50,7 @@ Er zijn twee manieren om Excel af te sluiten:
 
 3.  Sluit Excel.
 
-::: {.callout-note appearance="minimal"}
+::: {.callout-note title="Opslaan na wijzigingen"}
 Voor beide methodes geldt dat wanneer er in de werkmap iets gewijzigd is, er bij het afsluiten een dialoogvenster verschijnt waarin gevraagd wordt of de wijzigingen al dan niet moeten worden opgeslagen.
 :::
 :::::
@@ -86,7 +82,7 @@ Sommige tabbladen worden alleen maar getoond wanneer je ze nodig hebt, de zogena
 
 Verder staan de opdrachten die je het meest nodig hebt zoveel mogelijk aan de linkerkant en staan de meest gespecialiseerde opdrachten uiterst rechts.
 
-::: callout-note
+::: {.callout-tip title="Verbergen/Weergeven lint"}
 Je kunt het lint niet verwijderen, maar je kunt het lint wel minimaliseren met de toetscombinatie [Ctrl + F1]{.uicontrol}. Je ziet dan alleen de tabs. Opnieuw indrukken van deze toetscombinatie brengt het volledige lint weer terug.
 :::
 

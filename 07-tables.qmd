@@ -3,18 +3,15 @@
 ```{r, file = "R/webex-nl.R", include = FALSE}
 ```
 
-::: callout
-**Doelstellingen**
-
-+ Kenmerken van tabellen (lijsten).
-+ Knop Formulier.
-+ Samenvoegen (consolideren)van gegevens.
-+ Gegevensbereik omzetten naar een tabel.
-+ Sorteren en filteren van tabellen.
-+ Berekende kolommen in een tabel.
-+ Kolomtotalen bij een tabel.
+::: callout-intro
+-   Kenmerken van tabellen (lijsten).
+-   Knop Formulier.
+-   Samenvoegen (consolideren)van gegevens.
+-   Gegevensbereik omzetten naar een tabel.
+-   Sorteren en filteren van tabellen.
+-   Berekende kolommen in een tabel.
+-   Kolomtotalen bij een tabel.
 :::
-
 
 Veel informatie wordt in Excel bijgehouden in tabellen, zoals adressenlijsten, telefoonlijsten, klantgegevens e.d. Een tabel met gegevens in een Excel werkblad werd in oudere Excel versies een **lijst** genoemd.
 
@@ -24,27 +21,27 @@ Het werken met goed opgezette tabellen is een veel voorkomende bezigheid, vooral
 
 Een tabel is een georganiseerde verzameling van gegevens.
 
-|klantnr|naam    |datum     |prijs|korting|
-|-------|--------|----------|-----|-------|
-|A104   |Anderson|2010-10-02|400  |0 %    |
-|K102   |King    |2010-11-03|395  |5 %    |
-|S501   |Smith   |2010-12-04|375  |8%     |
+| klantnr | naam     | datum      | prijs | korting |
+|---------|----------|------------|-------|---------|
+| A104    | Anderson | 2010-10-02 | 400   | 0 %     |
+| K102    | King     | 2010-11-03 | 395   | 5 %     |
+| S501    | Smith    | 2010-12-04 | 375   | 8%      |
 
-:  Voorbeeld van een tabel. {#tbl-tables-exampletable}
+: Voorbeeld van een tabel. {#tbl-tables-exampletable}
 
 Een tabel bestaat uit rijen en kolommen. Deze **rijen** worden ook wel **records** genoemd en de **kolommen** worden **velden** genoemd. De soort gegevens die verzameld worden staan in kolommen. In de eerste rij van een tabel staan de kolomlabels die aangeven wat de informatie in de kolom voorstelt. De kolomlabels worden ook wel **veldnamen** genoemd. De veldnamen in @tbl-tables-exampletable zijn: [klantnr]{.varname}, [naam]{.varname}, [datum]{.varname}, [prijs]{.varname} en [korting]{.varname}.
 
 Om gegevens te kunnen analyseren is het belangrijk dat deze gegevens goed gestructureerd in het werkblad komen te staan. Een tabel met gestructureerde gegevens heeft de volgende kenmerken:
 
-+ De cellen in elke kolom bevatten dezelfde soort gegevens.
+-   De cellen in elke kolom bevatten dezelfde soort gegevens.
 
-+ De cellen in elke rij staan bevatten de afzonderlijke gegevens van het onderwerp.
+-   De cellen in elke rij staan bevatten de afzonderlijke gegevens van het onderwerp.
 
-+ De eerste rij van de tabel bevat de unieke namen van de velden. Deze namen zijn meestal anders opgemaakt (groter lettertype, vet, cursief, ...) dan de rest van de tabel.
+-   De eerste rij van de tabel bevat de unieke namen van de velden. Deze namen zijn meestal anders opgemaakt (groter lettertype, vet, cursief, ...) dan de rest van de tabel.
 
-+ Er mogen geen lege rijen in de tabel voorkomen. Wel mogen er lege cellen in een rij staan, maar niet alle cellen in een rij mogen leeg zijn.
+-   Er mogen geen lege rijen in de tabel voorkomen. Wel mogen er lege cellen in een rij staan, maar niet alle cellen in een rij mogen leeg zijn.
 
-+ Er mogen geen lege kolommen in de tabel voorkomen. Wel mogen er lege cellen in een kolom voorkomen, maar niet alle cellen in een kolom mogen leeg zijn.
+-   Er mogen geen lege kolommen in de tabel voorkomen. Wel mogen er lege cellen in een kolom voorkomen, maar niet alle cellen in een kolom mogen leeg zijn.
 
 Een tabel kan overal op het werkblad beginnen. Het is niet noodzakelijk dat de eerste rij van een tabel, die met de veldnamen dus, ook de eerste rij van het werkblad is.
 
@@ -56,36 +53,34 @@ In Excel kun je niet vanaf nul een tabel maken en vervolgens die tabel met gegev
 
 Standaard wordt een Excel-tabel automatisch uitgebreid en worden formules naar beneden gekopieerd. Voorbeelden:
 
-+ Je kunt nieuwe gegevens toevoegen in de rij direct onder de laatste rij van de tabel, of in de kolom direct rechts. De tabel wordt automatisch uitgebreid met de nieuwe gegevens.
+-   Je kunt nieuwe gegevens toevoegen in de rij direct onder de laatste rij van de tabel, of in de kolom direct rechts. De tabel wordt automatisch uitgebreid met de nieuwe gegevens.
 
-+ Wanneer je een formule invoert in de eerste cel van een nieuwe lege kolom, dan wordt na het indrukken van Enter die formule naar beneden gekopieerd in alle resterende cellen van de kolom.
+-   Wanneer je een formule invoert in de eerste cel van een nieuwe lege kolom, dan wordt na het indrukken van Enter die formule naar beneden gekopieerd in alle resterende cellen van de kolom.
 
 ## Knop Formulier inschakelen {#sec-tables-formbutton}
 
 Een belangrijke taak bij tabellen is het correct invoeren van de gegevens. Excel heeft hiervoor een ingebouwd formulier. De opdrachtknop voor het maken van zo'n formulier is echter niet standaard op het lint aanwezig. In de stappen hierna wordt beschreven hoe je deze opdrachtknop aan de [Werkbalk Snelle Toegang]{.uicontrol} kunt toevoegen. Dit is een eenmalige actie.
 
 ::: {#prp-tables-formbutton}
-
-1. Klik op de pijl aan het eind van de [Werkbalk Snelle Toegang]{.uicontrol}.
+1.  Klik op de pijl aan het eind van de [Werkbalk Snelle Toegang]{.uicontrol}.
 
 ![Excel scherm met Werkbalk Snelle Toegang.](images/common/qat-customize.png){#fig-qat-customize}
 
-2. Kies [Meer opdrachten...]{.uicontrol}.
+2.  Kies [Meer opdrachten...]{.uicontrol}.
 
-3. Klik op de pijl bij [Kies opdrachten uit]{.uicontrol} en kies [Opdrachten die niet op het lint staan]{.uicontrol}.
+3.  Klik op de pijl bij [Kies opdrachten uit]{.uicontrol} en kies [Opdrachten die niet op het lint staan]{.uicontrol}.
 
-![Dialoogvenster opties voor Excel > Werkbalk Snelle toegang aanpassen.](images/common/qat-customize-commands.png){#fig-qat-customize-commands}
+![Dialoogvenster opties voor Excel \> Werkbalk Snelle toegang aanpassen.](images/common/qat-customize-commands.png){#fig-qat-customize-commands}
 
-4. Blader door de alfabetische lijst met opdrachten en selecteer [Formulier...]{.uicontrol}.
+4.  Blader door de alfabetische lijst met opdrachten en selecteer [Formulier...]{.uicontrol}.
 
-![Dialoogvenster Opties voor Excel > opdracht formulier.](images/common/qat-customize-form.png){#fig-qat-customize-form}
+![Dialoogvenster Opties voor Excel \> opdracht formulier.](images/common/qat-customize-form.png){#fig-qat-customize-form}
 
 5.  Klik op [Toevoegen]{.uicontrol} en dan op [OK]{.uicontrol}.
 
 In de [Werkbalk Snelle Toegang]{.uicontrol} is nu de [knop Formulier]{.uicontrol} zichtbaar.
 
 ![Knop formulier op werkbalk Snelle Toegang.](images/common/qat-formbutton.png){#fig-qat-formbutton}
-
 :::
 
 ## Formulier gegevensinvoer {#sec-tables-data-entry-form}
@@ -96,34 +91,33 @@ De handigste en beste manier om records aan een tabel toe te voegen is door gebr
 
 ![Inkooplijst met eerste record.](images/tables/purchase-record1.png){#fig-purchase-record1}
 
-::: {#prp-tables-data-entry-form}
+:::: {#prp-tables-data-entry-form}
 [Bestand]{.smallcaps}: `Inkopen.xlsx`
 
-1. Open het bestand.
+1.  Open het bestand.
 
-2. Voer de volgende formules in:
+2.  Voer de volgende formules in:
 
-   + F2: formule `=D2*E2`
-   + G2: formule `=21%*F2`
-   + H2: formule `=F2+G2`
+    -   F2: formule `=D2*E2`
+    -   G2: formule `=21%*F2`
+    -   H2: formule `=F2+G2`
 
-3. Selecteer een willekeurige cel in de lijst.
+3.  Selecteer een willekeurige cel in de lijst.
 
-4. Klik op de knop [Formulier]{.uicontrol} op de Werkbalk Snelle Toegang.
+4.  Klik op de knop [Formulier]{.uicontrol} op de Werkbalk Snelle Toegang.
 
 Het gegevensformulier verschijnt. Aan de linkerkant staan de 8 veldnamen. Bij 5 veldnamen staan invulvakken. Hier kun je de gegevens invoeren of wijzigen. Bij de veldnamen [totaal excl.]{.varname}, [btw]{.varname} en [totaal incl.]{.varname} staan geen invulvakken, maar waarden. Deze waarden worden namelijk via formules berekend.
 
 ![Formulier inkopen.](images/tables/purchase-form.png){#fig-purchase-form}
 
-5. Klik op de knop [Nieuw]{.uicontrol} en voeg twee nieuwe records toe, zie het voorbeeld in @fig-purchase-result). Klik na het laatste record op [Sluiten]{.uicontrol}.
+5.  Klik op de knop [Nieuw]{.uicontrol} en voeg twee nieuwe records toe, zie het voorbeeld in @fig-purchase-result). Klik na het laatste record op [Sluiten]{.uicontrol}.
 
 ![Inkooplijst met drie records.](images/tables/purchase-result.png){#fig-purchase-result}
 
-::: {.callout-warning}
+::: {.callout-tip title="Navigeren in het formulier"}
 Gebruik de [Tab toets]{.uicontrol} of de muis om naar een volgend veld te gaan. Bij gebruik van de [Enter toets]{.uicontrol} ga je naar het volgende record en als dat er niet is krijg je een leeg formulier om een nieuw record in te voeren.
 :::
-
-:::
+::::
 
 ## Zoeken met een formulier {#sec-tables-search-form}
 
@@ -132,39 +126,37 @@ Een gegevensformulier is zeer geschikt om in een bereik/tabel te zoeken naar rec
 ::: {#prp-tables-search-form}
 [Bestand]{.smallcaps}: `Personeel.xlsx`
 
-1. Open het bestand.
+1.  Open het bestand.
 
-2. Selecteer een willekeurige cel in het gegevensgebied.
+2.  Selecteer een willekeurige cel in het gegevensgebied.
 
-3. Klik op de knop [Formulier]{.uicontrol}. Het gegevensformulier verschijnt.
+3.  Klik op de knop [Formulier]{.uicontrol}. Het gegevensformulier verschijnt.
 
 ![Gegevensformulier personeel.](images/tables/personnel-form.png){#fig-personnel-form}
 
-4. Klik op [Criteria]{.uicontrol}. Het formulier wordt leeg gemaakt en kan gebruikt worden om de zoekcriteria in te vullen.
+4.  Klik op [Criteria]{.uicontrol}. Het formulier wordt leeg gemaakt en kan gebruikt worden om de zoekcriteria in te vullen.
 
-5. Zoek op afdeling `Accounting` en divisie `Printers` (zie @fig-personnel-form-search).
+5.  Zoek op afdeling `Accounting` en divisie `Printers` (zie @fig-personnel-form-search).
 
 ![Gegevensformulier personeel met zoekcriteria.](images/tables/personnel-form-search.png){#fig-personnel-form-search}
 
-6. Klik op [Volgende zoeken]{.uicontrol}. De gegevens van de eerste persoon die aan de criteria voldoet worden getoond.
+6.  Klik op [Volgende zoeken]{.uicontrol}. De gegevens van de eerste persoon die aan de criteria voldoet worden getoond.
 
-7. Blader met de knoppen [Volgende zoeken]{.uicontrol} en [Vorige zoeken]{.uicontrol} door de lijst. Er zijn in totaal 5 personen die aan de criteria voldoen.
-
+7.  Blader met de knoppen [Volgende zoeken]{.uicontrol} en [Vorige zoeken]{.uicontrol} door de lijst. Er zijn in totaal 5 personen die aan de criteria voldoen.
 :::
 
 ### Voorbeelden zoekcriteria {#sec-tables-searchexamples}
 
 In @tbl-tables-searchexamples staan een aantal voorbeelden van zoekcriteria. Probeer deze uit en controleer of de gevonden records aan de criteria voldoen. Het is ook mogelijk om meerdere criteria te combineren. Maak steeds eerst de lijst met criteria leeg voordat je met een nieuwe oefening begint.
 
+| Veld | Waarde | Toelichting |
+|:------------|:------------|:---------------------------------------------|
+| Achternaam | Ja | Zoekt naar personen waarvan de achternaam begint met 'Ja'. |
+| Achternaam | \*os | Zoekt naar personen waarvan in de achternaam 'os' voorkomt. |
+| Salaris | \>70000 | Zoekt naar personen met een salaris groter dan 70000. |
+| Begindatum | \<1-1-1990 | Zoekt naar personen met een begindatum voor 1-1-1990. |
 
-|Veld       | Waarde   | Toelichting |
-|:----------|:---------|:----------------------------------------------------------|
-|Achternaam |Ja        |Zoekt naar personen waarvan de achternaam begint met 'Ja'. |
-|Achternaam |*os       |Zoekt naar personen waarvan in de achternaam 'os' voorkomt.|
-|Salaris    |>70000    |Zoekt naar personen met een salaris groter dan 70000.      |
-|Begindatum |<1-1-1990 |Zoekt naar personen met een begindatum voor 1-1-1990.      |
-
-:  Voorbeelden van zoekcriteria. {#tbl-tables-searchexamples}
+: Voorbeelden van zoekcriteria. {#tbl-tables-searchexamples}
 
 ## Bereiken samenvoegen {#sec-tables-consolidate}
 
@@ -172,75 +164,73 @@ Gelijksoortige gegevens die in verschillende bereiken staan kunnen samengevat wo
 
 Bij het samenvoegen kan aangegeven worden welke functie (`SOM`, `GEMIDDELDE`, `AANTAL`, ...) moet worden gebruikt. Deze vorm van samenvoegen wordt ook wel **consolideren** genoemd. Om lijsten te kunnen samenvoegen moeten de kolommen voorzien zijn van een kolomkop, een tekst.
 
-::: {#prp-tables-consolidate}
+:::: {#prp-tables-consolidate}
 [Bestand]{.smallcaps}: `Samenvoegen.xlsx`
 
-1. Open het bestand.
+1.  Open het bestand.
 
-2. Selecteer cel A1 in het werkblad [Totaal]{.uicontrol}.
+2.  Selecteer cel A1 in het werkblad [Totaal]{.uicontrol}.
 
 In de werkbladen [PRA]{.varname} en [PRB]{.varname} staan de samen te voegen lijsten. In het werkblad [Totaal]{.varname} moeten de samengevoegde gegevens komen.
 
-3. Kies [Gegevens > Consolideren (groep Hulpmiddelen voor gegevens)]{.uicontrol}.
+3.  Kies [Gegevens \> Consolideren (groep Hulpmiddelen voor gegevens)]{.uicontrol}.
 
 ![Dialoogvenster samenvoegen.](images/tables/consolidate-dialogbox.png){#fig-consolidate-dialogbox}
 
-4. Controleer of de functie `SOM` is geselecteerd. Zo niet, selecteer dan deze functie.
+4.  Controleer of de functie `SOM` is geselecteerd. Zo niet, selecteer dan deze functie.
 
-5. Plaats de cursor in het vak [Verwijzing]{.uicontrol}.
+5.  Plaats de cursor in het vak [Verwijzing]{.uicontrol}.
 
-6. Selecteer [werkblad PRA > gebied A1:B7]{.uicontrol} en klik op [Toevoegen]{.uicontrol}.
+6.  Selecteer [werkblad PRA \> gebied A1:B7]{.uicontrol} en klik op [Toevoegen]{.uicontrol}.
 
-7. Selecteer [werkblad PRB > gebied A1:B7]{.uicontrol} en klik op [Toevoegen]{.uicontrol}.
+7.  Selecteer [werkblad PRB \> gebied A1:B7]{.uicontrol} en klik op [Toevoegen]{.uicontrol}.
 
-8. Vink aan labels gebruiken in [Bovenste rij]{.uicontrol} en [Linkerkolom]{.uicontrol}.
+8.  Vink aan labels gebruiken in [Bovenste rij]{.uicontrol} en [Linkerkolom]{.uicontrol}.
 
 ![Dialoogvenster samenvoegen.](images/tables/consolidate-references.png){#fig-consolidate-references}
 
-9. Klik op [OK]{.uicontrol}.
+9.  Klik op [OK]{.uicontrol}.
 
 ![Resultaat na samenvoeging.](images/tables/consolidate-result.png){#fig-consolidate-result}
 
-::: {.callout-warning}
+::: {.callout-warning title="Samenvoeging is statisch"}
 De samenvoeging is statisch. Wanneer de brongegevens gewijzigd worden veranderen de samenvoegingsresultaten niet, er moet dan een nieuwe samenvoeging worden uitgevoerd. Gebruik van draaitabellen is vaak een betere keuze voor het samenvatten van gegevens.
 :::
-
-:::
+::::
 
 ## Bereik omzetten naar Tabel {#sec-tables-create}
 
 Door een bereik of lijst om te zetten naar een echte Excel tabel kun je daarna gebruik maken van de extra mogelijkheden die tabellen hebben.
 
-::: {#prp-tables-create}
+:::: {#prp-tables-create}
 [Bestand]{.smallcaps}: `Bonbondozen.xlsx`
 
-1. Open het bestand en selecteer een willekeurige cel met gegevens.
+1.  Open het bestand en selecteer een willekeurige cel met gegevens.
 
-2. Kies [tab Invoegen > Tabel]{.uicontrol}
+2.  Kies [tab Invoegen \> Tabel]{.uicontrol}
 
 Het dialoogvenster ***Tabel maken*** verschijnt. Wanneer je voorheen een cel met gegevens geselecteerd had, dan is het adres van het om te zetten bereik al ingevuld. Is dat niet het geval, of is het onjuist, dan moet je alsnog het juiste bereik met gegevens selecteren, inclusief de kopteksten.
 
 ![Dialoogvenster Tabel maken.](images/tables/candybox-table-create.png){#fig-candybox-table-create}
 
-::: {.callout-note}
-+ Wanneer het bereik labels voor de kopteksten bevat, dan moet je de optie [Mijn tabel bevat kopteksten]{.uicontrol} aanvinken. Wanneer er geen labels zijn dan moet je deze optie uitvinken. Excel voegt dan automatisch koppen aan alle kolommen toe met de algemene namen Kolom1, Kolom2, …
+::: {.callout-note title="Tabelkoppen"}
+-   Wanneer het bereik labels voor de kopteksten bevat, dan moet je de optie [Mijn tabel bevat kopteksten]{.uicontrol} aanvinken. Wanneer er geen labels zijn dan moet je deze optie uitvinken. Excel voegt dan automatisch koppen aan alle kolommen toe met de algemene namen Kolom1, Kolom2, …
 
-+ Het is sterk aan te raden om altijd voor eigen heldere kopteksten te zorgen.
+-   Het is sterk aan te raden om altijd voor eigen heldere kopteksten te zorgen.
 :::
 
-3. Klik [OK]{.uicontrol}.
+3.  Klik [OK]{.uicontrol}.
 
 ![Gegevens nu in een Excel tabel.](images/tables/candybox-table.png){#fig-candybox-table}
-
-:::
+::::
 
 Nadat een bereik is omgezet naar een tabel zijn de volgende veranderingen zichtbaar:
 
-+ Er is een tabelopmaak (stijl) toegepast. Deze kun je desgewenst wijzigen naar een andere opmaak.
+-   Er is een tabelopmaak (stijl) toegepast. Deze kun je desgewenst wijzigen naar een andere opmaak.
 
-+ Elke kolomkop bevat nu keuzepijlen voor filteren en sorteren.
+-   Elke kolomkop bevat nu keuzepijlen voor filteren en sorteren.
 
-+ Er is een tab [Tabelontwerp]{.uicontrol} bijgekomen. Deze verschijnt alleen wanneer een cel in de tabel geselecteerd is.
+-   Er is een tab [Tabelontwerp]{.uicontrol} bijgekomen. Deze verschijnt alleen wanneer een cel in de tabel geselecteerd is.
 
 ### Tabelontwerp {#sec-tables-design}
 
@@ -258,21 +248,21 @@ Je kunt de naam wijzigen in het vak [Tabelnaam]{.uicontrol}
 
 Rechter muisklik in een cel in de rij of kolom die je wilt selecteren. Kies dan [Selecteren]{.uicontrol} en vervolgens een van de mogelijkheden:
 
-+ Tabelkolomgegevens (is exclusief kolomkop)
-+ Gehele tabelkolom (is inclusief kolomkop)
-+ Tabelrij
+-   Tabelkolomgegevens (is exclusief kolomkop)
+-   Gehele tabelkolom (is inclusief kolomkop)
+-   Tabelrij
 
 ### Rijen/Kolommen invoegen {#sec-tables-insert-rc}
 
 Rechter muisklik in een cel, kies dan [Invoegen]{.uicontrol} en vervolgens een van de opties:
 
-+ Tabelkolommen links
-+ Tabelrijen boven
+-   Tabelkolommen links
+-   Tabelrijen boven
 
 Wanneer je in een cel in de onderste rij of de rechterkolom klikt heb je ook nog de mogelijkheden
 
-+ Tabelkolom rechts
-+ Tabelrij onder
+-   Tabelkolom rechts
+-   Tabelrij onder
 
 Bij de laatste cel helemaal rechtsonder heb je beide mogelijkheden.
 
@@ -282,12 +272,12 @@ Snelle manier om een nieuwe rij in te voegen: Selecteer de laatste cel rechtsond
 
 Rechter muisklik in een cel van een rij/kolom die je wilt verwijderen, kies dan [Verwijderen]{.uicontrol} en vervolgens een van de opties:
 
-+ Tabelkolommen
-+ Tabelrijen
+-   Tabelkolommen
+-   Tabelrijen
 
 ### Tabel omzetten naar een bereik {#sec-tables-convert}
 
-Selecteer een cel in de tabel. Kies [tab TabelOntwerp > Converteren naar bereik (groep Hulpmiddelen)]{.uicontrol} en bevestig daarna de bewerking.
+Selecteer een cel in de tabel. Kies [tab TabelOntwerp \> Converteren naar bereik (groep Hulpmiddelen)]{.uicontrol} en bevestig daarna de bewerking.
 
 ### Tabelstijl toekennen {#sec-tables-style}
 
@@ -297,41 +287,40 @@ Selecteer een cel in de tabel. Kies [tab TabelOntwerp]{.uicontrol}. Selecteer ee
 
 Sorteren is een veel voorkomende actie bij tabellen. Wanneer een cel in een kolom geselecteerd is, dan kan met één druk op de knop de hele tabel oplopend of aflopend gesorteerd worden volgens de waarden in die kolom.
 
-::: {.callout-warning}
+::: {.callout-important title="Sortering ongedaan maken"}
 Het herstellen van de tabel in de oorspronkelijke toestand kan alleen met de knop [Ongedaan maken]{.uicontrol} op de [Werkbalk Snelle Toegang]{.uicontrol}. Een alternatief is door voordat je begint met sorteren eerst een tijdelijke kolom met opeenvolgende nummers aan te maken. Door achteraf deze kolom te sorteren heb je ook de oorspronkelijke volgorde terug.
 :::
 
 ::: {#prp-tables-sort}
 [Bestand]{.smallcaps}: `Personeel.xlsx`
 
-1. Open het bestand.
+1.  Open het bestand.
 
-2. Zet het gegevensbereik om naar een tabel (zie @sec-tables-create).
+2.  Zet het gegevensbereik om naar een tabel (zie @sec-tables-create).
 
-3. Klik op de pijl naast de veldnaam [Afdeling]{.uicontrol} en selecteer [![](images/common/icon-sort-az.png) Sorteren van A naar Z]{.uicontrol}.
+3.  Klik op de pijl naast de veldnaam [Afdeling]{.uicontrol} en selecteer [![](images/common/icon-sort-az.png) Sorteren van A naar Z]{.uicontrol}.
 
 De tabel wordt oplopend gesorteerd volgens kolom Afdeling.
 
-4. Klik op de pijl naast de veldnaam [Divisie]{.uicontrol} en selecteer [![](images/common/icon-sort-az.png) Sorteren van Z naar A]{.uicontrol}.
+4.  Klik op de pijl naast de veldnaam [Divisie]{.uicontrol} en selecteer [![](images/common/icon-sort-az.png) Sorteren van Z naar A]{.uicontrol}.
 
 De tabel wordt aflopend gesorteerd volgens kolom [Divisie]{.uicontrol}.
 
 Je kunt een tabel sorteren op meerderen niveaus op basis van de waarden in verschillende kolommen. Een van de kolommen wordt dan het eerste niveau waarop je sorteert. Je kunt daarna steeds een nieuw sorteerniveau toevoegen. Een andere kolom zorgt dan voor het tweede sorteerniveau, enz.
 
-5. Selecteer een willekeurige cel in de tabel en klik [Start > Sorteren en filteren > Aangepast sorteren ...]{.uicontrol}
+5.  Selecteer een willekeurige cel in de tabel en klik [Start \> Sorteren en filteren \> Aangepast sorteren ...]{.uicontrol}
 
 Het dialoogvenster ***Sorteren*** verschijnt waar de voorwaarden voor de sortering kunnen worden ingevoerd.
 
-6. Kies Sorteren op [Divisie]{.varname}.
+6.  Kies Sorteren op [Divisie]{.varname}.
 
-7. Klik op [Niveau toevoegen]{.uicontrol} en kies hierin Sorteren op [Afdeling]{.uicontrol}.
+7.  Klik op [Niveau toevoegen]{.uicontrol} en kies hierin Sorteren op [Afdeling]{.uicontrol}.
 
 ![Dialoogvenster sorteren met twee niveaus.](images/tables/personnel-sort-multiple.png){#fig-personnel-sort-multiple}
 
-8. Klik op [OK]{.uicontrol}.
+8.  Klik op [OK]{.uicontrol}.
 
 De tabel wordt allereerst oplopend gesorteerd op de waarden in de kolom [Divisie]{.varname} en daarna op de waarden in de kolom [Afdeling]{.varname}.
-
 :::
 
 ## Tabel filteren {#sec-tables-filter}
@@ -341,60 +330,55 @@ Bij het filteren van een tabel worden alleen die records getoond die aan bepaald
 ::: {#prp-tables-filter}
 [Bestand]{.smallcaps}: `Personeel.xlsx`
 
-1. Open het bestand.
+1.  Open het bestand.
 
-2. Zet het gegevensbereik om naar een tabel wanneer dit nog niet het geval is (zie @sec-tables-create).
+2.  Zet het gegevensbereik om naar een tabel wanneer dit nog niet het geval is (zie @sec-tables-create).
 
-3. Klik op de pijl naast de veldnaam [Divisie]{.varname} en selecteer alleen `Kopieerapp.`, dan [OK]{.uicontrol}.
+3.  Klik op de pijl naast de veldnaam [Divisie]{.varname} en selecteer alleen `Kopieerapp.`, dan [OK]{.uicontrol}.
 
 Alleen de records voor de divisie Kopieerapp. worden nu getoond. De filterpijl bij kolomlabel [Divisie]{.varname} is gewijzigd in het filtersymbool ![](images/common/icon-filter.png)
 
-4. Verfijn de selectie door nu op de afdeling Accounting te filteren.
+4.  Verfijn de selectie door nu op de afdeling Accounting te filteren.
 
 In de statusbalk onderaan is te zien hoeveel records gevonden zijn.
 
-5. Wis het filter via [tab Gegevens > Wissen (groep Sorteren en filteren)]{.uicontrol}.
-
+5.  Wis het filter via [tab Gegevens \> Wissen (groep Sorteren en filteren)]{.uicontrol}.
 :::
 
 ### Getalfilter {#sec-tables-filter-number}
 
 Wanneer de inhoud van een veld uit getallen bestaat kunnen er specifieke filteracties worden uitgevoerd. Dergelijke filters vallen onder de categorie [Getalfilters]{.uicontrol}. In het volgende voorbeeld wordt hiervan gebruik gemaakt om de top 10 van de salarissen te bepalen.
 
-::: {#prp-tables-filter-number}
-
-1. Klik op de pijl naast de veldnaam [Salaris]{.varname} en kies [Getalfilters > Top 10...]{.uicontrol}.
+:::: {#prp-tables-filter-number}
+1.  Klik op de pijl naast de veldnaam [Salaris]{.varname} en kies [Getalfilters \> Top 10...]{.uicontrol}.
 
 ![Dialoogvenster autofilter top 10.](images/tables/filter-top10.png){#fig-filter-top10}
 
-::: {.callout-note}
+::: {.callout-tip title="Opties"}
 In plaats van `10` kun je ook een ander getal kiezen. En [Bovenste]{.uicontrol} kun je wijzigen in [Onderste]{.uicontrol}.
 :::
 
-2. [OK]{.uicontrol}. De tien records met het hoogste salaris worden nu getoond.
+2.  [OK]{.uicontrol}. De tien records met het hoogste salaris worden nu getoond.
 
-3. Wis het filter via [tab Gegevens > Wissen (groep Sorteren en filteren)]{.uicontrol}.
-
-:::
+3.  Wis het filter via [tab Gegevens \> Wissen (groep Sorteren en filteren)]{.uicontrol}.
+::::
 
 ### Aangepast filter {#sec-tables-filter-custom}
 
 Wanneer je op de getalvelden andere filters wilt gebruiken dan de filters die standaard worden aangeboden, zul je gebruik moeten maken van een aangepast filter. In het volgende voorbeeld wordt hiervan gebruik gemaakt om de records te tonen van alle personen met een salaris van € 20.000 tot € 25.000.
 
 ::: {#prp-tables-filter-custom}
-
-1. Klik op de pijl naast de veldnaam [Salaris]{.varname} en kies [Getalfilters > Aangepast filter ...]{.uicontrol}.
+1.  Klik op de pijl naast de veldnaam [Salaris]{.varname} en kies [Getalfilters \> Aangepast filter ...]{.uicontrol}.
 
 In het dialoogvenster ***Aangepast Autofilter*** kun je nu de voorwaarden voor de filtering invoeren.
 
-2. Maak de twee voorwaarden voor het salaris zoals aangegeven in @fig-personnel-filter-custom).
+2.  Maak de twee voorwaarden voor het salaris zoals aangegeven in @fig-personnel-filter-custom).
 
 ![Dialoogvenster aangepast autofilter met twee voorwaarden.](images/tables/personnel-filter-custom.png){#fig-personnel-filter-custom}
 
-3. [OK]{.uicontrol}. Er worden 10 records gevonden.
+3.  [OK]{.uicontrol}. Er worden 10 records gevonden.
 
-4. Wis het filter via [tab Gegevens > Wissen (groep Sorteren en filteren)]{.uicontrol}.
-
+4.  Wis het filter via [tab Gegevens \> Wissen (groep Sorteren en filteren)]{.uicontrol}.
 :::
 
 ### Datumfilter {#sec-tables-filter-date}
@@ -402,13 +386,11 @@ In het dialoogvenster ***Aangepast Autofilter*** kun je nu de voorwaarden voor d
 Wanneer de inhoud van een veld uit datums bestaat kunnen specifieke filteracties voor datums worden uitgevoerd. Dergelijke filters vallen onder de categorie [Datumfilters]{.uicontrol}. In het volgende voorbeeld wordt hiervan gebruik gemaakt om de records te vinden met een begindatum in september.
 
 ::: {#prp-tables-filter-date}
-
-1. Klik op de pijl naast de veldnaam [Begindatum]{.varname} en kies [Datumfilters > Alle datums in de periode > september]{.uicontrol}.
+1.  Klik op de pijl naast de veldnaam [Begindatum]{.varname} en kies [Datumfilters \> Alle datums in de periode \> september]{.uicontrol}.
 
 11 records worden gevonden.
 
-2. Wis het filter via [tab Gegevens > Wissen (groep Sorteren en filteren)]{.uicontrol}.
-
+2.  Wis het filter via [tab Gegevens \> Wissen (groep Sorteren en filteren)]{.uicontrol}.
 :::
 
 ### Slicers {#sec-tables-slicers}
@@ -417,37 +399,35 @@ Een slicer is een object in Excel waarmee je ook jouw gegevens kunt filteren. He
 
 Een slicer kan gebruikt worden met zowel tabellen als met draaitabellen (zie @sec-pivots-slicers). Een slicer zweeft als het ware boven de spreadsheet, is daardoor altijd zichtbaar en klaar voor gebruik.
 
-::: {#prp-tables-slicers}
+:::: {#prp-tables-slicers}
+1.  Selecteer een willekeurige cel in de tabel.
 
-1. Selecteer een willekeurige cel in de tabel.
-
-2. Kies [tab Tabelontwerp > Slicer invoegen (groep Hulpmiddelen)]{.uicontrol}.
+2.  Kies [tab Tabelontwerp \> Slicer invoegen (groep Hulpmiddelen)]{.uicontrol}.
 
 Dit opent het dialoogscherm Slicer invoegen en toont de kolomkoppen (velden) waarvoor je een slicer kunt invoegen. Je kunt een of meerdere velden selecteren.
 
-3. Selecteer de velden [Afdeling]{.varname} en [Divisie]{.varname} en klik op [OK]{.uicontrol}.
+3.  Selecteer de velden [Afdeling]{.varname} en [Divisie]{.varname} en klik op [OK]{.uicontrol}.
 
 Er worden nu twee slicers ingevoegd. Wanneer de slicers elkaar overlappen verschuif ze dan zodat ze naast elkaar komen te staan, zie @fig-personnel-slicers). Beide slicers tonen alle unieke waarden voor het betreffende veld.
 
 ![Twee slicers voor de velden Afdeling en Divisie.](images/tables/personnel-slicers.png){#fig-personnel-slicers}
 
-4. Klik in de slicer [Afdeling]{.varname} op de knop [Marketing]{.varname}. De gegevens voor alleen Marketing worden nu weergegeven.
+4.  Klik in de slicer [Afdeling]{.varname} op de knop [Marketing]{.varname}. De gegevens voor alleen Marketing worden nu weergegeven.
 
-5. Hef de filtering op door in de rechterbovenhoek van de slicer [Afdeling]{.varname} te klikken op de knop [Filter wissen]{.uicontrol} (die met het kruisje).
+5.  Hef de filtering op door in de rechterbovenhoek van de slicer [Afdeling]{.varname} te klikken op de knop [Filter wissen]{.uicontrol} (die met het kruisje).
 
-6. Klik in de rechterbovenhoek van de slicer [Afdeling]{.varname} op de knop [Meervoudige selectie]{.uicontrol} en filter nu op [Administratie]{.varname} en [Marketing]{.varname}.
+6.  Klik in de rechterbovenhoek van de slicer [Afdeling]{.varname} op de knop [Meervoudige selectie]{.uicontrol} en filter nu op [Administratie]{.varname} en [Marketing]{.varname}.
 
 ![Meervoudige selectie toegepast in slicer Afdeling.](images/tables/personnel-slicer-multiple.png){#fig-personnel-slicer-multiple}
 
-::: {.callout-note}
+::: {.callout-note title="Meervoudige selectie"}
 De knoppen werken als schakelaars. Door achter elkaar op een knop te klikken wordt de filtering voor die waarde in- en uitgeschakeld.
 :::
 
-7. Selecteer nu [Printers]{.varname} in de slicer [Divisie]{.varname}.
+7.  Selecteer nu [Printers]{.varname} in de slicer [Divisie]{.varname}.
 
-8. Experimenteer met de slicers. Voeg eventueel nog een derde slicer voor kolom [Functie]{.varname} toe. Eindig met het wissen van alle filters.
-
-:::
+8.  Experimenteer met de slicers. Voeg eventueel nog een derde slicer voor kolom [Functie]{.varname} toe. Eindig met het wissen van alle filters.
+::::
 
 ## Berekende kolom {#sec-tables-calculated-column}
 
@@ -455,31 +435,30 @@ Wanneer je een formule in een lege kolom invoert, dan wordt deze formule automat
 
 De eenvoudigste manier om een berekende kolom te maken is door met typen te beginnen in de kolom direct rechts van de tabel. De tabel wordt dan automatisch uitgebreid.
 
-::: {#prp-tables-calculated-column}
+:::: {#prp-tables-calculated-column}
 [Bestand]{.smallcaps}: `Personeel.xlsx`
 
-1. Open het bestand.
+1.  Open het bestand.
 
-2. Zet het gegevensbereik om naar een tabel wanneer dit nog niet het geval is (zie @sec-tables-create).
+2.  Zet het gegevensbereik om naar een tabel wanneer dit nog niet het geval is (zie @sec-tables-create).
 
-3. Selecteer cel I2 en voer de volgende formule in: `=AFRONDEN([@Salaris];0)`. Een nieuwe kolom met de berekende waarden wordt gemaakt.
+3.  Selecteer cel I2 en voer de volgende formule in: `=AFRONDEN([@Salaris];0)`. Een nieuwe kolom met de berekende waarden wordt gemaakt.
 
-::: {.callout-note}
+::: {.callout-note title="Gestructureerde verwijzingen"}
 Verwijzingen zoals `[@Salaris]` heten **gestructureerde verwijzingen** en zijn uniek voor Excel tabellen. De syntax van een gestructureerde verwijzing maakt het mogelijk dat dezelfde formule voor elke rij in de tabel gebruikt kan worden.
 :::
 
-4. Wijzig de tekst van de kolomkop in `Afgerond Salaris`.
+4.  Wijzig de tekst van de kolomkop in `Afgerond Salaris`.
 
-5. Selecteer een numerieke cel in de nieuwe kolom, [Rechter muisklik > Selecteren > Tabelkolomgegevens]{.uicontrol}.
+5.  Selecteer een numerieke cel in de nieuwe kolom, [Rechter muisklik \> Selecteren \> Tabelkolomgegevens]{.uicontrol}.
 
-6. Wijzig de opmaak van de cel in `Valuta, 0 decimalen`.
+6.  Wijzig de opmaak van de cel in `Valuta, 0 decimalen`.
 
-7. Selecteer cel J2 en voer de volgende formule in  
-   `=JAAR(NU())-JAAR([@[Begindatum]])`.
+7.  Selecteer cel J2 en voer de volgende formule in\
+    `=JAAR(NU())-JAAR([@[Begindatum]])`.
 
-8. Wijzig de tekst van de kolomkop in `Leeftijd`.
-
-:::
+8.  Wijzig de tekst van de kolomkop in `Leeftijd`.
+::::
 
 ## Totaalrij {#sec-tables-totalrow}
 
@@ -488,25 +467,24 @@ Je kunt numerieke gegevens in een tabel samenvatten met een subtotaal dat onder 
 ::: {#prp-tables-totalrow}
 [Bestand]{.smallcaps}: `Personeel.xlsx`
 
-1. Open het bestand.
+1.  Open het bestand.
 
-2. Zet het gegevensbereik om naar een tabel wanneer dit nog niet het geval is (zie @sec-tables-create).
+2.  Zet het gegevensbereik om naar een tabel wanneer dit nog niet het geval is (zie @sec-tables-create).
 
-3. Kies [tab TabelOntwerp > Aanvinken Totaalrij (groep Opties voor tabelstijlen)]{.uicontrol}.
+3.  Kies [tab TabelOntwerp \> Aanvinken Totaalrij (groep Opties voor tabelstijlen)]{.uicontrol}.
 
 Een rij [Totaal]{.uicontrol} wordt aan onder aan het eind van de tabel ingevoegd en een functie `SUBTOTAAL` is onder de laatste kolom met numerieke gegevens ingevoegd. In dit geval hoort deze functie hier niet thuis omdat de laatste kolom een datumkolom is.
 
-4. Selecteer in de rij [Totaal]{.uicontrol} de cel onder kolom [Begindatum]{.varname}, dan keuzepijl ![](images/tables/subtotal-selector.png) en kies `Geen`.
+4.  Selecteer in de rij [Totaal]{.uicontrol} de cel onder kolom [Begindatum]{.varname}, dan keuzepijl ![](images/tables/subtotal-selector.png) en kies `Geen`.
 
-5. Selecteer in de rij [Totaal]{.uicontrol} de cel onder kolom [Salaris]{.varname}, dan keuzepijl ![](images/tables/subtotal-selector.png) en kies `Som`.
+5.  Selecteer in de rij [Totaal]{.uicontrol} de cel onder kolom [Salaris]{.varname}, dan keuzepijl ![](images/tables/subtotal-selector.png) en kies `Som`.
 
 Het totale salaris is € 4.874.037,39.
-
 :::
 
 ## Opgaven {#sec-tables-exercises}
 
-::: {#exr-list001}
+:::: {#exr-list001}
 **Selecteren (list001)**
 
 [Bestand]{.smallcaps}: `List001.xlsx`
@@ -518,12 +496,9 @@ In de volgende tabel staan de cijfers van een aantal leerlingen.
 Breng nu een filter aan zodat alleen die rijen getoond worden van leerlingen die geen cijfer hebben of waar het cijfer 3 of lager is. Voor deze opgave is de tabel klein gehouden. Voor de oplossing moet je rekening houden met veel grotere tabellen.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-![](images/tables/list001_solution.png)
-`r unhide()`
+`r hide("Antwoord")` ![](images/tables/list001_solution.png) `r unhide()`
 :::
-
-:::
+::::
 
 ::: {#exr-list002}
 **Tentamencijfers samenvoegen (list002)**
@@ -549,7 +524,7 @@ In de volgende tabel staan de verkoopaantallen van broodsoorten in de filialen N
 Voer in een werkblad de gegevens voor de twee filialen in. Laat via het samenvoegen van gegevens het totaal ontstaan.
 :::
 
-::: {#exr-list004}
+:::: {#exr-list004}
 **Overzicht auto's filteren (list004)**
 
 [Bestand]{.smallcaps}: `Auto.xlsx`
@@ -563,9 +538,6 @@ In een werkblad staat een aantal gegevens van auto’s. Een klant is geïnteress
 Maak een lijst van alle auto's met de bijbehorende gegevens die aan deze voorwaarden voldoen.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-![](images/tables/list004_solution.png)
-`r unhide()`
+`r hide("Antwoord")` ![](images/tables/list004_solution.png) `r unhide()`
 :::
-
-:::
+::::

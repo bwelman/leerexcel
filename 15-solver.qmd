@@ -3,29 +3,29 @@
 ```{r, file = "R/webex-nl.R", include = FALSE}
 ```
 
-::: callout
-**Doelstellingen**
-
-+ Hulpprogramma Oplosser activeren.
-+ Toepassingsgebied van Oplosser.
-+ Opzetten van een berekeningsmodel.
-+ Toevoegen van randvoorwaarden.
-+ Tips gebruik Oplosser.
+::: callout-intro
+-   Hulpprogramma Oplosser activeren.
+-   Toepassingsgebied van Oplosser.
+-   Opzetten van een berekeningsmodel.
+-   Toevoegen van randvoorwaarden.
+-   Tips gebruik Oplosser.
 :::
 
 De Oplosser is een hulpprogramma (invoegtoepassing) binnen Excel om optimalisatieberekeningen uit te voeren. Bij zo'n berekening wil je een optimale waarde voor een formule in een bepaalde cel vinden, meestal een minimum of een maximum en soms een heel specifieke waarde.
 
 doelcel
-: Dit is de de cel met een formule waarvoor je de optimale uitkomst wilt vinden.
 
+:   Dit is de de cel met een formule waarvoor je de optimale uitkomst wilt vinden.
 
 variabele cellen, veranderende cellen, beslissingsvariabelen
-: Dit zijn de cellen die de uitkomst van de formule bepalen. Door de waarden hierin te wijzigen, verandert ook de uitkomst van de formule.
+
+:   Dit zijn de cellen die de uitkomst van de formule bepalen. Door de waarden hierin te wijzigen, verandert ook de uitkomst van de formule.
 
 restricties, randvoorwaarden, constraints
-: Dit zijn beperkingen die voor de variabele cellen gelden, deze kunnen vaak niet alle mogelijke waarden aannemen en zijn aan grenzen gebonden.
 
-::: {.callout-note}
+:   Dit zijn beperkingen die voor de variabele cellen gelden, deze kunnen vaak niet alle mogelijke waarden aannemen en zijn aan grenzen gebonden.
+
+::: {.callout-note title="Doelzoeken of Oplosser?"}
 Oplosser heeft meer mogelijkheden dan Doelzoeken om "Wat-Als" analyses uit te voeren en is veel breder inzetbaar. Oplosser past de waarden van de veranderende cellen aan binnen de grenzen van de randvoorwaarden om tot de optimale oplossing van de doelcel te komen.
 :::
 
@@ -33,29 +33,26 @@ Oplosser heeft meer mogelijkheden dan Doelzoeken om "Wat-Als" analyses uit te vo
 
 De Oplosser is een zogenaamde invoegtoepassing welke niet standaard via het menu van Excel beschikbaar is. Wanneer de Oplosser nog niet op het lint aanwezig is dan moet deze eerst geactiveerd worden. Dit is een eenmalige actie.
 
-::: {.callout-warning}
+::: {.callout-important title="Controleer beschikbaarheid Oplosser"}
 Controleer eerst of Oplosser op het lint beschikbaar is. Zoja, dan kun je deze taak overslaan. Kies [tab Gegevens]{.uicontrol}, kijk of de [groep Analyse]{.uicontrol} bestaat en zoja of hierin de [Oplosser]{.uicontrol} aanwezig is.
 
 ![Groep analyse met Oplosser op het lint.](images/solver/excel-ribbon-analyze.png){#fig-excel-ribbon-analyze}
-
 :::
 
 ::: {#prp-solver-activation}
+1.  Kies [Bestand \> Opties \> Invoegtoepassingen]{.uicontrol}. Er verschijnt een lijst met Microsoft Office Invoegtoepassingen.
 
-1. Kies [Bestand > Opties > Invoegtoepassingen]{.uicontrol}. Er verschijnt een lijst met Microsoft Office Invoegtoepassingen.
-
-2. Selecteer [Excel-invoegtoepassingen]{.uicontrol} onder in het scherm in het vak [Beheren]{.uicontrol}.
+2.  Selecteer [Excel-invoegtoepassingen]{.uicontrol} onder in het scherm in het vak [Beheren]{.uicontrol}.
 
 ![Selecteer het beheren van Excel-invoegtoepassingen.](images/solver/excel-options-addins-manage.png){#fig-excel-options-addins-manage}
 
-3. Klik op [Start...]{.uicontrol}. Er wordt nu een lijst met beschikbare invoegtoepassingen getoond.
+3.  Klik op [Start...]{.uicontrol}. Er wordt nu een lijst met beschikbare invoegtoepassingen getoond.
 
-4. Vink het selectievakje [Oplosser-invoegtoepassing]{.uicontrol} aan en klik op [OK]{.uicontrol}.
+4.  Vink het selectievakje [Oplosser-invoegtoepassing]{.uicontrol} aan en klik op [OK]{.uicontrol}.
 
 ![Beschikbare en geactiveerde Excel-invoegtoepassingen.](images/solver/excel-addins.png){#fig-excel-addins}
 
-5. Controleer opnieuw of Oplosser nu op het lint beschikbaar is.
-
+5.  Controleer opnieuw of Oplosser nu op het lint beschikbaar is.
 :::
 
 ## Opzetten optimalisatiemodel {#sec-solver-model}
@@ -78,8 +75,8 @@ Hoeveel korte en lange jacks moet je per week produceren om een maximale winst t
 
 Stel de beslissingsvariabelen vast. Dit zijn de veranderende cellen waarvoor je een waarde moet vaststellen die tot het optimale resultaat leiden. In dit voorbeeld zijn er twee beslissingsvariabelen welke gemakshalve met een letter worden aangeduid:
 
-+ $\mathrm{K}$ = aantal korte jacks per week
-+ $\mathrm{L}$ = aantal lange jacks per week
+-   $\mathrm{K}$ = aantal korte jacks per week
+-   $\mathrm{L}$ = aantal lange jacks per week
 
 ### Doelfunctie {#sec-solver-case-objective}
 
@@ -87,7 +84,7 @@ Er moet een formule bepaald worden waarvan de uitkomst de optimale waarde moet k
 
 $\mathrm{Winst = 90 \times K + 144 \times L}$ (deze moet gemaximaliseerd worden)
 
-::: {.callout-note}
+::: {.callout-note title="Meerdere doelstellingen en indirecte variabelen"}
 Bij wat ingewikkelder modellen is het soms lastig om het probleem zo te formuleren dat één doelfunctie verkregen wordt. Dan kan het gebeuren dat de beslissingsvariabelen niet rechtstreeks in de doelfunctie voorkomen, maar via een omweg. In de doelfunctie komen dan variabelen voor waarvan de waarden uiteindelijk weer afhangen van de beslissingsvariabelen.
 :::
 
@@ -101,11 +98,11 @@ Daarnaast zijn er vaak algemene restricties die te maken hebben met het gegevens
 
 Dit alles leidt tot de formulering van de volgende restricties:
 
-+ Restrictie snijtijd per week: $\mathrm{1 \times K + 2 \times L \le 32}$
-+ Restrictie naaitijd per week: $\mathrm{3 \times K + 4 \times L \le 84}$
-+ Restrictie marktvraag lange jacks: $\mathrm{L \le 12}$
-+ Restricties positieve waarden: $\mathrm{K \ge 0}$ en $\mathrm{L \ge 0}$
-+ Restricties gehele waarden: $\mathrm{K = integer}$ en $\mathrm{L = integer}$
+-   Restrictie snijtijd per week: $\mathrm{1 \times K + 2 \times L \le 32}$
+-   Restrictie naaitijd per week: $\mathrm{3 \times K + 4 \times L \le 84}$
+-   Restrictie marktvraag lange jacks: $\mathrm{L \le 12}$
+-   Restricties positieve waarden: $\mathrm{K \ge 0}$ en $\mathrm{L \ge 0}$
+-   Restricties gehele waarden: $\mathrm{K = integer}$ en $\mathrm{L = integer}$
 
 ### Model in Excel {#sec-solver-case-model}
 
@@ -117,21 +114,21 @@ Er is niet één goede manier om een dergelijk model in Excel te bouwen. Wel zij
 
 ### Richtlijnen voor een Oplossermodel in Excel {#sec-solver-case-guidelines}
 
-1. Organiseer de gegevens op een logische en overzichtelijke wijze en zet voldoende toelichtende tekst in de buurt van de cellen met getallen en formules. Een model wordt later vaak in rapportages gebruikt en dan moet duidelijk zijn wat alles voorstelt en waar het om draait. Markeer de cellen met de beslissingsvariabelen (B4 en C4) en de doelfunctie (D5) zodat ze gemakkelijk herkend worden. Zet de constraints in een afzonderlijk deel.
+1.  Organiseer de gegevens op een logische en overzichtelijke wijze en zet voldoende toelichtende tekst in de buurt van de cellen met getallen en formules. Een model wordt later vaak in rapportages gebruikt en dan moet duidelijk zijn wat alles voorstelt en waar het om draait. Markeer de cellen met de beslissingsvariabelen (B4 en C4) en de doelfunctie (D5) zodat ze gemakkelijk herkend worden. Zet de constraints in een afzonderlijk deel.
 
-2. Zet elke beslissingsvariabele in een aparte cel en geef ze een startwaarde. Zo staat in het voorbeeld het aantal geproduceerde korte en lange jacks in respectievelijk cel B4 en cel C4. Als startwaarde is in beide gevallen 1 gebruikt. Hierdoor kan in ieder geval de juistheid van de formules gecontroleerd worden.
+2.  Zet elke beslissingsvariabele in een aparte cel en geef ze een startwaarde. Zo staat in het voorbeeld het aantal geproduceerde korte en lange jacks in respectievelijk cel B4 en cel C4. Als startwaarde is in beide gevallen 1 gebruikt. Hierdoor kan in ieder geval de juistheid van de formules gecontroleerd worden.
 
-3. Maak een formule voor de doelcel. In D5 is de formule `=B5*B4+C5*C4`.
+3.  Maak een formule voor de doelcel. In D5 is de formule `=B5*B4+C5*C4`.
 
-4. Maak voor elke restrictie een formule in een aparte cel en zet in de cel rechts er van de grenswaarde van de restrictie.
+4.  Maak voor elke restrictie een formule in een aparte cel en zet in de cel rechts er van de grenswaarde van de restrictie.
 
-|cel|formule        |toelichting               |
-|---|--------------|---------------------------|
-|D8 |`=B8*B4+C8*C4`|berekening totale snijtijd |
-|D9 |`=B9*B4+C9*C4`|berekening totale naaitijd |
-|D10|`=C4`         |aantal lange jacks         |
+| cel | formule        | toelichting                |
+|-----|----------------|----------------------------|
+| D8  | `=B8*B4+C8*C4` | berekening totale snijtijd |
+| D9  | `=B9*B4+C9*C4` | berekening totale naaitijd |
+| D10 | `=C4`          | aantal lange jacks         |
 
-:  Formules in het model. {#tbl-solver-model}
+: Formules in het model. {#tbl-solver-model}
 
 ### Randvoorwaarden in Oplosser {#sec-solver-case-solverconstraints}
 
@@ -142,52 +139,58 @@ Het dialoogscherm in Oplosser waarmee je randvoorwaarden toevoegt ziet eruit zoa
 Elke randvoorwaarde bestaat uit drie onderdelen: een Celverwijzing, een relatie en een Randvoorwaarde.
 
 Celverwijzing
-: Celadres of naam of cellenbereik waarvan je de waarden wilt beperken. Je kunt een enkele cel of een bereik gebruiken, maar niet meerdere bereiken.
+
+:   Celadres of naam of cellenbereik waarvan je de waarden wilt beperken. Je kunt een enkele cel of een bereik gebruiken, maar niet meerdere bereiken.
 
 Relatie
-: Mogelijke operatoren: `<=`, `=`, `>=`, `geh`, `bin` of `dif`.
-: + `geh` wordt later in het model weergegeven als `geheeltallig`. De waarden in de celverwijzingen moeten dan gehele getallen zijn, binnen een bepaalde kleine tolerantie (vastgelegd met de Precisie van randvoorwaarde in de opties van de Oplosser).
-: + `bin` wordt later in het model weergegeven als `binair`. De waarden in de celverwijzingen moeten of 0 of 1 zijn. Deze mogelijkheid kun je dus ook gebruiken voor “ja/nee” beslissingen.
-: + `dif` wordt later in het model weergegeven als `AllDifferent`. De waarden in alle celverwijzingen moeten verschillend zijn.
+
+:   Mogelijke operatoren: `<=`, `=`, `>=`, `geh`, `bin` of `dif`.
+
+:   -   `geh` wordt later in het model weergegeven als `geheeltallig`. De waarden in de celverwijzingen moeten dan gehele getallen zijn, binnen een bepaalde kleine tolerantie (vastgelegd met de Precisie van randvoorwaarde in de opties van de Oplosser).
+
+:   -   `bin` wordt later in het model weergegeven als `binair`. De waarden in de celverwijzingen moeten of 0 of 1 zijn. Deze mogelijkheid kun je dus ook gebruiken voor “ja/nee” beslissingen.
+
+:   -   `dif` wordt later in het model weergegeven als `AllDifferent`. De waarden in alle celverwijzingen moeten verschillend zijn.
 
 Randvoorwaarde
-: Een getal, celverwijzing, naam of een formule waaraan voldaan moet worden.
+
+:   Een getal, celverwijzing, naam of een formule waaraan voldaan moet worden.
 
 ## Implementatie model {#sec-solver-case-implementation}
 
 Bij de casus WeatherLeather moet de winst gemaximaliseerd worden.
 
-::: {#prp-solver-case-implementation}
+::::: {#prp-solver-case-implementation}
 [Bestand]{.smallcaps}: `WeatherLeather.xlsx`
 
-1. Open het bestand.
+1.  Open het bestand.
 
-2. Selecteer de doelcel D5.
+2.  Selecteer de doelcel D5.
 
-3. Kies [tab Gegevens > Oplosser (groep Analyse)]{.uicontrol}.
+3.  Kies [tab Gegevens \> Oplosser (groep Analyse)]{.uicontrol}.
 
 ![Parameters van Oplosser.](images/solver/weatherleather-solver-parameters1.png){#fig-weatherleather-solver-parameters1}
 
-4. Controleer het volgende:
+4.  Controleer het volgende:
 
-   + [Doelfunctie bepalen]{.uicontrol}: `$D$5`
-   + [Naar]{.uicontrol}: `Max`
+    -   [Doelfunctie bepalen]{.uicontrol}: `$D$5`
+    -   [Naar]{.uicontrol}: `Max`
 
-5. Klik in het vak [Door veranderen van variabelecellen]{.uicontrol} en selecteer daarna in het werkblad de cellen B4:C4. Excel maakt hier dan van `$B$4:$C$4`.
+5.  Klik in het vak [Door veranderen van variabelecellen]{.uicontrol} en selecteer daarna in het werkblad de cellen B4:C4. Excel maakt hier dan van `$B$4:$C$4`.
 
-6. Klik in het gedeelte voor randvoorwaarden op [Toevoegen]{.uicontrol}. Het dialoogvenster ***Randvoorwaarde toevoegen*** verschijnt (zie @fig-solver-constraint-add-general.
+6.  Klik in het gedeelte voor randvoorwaarden op [Toevoegen]{.uicontrol}. Het dialoogvenster ***Randvoorwaarde toevoegen*** verschijnt (zie @fig-solver-constraint-add-general.
 
-7. Voer als randvoorwaarde in `D8 <= E8` en klik op [OK]{.uicontrol}.
+7.  Voer als randvoorwaarde in `D8 <= E8` en klik op [OK]{.uicontrol}.
 
 Het dialoogvenster Parameters Oplosser verschijnt weer en Excel heeft de eerste randvoorwaarde omgezet in `$D$8 <= $E$8`.
 
-8. Klik op [Toevoegen]{.uicontrol}.
+8.  Klik op [Toevoegen]{.uicontrol}.
 
-9. Voer als randvoorwaarde in `D9 <= E9` en klik nu op [Toevoegen]{.uicontrol}.
+9.  Voer als randvoorwaarde in `D9 <= E9` en klik nu op [Toevoegen]{.uicontrol}.
 
 Het lege dialoogvenster Toevoegen verschijnt weer. Je krijgt nu niet te zien dat Excel de tweede randvoorwaarde heeft toegevoegd.
 
-::: {.callout-note appearance="minimal"}
+::: {.callout-tip title="Meerdere randvoorwaarden toevoegen"}
 Door op [Toevoegen]{.uicontrol} te klikken in plaats van [OK]{.uicontrol} kun je snel achter elkaar de randvoorwaarden toevoegen zonder steeds weer naar het dialoogvenster Parameters Oplosser terug te keren.
 :::
 
@@ -215,15 +218,14 @@ En er is ook een nieuw werkblad gemaakt met de naam [Antwoordrapport ...]{.uicon
 
 ![Antwoordrapport voor WeatherLeather.](images/solver/weatherleather-solver-report.png){#fig-weatherleather-solver-report}
 
-::: {.callout-note appearance="minimal"}
--  De namen die in het rapport gebruikt worden zijn niet altijd juist of duidelijk. Dat komt omdat Excel deze namen haalt uit de de tekstcellen in de omgeving. Om te zorgen dat er wel goede namen in het rapport gebruikt worden moet je de relevante cellen in het werkblad eerst van een naam voorzien. Dit wordt sterk aanbevolen.
+::: {.callout-note title="Interpretatie antwoordrapport"}
+-   De namen die in het rapport gebruikt worden zijn niet altijd juist of duidelijk. Dat komt omdat Excel deze namen haalt uit de de tekstcellen in de omgeving. Om te zorgen dat er wel goede namen in het rapport gebruikt worden moet je de relevante cellen in het werkblad eerst van een naam voorzien. Dit wordt sterk aanbevolen.
 
--  Bij het onderdeel Randvoorwaarden in het Antwoordrapport is onder het kopje Status te zien welke restricties Bindend zijn. Wanneer dat het geval is wil dat zeggen dat de grens van de restrictie bereikt is en er geen speling meer is. Zo is in het voorbeeld te zien dat alle capaciteit voor de snijtijd en naaitijd gebruikt wordt. De marktafzet voor lange jacks is niet bindend, daar zouden nog 6 stuks meer afgezet kunnen worden.
+-   Bij het onderdeel Randvoorwaarden in het Antwoordrapport is onder het kopje Status te zien welke restricties Bindend zijn. Wanneer dat het geval is wil dat zeggen dat de grens van de restrictie bereikt is en er geen speling meer is. Zo is in het voorbeeld te zien dat alle capaciteit voor de snijtijd en naaitijd gebruikt wordt. De marktafzet voor lange jacks is niet bindend, daar zouden nog 6 stuks meer afgezet kunnen worden.
 :::
 
 De vraag van WeatherLeather is nu opgelost. Er kan een maximale winst van € 2664 per week behaald worden door 20 korte jacks en 6 lange jacks per week te maken.
-
-:::
+:::::
 
 ## Geen oplossing gevonden. Wat nu? {#sec-solver-problems}
 
@@ -233,16 +235,16 @@ Het komt regelmatig voor dat de Oplosser rapporteert dat geen oplossing gevonden
 
 Er zijn nu twee mogelijkheden:
 
-1. Er bestaat geen oplossing voor het geformuleerde probleem.
-2. Er bestaat wel een oplossing voor het geformuleerde probleem, maar deze wordt niet door de Oplosser gevonden.
+1.  Er bestaat geen oplossing voor het geformuleerde probleem.
+2.  Er bestaat wel een oplossing voor het geformuleerde probleem, maar deze wordt niet door de Oplosser gevonden.
 
 Je weet in de meeste gevallen nooit met zekerheid welke situatie aan de hand is. Er zijn wel een paar richtlijnen om te onderzoeken of er alsnog een oplossing door de Oplosser gevonden kan worden.
 
-#### Wijziging beginwaarden veranderende cellen {-}
+#### Wijziging beginwaarden veranderende cellen {.unnumbered}
 
 Of de Oplosser een bestaande oplossing kan vinden hangt onder andere af van de beginwaarden voor de veranderende cellen. Door met andere beginwaarden te experimenteren kan uitgezocht worden of dan wel een oplossing gevonden kan worden.
 
-#### Wijziging instellingen Oplosser {-}
+#### Wijziging instellingen Oplosser {.unnumbered}
 
 Het vinden van een oplossing hangt ook van de wijze waarop de Oplosser dit doet. Het zoeken naar een oplossing verloopt volgens een zogenaamd iteratief proces. Een iteratie is een herhaalde herberekening van het werkblad totdat aan een bepaalde voorwaarde is voldaan. De Oplosser kent een aantal instellingen voor dit iteratieproces. Door te klikken op de knop [Opties]{.uicontrol} in het dialoogvenster Parameters Oplosser verschijnt een venster waar je verschillende opties van de Oplosser kunt wijzigen.
 
@@ -250,37 +252,35 @@ Het vinden van een oplossing hangt ook van de wijze waarop de Oplosser dit doet.
 
 Het dialoogvenster biedt uitgebreide mogelijkheden om het oplosproces te besturen. En de specificaties voor bepaalde problemen kunnen als een model worden opgeslagen en weer geladen worden. Een paar van deze instellingen worden hier in het kort behandeld. Voor meer verdieping moet de literatuur bestudeerd worden.
 
+| Instelling | Toelichting |
+|-----------------------------|-------------------------------------------|
+| Max tijd | Het maximaal aantal seconden die de Oplosser mag besteden aan het iteratieproces. De standaardwaarde van 100 sec. kan verhoogd worden wanneer de Oplosser rapporteert dat de toegestane tijd bereikt is. |
+| Iteraties | Het maximaal aantal iteraties (herberekeningen). De standaardwaarde van 100 kan verhoogd worden wanneer geen oplossing gevonden kan worden. |
+| Precisie | Hiermee wordt bepaald of de celwaarde van een restrictie aan de opgegeven voorwaarde voldoet. Hoe groter de precisie (meer decimalen)hoe langer het duurt voordat de Oplosser met resultaten komt. |
+| Tolerantie | Het maximale foutpercentage dat is toegestaan bij integer oplossingen. De waarde is alleen van belang wanneer een restrictie met integer aanwezig is. Hoe kleiner het foutpercentage, hoe langer het zoekproces duurt. |
+| Uitgaan van lineair model | Alleen gebruiken wanneer alle relaties in het berekeningsmodel lineair zijn. De keuze kan dan het zoekproces versnellen. Gebruik hiervan bij niet-lineaire modellen kan er juist voor zorgen dat er geen oplossing wordt gevonden. |
+| Iteratieresultaat tonen | Bij inschakelen hiervan stopt de Oplosser na elke iteratie (herberekening)en geeft dan het resultaat weer. Normaliter niet gebruiken. |
+| Precisie randvoorwaarde | Hiermee wordt bepaald of de celwaarde van een randvoorwaarde aan de opgegeven voorwaarde voldoet. Hoe groter de precisie (meer decimalen)hoe langer het duurt voordat de Oplosser met resultaten komt. |
+| Maximale tijd | Het maximaal aantal seconden die de Oplosser mag besteden aan het iteratieproces. |
+| Iteraties | Het maximaal aantal iteraties (herberekeningen). |
+| Resultaten iteraties weergeven | Bij inschakelen hiervan stopt de Oplosser na elke iteratie (herberekening)en geeft dan het resultaat weer. Normaliter niet gebruiken. |
 
-|Instelling|Toelichting    |
-|----------|---------------|
-|Max tijd|Het maximaal aantal seconden die de Oplosser mag besteden aan het iteratieproces. De standaardwaarde van 100 sec. kan verhoogd worden wanneer de Oplosser rapporteert dat de toegestane tijd bereikt is.|
-|Iteraties|Het maximaal aantal iteraties (herberekeningen\). De standaardwaarde van 100 kan verhoogd worden wanneer geen oplossing gevonden kan worden.|
-|Precisie|Hiermee wordt bepaald of de celwaarde van een restrictie aan de opgegeven voorwaarde voldoet. Hoe groter de precisie (meer decimalen)hoe langer het duurt voordat de Oplosser met resultaten komt.|
-|Tolerantie|Het maximale foutpercentage dat is toegestaan bij integer oplossingen. De waarde is alleen van belang wanneer een restrictie met integer aanwezig is. Hoe kleiner het foutpercentage, hoe langer het zoekproces duurt.|
-|Uitgaan van lineair model|Alleen gebruiken wanneer alle relaties in het berekeningsmodel lineair zijn. De keuze kan dan het zoekproces versnellen. Gebruik hiervan bij niet-lineaire modellen kan er juist voor zorgen dat er geen oplossing wordt gevonden.|
-|Iteratieresultaat tonen|Bij inschakelen hiervan stopt de Oplosser na elke iteratie (herberekening)en geeft dan het resultaat weer. Normaliter niet gebruiken.|
-|Precisie randvoorwaarde|Hiermee wordt bepaald of de celwaarde van een randvoorwaarde aan de opgegeven voorwaarde voldoet. Hoe groter de precisie (meer decimalen)hoe langer het duurt voordat de Oplosser met resultaten komt.|
-|Maximale tijd|Het maximaal aantal seconden die de Oplosser mag besteden aan het iteratieproces.|
-|Iteraties|Het maximaal aantal iteraties (herberekeningen\).|
-|Resultaten iteraties weergeven|Bij inschakelen hiervan stopt de Oplosser na elke iteratie (herberekening)en geeft dan het resultaat weer. Normaliter niet gebruiken.|
+: Uitleg van de opties bij Oplosser. {#tbl-solver-options tbl-colwidths="\[25,75\]"}
 
-:  Uitleg van de opties bij Oplosser. {#tbl-solver-options tbl-colwidths="[25,75]"}
-
-
-Aanvullende informatie:  
+Aanvullende informatie:\
 [Support site van Frontline Systems (Engelstalig), de ontwikkelaar van Oplosser.](http://www.solver.com)
 
 ## Opgaven {#sec-solver-exercises}
 
-::: {#exr-solv001}
+:::: {#exr-solv001}
 **Bonbondoos (solv001)**
 
 Een bekende bonbonfabrikant wil een assortimentdoos uitbrengen met 2 soorten bonbons (kersenbonbons en hazelnootbonbons)en daarbij zoveel mogelijk winst behalen. Bekend is verder:
 
-   + Een kersenbonbon neemt 16 cm^2^ ruimte in en een hazelnootbonbon 8 cm^2^. De bonbons worden door papier van elkaar gescheiden. Minimaal 320 cm^2^ van de doos moet met bonbons bedekt zijn.
-   + Een kersenbonbon weegt 2 gram en een hazelnootbonbon weegt 1 gram. Uit marktonderzoek is gebleken dat het ideale gewicht van de inhoud van de doos tussen de 40 gram en 60 gram moet liggen.
-   + Ook is uit marktonderzoek gebleken dat de doos minstens 35 bonbons moet bevatten waarvan zeker 10 kersenbonbons.
-   + De winst op een kersenbonbon is 28 eurocent en op een hazelnootbonbon 20 eurocent.
+-   Een kersenbonbon neemt 16 cm^2^ ruimte in en een hazelnootbonbon 8 cm^2^. De bonbons worden door papier van elkaar gescheiden. Minimaal 320 cm^2^ van de doos moet met bonbons bedekt zijn.
+-   Een kersenbonbon weegt 2 gram en een hazelnootbonbon weegt 1 gram. Uit marktonderzoek is gebleken dat het ideale gewicht van de inhoud van de doos tussen de 40 gram en 60 gram moet liggen.
+-   Ook is uit marktonderzoek gebleken dat de doos minstens 35 bonbons moet bevatten waarvan zeker 10 kersenbonbons.
+-   De winst op een kersenbonbon is 28 eurocent en op een hazelnootbonbon 20 eurocent.
 
 1.  Wat zijn de beslissingsvariabelen?
 2.  Wat is de doelfunctie?
@@ -292,27 +292,13 @@ Een bekende bonbonfabrikant wil een assortimentdoos uitbrengen met 2 soorten bon
 5.  Bepaal met de Oplosser het optimale aantal bonbons per doos van elke soort.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-1. Twee beslissingsvariabelen: 
-   -   Aantal kersenbonbons per doos (= K)
-   -   Aantal hazelnootbonbons per doos (= H)
-2. Doelfunctie is de maximale winst op een doos (= W): `W = 0,28*K + 0,20*H`
-3. Restricties:
-   -   Aantal kersenbonbons per doos: `K >= 10`
-   -   Totaal aantal bonbons per doos: `K + H >= 35`
-   -   Gewicht doos: `2*K + 1*H >= 40`
-   -   Gewicht doos: `2*K +1*H <= 60`
-   -   Oppervlakte bonbons: `16*K + 8*H >= 320`
-   -   Aantal bonbons is een geheel getal: `K = integer , H = integer`
-   -   Aantal bonbons is een positief getal: `K >= 0 , H >= 0`
+`r hide("Antwoord")` 1. Twee beslissingsvariabelen: - Aantal kersenbonbons per doos (= K) - Aantal hazelnootbonbons per doos (= H) 2. Doelfunctie is de maximale winst op een doos (= W): `W = 0,28*K + 0,20*H` 3. Restricties: - Aantal kersenbonbons per doos: `K >= 10` - Totaal aantal bonbons per doos: `K + H >= 35` - Gewicht doos: `2*K + 1*H >= 40` - Gewicht doos: `2*K +1*H <= 60` - Oppervlakte bonbons: `16*K + 8*H >= 320` - Aantal bonbons is een geheel getal: `K = integer , H = integer` - Aantal bonbons is een positief getal: `K >= 0 , H >= 0`
 
-Optimale inhoud doos: aantal kersenbonbons = 10, aantal hazelnootbonbons = 40. De winst per doos is dan € 10,80 en aan alle restricties wordt voldaan.
-`r unhide()`
+Optimale inhoud doos: aantal kersenbonbons = 10, aantal hazelnootbonbons = 40. De winst per doos is dan € 10,80 en aan alle restricties wordt voldaan. `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-solv002}
+:::: {#exr-solv002}
 **Aantal supermarkten (solv002)**
 
 Een supermarktketen wil voor maximaal 14 miljoen euro een aantal nieuwe vestigingen openen. De keten heeft 4 soorten winkels, te weten van type A, B, C en D. De kosten voor het opzetten van de vier typen winkels en de (verwachte) omzet in het volgend boekjaar zijn in de volgende afbeelding te zien.
@@ -321,31 +307,23 @@ Een supermarktketen wil voor maximaal 14 miljoen euro een aantal nieuwe vestigin
 
 Alle nieuw te bouwen vestigingen kunnen voor het komende boekjaar gereed zijn. De eventuele vestigingsplaatsen zijn qua bevolking vergelijkbaar. De directie wenst een zo groot mogelijke omzet van de nieuwe vestigingen in het komende boekjaar. Bepaal met de oplosser hoeveel winkels van welk type gebouwd dienen te worden en wat de te verwachten totale omzet zal zijn.
 
-1. Wat zijn de beslissingsvariabelen?
-2. Wat is de doelfunctie?
-3. Welke restricties zijn er?
-4. Bouw het model in Excel en gebruik de in dit studieboek aangegeven richtlijnen. Een voorbeeld zie je in de volgende figuur. Alle beslissingsvariabelen hebben hierin als startwaarde 2 gekregen.
+1.  Wat zijn de beslissingsvariabelen?
+2.  Wat is de doelfunctie?
+3.  Welke restricties zijn er?
+4.  Bouw het model in Excel en gebruik de in dit studieboek aangegeven richtlijnen. Een voorbeeld zie je in de volgende figuur. Alle beslissingsvariabelen hebben hierin als startwaarde 2 gekregen.
 
 ![](images/solver/solv002_model.png)
 
-5. Bepaal met de Oplosser het optimale het optimale aantal winkels van elke type.
+5.  Bepaal met de Oplosser het optimale het optimale aantal winkels van elke type.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-1.  Vier beslissingsvariabelen: Aantal winkels type A (= A), type B (= B), type C (= C)en type D (= D).
-2.  Doelfunctie is de totale omzet (= O): `O = 24*A + 20*B + 11*C + 5*D`
-3.  Restricties:
-    -   Maximale investering: `4*A + 3*B + 2*C + 1*D <= 14`
-    -   Elk aantal winkels is een geheel getal: `A = integer , B = integer , C = integer , D = integer`
-    -   Elk aantal winkels is een positief getal: `A >= 0 , B >= 0 , C >= 0 , D >= 0`
+`r hide("Antwoord")` 1. Vier beslissingsvariabelen: Aantal winkels type A (= A), type B (= B), type C (= C)en type D (= D). 2. Doelfunctie is de totale omzet (= O): `O = 24*A + 20*B + 11*C + 5*D` 3. Restricties: - Maximale investering: `4*A + 3*B + 2*C + 1*D <= 14` - Elk aantal winkels is een geheel getal: `A = integer , B = integer , C = integer , D = integer` - Elk aantal winkels is een positief getal: `A >= 0 , B >= 0 , C >= 0 , D >= 0`
 
-Optimale aantal winkels type A = 0, aantal type B = 4, aantal type C = 1, aantal type D = 0. De totale omzet = 91 miljoen EUR.
-`r unhide()`
+Optimale aantal winkels type A = 0, aantal type B = 4, aantal type C = 1, aantal type D = 0. De totale omzet = 91 miljoen EUR. `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-solv003}
+:::: {#exr-solv003}
 **Hardloopschoenen (solv003)**
 
 Een bedrijf in Hongkong heeft zich toegelegd op het fabriceren van amerikaanse hardloopschoenen. Het bedrijf maakt drie modellen: Runner, Lady T, en Super A en wil hiermee zoveel mogelijk winst maken.
@@ -357,36 +335,25 @@ Een bedrijf in Hongkong heeft zich toegelegd op het fabriceren van amerikaanse h
 
 Bereken met de oplosser de optimale productieaantallen en de maximale winst per week.
 
-1. Wat zijn de beslissingsvariabelen?
-2. Wat is de doelfunctie?
-3. Welke restricties zijn er?
-4. Bouw het model in Excel en gebruik de in dit studieboek aangegeven richtlijnen. Een voorbeeld zie je in de volgende figuur. Beide beslissingsvariabelen hebben hierin als startwaarde 100 gekregen.
+1.  Wat zijn de beslissingsvariabelen?
+2.  Wat is de doelfunctie?
+3.  Welke restricties zijn er?
+4.  Bouw het model in Excel en gebruik de in dit studieboek aangegeven richtlijnen. Een voorbeeld zie je in de volgende figuur. Beide beslissingsvariabelen hebben hierin als startwaarde 100 gekregen.
 
 ![](images/solver/solv003_model.png)
 
-5. Bepaal met de Oplosser het optimale aantal modellen en de maximale winst per week.
+5.  Bepaal met de Oplosser het optimale aantal modellen en de maximale winst per week.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-1.  Drie beslissingsvariabelen: Aantal model Runner per week (= R), aantal model Lady T per week (= T)en aantal model Super A per week (= A).
-2.  Doelfunctie is de maximale winst per week (= W): `W = 6*R + 5*T + 4*A`
-3.  Restricties:
-    -   Aantal model Runner per week: `R <= 300`
-    -   Aantal model Lady T per week: `T <= 400`
-    -   Aantal model Super A per week: `A <= 400`
-    -   Maximale productietijd per week: `0,31*R 0,20*T + 0,25*A <= 150`
-    -   Maximale investering per week: `16*R + 12*T +10*A <= 8000`
-    -   Aantal van elk model is een geheel getal: `R = integer , T = integer , A = integer`
-    -   Aantal van elk model is een positief getal: `R >= 0 , T >= 0 en A >= 0`
+`r hide("Antwoord")` 1. Drie beslissingsvariabelen: Aantal model Runner per week (= R), aantal model Lady T per week (= T)en aantal model Super A per week (= A). 2. Doelfunctie is de maximale winst per week (= W): `W = 6*R + 5*T + 4*A` 3. Restricties: - Aantal model Runner per week: `R <= 300` - Aantal model Lady T per week: `T <= 400` - Aantal model Super A per week: `A <= 400` - Maximale productietijd per week: `0,31*R 0,20*T + 0,25*A <= 150` - Maximale investering per week: `16*R + 12*T +10*A <= 8000` - Aantal van elk model is een geheel getal: `R = integer , T = integer , A = integer` - Aantal van elk model is een positief getal: `R >= 0 , T >= 0 en A >= 0`
 
 Optimaal aantal Runner = 111, aantal lady T = 400, aantal Super A = 142. De winst per week is € 3234.
 
 `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-solv004}
+:::: {#exr-solv004}
 **Productie aluminium ladders (solv004)**
 
 Een fabrikant van aluminium ladders maakt drie typen ladders. Om een ladder te maken moet eerst materiaal afgezaagd worden. Daarna vindt de assemblage plaats en tenslotte de afwerking. De productietijden alsmede de winst per ladder staan in de volgende tabel.
@@ -398,14 +365,11 @@ De totaal beschikbare productiecapaciteit is 80 voor zagen, 100 voor assemblage 
 Bepaal met behulp van de oplosser hoeveel ladders van elk type geproduceerd moeten worden opdat de winst maximaal is.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-Aantal type 1 = 0, aantal type 2 = 4, aantal type 3 = 10, winst = € 1080.
-`r unhide()`
+`r hide("Antwoord")` Aantal type 1 = 0, aantal type 2 = 4, aantal type 3 = 10, winst = € 1080. `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-solv005}
+:::: {#exr-solv005}
 **Productie hondenvoer (solv005)**
 
 Er zijn twee soorten hondevoer te koop: gewoon en speciaal. Een zak gewoon voer bevat 3 eenheden mineralen, 2 eenheden eiwit en 3 eenheden vet. Deze zak kost € 8. Een zak speciaal voer bevat 8 eenheden mineralen, 2 eenheden eiwit en 1 eenheid vet. De prijs van deze zak is € 14. Over een bepaalde periode moet de hond minstens 72 eenheden mineralen, 36 eenheden vet en 36 eenheden eiwit binnen krijgen.
@@ -413,14 +377,11 @@ Er zijn twee soorten hondevoer te koop: gewoon en speciaal. Een zak gewoon voer 
 Bepaal met behulp van de oplosser welke hoeveelheden van beide zakken gekocht moeten worden om de maaltijdkosten zo laag mogelijk te houden.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-Aantal zakken gewoon = 14, aantal zakken speciaal = 4, maaltijdkosten = € 168.
-`r unhide()`
+`r hide("Antwoord")` Aantal zakken gewoon = 14, aantal zakken speciaal = 4, maaltijdkosten = € 168. `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-solv006}
+:::: {#exr-solv006}
 **Vitamines in veevoer (solv006)**
 
 Een boer gebruikt drie typen veevoer, type 1, type 2 en type 3. De voedingssamenstelling en de kosten per kg van elk type is in de volgende afbeelding weergegeven.
@@ -432,27 +393,21 @@ In een vaktijdschrift zijn de minimale dagbehoeftes (MDB)in milligram per dier v
 Hoeveel kg van elk type moet de boer elke dag verstrekken om de kosten zo laag mogelijk te krijgen en toch te voldoen aan de minimale dagbehoefte?
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-Per dag: type 1 = 7,500 kg, type 2 = 1,397 kg, type 3 = 1,426 kg , kosten = € 68,37.
-`r unhide()`
+`r hide("Antwoord")` Per dag: type 1 = 7,500 kg, type 2 = 1,397 kg, type 3 = 1,426 kg , kosten = € 68,37. `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-solv007}
+:::: {#exr-solv007}
 **Vitaminetabletten (solv007)**
 
 Een voedingsdeskundige beveelt een patient de volgende minimale dagbehoeftes vitamine B en C aan: 400 eenheden vitamine B en 800 eenheden vitamine C. De plaatselijke apotheek kan twee verschillende vitaminetabletten leveren, merk Y en merk Z. Een vitaminetablet van merk Y bevat 75 eenheden vitamine B en 100 eenheden vitamine C en kost € 0,10. Een vitaminetablet van merk Z bevat 50 eenheden vitamine B en 200 eenheden vitamine C en kost € 0,08. Hoeveel vitaminetabletten van elk soort moeten elke dag genuttigd worden tegen zo laag mogelijke kosten?
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-Per dag: aantal per merk Y = 4, aantal merk Z = 2, kosten = € 0,56.
-`r unhide()`
+`r hide("Antwoord")` Per dag: aantal per merk Y = 4, aantal merk Z = 2, kosten = € 0,56. `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-solv008}
+:::: {#exr-solv008}
 **Transportkosten minimaliseren (solv008)**
 
 [Bestand]{.smallcaps}: `Solv008.xlsx`
@@ -471,14 +426,11 @@ Toelichting:
 Maak met behulp van de oplosser een zodanige vervoersplanning te maken dat de kosten minimaal zijn.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-![](images/solver/solv008_result.png)
-`r unhide()`
+`r hide("Antwoord")` ![](images/solver/solv008_result.png) `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-solv009}
+:::: {#exr-solv009}
 **Stelsel lineaire vergelijkingen oplossen (solv009)**
 
 Los met behulp van de oplosser het volgende stelsel vergelijkingen op.
@@ -492,14 +444,11 @@ Los met behulp van de oplosser het volgende stelsel vergelijkingen op.
 \end{align*}
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-![](images/solver/solv009_result.png)
-`r unhide()`
+`r hide("Antwoord")` ![](images/solver/solv009_result.png) `r unhide()`
 :::
+::::
 
-:::
-
-::: {#exr-solv010}
+:::: {#exr-solv010}
 **Spaarbank (solv010)**
 
 Een spaarbank heeft 3 miljoen euro om te beleggen. De beleggingsportefeuilles zijn persoonlijke leningen, hypotheken (eerste en tweede hypotheken) en autoleasing. In de statuten van de bank staan een aantal voorwaarden t.a.v. de besteding van de gelden:
@@ -511,27 +460,18 @@ Een spaarbank heeft 3 miljoen euro om te beleggen. De beleggingsportefeuilles zi
 
 De jaarlijkse opbrengst van elk type lening is in de volgende tabel weergegeven.
 
-|Type lening|Opbrengst|
-|-----------|---------|
-|Persoonlijke lening|18%|
-|Eerste hypotheek|12%|
-|Tweede hypotheek|14%|
-|Autolease|16%|
+| Type lening         | Opbrengst |
+|---------------------|-----------|
+| Persoonlijke lening | 18%       |
+| Eerste hypotheek    | 12%       |
+| Tweede hypotheek    | 14%       |
+| Autolease           | 16%       |
 
 Bepaal met de oplosser hoeveel geld (in veelvouden van € 1000,-) voor elk van de vier typen leningen uitgegeven moet worden zodat de opbrengst zo hoog mogelijk wordt.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Antwoord")`
-|Type lening|Bedrag|
-|-----------|------|
-|Persoonlijke lening|450 K€|
-|Eerste hypotheek|1125 K€|
-|Tweede hypotheek|1125 K€|
-|Autolease|300 K€|
+`r hide("Antwoord")` \|Type lening\|Bedrag\| \|-----------\|------\| \|Persoonlijke lening\|450 K€\| \|Eerste hypotheek\|1125 K€\| \|Tweede hypotheek\|1125 K€\| \|Autolease\|300 K€\|
 
-Totale opbrengst 422 K€. Bij weergave op eurocent nauwkeurig kunnen er afrondingsverschillen zijn.
-`r unhide()`
+Totale opbrengst 422 K€. Bij weergave op eurocent nauwkeurig kunnen er afrondingsverschillen zijn. `r unhide()`
 :::
-
-:::
-
+::::

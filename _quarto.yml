@@ -46,6 +46,8 @@ language:
     crossref-prp-title: "Task"
   nl:
     crossref-prp-title: "Taak"
+filters:
+  - textbook
 
 format:
   html:

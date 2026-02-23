@@ -3,9 +3,7 @@
 ```{r, file = "R/webex-nl.R", include = FALSE}
 ```
 
-::: callout
-**Doelstellingen**
-
+::: callout-intro
 -   Grafieksoorten.
 -   Lijndiagram vs Spreidingsdiagram.
 :::
@@ -286,7 +284,7 @@ De gegevens moeten in een bellendiagram worden weergegeven, zoals in @fig-bubble
 
 2.  Zorg voor een passende opmaak voor de waarden voor omzet en marktaandeel.
 
-::: callout-note
+::: {.callout-tip title="Tip opmaak"}
 Een goede layout van de brongegevens zorgt er voor dat je deze opmaak ook in de grafiek krijgt.
 :::
 
@@ -395,7 +393,7 @@ Als voorbeeld een continu chemisch proces waarbij elk uur de temperatuur van het
 5.  Pas de layout van de grafiek aan.
 :::
 
-::: {.callout-tip appearance="simple"}
+::: {.callout-tip title="SPC informatie"}
 Er is op internet veel informatie over SPC en regelkaarten te vinden. Een gedegen artikel is [Control Limits and Specifications: The Four Process States](https://www.spcforexcel.com/knowledge/variation/four-process-states)
 :::
 
