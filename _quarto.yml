@@ -13,7 +13,7 @@ book:
   repo-actions: [issue]
   description: "Een taakgericht studieboek."
   favicon: images/favicon-excel.png
-  downloads: [pdf, epub]
+  downloads: [pdf]
 
   chapters:
     - index.qmd
@@ -54,12 +54,11 @@ format:
     theme:
       - cosmo
       - include/textbook.scss
-    cover-image: images/cover-excel.svg
+    cover-image: resources/LeerExcel.png
     fig-width: 6
     fig-asp: 0.618
     code-fold: false
     link-external-newwindow: true
-    callout-appearance: simple
     author-meta: "Ben Welman"
     description-meta: "Met dit taakgericht studieboek leer je te werken met Excel."
     # keywords: ["Excel", "Power Query", "berekeningen", "functies", "tabellen", "grafieken", "arrays", "scenario", "draaitabellen", "doelzoeken", "oplosser"]
@@ -67,6 +66,7 @@ format:
   pdf:
     documentclass: scrbook
     classoption: oneside
+    include-in-header: latex/preamble.tex
     papersize: a4
     geometry:
      - top=25mm
@@ -75,15 +75,8 @@ format:
      - right=25mm
     cite-method: biblatex
     links-as-notes: true
-    author: [Ben Welman]
     date: \today
-
-  # epub:
-  #   cover-image: images/cover-excel.svg
-  #   css: include/epub-styles.css
-  #   metadata:
-  #     title: "Leer Microsoft Excel"
-  #   toc: true
+    author: [Ben Welman]
 
 knitr:
   opts_chunk:
