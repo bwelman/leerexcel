@@ -21,13 +21,15 @@ Het werken met goed opgezette tabellen is een veel voorkomende bezigheid, vooral
 
 Een tabel is een georganiseerde verzameling van gegevens.
 
+::: {#tbl-tables-exampletable}
 | klantnr | naam     | datum      | prijs | korting |
 |---------|----------|------------|-------|---------|
 | A104    | Anderson | 2010-10-02 | 400   | 0 %     |
 | K102    | King     | 2010-11-03 | 395   | 5 %     |
 | S501    | Smith    | 2010-12-04 | 375   | 8%      |
 
-: Voorbeeld van een tabel. {#tbl-tables-exampletable}
+: Voorbeeld van een tabel.
+:::
 
 Een tabel bestaat uit rijen en kolommen. Deze **rijen** worden ook wel **records** genoemd en de **kolommen** worden **velden** genoemd. De soort gegevens die verzameld worden staan in kolommen. In de eerste rij van een tabel staan de kolomlabels die aangeven wat de informatie in de kolom voorstelt. De kolomlabels worden ook wel **veldnamen** genoemd. De veldnamen in @tbl-tables-exampletable zijn: [klantnr]{.varname}, [naam]{.varname}, [datum]{.varname}, [prijs]{.varname} en [korting]{.varname}.
 
@@ -149,6 +151,7 @@ Een gegevensformulier is zeer geschikt om in een bereik/tabel te zoeken naar rec
 
 In @tbl-tables-searchexamples staan een aantal voorbeelden van zoekcriteria. Probeer deze uit en controleer of de gevonden records aan de criteria voldoen. Het is ook mogelijk om meerdere criteria te combineren. Maak steeds eerst de lijst met criteria leeg voordat je met een nieuwe oefening begint.
 
+::: {#tbl-tables-searchexamples}
 | Veld | Waarde | Toelichting |
 |:------------|:------------|:---------------------------------------------|
 | Achternaam | Ja | Zoekt naar personen waarvan de achternaam begint met 'Ja'. |
@@ -156,7 +159,8 @@ In @tbl-tables-searchexamples staan een aantal voorbeelden van zoekcriteria. Pro
 | Salaris | \>70000 | Zoekt naar personen met een salaris groter dan 70000. |
 | Begindatum | \<1-1-1990 | Zoekt naar personen met een begindatum voor 1-1-1990. |
 
-: Voorbeelden van zoekcriteria. {#tbl-tables-searchexamples}
+: Voorbeelden van zoekcriteria.
+:::
 
 ## Bereiken samenvoegen {#sec-tables-consolidate}
 

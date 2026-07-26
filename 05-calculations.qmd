@@ -4,11 +4,11 @@
 ```
 
 ::: callout-intro
--   Formules maken.
--   Opzetten van een calculatiemodel.
--   Kopiëren van formules en absolute en relatieve celadressen.
--   Formules die als uitkomst WAAR of ONWAAR hebben.
--   Gebruik van namen voor cellen.
+- Formules maken.
+- Opzetten van een calculatiemodel.
+- Kopiëren van formules en absolute en relatieve celadressen.
+- Formules die als uitkomst WAAR of ONWAAR hebben.
+- Gebruik van namen voor cellen.
 :::
 
 Een van de belangrijkste aspecten van het werken met Excel is het uitvoeren van berekeningen en hiervoor gebruik je formules. Om goed en handig met formules te kunnen werken is het belangrijk dat je van te voren goed nadenkt over wat je waar in het werkblad plaatst. Dit kan je een hoop tijd en problemen besparen.
@@ -23,6 +23,7 @@ Om een formule in te voeren begin je met het intypen van de `=` en daarna typ je
 
 In @tbl-calculation-operators kun je de symbolen (operatoren) vinden voor het utvoeren van berekeningen.
 
+::: {#tbl-calculation-operators}
 | symbool | betekenis                        | voorbeeld   | uitkomst |
 |:--------|:---------------------------------|:------------|---------:|
 | `+`     | optellen                         | `=4+5`      |      `9` |
@@ -32,7 +33,8 @@ In @tbl-calculation-operators kun je de symbolen (operatoren) vinden voor het ut
 | `^`     | machtsverheffen                  | `=2^3`      |      `8` |
 | `()`    | haakjes voor volgorde berekening | `=30-(4+6)` |     `20` |
 
-: Operators. {#tbl-calculation-operators}
+: Operators.
+:::
 
 ::: {#prp-calculation-operators}
 Probeer deze voorbeelden in een werkblad uit.
@@ -42,9 +44,9 @@ Probeer deze voorbeelden in een werkblad uit.
 
 In deze oefening wordt een eenvoudige berekening opgezet, zie @fig-example-sellings. Drie cellen bevatten getallen:
 
--   C1, het inkoopbedrag.
--   B2, het winstpercentage.
--   B5, het BTW percentage.
+- C1, het inkoopbedrag.
+- B2, het winstpercentage.
+- B5, het BTW percentage.
 
 In vier cellen (C2, C3, C5 en C6)staan formules. Het is de bedoeling dat wanneer de waarden in C1, B2 of B5 veranderen, alle hiervan afhankelijke waarden automatisch worden aangepast.
 
@@ -85,10 +87,10 @@ In @fig-example-wages zie je een werkblad waar formules worden gebruikt om de ar
 
 2.  Voer onder bedrag de juiste formules in:
 
-    -   in cel D2 de formule `B2*C2`
-    -   in cel D3 de formule `=B3*C3`
-    -   in cel D4 de formule `=B4*C4`
-    -   in cel D5 de formule `=D2+D3+D4`
+    - in cel D2 de formule `B2*C2`
+    - in cel D3 de formule `=B3*C3`
+    - in cel D4 de formule `=B4*C4`
+    - in cel D5 de formule `=D2+D3+D4`
 :::
 
 ## Berekeningsmodel {#sec-calculation-model}
@@ -147,11 +149,12 @@ Een (cel)bereik is een groep van cellen waarnaar je in een formule kunt verwijze
 
 Omdat een formule vaak celverwijzingen bevat is het van belang om na te denken wat er met deze celverwijzingen moet gebeuren bij de kopieeractie. Er zijn twee mogelijkheden:
 
--   De celverwijzingen passen zich aan de nieuwe situatie aan. De celadressen in de formule zijn dan **relatief**.
--   De celverwijzingen blijven hetzelfde. De celadressen in de formule zijn dan **absoluut**.
+- De celverwijzingen passen zich aan de nieuwe situatie aan. De celadressen in de formule zijn dan **relatief**.
+- De celverwijzingen blijven hetzelfde. De celadressen in de formule zijn dan **absoluut**.
 
 Een adres wordt absoluut gemaakt door dollartekens in het adres aan te brengen. Je kunt een dollarteken voor de kolomletter en/of het rijnummer plaatsen. Het deel waarvoor het dollarteken geplaatst is wordt dan absoluut en verandert bij het kopiëren niet. Er zijn 4 mogelijkheden voor een celadres, zie @tbl-cell-addresses voor de mogelijkheden.
 
+::: {#tbl-cell-addresses}
 | Type                                 | Voorbeeld |
 |:-------------------------------------|:----------|
 | Relatief adres                       | `B1`      |
@@ -159,7 +162,8 @@ Een adres wordt absoluut gemaakt door dollartekens in het adres aan te brengen. 
 | Absoluut kolom en relatief rij adres | `$B1`     |
 | Relatief kolom en absoluut rij adres | `B$1`     |
 
-: Voorbeelden van celadressen. {#tbl-cell-addresses}
+: Voorbeelden van celadressen.
+:::
 
 ::: {.callout-note title="Aanpassingen celadressen bij kopieeracties"}
 Bij het kopiëren van een formule met celadressen wordt het absolute deel niet aangepast en het relatieve deel wel.
@@ -167,17 +171,18 @@ Bij het kopiëren van een formule met celadressen wordt het absolute deel niet a
 
 Wanneer een formule bewerkt wordt, kun je het type van het celadres op een van de volgende manieren wijzigen :
 
--   De dollartekens op de juiste plaats intypen.
--   Wanneer de cursor in een celadres staat herhaaldelijk op toets [F4]{.uicontrol} drukken totdat het gewenste resultaat bereikt is. Tijdens het repeterend drukken op [F4]{.uicontrol} worden alle vier de mogelijkheden doorlopen.
+- De dollartekens op de juiste plaats intypen.
+- Wanneer de cursor in een celadres staat herhaaldelijk op toets [F4]{.uicontrol} drukken totdat het gewenste resultaat bereikt is. Tijdens het repeterend drukken op [F4]{.uicontrol} worden alle vier de mogelijkheden doorlopen.
 
 ### Kopieerregels {#sec-copyrules}
 
 Bij het kopiëren van formules met celverwijzingen past Excel de volgende regels toe:
 
--   Bij het kopiëren in de richting naar links of naar rechts wordt de kolomletter verlaagd dan wel verhoogd.
--   Bij het kopiëren in de richting naar boven of naar beneden wordt het rijnummer verlaagd dan wel verhoogd.
--   De delen met een dollarteken ervoor worden niet aangepast.
+- Bij het kopiëren in de richting naar links of naar rechts wordt de kolomletter verlaagd dan wel verhoogd.
+- Bij het kopiëren in de richting naar boven of naar beneden wordt het rijnummer verlaagd dan wel verhoogd.
+- De delen met een dollarteken ervoor worden niet aangepast.
 
+::: {#tbl-copy-actions}
 | Formule      | Kopieeractie                            | Resultaat    |
 |:-------------|:----------------------------------------|:-------------|
 | `=A1+B2`     | 1 cel naar rechts                       | `=B1+C2`     |
@@ -191,7 +196,8 @@ Bij het kopiëren van formules met celverwijzingen past Excel de volgende regels
 |              | 1 cel naar rechts en 1 cel naar beneden | `=$A2+$B3`   |
 | `=$A$1+$B$2` | elke kopieeractie                       | =\$A$1+$B\$2 |
 
-: Voorbeelden van kopieeracties. {#tbl-copy-actions}
+: Voorbeelden van kopieeracties.
+:::
 
 ### Premietabel {#sec-calculation-example-insurance}
 
@@ -221,6 +227,7 @@ Er zijn formules die geen berekeningen uitvoeren, maar die twee zaken met elkaar
 
 In @tbl-boolean-operators kun je de operatoren vinden die je in boolean expressies kunt gebruiken.
 
+::: {#tbl-boolean-operators}
 | Operator | Betekenis                    |
 |:---------|:-----------------------------|
 | `=`      | is gelijk aan                |
@@ -230,10 +237,12 @@ In @tbl-boolean-operators kun je de operatoren vinden die je in boolean expressi
 | `>`      | is groter dan                |
 | `>=`     | is groter dan of gelijk aan  |
 
-: Operatoren voor het vergelijken van twee items. {#tbl-boolean-operators}
+: Operatoren voor het vergelijken van twee items.
+:::
 
 In @tbl-boolean-examples staan een aantal voorbeelden van dergelijke formules. Om de werking ervan goed te begrijpen zou je deze in een cel kunnen invoeren. De ronde haakjes die je in de formules ziet zijn niet echt noodzakelijk, maar zorgen voor meer duidelijkheid over wat de bedoeling van de formule is. Geadviseerd wordt daarom om deze haakjes altijd te gebruiken.
 
+::: {#tbl-boolean-examples}
 | Formule       | Resultaat |
 |:--------------|:----------|
 | `=(1=1)`      | `WAAR`    |
@@ -248,7 +257,8 @@ In @tbl-boolean-examples staan een aantal voorbeelden van dergelijke formules. O
 | `=("a"="b")`  | `ONWAAR`  |
 | `=("a"<>"b")` | `WAAR`    |
 
-: Voorbeelden van waar/onwaar formules. {#tbl-boolean-examples}
+: Voorbeelden van waar/onwaar formules.
+:::
 
 ::: {.callout-important title="Gebruik dubbele aanhalingstekens voor tekst in Booleaanse formules"}
 Tekst moet in formules altijd tussen dubbele aanhalingstekens geplaatst worden.
@@ -256,8 +266,8 @@ Tekst moet in formules altijd tussen dubbele aanhalingstekens geplaatst worden.
 
 Dergelijke formules zomaar in cellen plaatsen heeft niet zoveel zin. Wel is van belang dat ze in berekeningen mogen voorkomen. Excel gebruikt dan de volgende getalswaarden:
 
--   `WAAR` = 1
--   `ONWAAR` = 0
+- `WAAR` = 1
+- `ONWAAR` = 0
 
 Dit geeft de mogelijkheid om voorwaarden in berekeningen aan te brengen, op basis waarvan dan het resultaat bepaald wordt. Zo kun je bij een bestelling de portokosten wel of niet in rekening brengen afhankelijk van de bestelde hoeveelheid.
 
@@ -266,8 +276,8 @@ Dit geeft de mogelijkheid om voorwaarden in berekeningen aan te brengen, op basi
 
 Bij een internetwinkel wordt een bestelling vanaf € 25 zonder portokosten bezorgd. In de volgende afbeelding is te zien dat de portokosten met een waar/onwaar formule worden berekend. In het begin van de formule staat `(B5<$B$2)`. Dit gedeelte levert als resultaat WAAR (=1)of ONWAAR (=0)op. En dit resultaat wordt weer vermenigvuldigd met € 3,50. Er zijn dan maar twee uitkomsten mogelijk:
 
--   `1 * 3,50 = 3,50`
--   `0 * 3,50 = 0`
+- `1 * 3,50 = 3,50`
+- `0 * 3,50 = 0`
 
 ![Voorbeeld met een waar/onwaar formule.](images/calculations/example-boolean.png){#fig-example-boolean}
 
@@ -280,11 +290,11 @@ Het werken met celadressen in formules kan verwarrend werken, een formule wordt 
 
 Regels voor naamgeving:
 
--   Namen moeten beginnen met een letter of met het underscoresymbool (`-`), daarna mogen er ook cijfers komen. Een naam mag niet beginnen met een cijfer.
+- Namen moeten beginnen met een letter of met het underscoresymbool (`-`), daarna mogen er ook cijfers komen. Een naam mag niet beginnen met een cijfer.
 
--   Namen mogen geen spaties bevatten. Om een spatie te simuleren kun je het underscoresymbool gebruiken, bijvoorbeeld [Verkoop_2010]{.varname}.
+- Namen mogen geen spaties bevatten. Om een spatie te simuleren kun je het underscoresymbool gebruiken, bijvoorbeeld [Verkoop_2010]{.varname}.
 
--   De meeste symbolen (komma, dubbele punt, uitroepteken, enz.)kun je niet gebruiken.
+- De meeste symbolen (komma, dubbele punt, uitroepteken, enz.)kun je niet gebruiken.
 
 ### Namen maken {#sec-calculation-names-create}
 
@@ -313,9 +323,9 @@ Een alternatieve en snelle manier om een naam toe te kennen is door de cel te se
 
 6.  Selecteer cel A3 en voer de formule om de winst te berekenen op een van de volgende manieren in:
 
-    -   Typ `=Verkopen-Inkopen` en druk op de [Enter]{.uicontrol} toets.
-    -   Typ `=`, selecteer A2, typ `-`, selecteer A1 en druk op [Enter]{.uicontrol}.
-    -   Typ `=`, kies dan [tab Formules \> Gebruiken in formule (groep Gedefinieerde namen) \> Verkopen]{.uicontrol}, typ `-` en kies dan [tab Formules \> Gebruiken in formule (groep Gedefinieerde namen) \> Inkopen]{.uicontrol} en druk op [Enter]{.uicontrol}.
+    - Typ `=Verkopen-Inkopen` en druk op de [Enter]{.uicontrol} toets.
+    - Typ `=`, selecteer A2, typ `-`, selecteer A1 en druk op [Enter]{.uicontrol}.
+    - Typ `=`, kies dan [tab Formules \> Gebruiken in formule (groep Gedefinieerde namen) \> Verkopen]{.uicontrol}, typ `-` en kies dan [tab Formules \> Gebruiken in formule (groep Gedefinieerde namen) \> Inkopen]{.uicontrol} en druk op [Enter]{.uicontrol}.
 
 In cel A3 is het antwoord `175` verschenen en wanneer je deze cel selecteert zie je in de formule balk staan `=Verkopen-Inkopen`. Dus, door namen te gebruiken heb je een goed leesbare formule gekregen.
 :::
@@ -363,13 +373,13 @@ Excel kent beheersmogelijkheden voor namen, zodat je een overzicht van alle name
 ::: {.callout-note title="Bewerkingen met namen"}
 Via het dialoogvenster ***Namen beheren*** kun je diverse bewerkingen op de namen uitvoeren.
 
--   **Naam verwijderen**: Selecteer de naam en kies [Verwijderen]{.uicontrol}.
+- **Naam verwijderen**: Selecteer de naam en kies [Verwijderen]{.uicontrol}.
 
--   **Naam wijzigen**: Selecteer de naam en kies [Bewerken]{.uicontrol}.
+- **Naam wijzigen**: Selecteer de naam en kies [Bewerken]{.uicontrol}.
 
--   **Beschrijving toevoegen/bewerken**: Selecteer de naam en kies [Bewerken]{.uicontrol}.
+- **Beschrijving toevoegen/bewerken**: Selecteer de naam en kies [Bewerken]{.uicontrol}.
 
--   **Nieuwe naam maken**: Kies [Nieuw]{.uicontrol}.
+- **Nieuwe naam maken**: Kies [Nieuw]{.uicontrol}.
 :::
 
 ### Namen documenteren {#sec-calculation-names-list}

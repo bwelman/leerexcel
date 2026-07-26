@@ -1,13 +1,13 @@
 # Gegevens invoeren/bewerken {#sec-data}
 
 ::: callout-intro
--   Invoeren van gegevens in een cel.
--   Taalafhankelijke scheidingstekens bij getallen.
--   Het verschil tussen inhoud en opmaak van een cel.
--   Ongedaan maken van aangebrachte wijzigingen.
--   Invoegen van een rij of kolom in een werkblad.
--   Kopiëren van gegevens naar een andere plek.
--   Snel invoeren van een reeks gegevens waar een patroon in zit.
+- Invoeren van gegevens in een cel.
+- Taalafhankelijke scheidingstekens bij getallen.
+- Het verschil tussen inhoud en opmaak van een cel.
+- Ongedaan maken van aangebrachte wijzigingen.
+- Invoegen van een rij of kolom in een werkblad.
+- Kopiëren van gegevens naar een andere plek.
+- Snel invoeren van een reeks gegevens waar een patroon in zit.
 :::
 
 Het invoeren van gegevens (teksten, getallen, formules) is een van de belangrijkste werkzaamheden binnen Excel. Het invoeren van gegevens in een cel komt in het kort neer op:
@@ -102,21 +102,21 @@ Het is mogelijk om de breedte van de kolom aan te passen zodat alle tekst in cel
 
 **Samenvatting**
 
--   Tekst wordt standaard links uitgelijnd.
--   Getallen worden standaard rechts uitgelijnd.
--   Er is een belangrijk verschil tussen komma's en punten in getallen.
--   Formules beginnen altijd met het `=` teken.
--   De invoer van een datum wordt behandeld als een getal en opgemaakt als een datum.
--   De invoer van een getal met een procentteken wordt behandeld als een getal en opgemaakt als een percentage. De echte inhoud van de cel wordt het honderdste deel van het ingevoerde getal.
--   Een cel heeft een inhoud en een opmaak. En wat je ziet is niet alijd de werkelijke inhoud.
+- Tekst wordt standaard links uitgelijnd.
+- Getallen worden standaard rechts uitgelijnd.
+- Er is een belangrijk verschil tussen komma's en punten in getallen.
+- Formules beginnen altijd met het `=` teken.
+- De invoer van een datum wordt behandeld als een getal en opgemaakt als een datum.
+- De invoer van een getal met een procentteken wordt behandeld als een getal en opgemaakt als een percentage. De echte inhoud van de cel wordt het honderdste deel van het ingevoerde getal.
+- Een cel heeft een inhoud en een opmaak. En wat je ziet is niet alijd de werkelijke inhoud.
 
 ## Celinhoud wijzigen {#sec-data-edit}
 
 De gegevens in een cel kunnen op een van de volgende manieren bewerkt worden:
 
--   Dubbelklikken op de cel. De cursor komt midden in de cel te staan zodat de inhoud direct binnen de cel bewerkt kan worden.
--   Selecteer de cel en druk dan [F2]{.uicontrol}. De cursor komt dan aan het eind van de celinhoud te staan zodat de inhoud bewerkt kan worden.
--   Selecteer de cel en klik dan op de formulebalk op de plek waar je het bewerken wilt beginnen.
+- Dubbelklikken op de cel. De cursor komt midden in de cel te staan zodat de inhoud direct binnen de cel bewerkt kan worden.
+- Selecteer de cel en druk dan [F2]{.uicontrol}. De cursor komt dan aan het eind van de celinhoud te staan zodat de inhoud bewerkt kan worden.
+- Selecteer de cel en klik dan op de formulebalk op de plek waar je het bewerken wilt beginnen.
 
 Wanneer de cel in de bewerkingsmodus wordt gezet verandert op de statusbalk helemaal links onderaan de status van de cel van `Gereed` in `Bewerken`. En verder worden drie iconen links op de formulebalk geactiveerd:
 
@@ -203,8 +203,9 @@ Het resultaat is dat het gebied gevuld is met de getallen 1, 2, 3, 4, 5, ...
 In @tbl-patternrecognition zie je een aantal voorbeelden om mee te experimenteren.
 :::
 
+::: {#tbl-patternrecognition}
 | Beginwaarden | Doorgevoerde reeks                   |
-|--------------|--------------------------------------|
+|:-------------|:-------------------------------------|
 | 1, 3         | 5, 7, 9, 11, ...                     |
 | 2, 4         | 6, 8, 10, 12, ...                    |
 | 3, 6         | 9, 12, 15, 18, ...                   |
@@ -218,4 +219,5 @@ In @tbl-patternrecognition zie je een aantal voorbeelden om mee te experimentere
 | 1e periode   | 2e periode, 3e periode, ...          |
 | artikel 1    | artikel 2, artikel 3, artikel 4, ... |
 
-: Voorbeelden van patroonherkenning. {#tbl-patternrecognition}
+: Voorbeelden van patroonherkenning.
+:::

@@ -4,8 +4,8 @@
 ```
 
 ::: callout-intro
--   Grafieksoorten.
--   Lijndiagram vs Spreidingsdiagram.
+- Grafieksoorten.
+- Lijndiagram vs Spreidingsdiagram.
 :::
 
 Grafieken gebruik je om gegevens te visualiseren, om gemakkelijk cijfers te vergelijken. Excel kent een grote variatie aan grafiektypes. Welk type het beste in welke situatie gebruikt kan worden komt hier niet aan de orde.
@@ -16,8 +16,8 @@ Ondanks de grote hoeveelheid aan grafieksoorten zijn er in wezen maar een beperk
 
 Al deze basisvormen hebben vele varianten zodat je in het begin snel in verwarring kunt raken. Het is belang om een goede grafieksoort uit te kiezen voor het visualiseren van de gegevens. Stel jezelf vragen als:
 
--   Wat moet de grafiek vertellen?
--   Welke feiten moeten vergeleken worden?
+- Wat moet de grafiek vertellen?
+- Welke feiten moeten vergeleken worden?
 
 ## Kolomdiagram {#sec-charttype-column}
 
@@ -42,8 +42,8 @@ De gegevens moeten in een kolomdiagram worden weergegeven, zoals in @fig-column-
 
 4.  Wijzig titels:
 
-    -   Grafiektitel: `Marktaandelen supermarktketens`
-    -   Verticale astitel: `Marktaandeel (%)`
+    - Grafiektitel: `Marktaandelen supermarktketens`
+    - Verticale astitel: `Marktaandeel (%)`
 
 5.  Kies [Invoegen \> Tekst \> Tekstvak]{.uicontrol}.
 
@@ -100,6 +100,7 @@ Cirkeldiagrammen worden vooral gebruikt voor het weergeven van de procentuele ve
 
 Aan 150 leerlingen is gevraagd wat hun favoriete huisdier is. In @tbl-survey-pet zie je de resultaten.
 
+::: {#tbl-survey-pet}
 | Huisdier | Frequentie |
 |----------|------------|
 | Katten   | 70         |
@@ -108,7 +109,8 @@ Aan 150 leerlingen is gevraagd wat hun favoriete huisdier is. In @tbl-survey-pet
 | Vissen   | 13         |
 | Anders   | 7          |
 
-: Resultaten enquête favoriete huisdier. {#tbl-survey-pet}
+: Resultaten enquête favoriete huisdier.
+:::
 
 De gegevens moeten in een cirkeldiagram worden weergegeven, zoals in @fig-pie-result.
 
@@ -142,9 +144,9 @@ Een lijndiagram gebruik je meestal om het verloop van een variabele in de tijd w
 
 In @fig-line-data kun je de jaarlijkse temperaturen (^o^C) vinden voor Amsterdam Luchthaven Schiphol (bron: [Tutiempo Network](https://en.tutiempo.net/climate/ws-62400.html)).
 
--   T = Gemiddelde jaarlijkse temperatuur
--   Tmax = Gemiddelde jaarlijkse maximum temperatuur
--   Tmin = Gemiddelde jaarlijkse maximum temperatuur
+- T = Gemiddelde jaarlijkse temperatuur
+- Tmax = Gemiddelde jaarlijkse maximum temperatuur
+- Tmin = Gemiddelde jaarlijkse maximum temperatuur
 
 ![Jaarlijkse temperaturen voor Amsterdam Luchthaven Schiphol.](images/charttypes/line-data.png){#fig-line-data}
 
@@ -163,8 +165,8 @@ De gegevens moeten in een lijndiagram worden weergegeven, bijvoorbeeld zoals in 
 
 4.  Wijzig titels:
 
-    -   Grafiektitel: `Jaarlijkse temperaturen Amsterdam Luchthaven Schiphol`
-    -   Verticale astitel: `Temperatuur (C)`.
+    - Grafiektitel: `Jaarlijkse temperaturen Amsterdam Luchthaven Schiphol`
+    - Verticale astitel: `Temperatuur (C)`.
 
 5.  Selecteer de grafiek en wijzig de stijl via [tab Grafiekontwerp \> Grafiekstijlen]{.uicontrol}. Kies een stijl die je bevalt.
 :::
@@ -181,7 +183,7 @@ De gegevens moeten in een spreidingsdiagram worden weergegeven, zoals in @fig-sc
 
 ![Spreidingsdiagram lengte - gewicht.](images/charttypes/scatter-result.png){#fig-scatter-result}
 
-::: {#prp-charttype-scatter}
+:::: {#prp-charttype-scatter}
 [Bestand]{.smallcaps}: `Grafiek_spreiding.xlsx`
 
 1.  Open het bestand.
@@ -192,9 +194,9 @@ De gegevens moeten in een spreidingsdiagram worden weergegeven, zoals in @fig-sc
 
 4.  Wijzig titels:
 
-    -   Grafiektitel: `Relatie lichaamslengte - gewicht`
-    -   Horizontale astitel: `Lengte (cm)`
-    -   Verticale astitel: `Gewicht (kg)`.
+    - Grafiektitel: `Relatie lichaamslengte - gewicht`
+    - Horizontale astitel: `Lengte (cm)`
+    - Verticale astitel: `Gewicht (kg)`.
 
 5.  Wijzig de schaal van de horizontale as zo dat deze loopt van 160 t/m 190, steeds oplopend met 5.
 
@@ -203,7 +205,7 @@ De gegevens moeten in een spreidingsdiagram worden weergegeven, zoals in @fig-sc
 ::: {.content-visible when-format="html:js"}
 `r hide("Hint aanpassing schaal as")` [Selecteer de as \> Rechter muisknop \> As opmaken \> Opties voor as]{.uicontrol} `r unhide()`
 :::
-:::
+::::
 
 ## Ringdiagram {#sec-charttype-doughnut}
 
@@ -245,7 +247,7 @@ De gegevens moeten in een gestapeld vlakdiagram worden weergegeven, zoals in @fi
 
 ![Gestapeld vlakdiagram voor aantal verkochte artikelen per maand.](images/charttypes/area-result.png){#fig-area-result}
 
-::: {#prp-charttype-area}
+:::: {#prp-charttype-area}
 [Bestand]{.smallcaps}: `Grafiek_vlak.xlsx`
 
 1.  Open het bestand.
@@ -261,7 +263,7 @@ De gegevens moeten in een gestapeld vlakdiagram worden weergegeven, zoals in @fi
 ::: {.content-visible when-format="html:js"}
 `r hide("Hint legenda")` [Selecteer legenda \> Rechter muisknop \> Legenda opmaken \> Opties voor legenda]{.uicontrol} `r unhide()`
 :::
-:::
+::::
 
 ## Bellendiagram {#sec-charttype-bubble}
 
@@ -277,7 +279,7 @@ De gegevens moeten in een bellendiagram worden weergegeven, zoals in @fig-bubble
 
 ![bellendiagram voor marktaandeel.](images/charttypes/bubble-result.png){#fig-bubble-result}
 
-::: {#prp-charttype-bubble}
+:::: {#prp-charttype-bubble}
 [Bestand]{.smallcaps}: `Grafiek_bellen.xlsx`
 
 1.  Open het bestand.
@@ -294,18 +296,18 @@ Een goede layout van de brongegevens zorgt er voor dat je deze opmaak ook in de 
 
 5.  Breng de volgende wijzigingen aan:
 
-    -   Grafiektitel: `Marktaandelen`
-    -   Horizontale astitel: `Aantal producten`
-    -   Verticale astitel: `Omzet`
-    -   Scaling verticale as: 0 t/m 70000
-    -   Kleur bellen: oranje/goudachtig
-    -   Gegevenslabels: positie gecentreerd, weergave percentage marktaandeel
+    - Grafiektitel: `Marktaandelen`
+    - Horizontale astitel: `Aantal producten`
+    - Verticale astitel: `Omzet`
+    - Scaling verticale as: 0 t/m 70000
+    - Kleur bellen: oranje/goudachtig
+    - Gegevenslabels: positie gecentreerd, weergave percentage marktaandeel
 
 De toegevoegde gegevenslabels zijn niet de gewenste. Standaard wordt de Y-waarde (in dit geval van de omzet) weergegeven. Deze moet gewijzigd worden in de belgrootte, welke in dit geval door het marktaandeel bepaald wordt.
 
 6.  Selecteer onder [Label bevat]{.uicontrol} alleen [Belgrootte]{.uicontrol}.\
     ![](images/charttypes/bubble-labels.png)
-:::
+::::
 
 ## Radardiagram {#sec-charttype-radar}
 
@@ -363,9 +365,9 @@ Controlekaarten (ook wel regelkaarten genoemd) worden bij statistische procescon
 
 **Grenzen**
 
--   UCL - Bovenste controlegrens (Upper Control Limit)
+- UCL - Bovenste controlegrens (Upper Control Limit)
 
--   LCL - Onderste controlegrens (Lower Control Limit)
+- LCL - Onderste controlegrens (Lower Control Limit)
 
 De controlegrenzen worden uit de data berekend en, afhankelijk van het soort proces, op 2-3 standaardafwijkingen van het gemiddelde gezet. Vaak zie je ook nog een horizontale lijn voor het gemiddelde op de kaart. Deze lijn wordt met CL (Centrale Lijn) aangeduid.
 
@@ -382,11 +384,11 @@ Als voorbeeld een continu chemisch proces waarbij elk uur de temperatuur van het
 
 3.  Voer de volgende formules in
 
-    -   In kolom CL: `=$H$1`
+    - In kolom CL: `=$H$1`
 
-    -   In kolom UCL: `= $H$1 + 2*$H$2`
+    - In kolom UCL: `= $H$1 + 2*$H$2`
 
-    -   In kolom LCL: `= $H$1 - 2*$H$2`
+    - In kolom LCL: `= $H$1 - 2*$H$2`
 
 4.  Selecteer alle gegevens in de tabel en voeg een lijndiagram met markeringen in.
 
@@ -413,8 +415,8 @@ Het verschil in schaling kan voor onjuiste conclusies zorgen. In het lijndiagram
 
 **Lijndiagram**
 
--   verticaal: *waarde-as*
--   horizontaal: *categorie-as*
+- verticaal: *waarde-as*
+- horizontaal: *categorie-as*
 
 De horizontale as heeft gelijk verdeelde gegevenscategorieën (tekst of datums). Een datumas geeft datums in chronologische volgorde weer.
 
@@ -422,8 +424,8 @@ Een lijndiagram is goed voor het weergeven van de verandering van een variabele 
 
 **Spreidingsdiagram**
 
--   verticaal: *waarde-as*
--   horizontaal: *waarde-as*
+- verticaal: *waarde-as*
+- horizontaal: *waarde-as*
 
 De horizontale as kan numerieke waarden of datumwaarden weergeven. En je kunt de schaalopties van beide assen wijzigen. Het diagram geeft punten weer op het snijpunt van een x-waarde en een y-waarde.
 
@@ -435,8 +437,9 @@ Spreidingsdiagrammen worden veel in de wetenschap en de techniek gebruikt. Maar 
 
 ## Vertaaltabel grafieksoorten {#sec-charttype-translations}
 
+::: {#tbl-charttype-translations}
 | Nederlands        | Engels            | Duits              |
-|-------------------|-------------------|--------------------|
+|:------------------|:------------------|:-------------------|
 | Bellendiagram     | Bubble chart      | Blasendiagramm     |
 | Cirkeldiagram     | Pie chart         | Kreisdiagramm      |
 | Kolomdiagram      | Column chart      | Säulendiagramm     |
@@ -448,4 +451,5 @@ Spreidingsdiagrammen worden veel in de wetenschap en de techniek gebruikt. Maar 
 | Vlakdiagram       | Area chart        | Flächendiagramm    |
 | Watervaldiagram   | Waterfall chart   | Wasserfalldiagramm |
 
-: Nederlandse, Engelse en Duitse namen van een aantal grafieksoorten. {#tbl-charttype-translations}
+: Nederlandse, Engelse en Duitse namen van een aantal grafieksoorten.
+:::

@@ -4,11 +4,11 @@
 ```
 
 ::: callout-intro
--   Hulpprogramma Oplosser activeren.
--   Toepassingsgebied van Oplosser.
--   Opzetten van een berekeningsmodel.
--   Toevoegen van randvoorwaarden.
--   Tips gebruik Oplosser.
+- Hulpprogramma Oplosser activeren.
+- Toepassingsgebied van Oplosser.
+- Opzetten van een berekeningsmodel.
+- Toevoegen van randvoorwaarden.
+- Tips gebruik Oplosser.
 :::
 
 De Oplosser is een hulpprogramma (invoegtoepassing) binnen Excel om optimalisatieberekeningen uit te voeren. Bij zo'n berekening wil je een optimale waarde voor een formule in een bepaalde cel vinden, meestal een minimum of een maximum en soms een heel specifieke waarde.
@@ -75,8 +75,8 @@ Hoeveel korte en lange jacks moet je per week produceren om een maximale winst t
 
 Stel de beslissingsvariabelen vast. Dit zijn de veranderende cellen waarvoor je een waarde moet vaststellen die tot het optimale resultaat leiden. In dit voorbeeld zijn er twee beslissingsvariabelen welke gemakshalve met een letter worden aangeduid:
 
--   $\mathrm{K}$ = aantal korte jacks per week
--   $\mathrm{L}$ = aantal lange jacks per week
+- $\mathrm{K}$ = aantal korte jacks per week
+- $\mathrm{L}$ = aantal lange jacks per week
 
 ### Doelfunctie {#sec-solver-case-objective}
 
@@ -98,11 +98,11 @@ Daarnaast zijn er vaak algemene restricties die te maken hebben met het gegevens
 
 Dit alles leidt tot de formulering van de volgende restricties:
 
--   Restrictie snijtijd per week: $\mathrm{1 \times K + 2 \times L \le 32}$
--   Restrictie naaitijd per week: $\mathrm{3 \times K + 4 \times L \le 84}$
--   Restrictie marktvraag lange jacks: $\mathrm{L \le 12}$
--   Restricties positieve waarden: $\mathrm{K \ge 0}$ en $\mathrm{L \ge 0}$
--   Restricties gehele waarden: $\mathrm{K = integer}$ en $\mathrm{L = integer}$
+- Restrictie snijtijd per week: $\mathrm{1 \times K + 2 \times L \le 32}$
+- Restrictie naaitijd per week: $\mathrm{3 \times K + 4 \times L \le 84}$
+- Restrictie marktvraag lange jacks: $\mathrm{L \le 12}$
+- Restricties positieve waarden: $\mathrm{K \ge 0}$ en $\mathrm{L \ge 0}$
+- Restricties gehele waarden: $\mathrm{K = integer}$ en $\mathrm{L = integer}$
 
 ### Model in Excel {#sec-solver-case-model}
 
@@ -122,13 +122,15 @@ Er is niet één goede manier om een dergelijk model in Excel te bouwen. Wel zij
 
 4.  Maak voor elke restrictie een formule in een aparte cel en zet in de cel rechts er van de grenswaarde van de restrictie.
 
+::: {#tbl-solver-model}
 | cel | formule        | toelichting                |
-|-----|----------------|----------------------------|
+|:----|:---------------|:---------------------------|
 | D8  | `=B8*B4+C8*C4` | berekening totale snijtijd |
 | D9  | `=B9*B4+C9*C4` | berekening totale naaitijd |
 | D10 | `=C4`          | aantal lange jacks         |
 
-: Formules in het model. {#tbl-solver-model}
+: Formules in het model.
+:::
 
 ### Randvoorwaarden in Oplosser {#sec-solver-case-solverconstraints}
 
@@ -146,11 +148,11 @@ Relatie
 
 :   Mogelijke operatoren: `<=`, `=`, `>=`, `geh`, `bin` of `dif`.
 
-:   -   `geh` wordt later in het model weergegeven als `geheeltallig`. De waarden in de celverwijzingen moeten dan gehele getallen zijn, binnen een bepaalde kleine tolerantie (vastgelegd met de Precisie van randvoorwaarde in de opties van de Oplosser).
+:   - `geh` wordt later in het model weergegeven als `geheeltallig`. De waarden in de celverwijzingen moeten dan gehele getallen zijn, binnen een bepaalde kleine tolerantie (vastgelegd met de Precisie van randvoorwaarde in de opties van de Oplosser).
 
-:   -   `bin` wordt later in het model weergegeven als `binair`. De waarden in de celverwijzingen moeten of 0 of 1 zijn. Deze mogelijkheid kun je dus ook gebruiken voor “ja/nee” beslissingen.
+:   - `bin` wordt later in het model weergegeven als `binair`. De waarden in de celverwijzingen moeten of 0 of 1 zijn. Deze mogelijkheid kun je dus ook gebruiken voor “ja/nee” beslissingen.
 
-:   -   `dif` wordt later in het model weergegeven als `AllDifferent`. De waarden in alle celverwijzingen moeten verschillend zijn.
+:   - `dif` wordt later in het model weergegeven als `AllDifferent`. De waarden in alle celverwijzingen moeten verschillend zijn.
 
 Randvoorwaarde
 
@@ -173,8 +175,8 @@ Bij de casus WeatherLeather moet de winst gemaximaliseerd worden.
 
 4.  Controleer het volgende:
 
-    -   [Doelfunctie bepalen]{.uicontrol}: `$D$5`
-    -   [Naar]{.uicontrol}: `Max`
+    - [Doelfunctie bepalen]{.uicontrol}: `$D$5`
+    - [Naar]{.uicontrol}: `Max`
 
 5.  Klik in het vak [Door veranderen van variabelecellen]{.uicontrol} en selecteer daarna in het werkblad de cellen B4:C4. Excel maakt hier dan van `$B$4:$C$4`.
 
@@ -219,9 +221,9 @@ En er is ook een nieuw werkblad gemaakt met de naam [Antwoordrapport ...]{.uicon
 ![Antwoordrapport voor WeatherLeather.](images/solver/weatherleather-solver-report.png){#fig-weatherleather-solver-report}
 
 ::: {.callout-note title="Interpretatie antwoordrapport"}
--   De namen die in het rapport gebruikt worden zijn niet altijd juist of duidelijk. Dat komt omdat Excel deze namen haalt uit de de tekstcellen in de omgeving. Om te zorgen dat er wel goede namen in het rapport gebruikt worden moet je de relevante cellen in het werkblad eerst van een naam voorzien. Dit wordt sterk aanbevolen.
+- De namen die in het rapport gebruikt worden zijn niet altijd juist of duidelijk. Dat komt omdat Excel deze namen haalt uit de de tekstcellen in de omgeving. Om te zorgen dat er wel goede namen in het rapport gebruikt worden moet je de relevante cellen in het werkblad eerst van een naam voorzien. Dit wordt sterk aanbevolen.
 
--   Bij het onderdeel Randvoorwaarden in het Antwoordrapport is onder het kopje Status te zien welke restricties Bindend zijn. Wanneer dat het geval is wil dat zeggen dat de grens van de restrictie bereikt is en er geen speling meer is. Zo is in het voorbeeld te zien dat alle capaciteit voor de snijtijd en naaitijd gebruikt wordt. De marktafzet voor lange jacks is niet bindend, daar zouden nog 6 stuks meer afgezet kunnen worden.
+- Bij het onderdeel Randvoorwaarden in het Antwoordrapport is onder het kopje Status te zien welke restricties Bindend zijn. Wanneer dat het geval is wil dat zeggen dat de grens van de restrictie bereikt is en er geen speling meer is. Zo is in het voorbeeld te zien dat alle capaciteit voor de snijtijd en naaitijd gebruikt wordt. De marktafzet voor lange jacks is niet bindend, daar zouden nog 6 stuks meer afgezet kunnen worden.
 :::
 
 De vraag van WeatherLeather is nu opgelost. Er kan een maximale winst van € 2664 per week behaald worden door 20 korte jacks en 6 lange jacks per week te maken.
@@ -252,8 +254,9 @@ Het vinden van een oplossing hangt ook van de wijze waarop de Oplosser dit doet.
 
 Het dialoogvenster biedt uitgebreide mogelijkheden om het oplosproces te besturen. En de specificaties voor bepaalde problemen kunnen als een model worden opgeslagen en weer geladen worden. Een paar van deze instellingen worden hier in het kort behandeld. Voor meer verdieping moet de literatuur bestudeerd worden.
 
+::: {#tbl-solver-options tbl-colwidths="[25,75]"}
 | Instelling | Toelichting |
-|-----------------------------|-------------------------------------------|
+|:----------------------------|:------------------------------------------|
 | Max tijd | Het maximaal aantal seconden die de Oplosser mag besteden aan het iteratieproces. De standaardwaarde van 100 sec. kan verhoogd worden wanneer de Oplosser rapporteert dat de toegestane tijd bereikt is. |
 | Iteraties | Het maximaal aantal iteraties (herberekeningen). De standaardwaarde van 100 kan verhoogd worden wanneer geen oplossing gevonden kan worden. |
 | Precisie | Hiermee wordt bepaald of de celwaarde van een restrictie aan de opgegeven voorwaarde voldoet. Hoe groter de precisie (meer decimalen)hoe langer het duurt voordat de Oplosser met resultaten komt. |
@@ -265,7 +268,8 @@ Het dialoogvenster biedt uitgebreide mogelijkheden om het oplosproces te besture
 | Iteraties | Het maximaal aantal iteraties (herberekeningen). |
 | Resultaten iteraties weergeven | Bij inschakelen hiervan stopt de Oplosser na elke iteratie (herberekening)en geeft dan het resultaat weer. Normaliter niet gebruiken. |
 
-: Uitleg van de opties bij Oplosser. {#tbl-solver-options tbl-colwidths="\[25,75\]"}
+: Uitleg van de opties bij Oplosser.
+:::
 
 Aanvullende informatie:\
 [Support site van Frontline Systems (Engelstalig), de ontwikkelaar van Oplosser.](http://www.solver.com)
@@ -277,10 +281,10 @@ Aanvullende informatie:\
 
 Een bekende bonbonfabrikant wil een assortimentdoos uitbrengen met 2 soorten bonbons (kersenbonbons en hazelnootbonbons)en daarbij zoveel mogelijk winst behalen. Bekend is verder:
 
--   Een kersenbonbon neemt 16 cm^2^ ruimte in en een hazelnootbonbon 8 cm^2^. De bonbons worden door papier van elkaar gescheiden. Minimaal 320 cm^2^ van de doos moet met bonbons bedekt zijn.
--   Een kersenbonbon weegt 2 gram en een hazelnootbonbon weegt 1 gram. Uit marktonderzoek is gebleken dat het ideale gewicht van de inhoud van de doos tussen de 40 gram en 60 gram moet liggen.
--   Ook is uit marktonderzoek gebleken dat de doos minstens 35 bonbons moet bevatten waarvan zeker 10 kersenbonbons.
--   De winst op een kersenbonbon is 28 eurocent en op een hazelnootbonbon 20 eurocent.
+- Een kersenbonbon neemt 16 cm^2^ ruimte in en een hazelnootbonbon 8 cm^2^. De bonbons worden door papier van elkaar gescheiden. Minimaal 320 cm^2^ van de doos moet met bonbons bedekt zijn.
+- Een kersenbonbon weegt 2 gram en een hazelnootbonbon weegt 1 gram. Uit marktonderzoek is gebleken dat het ideale gewicht van de inhoud van de doos tussen de 40 gram en 60 gram moet liggen.
+- Ook is uit marktonderzoek gebleken dat de doos minstens 35 bonbons moet bevatten waarvan zeker 10 kersenbonbons.
+- De winst op een kersenbonbon is 28 eurocent en op een hazelnootbonbon 20 eurocent.
 
 1.  Wat zijn de beslissingsvariabelen?
 2.  Wat is de doelfunctie?
@@ -328,10 +332,10 @@ Optimale aantal winkels type A = 0, aantal type B = 4, aantal type C = 1, aantal
 
 Een bedrijf in Hongkong heeft zich toegelegd op het fabriceren van amerikaanse hardloopschoenen. Het bedrijf maakt drie modellen: Runner, Lady T, en Super A en wil hiermee zoveel mogelijk winst maken.
 
--   Het vervaardigen van 1 paar Runner kost 0,31 uur, van 1 paar Lady T kost 0,20 uur en van 1 paar Super A kost 0,25 uur. In totaal kan per week niet meer dan 150 uur geproduceerd worden.
--   De kapitaalinvestering bedraagt per paar Runner, Lady T, Super A respectievelijk € 16, € 12 en € 10. Er is per week € 8000 hiervoor beschikbaar.
--   Vanwege de beperkte machinecapaciteit kan er per week hoogstens 300 paar Runner, 400 paar Lady T en 400 paar Super A geproduceerd worden.
--   Op 1 paar Runner wordt een winst gemaakt van € 6 en de winst per paar Lady T is € 5 en per paar Super A bedraagt deze € 4.
+- Het vervaardigen van 1 paar Runner kost 0,31 uur, van 1 paar Lady T kost 0,20 uur en van 1 paar Super A kost 0,25 uur. In totaal kan per week niet meer dan 150 uur geproduceerd worden.
+- De kapitaalinvestering bedraagt per paar Runner, Lady T, Super A respectievelijk € 16, € 12 en € 10. Er is per week € 8000 hiervoor beschikbaar.
+- Vanwege de beperkte machinecapaciteit kan er per week hoogstens 300 paar Runner, 400 paar Lady T en 400 paar Super A geproduceerd worden.
+- Op 1 paar Runner wordt een winst gemaakt van € 6 en de winst per paar Lady T is € 5 en per paar Super A bedraagt deze € 4.
 
 Bereken met de oplosser de optimale productieaantallen en de maximale winst per week.
 
@@ -418,10 +422,10 @@ Een bedrijf heeft winkels in 6 plaatsen (Amersfoort, Eindhoven, Enschede, Lelyst
 
 Toelichting:
 
--   In de bovenste tabel staan de vervoerskosten in euro's per eenheid product van het DC naar de winkel. Zo kost het vervoer van 1 product van het DC Coevorden naar de winkel in Amersfoort € 100.
--   In de kolom "Aantal Nodig" staat het aantal producten dat de winkel moet ontvangen. Zo moet Amersfoort 225 producten ontvangen.
--   In het gebied "Aantal vervoerd van" moet het aantal producten komen te staan dat van het desbetreffende DC naar de winkel vervoerd wordt. De Oplosser moet deze aantallen bepalen.
--   De rij "Beginvoorraad" bevat het aantal producten dat op dit moment in het DC in voorraad is.
+- In de bovenste tabel staan de vervoerskosten in euro's per eenheid product van het DC naar de winkel. Zo kost het vervoer van 1 product van het DC Coevorden naar de winkel in Amersfoort € 100.
+- In de kolom "Aantal Nodig" staat het aantal producten dat de winkel moet ontvangen. Zo moet Amersfoort 225 producten ontvangen.
+- In het gebied "Aantal vervoerd van" moet het aantal producten komen te staan dat van het desbetreffende DC naar de winkel vervoerd wordt. De Oplosser moet deze aantallen bepalen.
+- De rij "Beginvoorraad" bevat het aantal producten dat op dit moment in het DC in voorraad is.
 
 Maak met behulp van de oplosser een zodanige vervoersplanning te maken dat de kosten minimaal zijn.
 
@@ -453,10 +457,10 @@ Los met behulp van de oplosser het volgende stelsel vergelijkingen op.
 
 Een spaarbank heeft 3 miljoen euro om te beleggen. De beleggingsportefeuilles zijn persoonlijke leningen, hypotheken (eerste en tweede hypotheken) en autoleasing. In de statuten van de bank staan een aantal voorwaarden t.a.v. de besteding van de gelden:
 
--   Minimaal 30% van het totaal uitgeleende bedrag moet voor hypotheken bestemd zijn.
--   Van het voor hypotheken bestemde bedrag moet minstens 50% voor eerste hypotheken aangewend worden.
--   Maximaal 25% van het totaal uitgeleende bedrag mag aan persoonlijke leningen en autoleasing samen besteed worden.
--   Maximaal 15% van het totaal uitgeleende bedrag mag aan persoonlijke leningen bestemd worden.
+- Minimaal 30% van het totaal uitgeleende bedrag moet voor hypotheken bestemd zijn.
+- Van het voor hypotheken bestemde bedrag moet minstens 50% voor eerste hypotheken aangewend worden.
+- Maximaal 25% van het totaal uitgeleende bedrag mag aan persoonlijke leningen en autoleasing samen besteed worden.
+- Maximaal 15% van het totaal uitgeleende bedrag mag aan persoonlijke leningen bestemd worden.
 
 De jaarlijkse opbrengst van elk type lening is in de volgende tabel weergegeven.
 

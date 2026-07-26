@@ -4,12 +4,12 @@
 ```
 
 ::: callout-intro
--   Uitleg macro's en het gebruik ervan.
--   Activeren tabblad Ontwikkelaars.
--   Opnemen van een macro met de macrorecorder.
--   Wijzigen van een macro.
--   Opdrachtknop maken.
--   Beveiligingsinstellingen.
+- Uitleg macro's en het gebruik ervan.
+- Activeren tabblad Ontwikkelaars.
+- Opnemen van een macro met de macrorecorder.
+- Wijzigen van een macro.
+- Opdrachtknop maken.
+- Beveiligingsinstellingen.
 :::
 
 Een taak die je in Microsoft Excel regelmatig moet uitvoeren kun je met een macro automatiseren. Een macro bestaat uit een reeks opdrachten en functies die door één commando of druk op een knop achter elkaar worden uitgevoerd.
@@ -58,14 +58,16 @@ Dan verschijnt het dialoogvenster ***Vertrouwenscentrum***.
 
 ![Macro instellingen in het vertrouwenscentrum.](images/macro/trust-center-macro-settings.png){#fig-trust-center-macro-settings}
 
-| Instelling                                          | Toelichting                                                                                                                                                                                                                                                                                                                                                           |
-|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Macro's zonder meldingen uitschakelen               | Kies deze optie wanneer je macro's niet wilt toestaan. Alle macro's in documenten worden uitgeschakeld, evenals de beveiligingswaarschuwingen over macro's. Bestanden die macro's bevatten die je wel vertrouwt, kun je eventueel opslaan op een vertrouwde locatie. Bestanden op vertrouwde locaties worden uitgevoerd zonder controle door het beveiligingssysteem. |
-| Macro's met meldingen uitschakelen                  | Dit is de standaardinstelling en de beste keuze. Met deze instelling krijg je een melding waarbij je kunt kiezen om macro's macro's wel of niet uit te voeren.                                                                                                                                                                                                        |
-| Macro's uitschakelen, behalve digitaal ondertekende | De maker van een macro kan deze digitaal ondertekenen. Wanneer je deze maker dan als een vertrouwde instantie aanmerkt dan wordt de macro zonder waarschuwingen uitgevoerd. Alle niet-ondertekende macro´s worden zonder melding uitgeschakeld.                                                                                                                       |
-| Macro's inschakelen                                 | Kies deze optie wanneer je alle macro's wilt uitvoeren. Deze optie wordt niet aanbevolen want hierdoor ben je niet meer beschermd tegen schadelijke macro's.                                                                                                                                                                                                          |
+::: {#tbl-macro-security-settings tbl-colwidths="[25,75]"}
+| Instelling | Toelichting |
+|:-------------|:--------------------------------------------------------|
+| Macro's zonder meldingen uitschakelen | Kies deze optie wanneer je macro's niet wilt toestaan. Alle macro's in documenten worden uitgeschakeld, evenals de beveiligingswaarschuwingen over macro's. Bestanden die macro's bevatten die je wel vertrouwt, kun je eventueel opslaan op een vertrouwde locatie. Bestanden op vertrouwde locaties worden uitgevoerd zonder controle door het beveiligingssysteem. |
+| Macro's met meldingen uitschakelen | Dit is de standaardinstelling en de beste keuze. Met deze instelling krijg je een melding waarbij je kunt kiezen om macro's macro's wel of niet uit te voeren. |
+| Macro's uitschakelen, behalve digitaal ondertekende | De maker van een macro kan deze digitaal ondertekenen. Wanneer je deze maker dan als een vertrouwde instantie aanmerkt dan wordt de macro zonder waarschuwingen uitgevoerd. Alle niet-ondertekende macro´s worden zonder melding uitgeschakeld. |
+| Macro's inschakelen | Kies deze optie wanneer je alle macro's wilt uitvoeren. Deze optie wordt niet aanbevolen want hierdoor ben je niet meer beschermd tegen schadelijke macro's. |
 
-: Overzicht Macro instellingen. {#tbl-macro-security-settings tbl-colwidths="\[25,75\]"}
+: Overzicht Macro instellingen.
+:::
 
 ## Macro's opnemen {#sec-macros-recording}
 
@@ -97,9 +99,9 @@ Het is niet verplicht om aan een macro een sneltoets toe te wijzen, maar voor ve
 
 De plekken waar een macro kan worden opgeslagen zijn:
 
--   Deze werkmap
--   Nieuwe werkmap
--   Persoonlijke Macrowerkmap
+- Deze werkmap
+- Nieuwe werkmap
+- Persoonlijke Macrowerkmap
 
 Het is wel belangrijk om hier van te voren goed over na te denken. Wanneer de macro alleen in de actieve werkmap gebruikt gaat worden, dan kies je voor [Deze werkmap]{.uicontrol}. Moet de macro ook in andere werkmappen gebruikt worden, dus eigenlijk altijd beschikbaar zijn, dan is [Persoonlijke Macrowerkmap]{.uicontrol} de beste keuze. De keuze [Nieuwe werkmap]{.uicontrol} wordt eigenlijk nooit gebruikt.
 
@@ -136,10 +138,10 @@ Maak een macro die een geselecteerde cel opmaakt met het lettertype Comic Sans M
 
 6.  Voer de volgende acties uit op de geselecteerde cel: [Rechter muisklik \> Celeigenschappen \> tab Lettertype]{.uicontrol} en stel het volgende in:
 
-    -   Lettertype: Comic Sans MS
-    -   Tekenstijl: Vet en cursief
-    -   Punten: 16
-    -   Kleur: Rood
+    - Lettertype: Comic Sans MS
+    - Tekenstijl: Vet en cursief
+    - Punten: 16
+    - Kleur: Rood
 
 7.  Kies tab [Start \> Opmaak (groep Cellen) \> Kolombreedte AutoAanpassen]{.uicontrol}.
 
@@ -182,8 +184,8 @@ Een eenmaal gemaakte macro kan gewijzigd worden zonder de macro weer helemaal op
 
 Breng de volgende wijzigingen aan in de macro [Celopmaak]{.varname}:
 
--   Ken sneltoets [Control t]{.uicontrol} toe.
--   Wijzig lettergrootte in 18 pt.
+- Ken sneltoets [Control t]{.uicontrol} toe.
+- Wijzig lettergrootte in 18 pt.
 
 ::: {#prp-macros-cellformat-editing}
 Ga verder met het bestand uit @prp-macros-cellformat-test.
@@ -204,8 +206,8 @@ Je krijgt nu weer het dialoogvenster met beschikbare macro's, zie @fig-macro-cel
 
 Een nieuw venster Microsoft Visual Basic verschijnt nu met in het codescherm de programmacode van de macro. In deze code kom je op twee plaatsen tegen dat de tekstgrootte 16 wordt:
 
--   `Maakt cel op in Comic Sans, 16pt, vet, cursief en rood`
--   `.Size = 16`
+- `Maakt cel op in Comic Sans, 16pt, vet, cursief en rood`
+- `.Size = 16`
 
 6.  Wijzig dit op beide plaatsen in `18`.
 
@@ -218,9 +220,9 @@ Een nieuw venster Microsoft Visual Basic verschijnt nu met in het codescherm de 
 
 Je kunt een macro op een van de volgende manieren uitvoeren:
 
--   Via het menu [tab Ontwikkelaars \> Macro's \> macro selecteren \> Uitvoeren]{.uicontrol}.
--   Via een sneltoets wanneer er eentje aan de macro is toegewezen.
--   Via een opdrachtknop voor de macro.
+- Via het menu [tab Ontwikkelaars \> Macro's \> macro selecteren \> Uitvoeren]{.uicontrol}.
+- Via een sneltoets wanneer er eentje aan de macro is toegewezen.
+- Via een opdrachtknop voor de macro.
 
 In deze taak wordt voor de eerder gemaakte macro [Celopmaak]{.varname} een opdrachtknop op het werkblad gemaakt.
 
@@ -274,7 +276,7 @@ Macro's kunnen verwijderd worden via [tab Ontwikkelaars \> Macro's (groep Progra
 
 ## Opgaven {#sec-macros-exercises}
 
-::: {#exr-macr001}
+:::: {#exr-macr001}
 **Achtergrondkleur (macr001)**
 
 Neem een macro op die de actieve cel een grijze achtergrondkleur geeft.
@@ -299,9 +301,9 @@ End Sub
 
 `r unhide()`
 :::
-:::
+::::
 
-::: {#exr-macr002}
+:::: {#exr-macr002}
 **Procentuele opmaak (macr002)**
 
 Neem een macro op met de naam ProcentOpmaak die een getal opmaakt als procenten met 1 decimaal en het getal in de cel centreert.
@@ -323,16 +325,16 @@ End Sub
 
 `r unhide()`
 :::
-:::
+::::
 
-::: {#exr-macr003}
+:::: {#exr-macr003}
 **Opmaak cel A1 (macr003)**
 
 Neem een macro op die het volgende uitvoert:
 
--   Rijhoogte rij 1 wordt 18
--   Kolombreedte van de eerste kolom wordt 3
--   Tekst in cel A1 wordt Tahoma 14, vet, blauwe kleur
+- Rijhoogte rij 1 wordt 18
+- Kolombreedte van de eerste kolom wordt 3
+- Tekst in cel A1 wordt Tahoma 14, vet, blauwe kleur
 
 ::: {.content-visible when-format="html:js"}
 `r hide("Antwoord")` Een mogelijke oplossing.
@@ -358,9 +360,9 @@ End Sub
 
 `r unhide()`
 :::
-:::
+::::
 
-::: {#exr-macr004}
+:::: {#exr-macr004}
 **Rasterlijnen afdrukken (macr004)**
 
 Neem een macro op die er voor zorgt dat bij het afdrukken ook de rasterlijnen worden afgedrukt. Deze eigenschap is te vinden bij [tab Pagina-indeling \> Pagina-instelling \> tab Blad]{.uicontrol}.
@@ -381,4 +383,4 @@ End Sub
 
 `r unhide()`
 :::
-:::
+::::

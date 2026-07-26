@@ -4,22 +4,22 @@
 ```
 
 ::: callout-intro
--   Mogelijkheden van een draaitabel.
--   Draaitabel maken.
--   Brongegevens van een draaitabel.
--   Groeperen van dataum/tijd gegevens.
--   Het filteren van een draaitabel met rapportfilters, slicers en tijdlijnen.
--   Draaigrafiek maken.
+- Mogelijkheden van een draaitabel.
+- Draaitabel maken.
+- Brongegevens van een draaitabel.
+- Groeperen van dataum/tijd gegevens.
+- Het filteren van een draaitabel met rapportfilters, slicers en tijdlijnen.
+- Draaigrafiek maken.
 :::
 
 Een draaitabel is een hulpmiddel om gegevens samen te vatten. Het is een interactieve dynamische tabel waarin je snel en gemakkelijk grote hoeveelheden gegevens kunt samenvatten, combineren en vergelijken. Het is wel noodzakelijk dat de gegevens goed geordend in een werkblad staan.
 
 Een draaitabel is vooral erg geschikt wanneer variabelen uitgezet moet worden tegen andere variabelen, waardoor je antwoorden kunt krijgen op vragen als:
 
--   Welk produkt levert de hoogste winstbijdrage?
--   Welke verkoper maakt de hoogste omzet?
--   Welke afdeling maakt de meeste kosten?
--   ...
+- Welk produkt levert de hoogste winstbijdrage?
+- Welke verkoper maakt de hoogste omzet?
+- Welke afdeling maakt de meeste kosten?
+- ...
 
 ::: {#exm-supermarket}
 **Omzet per categorie**
@@ -35,14 +35,16 @@ Omdat deze resultaten worden samengevat moet ook nog aangegeven worden welke ber
 
 Een draaitabel heeft vier gebieden waarin je velden kunt plaatsen:
 
+::: {#tbl-pivotareas}
 | Gebied | Toelichting |
-|------------|------------------------------------------------------------|
+|:---------------|:-------------------------------------------------------|
 | Waarden | De velden met numerieke gegevens die je wilt samenvatten, meestal voor de berekening van totalen en gemiddeldes. |
 | Rijen | Deze velden worden gebruikt om afzonderlijke groepen te maken. De informatie voor elke groep wordt in een aparte rij gezet. |
 | Kolommen | Deze velden worden ook gebruikt om afzonderlijke groepen te maken. Ze worden meestal gebruikt wanneer de gegevens in de rijen wilt onderverdelen. Deze groepen worden in afzonderlijke kolommen weergegeven. Neem velden die niet teveel groepen geven, anders wordt de tabel erg breed. |
 | Filters | Deze velden kunnen gebruikt worden om de gegevens te filteren. |
 
-: Gebieden in een draaitabel. {#tbl-pivotareas}
+: Gebieden in een draaitabel.
+:::
 
 ## Draaitabellen maken {#sec-pivots-creating}
 
@@ -110,9 +112,9 @@ Het draaitabelrapport is nu in principe gereed, maar kan nog wel een aantal verb
 ::: {.callout-note title="Waardeveldinstellingen"}
 Het dialoogvenster ***Waardeveldinstellingen*** is erg belangrijk bij het maken van draaitabelrapportages. Je kunt hier diverse zaken regelen, zoals:
 
--   de weer te geven naam via het tekstvak [Aangepaste naam]{.uicontrol}.
--   de berekeningsmethode, standaard `Som`. Andere mogelijkheden zijn: `Aantal`, `Gemiddelde`, `Min`, `Max`, `Product`, `Stdev`, `Stdevp`, `Var`, `Varp`.
--   hoe je de waarden wilt weergeven, bijvoorbeeld als percentages van het rij- of kolomtotaal.
+- de weer te geven naam via het tekstvak [Aangepaste naam]{.uicontrol}.
+- de berekeningsmethode, standaard `Som`. Andere mogelijkheden zijn: `Aantal`, `Gemiddelde`, `Min`, `Max`, `Product`, `Stdev`, `Stdevp`, `Var`, `Varp`.
+- hoe je de waarden wilt weergeven, bijvoorbeeld als percentages van het rij- of kolomtotaal.
 :::
 
 2.  Klik op de knop [Getalnotatie]{.uicontrol}. Het dialoogvenster Celeigenschappen verschijnt.
@@ -240,9 +242,9 @@ Allereerst wordt met een draaitabel de omzet per verkoper per productcategorie g
 ![Specificeer het gegevensgebied en de locatie voor de draaitabel.](images/pivots/invoices-pivot-create.png){#fig-invoices-pivot-create}
 
 ::: {.callout-note title="Gegevensgebied en locatie draaitabel"}
--   Omdat het gegevensgebied hier een tabel is met de naam [Verkoopdata]{.varname}, wordt deze naam automatisch ingevuld en niet de celadressen.
+- Omdat het gegevensgebied hier een tabel is met de naam [Verkoopdata]{.varname}, wordt deze naam automatisch ingevuld en niet de celadressen.
 
--   Om de draaitabel op een nieuw werkblad te laten verschijnen accepteer je de standaardkeuze [Nieuw Werkblad]{.uicontrol}.
+- Om de draaitabel op een nieuw werkblad te laten verschijnen accepteer je de standaardkeuze [Nieuw Werkblad]{.uicontrol}.
 :::
 
 3.  Klik [OK]{.uicontrol}.
@@ -412,10 +414,10 @@ Het dialoogvenster ***Tijdlijn invoegen*** toont alleen het veld [datum]{.varnam
 ::: {.callout-note title="Onderdelen van een tijdlijn"}
 ![Tijdlijn voor het veld datum.](images/pivots/supermarket-timeline-months.png){#fig-supermarket-timeline-months}
 
--   Een schuifbalk voor de zichtbare periode.
--   Handgrepen om de periode te selecteren waarop gefilterd moet worden.
--   Keuze voor de weer te geven tijdsperiode (Jaren, Kwartalen, Maanden, Dagen).
--   Wanneer je een tijdlijn selecteert krijg je op de randen handgrepen waarmee je het gebied groter/kleiner kunt maken.
+- Een schuifbalk voor de zichtbare periode.
+- Handgrepen om de periode te selecteren waarop gefilterd moet worden.
+- Keuze voor de weer te geven tijdsperiode (Jaren, Kwartalen, Maanden, Dagen).
+- Wanneer je een tijdlijn selecteert krijg je op de randen handgrepen waarmee je het gebied groter/kleiner kunt maken.
 :::
 
 3.  Selecteer een paar maanden en bekijk de resultaten.

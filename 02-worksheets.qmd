@@ -1,13 +1,13 @@
 # Het werkblad {#sec-worksheets}
 
 ::: callout-intro
--   Inrichting en gebruik van het werkblad.
--   Het activeren van een werkblad.
--   Het toevoegen, verwijderen, verplaatsen en kopieren van een werkblad.
--   De naam van een werkblad en het wijzigen ervan.
--   Selecteren met de muis.
--   Het belangrijke verschil tussen de inhoud en de opmaak van een cel.
--   Het afdrukken en de afdrukinstellingen.
+- Inrichting en gebruik van het werkblad.
+- Het activeren van een werkblad.
+- Het toevoegen, verwijderen, verplaatsen en kopieren van een werkblad.
+- De naam van een werkblad en het wijzigen ervan.
+- Selecteren met de muis.
+- Het belangrijke verschil tussen de inhoud en de opmaak van een cel.
+- Het afdrukken en de afdrukinstellingen.
 :::
 
 In een werkmap komen 1 of meerdere werkbladen te staan. Elk werkblad heeft een [tab]{.uicontrol} die onderaan in het venster van de werkmap te zien is. Op de tab staat de naam van het werkblad. In het werkblad worden de gegevens en de formules ingevoerd. De belangrijkste onderwerpen die in dit onderdeel aan bod komen zijn hoe en waar je deze gegevens in het werkblad invoert en hoe ze worden weergegeven.
@@ -32,9 +32,9 @@ Je kunt deze richting wijzigen in [Bestand \> Opties \> Geavanceerd]{.uicontrol}
 
 De inhoud van een cel kan bestaan uit:
 
--   tekst
--   getallen
--   formules
+- tekst
+- getallen
+- formules
 
 In de formules mogen verwijzingen naar andere cellen voorkomen. Wanneer dan de inhoud van deze cellen gewijzigd wordt, dan worden de formules automatisch opnieuw doorgerekend. Dit maakt een spreadsheet erg krachtig.
 
@@ -71,8 +71,8 @@ Het is een goede gewoonte om alleen werkbladen met inhoud in de werkmap te bewar
 
 Er zijn nu twee mogelijkheden:
 
--   Het werkblad wordt direct verwijderd. In dat geval is er geen volgende stap.
--   Er verschijnt een dialoogvenster waarin om een bevestiging van de verwijdering gevraagd wordt.
+- Het werkblad wordt direct verwijderd. In dat geval is er geen volgende stap.
+- Er verschijnt een dialoogvenster waarin om een bevestiging van de verwijdering gevraagd wordt.
 
 2.  Klik [Verwijderen]{.uicontrol}.
 :::
@@ -84,8 +84,8 @@ Het is aan te bevelen om het werkblad een zinvolle naam te geven en niet de stan
 ::: {#prp-ws-rename}
 1.  Wijzig de naam van een werkblad op een van de volgende manieren:
 
-    -   Rechtermuisklik op de tabnaam en kies dan [Naam wijzigen]{.uicontrol}.
-    -   Dubbelklikken op de tabnaam van het werkblad.
+    - Rechtermuisklik op de tabnaam en kies dan [Naam wijzigen]{.uicontrol}.
+    - Dubbelklikken op de tabnaam van het werkblad.
 
 2.  Typ de nieuwe naam in op de tab en sluit af met [Enter]{.uicontrol}.
 :::
@@ -99,17 +99,18 @@ Het is aan te bevelen om het werkblad een zinvolle naam te geven en niet de stan
 
 2.  Voer naar keuze een of meerdere van de volgende mogelijkheden uit:
 
--   *Naar map* - Standaard staat hier dezelfde map. Door op de keuzepijl aan het eind te klikken kan gekozen worden uit andere geopende werkmappen of een nieuwe werkmap. In het laatste geval wordt een nieuwe werkmap aangemaakt.
--   *Voor blad* - Kies de plaats in de doelmap waar de kopie moet komen.
--   *Kopie maken* - Wanneer deze keuze wordt aangevinkt, dan wordt er een kopie van het werkblad gemaakt. Wordt dit niet aangevinkt, dan wordt het werkblad verplaatst.
+- *Naar map* - Standaard staat hier dezelfde map. Door op de keuzepijl aan het eind te klikken kan gekozen worden uit andere geopende werkmappen of een nieuwe werkmap. In het laatste geval wordt een nieuwe werkmap aangemaakt.
+- *Voor blad* - Kies de plaats in de doelmap waar de kopie moet komen.
+- *Kopie maken* - Wanneer deze keuze wordt aangevinkt, dan wordt er een kopie van het werkblad gemaakt. Wordt dit niet aangevinkt, dan wordt het werkblad verplaatst.
 :::
 
 ## Selecteren met de muis {#sec-worksheet-mouseselections}
 
 Het komt heel veel voor dat een opdracht op een aantal cellen tegelijk moet worden uitgevoerd. Bijvoorbeeld wanneer je de tekst in een aantal cellen wilt centreren, of het lettertype in deze cellen wilt veranderen. Het is daarom erg belangrijk dat je routine krijgt in het selecteren van meerdere cellen tegelijk. In @tbl-mouse-selections zie je de meest gebruikte selecties.
 
+::: {#tbl-mouse-selections}
 | gewenste selectie | methode |
-|------------------------|-----------------------------------------------|
+|:------------------------|:----------------------------------------------|
 | enkele cel | Klik op de betreffende cel. |
 | aaneensluitende reeks cellen | Klik op de eerste cel en sleep dan tot de laatste cel. |
 | een kolom | Klik op de kolomletter. |
@@ -118,7 +119,8 @@ Het komt heel veel voor dat een opdracht op een aantal cellen tegelijk moet word
 | reeks aaneensluitende rijen | Klik op de eerste rijnummer en sleep tot de laatste rijnummer. |
 | alle cellen in werkblad | Klik op het knopje boven rijnummer 1 en links van kolom letter A of sneltoets [CTRL A]{.uicontrol} |
 
-: Meest gebruikte selecties met de muis. {#tbl-mouse-selections}
+: Meest gebruikte selecties met de muis.
+:::
 
 Bij het selecteren kun je ook gebruik maken van de [SHIFT]{.uicontrol} toets of de [CTRL]{.uicontrol} toets, met de volgende effecten:
 
@@ -126,11 +128,11 @@ Bij het selecteren kun je ook gebruik maken van de [SHIFT]{.uicontrol} toets of 
 
 :   Hiermee kun je een aaneensluitend gebied selecteren.
 
-:   -   Voor een rechthoekig gebied met cellen klik je op een van de cellen in de hoekpunten, dan [SHIFT]{.uicontrol} toets indrukken en ingedrukt houden, klik dan op de cel in het hoekpunt diagonaal daar tegenover.
+:   - Voor een rechthoekig gebied met cellen klik je op een van de cellen in de hoekpunten, dan [SHIFT]{.uicontrol} toets indrukken en ingedrukt houden, klik dan op de cel in het hoekpunt diagonaal daar tegenover.
 
-:   -   Voor een reeks aaneensluitende kolommen selecteer je de eerste kolom, houd de [SHIFT]{.uicontrol} toets ingedrukt en selecteer de laatste kolom.
+:   - Voor een reeks aaneensluitende kolommen selecteer je de eerste kolom, houd de [SHIFT]{.uicontrol} toets ingedrukt en selecteer de laatste kolom.
 
-:   -   Voor een reeks aaneensluitende rijen selecteer je de eerste rij, houd de [SHIFT]{.uicontrol} toets ingedrukt en selecteer de laatste rij.
+:   - Voor een reeks aaneensluitende rijen selecteer je de eerste rij, houd de [SHIFT]{.uicontrol} toets ingedrukt en selecteer de laatste rij.
 
 [CTRL]{.uicontrol}
 
@@ -148,9 +150,9 @@ Bij het selecteren kun je ook gebruik maken van de [SHIFT]{.uicontrol} toets of 
 
 Om een aaneensluitend gebied aan te duiden worden de celadressen gebruikt. Een paar voorbeelden:
 
--   `A2:C7` is een rechthoek cellen van A2 tot en met C7. Voor het adres van een gebied noem je altijd eerst het adres van de linkerbovenhoek, dan een dubbele punt en dan het adres van de rechteronderhoek.
--   `B:E` zijn de kolommen B tot en met E.
--   `3:9` zijn de rijen 3 tot en met 9.
+- `A2:C7` is een rechthoek cellen van A2 tot en met C7. Voor het adres van een gebied noem je altijd eerst het adres van de linkerbovenhoek, dan een dubbele punt en dan het adres van de rechteronderhoek.
+- `B:E` zijn de kolommen B tot en met E.
+- `3:9` zijn de rijen 3 tot en met 9.
 
 ## Cel: Inhoud en opmaak {#sec-ws-cell}
 
@@ -167,7 +169,6 @@ In de cellen `A1:A10` van het werkblad in @fig-worksheet-cell-formats) is steeds
 Je kunt aan het uiterlijk bijna nooit de opmaak zien en vaak ook de inhoud niet. Inhoud en opmaak zijn twee verschillende zaken.
 
 ::: {.callout-important title="Inhoud en opmaak niet tegelijk invoeren"}
-
 Pas op dat je bij het invoeren van gegevens in een cel niet tegelijk ook de opmaak intypt.
 
 Wanneer je bijvoorbeeld in cel `A9` letterlijk intypt `40.299 uren`, dan wordt dat als een stuk tekst gezien in plaats van het getal `40299`. En omdat het tekst is kun je er niet meer mee rekenen.
@@ -202,9 +203,9 @@ Een voorbeeld van de afdruk en mogelijkheden om instellingen te wijzigen, worden
 
 ![Afdrukvoorbeeld.](images/common/print-preview.png){#fig-print-preview}
 
--   Wanneer je de marges wilt zien, klik dan op de knop [Marges weergeven]{.uicontrol} rechtsonder in het scherm.
+- Wanneer je de marges wilt zien, klik dan op de knop [Marges weergeven]{.uicontrol} rechtsonder in het scherm.
 
--   Door klikken op de link [Pagina-instelling]{.uicontrol} krijg je een dialoogvenster met tabbladen waarmee je allerlei opties voor de afdruk beschikbaar hebt.
+- Door klikken op de link [Pagina-instelling]{.uicontrol} krijg je een dialoogvenster met tabbladen waarmee je allerlei opties voor de afdruk beschikbaar hebt.
 :::
 
 ### Pagina Lay-out {#sec-ws-page-layout}
@@ -235,10 +236,10 @@ Door op de pijltjes aan het eind van de vakken koptekst en voettekst te klikken 
 
 Kop- en voetteksten hebben elk drie secties (links, midden en rechts). In elk deel kun je eigen tekst intypen. Je kunt via de aanwezige knoppen ook voorgedefinieerde inhoud ingeven als:
 
--   Paginanummer
--   Aantal pagina's
--   Datum en tijd
--   Bestandspad, bestandsnaam en de naam van het werkblad
+- Paginanummer
+- Aantal pagina's
+- Datum en tijd
+- Bestandspad, bestandsnaam en de naam van het werkblad
 
 #### Blad {#sec-ws-pagesetup-sheet .unnumbered}
 
@@ -272,9 +273,9 @@ Om weer naar de weergave [Normaal]{.uicontrol} over te schakelen kies je [Beeld 
 
 Pagina-einden kunnen ook handmatig aangebracht worden. Ga hiervoor als volgt te werk.
 
--   [Horizontaal pagina-einde]{.term}: Selecteer de rij die op een nieuwe pagina moet beginnen.
+- [Horizontaal pagina-einde]{.term}: Selecteer de rij die op een nieuwe pagina moet beginnen.
 
--   [Verticaal pagina-einde]{.term}: Selecteer de kolom die op een nieuwe pagina moet beginnen.
+- [Verticaal pagina-einde]{.term}: Selecteer de kolom die op een nieuwe pagina moet beginnen.
 
 Kies dan [Pagina-indeling \> Eindemarkeringen (groep Pagina-instelling) \> Pagina-einde invoegen]{.uicontrol}.
 
@@ -282,16 +283,17 @@ Kies dan [Pagina-indeling \> Eindemarkeringen (groep Pagina-instelling) \> Pagin
 
 De automatisch door Excel gegenereerde pagina-einden kunnen niet verwijderd worden, de handmatig aangebrachte einden wel. Ga hiervoor als volgt te werk.
 
--   [Horizontaal pagina-einde]{.term}: Selecteer de rij onder de pagina-einde.
+- [Horizontaal pagina-einde]{.term}: Selecteer de rij onder de pagina-einde.
 
--   [Verticaal pagina-einde]{.term}: Selecteer de kolom rechts van de pagina-einde.
+- [Verticaal pagina-einde]{.term}: Selecteer de kolom rechts van de pagina-einde.
 
 Kies dan [Pagina-indeling \> Eindemarkeringen (groep Pagina-instelling) \> Pagina-einde verwijderen]{.uicontrol}.
 
 ## Sneltoetsen celverplaatsingen {#sec-ws-cell-movements}
 
+::: {#tbl-shortcuts-cell-movements}
 | Sneltoets | Actieve cel wordt |
-|-------------------------|-----------------------------------------------|
+|:------------------------|:----------------------------------------------|
 | pijl omhoog | 1 cel hoger |
 | pijl rechts | 1 cel naar rechts |
 | pijl omlaag | 1 cel lager |
@@ -303,4 +305,5 @@ Kies dan [Pagina-indeling \> Eindemarkeringen (groep Pagina-instelling) \> Pagin
 | Home | De eerste cel in de rij |
 | Ctrl Home | De eerste cel in het werkblad, dus A1 |
 
-: Sneltoetsen celverplaatsingen. {#tbl-shortcuts-cell-movements}
+: Sneltoetsen celverplaatsingen.
+:::
