@@ -101,15 +101,15 @@ Bij een berekeningsmodel heb je altijd te maken met drie soorten cellen.
 
 Invoer (input)
 
-:   Hierin zet de gebruiker steeds andere waarden in, waarmee wat gedaan moet worden. In feite zijn dit de cellen voor de variabelen.
+: Hierin zet de gebruiker steeds andere waarden in, waarmee wat gedaan moet worden. In feite zijn dit de cellen voor de variabelen.
 
 Berekeningen
 
-:   Hierin worden allerlei berekeningen uitgevoerd met de waarden in de invoercellen.
+: Hierin worden allerlei berekeningen uitgevoerd met de waarden in de invoercellen.
 
 Uitvoer (output)
 
-:   Hierin komt het resultaat te staan.
+: Hierin komt het resultaat te staan.
 
 De stroomrichting in een model loopt van invoer via berekeningen naar uitvoer. Bij het opzetten van een model moet je eigenlijk andersom denken. Immers het gaat om het gewenste resultaat. Uit de gewenste resultaten wordt dan afgeleid welke berekeningen uitgevoerd moeten worden. En die bepalen weer welke input daarvoor nodig is.
 
@@ -345,7 +345,7 @@ Je kunt echter vrij gemakkelijk nieuwe namen in bestaande formules gebruiken. In
 
 2.  Selecteer cel B5.
 
-3.  Kies [Formules]{.uicontrol} en klik op de [pijl van de knop Naam definiëren (groep Gedefinieerde namen)]{.uicontrol} en kies dan voor [Namen gebruiken]{.uicontrol}.
+3.  Kies [Formules]{.uicontrol} en klik op de [pijl van de knop Naam definiëren (groep Gedefinieerde namen)]{.uicontrol} en kies dan voor [Namen toepassen]{.uicontrol}.
 
 ![Dialoogvenster naam gebruiken.](images/calculations/name-apply.png){#fig-name-apply}
 
