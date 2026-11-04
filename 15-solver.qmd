@@ -15,15 +15,15 @@ De Oplosser is een hulpprogramma (invoegtoepassing) binnen Excel om optimalisati
 
 doelcel
 
-:   Dit is de de cel met een formule waarvoor je de optimale uitkomst wilt vinden.
+: Dit is de de cel met een formule waarvoor je de optimale uitkomst wilt vinden.
 
 variabele cellen, veranderende cellen, beslissingsvariabelen
 
-:   Dit zijn de cellen die de uitkomst van de formule bepalen. Door de waarden hierin te wijzigen, verandert ook de uitkomst van de formule.
+: Dit zijn de cellen die de uitkomst van de formule bepalen. Door de waarden hierin te wijzigen, verandert ook de uitkomst van de formule.
 
 restricties, randvoorwaarden, constraints
 
-:   Dit zijn beperkingen die voor de variabele cellen gelden, deze kunnen vaak niet alle mogelijke waarden aannemen en zijn aan grenzen gebonden.
+: Dit zijn beperkingen die voor de variabele cellen gelden, deze kunnen vaak niet alle mogelijke waarden aannemen en zijn aan grenzen gebonden.
 
 ::: {.callout-note title="Doelzoeken of Oplosser?"}
 Oplosser heeft meer mogelijkheden dan Doelzoeken om "Wat-Als" analyses uit te voeren en is veel breder inzetbaar. Oplosser past de waarden van de veranderende cellen aan binnen de grenzen van de randvoorwaarden om tot de optimale oplossing van de doelcel te komen.
@@ -142,21 +142,21 @@ Elke randvoorwaarde bestaat uit drie onderdelen: een Celverwijzing, een relatie 
 
 Celverwijzing
 
-:   Celadres of naam of cellenbereik waarvan je de waarden wilt beperken. Je kunt een enkele cel of een bereik gebruiken, maar niet meerdere bereiken.
+: Celadres of naam of cellenbereik waarvan je de waarden wilt beperken. Je kunt een enkele cel of een bereik gebruiken, maar niet meerdere bereiken.
 
 Relatie
 
-:   Mogelijke operatoren: `<=`, `=`, `>=`, `geh`, `bin` of `dif`.
+: Mogelijke operatoren: `<=`, `=`, `>=`, `geh`, `bin` of `dif`.
 
-:   - `geh` wordt later in het model weergegeven als `geheeltallig`. De waarden in de celverwijzingen moeten dan gehele getallen zijn, binnen een bepaalde kleine tolerantie (vastgelegd met de Precisie van randvoorwaarde in de opties van de Oplosser).
+: - `geh` wordt later in het model weergegeven als `geheeltallig`. De waarden in de celverwijzingen moeten dan gehele getallen zijn, binnen een bepaalde kleine tolerantie (vastgelegd met de Precisie van randvoorwaarde in de opties van de Oplosser).
 
-:   - `bin` wordt later in het model weergegeven als `binair`. De waarden in de celverwijzingen moeten of 0 of 1 zijn. Deze mogelijkheid kun je dus ook gebruiken voor “ja/nee” beslissingen.
+: - `bin` wordt later in het model weergegeven als `binair`. De waarden in de celverwijzingen moeten of 0 of 1 zijn. Deze mogelijkheid kun je dus ook gebruiken voor “ja/nee” beslissingen.
 
-:   - `dif` wordt later in het model weergegeven als `AllDifferent`. De waarden in alle celverwijzingen moeten verschillend zijn.
+: - `dif` wordt later in het model weergegeven als `AllDifferent`. De waarden in alle celverwijzingen moeten verschillend zijn.
 
 Randvoorwaarde
 
-:   Een getal, celverwijzing, naam of een formule waaraan voldaan moet worden.
+: Een getal, celverwijzing, naam of een formule waaraan voldaan moet worden.
 
 ## Implementatie model {#sec-solver-case-implementation}
 
@@ -180,7 +180,7 @@ Bij de casus WeatherLeather moet de winst gemaximaliseerd worden.
 
 5.  Klik in het vak [Door veranderen van variabelecellen]{.uicontrol} en selecteer daarna in het werkblad de cellen B4:C4. Excel maakt hier dan van `$B$4:$C$4`.
 
-6.  Klik in het gedeelte voor randvoorwaarden op [Toevoegen]{.uicontrol}. Het dialoogvenster ***Randvoorwaarde toevoegen*** verschijnt (zie @fig-solver-constraint-add-general.
+6.  Klik in het gedeelte voor randvoorwaarden op [Toevoegen]{.uicontrol}. Het dialoogvenster ***Randvoorwaarde toevoegen*** verschijnt, zie @fig-solver-constraint-add-general.
 
 7.  Voer als randvoorwaarde in `D8 <= E8` en klik op [OK]{.uicontrol}.
 

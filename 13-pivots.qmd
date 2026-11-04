@@ -37,7 +37,7 @@ Een draaitabel heeft vier gebieden waarin je velden kunt plaatsen:
 
 ::: {#tbl-pivotareas}
 | Gebied | Toelichting |
-|:---------------|:-------------------------------------------------------|
+|:-----------------|:-----------------------------------------------------|
 | Waarden | De velden met numerieke gegevens die je wilt samenvatten, meestal voor de berekening van totalen en gemiddeldes. |
 | Rijen | Deze velden worden gebruikt om afzonderlijke groepen te maken. De informatie voor elke groep wordt in een aparte rij gezet. |
 | Kolommen | Deze velden worden ook gebruikt om afzonderlijke groepen te maken. Ze worden meestal gebruikt wanneer de gegevens in de rijen wilt onderverdelen. Deze groepen worden in afzonderlijke kolommen weergegeven. Neem velden die niet teveel groepen geven, anders wordt de tabel erg breed. |
@@ -218,11 +218,11 @@ De [+]{.uicontrol} knop in de draaitabel duidt op een samengevouwen niveau. Wann
 
 Aangepast groeperen
 
-:   Het groeperen kun je aanpassen via een rechtermuisklik op een datum/tijdveld in de draaitabel en dan kiezen voor [Groeperen]{.uicontrol}. In het dialoogvenster Groeperen dat dan verschijnt, kun je andere tijdniveaus toevoegen of verwijderen.
+: Het groeperen kun je aanpassen via een rechtermuisklik op een datum/tijdveld in de draaitabel en dan kiezen voor [Groeperen]{.uicontrol}. In het dialoogvenster Groeperen dat dan verschijnt, kun je andere tijdniveaus toevoegen of verwijderen.
 
 Groepering opheffen
 
-:   Een groepering kun je opheffen via een rechtermuisklik op een gegroepeerd veld in de draaitabel en dan kiezen voor [Groep opheffen]{.uicontrol}.
+: Een groepering kun je opheffen via een rechtermuisklik op een gegroepeerd veld in de draaitabel en dan kiezen voor [Groep opheffen]{.uicontrol}.
 
 ## Voorbeeld Groeperen {#sec-pivots-grouping-example}
 
@@ -597,7 +597,10 @@ Onder de bezoekers van een stadcentrum is een marktonderzoek uitgevoerd naar het
 Plaats de gegevens in een werkblad en bepaal met behulp van een draaitabel de gemiddelde tijd met de auto voor inwoners die verder dan 15 km van het centrum wonen.
 
 ::: {.content-visible when-format="html:js"}
-`r hide("Hint")` Maak een extra kolom waarin bepaald wordt of de afstand tot het centrum meer dan 15 km is. `r unhide()`
+`r hide("Hint")`
+Maak een extra kolom waarin bepaald wordt of de afstand tot het centrum meer dan 15 km is.
+![](images/pivots/pivo009_dataplus.png)
+`r unhide()`
 :::
 
 ::: {.content-visible when-format="html:js"}

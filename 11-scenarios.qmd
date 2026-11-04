@@ -97,7 +97,7 @@ In het werkblad worden de waarden in de veranderende cellen en de cellen die daa
 
 12. Klik op [Samenvatting]{.uicontrol} om een rapport te maken.
 
-Er verschijnt een dialoogvenster (@fig-coffeebar-scen-reporttype)) waarin je de soort samenvatting kunt kiezen. Ook de resultaatcel (de cel met de winst)is reeds door Excel ingevuld.
+Er verschijnt een dialoogvenster (@fig-coffeebar-scen-reporttype) waarin je de soort samenvatting kunt kiezen. Ook de resultaatcel (de cel met de winst)is reeds door Excel ingevuld.
 
 ![Dialoogvenster scenariosamenvatting.](images/scenarios/coffeebar-scen-reporttype.png){#fig-coffeebar-scen-reporttype}
 

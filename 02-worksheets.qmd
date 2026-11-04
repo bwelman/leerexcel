@@ -161,7 +161,7 @@ Een cel heeft een inhoud en een opmaak. Het is erg belangrijk dit verschil goed 
 ::: {#exm-ws-cell}
 **Inhoud - Opmaak**
 
-In de cellen `A1:A10` van het werkblad in @fig-worksheet-cell-formats) is steeds hetzelfde getal `40299` ingevoerd. Deze cellen hebben dus de dezelfde inhoud. Toch zien ze er steeds anders uit en dat komt omdat de opmaak van deze cellen steeds anders is.
+In de cellen `A1:A10` van het werkblad in @fig-worksheet-cell-formats is steeds hetzelfde getal `40299` ingevoerd. Deze cellen hebben dus de dezelfde inhoud. Toch zien ze er steeds anders uit en dat komt omdat de opmaak van deze cellen steeds anders is.
 
 ![Voorbeeld van cellen met gelijke inhoud en verschillende opmaak.](images/worksheets/worksheet-cell-formats.png){#fig-worksheet-cell-formats}
 :::

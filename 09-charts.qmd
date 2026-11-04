@@ -141,7 +141,7 @@ Nadat eerst de grafiek geselecteerd is heb je de volgende mogelijkheden om een e
 ![Huidige selectie op het lint onder tab Opmaak. Via de keuzepijl kun je het gewenste grafiekonderdeel selecteren.](images/charts/chart-elements-currentselection.png){#fig-chart-elements-currentselection}
 
 ::: {.callout-note title="Geselecteerse grafiekelementen"}
-1.  In de [Huidige selectie]{.uicontrol} kun je altijd zien welk element geselecteerd is. In @fig-chart-elements-currentselection) is dat [Grafiekgebied]{.uicontrol}.
+1.  In de [Huidige selectie]{.uicontrol} kun je altijd zien welk element geselecteerd is. In @fig-chart-elements-currentselection is dat [Grafiekgebied]{.uicontrol}.
 
 2.  Wanneer een onderdeel geselecteerd is dan wordt het onderdeel in de grafiek met formaatgrepen gemarkeerd.\
     ![](images/charts/chart-elements-sizinghandles.png)
@@ -157,7 +157,7 @@ Wanneer een element geselecteerd is waarvan de grootte aangepast kan worden,dan 
 
 **Opmaak wijzigen**
 
-Selecteer het onderdeel. Kies [tab Opmaak \> Selectie opmaken (groep Huidige selectie)]{.uicontrol} (zie @fig-chart-elements-currentselection)). Er verschijnt dan een taakvenster aan de rechterkant met mogelijkheden voor de opmaak van het element.
+Selecteer het onderdeel. Kies [tab Opmaak \> Selectie opmaken (groep Huidige selectie)]{.uicontrol} (zie @fig-chart-elements-currentselection). Er verschijnt dan een taakvenster aan de rechterkant met mogelijkheden voor de opmaak van het element.
 
 Het taakvenster verschijnt ook via: [rechter muisklik \> Opmaak ...]{.uicontrol}.
 

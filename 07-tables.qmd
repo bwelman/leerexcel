@@ -112,7 +112,7 @@ Het gegevensformulier verschijnt. Aan de linkerkant staan de 8 veldnamen. Bij 5 
 
 ![Formulier inkopen.](images/tables/purchase-form.png){#fig-purchase-form}
 
-5.  Klik op de knop [Nieuw]{.uicontrol} en voeg twee nieuwe records toe, zie het voorbeeld in @fig-purchase-result). Klik na het laatste record op [Sluiten]{.uicontrol}.
+5.  Klik op de knop [Nieuw]{.uicontrol} en voeg twee nieuwe records toe, zie het voorbeeld in @fig-purchase-result. Klik na het laatste record op [Sluiten]{.uicontrol}.
 
 ![Inkooplijst met drie records.](images/tables/purchase-result.png){#fig-purchase-result}
 
@@ -306,7 +306,7 @@ Het herstellen van de tabel in de oorspronkelijke toestand kan alleen met de kno
 
 De tabel wordt oplopend gesorteerd volgens kolom Afdeling.
 
-4.  Klik op de pijl naast de veldnaam [Divisie]{.uicontrol} en selecteer [![](images/common/icon-sort-az.png) Sorteren van Z naar A]{.uicontrol}.
+4.  Klik op de pijl naast de veldnaam [Divisie]{.uicontrol} en selecteer [![](images/common/icon-sort-za.png) Sorteren van Z naar A]{.uicontrol}.
 
 De tabel wordt aflopend gesorteerd volgens kolom [Divisie]{.uicontrol}.
 
@@ -376,7 +376,7 @@ Wanneer je op de getalvelden andere filters wilt gebruiken dan de filters die st
 
 In het dialoogvenster ***Aangepast Autofilter*** kun je nu de voorwaarden voor de filtering invoeren.
 
-2.  Maak de twee voorwaarden voor het salaris zoals aangegeven in @fig-personnel-filter-custom).
+2.  Maak de twee voorwaarden voor het salaris zoals aangegeven in @fig-personnel-filter-custom.
 
 ![Dialoogvenster aangepast autofilter met twee voorwaarden.](images/tables/personnel-filter-custom.png){#fig-personnel-filter-custom}
 
@@ -412,7 +412,7 @@ Dit opent het dialoogscherm Slicer invoegen en toont de kolomkoppen (velden) waa
 
 3.  Selecteer de velden [Afdeling]{.varname} en [Divisie]{.varname} en klik op [OK]{.uicontrol}.
 
-Er worden nu twee slicers ingevoegd. Wanneer de slicers elkaar overlappen verschuif ze dan zodat ze naast elkaar komen te staan, zie @fig-personnel-slicers). Beide slicers tonen alle unieke waarden voor het betreffende veld.
+Er worden nu twee slicers ingevoegd. Wanneer de slicers elkaar overlappen verschuif ze dan zodat ze naast elkaar komen te staan, zie @fig-personnel-slicers. Beide slicers tonen alle unieke waarden voor het betreffende veld.
 
 ![Twee slicers voor de velden Afdeling en Divisie.](images/tables/personnel-slicers.png){#fig-personnel-slicers}
 

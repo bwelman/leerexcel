@@ -114,7 +114,7 @@ Deze berekening is ook met matrixformules uit te voeren. Het is een goede oefeni
 :::: {#prp-arrays-multiplication1}
 **Vermenigvuldiging rijvector met een getal**
 
-In @fig-example-dim1) is te zien hoe een rijtje van drie getallen wordt vermenigvuldigd met het getal 4. Het resultaat bestaat uit een rijtje van drie getallen. Maak dit voorbeeld na.
+In @fig-example-dim1 is te zien hoe een rijtje van drie getallen wordt vermenigvuldigd met het getal 4. Het resultaat bestaat uit een rijtje van drie getallen. Maak dit voorbeeld na.
 
 ![Vermenigvuldiging rijvector met een constante.](images/arrays/example-dim1.png){#fig-example-dim1}
 
@@ -539,7 +539,7 @@ In @fig-array-xlookup-2way staan een aantal koffieprijzen van Starbucks. Aan de 
 
 ## Wiskundige matrixfuncties {#sec-arrays-math}
 
-Met name in de [lineaire algebra](https://nl.wikipedia.org/wiki/Lineaire-algebra) worden veelvuldig rekenkundige bewerkingen met matrices uitgevoerd. Excel biedt daarvoor ondersteuning met een paar specifieke functies. Het gebruik van deze functies valt buiten het bestek van dit cursusboek.
+Met name in de [lineaire algebra](https://nl.wikipedia.org/wiki/Lineaire_algebra) worden veelvuldig rekenkundige bewerkingen met matrices uitgevoerd. Excel biedt daarvoor ondersteuning met een paar specifieke functies. Het gebruik van deze functies valt buiten het bestek van dit cursusboek.
 
 EENHEIDMAT
 

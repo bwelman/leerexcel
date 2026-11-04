@@ -1,11 +1,11 @@
 # Beginnen met Excel {#sec-introductie}
 
 ::: callout-intro
--   Over wat rekenbladen (spreadsheets)zijn.
--   Het opstarten en afsluiten van Excel.
--   De indeling van het programmavenster van Excel.
--   Het maken van een nieuwe werkmap en het opslaan ervan.
--   De bestandsformaten van Excel.
+- Over wat rekenbladen (spreadsheets)zijn.
+- Het opstarten en afsluiten van Excel.
+- De indeling van het programmavenster van Excel.
+- Het maken van een nieuwe werkmap en het opslaan ervan.
+- De bestandsformaten van Excel.
 :::
 
 ## Wat is Excel? {#sec-intro-over}
@@ -45,8 +45,8 @@ De eerstvolgende keer dat je Excel opstart verschijnt direct een nieuwe werkmap 
 
 Er zijn twee manieren om Excel af te sluiten:
 
--   Via de sluitknop van het programmavenster. Dit is een knop met een [X]{.uicontrol} in de rechterbovenhoek van het venster.
--   Via het menu [Bestand \> Sluiten]{.uicontrol}.
+- Via de sluitknop van het programmavenster. Dit is een knop met een [X]{.uicontrol} in de rechterbovenhoek van het venster.
+- Via het menu [Bestand \> Sluiten]{.uicontrol}.
 
 3.  Sluit Excel.
 
@@ -63,20 +63,20 @@ Het programmavenster van Excel heeft drie onderdelen: besturing programma, werkb
 
 1 - Bestand
 
-:   Deze knop bevindt zich in de linkerbovenhoek van het programmavenster. Wanneer je op deze knop, beschikbaar in alle Office programma's, klikt verschijnt een keuzelijst met een aantal basisopdrachten zoals het maken, openen, opslaan en afdrukken van bestanden. Ook zit hieronder de belangrijke opdracht [Opties]{.uicontrol}, waarmee je een aantal instellingen voor Excel kunt regelen. Dit wordt ook wel de **Backstage** weergave genoemd.
+: Deze knop bevindt zich in de linkerbovenhoek van het programmavenster. Wanneer je op deze knop, beschikbaar in alle Office programma's, klikt verschijnt een keuzelijst met een aantal basisopdrachten zoals het maken, openen, opslaan en afdrukken van bestanden. Ook zit hieronder de belangrijke opdracht [Opties]{.uicontrol}, waarmee je een aantal instellingen voor Excel kunt regelen. Dit wordt ook wel de **Backstage** weergave genoemd.
 
 2 - Werkbalk Snelle Toegang
 
-:   In de Werkbalk Snelle Toegang staan een aantal knoppen voor opdrachten die je vaak gebruikt en anders minder snel kunt vinden. Je kunt zelf knoppen aan deze werkbalk toevoegen. Bij de standaard installatie van Excel staan hierop vier knoppen:
+: In de Werkbalk Snelle Toegang staan een aantal knoppen voor opdrachten die je vaak gebruikt en anders minder snel kunt vinden. Je kunt zelf knoppen aan deze werkbalk toevoegen. Bij de standaard installatie van Excel staan hierop vier knoppen:
 
--   ![](images/common/button-save.png) [Opslaan]{.uicontrol}
--   ![](images/common/button-undo.png) [Ongedaan maken]{.uicontrol}
--   ![](images/common/button-redo.png) [Opnieuw]{.uicontrol}
--   ![](images/common/button-form.png) [Formulier]{.uicontrol}
+- ![](images/common/button-save.png) [Opslaan]{.uicontrol}
+- ![](images/common/button-undo.png) [Ongedaan maken]{.uicontrol}
+- ![](images/common/button-redo.png) [Opnieuw]{.uicontrol}
+- ![](images/common/button-form.png) [Formulier]{.uicontrol}
 
 3 - Lint
 
-:   Het lint is een paneel, een soort brede werkbalk, aan de bovenkant van het programmavenster. Op het lint staan opdrachten die georganiseerd zijn in logische groepen die weer verzameld worden in tabbladen zoals [Start]{.uicontrol}, [Invoegen]{.uicontrol}, [Pagina-indeling]{.uicontrol}, ... Elk tabblad heeft met een bepaald soort activiteit te maken.
+: Het lint is een paneel, een soort brede werkbalk, aan de bovenkant van het programmavenster. Op het lint staan opdrachten die georganiseerd zijn in logische groepen die weer verzameld worden in tabbladen zoals [Start]{.uicontrol}, [Invoegen]{.uicontrol}, [Pagina-indeling]{.uicontrol}, ... Elk tabblad heeft met een bepaald soort activiteit te maken.
 
 Sommige tabbladen worden alleen maar getoond wanneer je ze nodig hebt, de zogenaamde **contextuele tabbladen**, die alleen in een bepaalde context verschijnen. Zo verschijnt [Hulpmiddelen voor grafieken]{.uicontrol} alleen maar wanneer je een grafiek geselecteerd hebt.
 
@@ -88,35 +88,35 @@ Je kunt het lint niet verwijderen, maar je kunt het lint wel minimaliseren met d
 
 4 - Tabbladen
 
-:   Aan de bovenkant van het lint zijn tabs zichtbaar. Op elke tab staan groepen opdrachten. Sommige tabs worden alleen maar getoond wanneer je ze nodig hebt.
+: Aan de bovenkant van het lint zijn tabs zichtbaar. Op elke tab staan groepen opdrachten. Sommige tabs worden alleen maar getoond wanneer je ze nodig hebt.
 
 5 - Groepen
 
-:   Op elk tabblad staan groepen van bij elkaar behorende opdrachten. De groepen bevatten alle opdrachten die je nodig kunt hebben voor een bepaald soort taak. Bij de meeste groepen zijn niet alle opdrachten zichtbaar. Wanneer je meer opties wilt zien die voor de groep beschikbaar zijn moet je op de pijl ![](images/common/button-dialogwindow.png) in de rechterbenedenhoek van de groep klikken.
+: Op elk tabblad staan groepen van bij elkaar behorende opdrachten. De groepen bevatten alle opdrachten die je nodig kunt hebben voor een bepaald soort taak. Bij de meeste groepen zijn niet alle opdrachten zichtbaar. Wanneer je meer opties wilt zien die voor de groep beschikbaar zijn moet je op de pijl ![](images/common/button-dialogwindow.png) in de rechterbenedenhoek van de groep klikken.
 
 6 - Naam werkmap
 
-:   Naam van de werkmap (het bestand).
+: Naam van de werkmap (het bestand).
 
 7 - Opdrachtknop
 
-:   Wanneer je op een opdrachtknop klikt dan wordt de wijziging onmiddellijk aangebracht. Het kan ook zijn dat er eerst een keuzelijst of een dialoogvenster verschijnt.
+: Wanneer je op een opdrachtknop klikt dan wordt de wijziging onmiddellijk aangebracht. Het kan ook zijn dat er eerst een keuzelijst of een dialoogvenster verschijnt.
 
 8 - Actieve cel
 
-:   De actieve cel is de cel die op het actieve werkblad geselecteerd is. De actieve cel is van een zwart kader voorzien. In de afbeelding is cel `A1` de actieve cel.
+: De actieve cel is de cel die op het actieve werkblad geselecteerd is. De actieve cel is van een zwart kader voorzien. In de afbeelding is cel `A1` de actieve cel.
 
 9 - Naamvak
 
-:   Het naamvak bevindt zich links van de formulebalk boven het gebied voor het werkblad. Het toont het adres van de actieve cel. Wanneer aan de cel (of celbereik)een naam is toegekend dan toont het naamvak deze naam. Het naamvak kan ook gebruikt worden om namen aan cellen (of celbereiken) toe te kennen.
+: Het naamvak bevindt zich links van de formulebalk boven het gebied voor het werkblad. Het toont het adres van de actieve cel. Wanneer aan de cel (of celbereik)een naam is toegekend dan toont het naamvak deze naam. Het naamvak kan ook gebruikt worden om namen aan cellen (of celbereiken) toe te kennen.
 
 10 - Formulebalk
 
-:   De formulebalk bevindt zich boven het gebied voor het werkblad. Deze toont de gegevens of formule van de actieve cel. De formulebalk kan ook gebruikt worden om gegevens of formules in de actieve cel in te voeren.
+: De formulebalk bevindt zich boven het gebied voor het werkblad. Deze toont de gegevens of formule van de actieve cel. De formulebalk kan ook gebruikt worden om gegevens of formules in de actieve cel in te voeren.
 
 11 - Werkblad
 
-:   Een werkmap in Excel kan meerdere werkbladen bevatten. Bij het maken van een nieuwe werkmap maakt Excel standaard een werkblad aan met de naam [Blad1]{.varname}. Een werkblad kan geactiveerd worden door op de tab van het werkblad (nummer 11 in @fig-excel-window)) te klikken. Een nieuw werkblad kan worden toegevoegd worden door op de `+` (nummer 12 in @fig-excel-window)) te klikken.
+: Een werkmap in Excel kan meerdere werkbladen bevatten. Bij het maken van een nieuwe werkmap maakt Excel standaard een werkblad aan met de naam [Blad1]{.varname}. Een werkblad kan geactiveerd worden door op de tab van het werkblad (nummer 11 in @fig-excel-window) te klikken. Een nieuw werkblad kan worden toegevoegd worden door op de `+` (nummer 12 in @fig-excel-window)) te klikken.
 
 ## Nieuwe werkmap maken {#sec-intro-document-new}
 
@@ -132,9 +132,9 @@ Je kunt op elk moment een nieuwe werkmap aanmaken. Dit kan een lege werkmap zijn
 
 Veel gebruikte methodes om een reeds bestaande werkmap, een Excel bestand, te openen zijn:
 
--   Dubbelklikken op een Excelbestand in de Windows verkenner. Het bestand wordt dan in een Excel programmavenster geopend.
--   In het opstartscherm van Excel kiezen voor [Openen]{.uicontrol}. Je krijgt dan het dialoogscherm ***Openen***.
--   In Excel zelf klikken op [Bestand]{.uicontrol}. Je krijgt dan ook het dialoogscherm ***Openen***.
+- Dubbelklikken op een Excelbestand in de Windows verkenner. Het bestand wordt dan in een Excel programmavenster geopend.
+- In het opstartscherm van Excel kiezen voor [Openen]{.uicontrol}. Je krijgt dan het dialoogscherm ***Openen***.
+- In Excel zelf klikken op [Bestand]{.uicontrol}. Je krijgt dan ook het dialoogscherm ***Openen***.
 
 ![Dialoogscherm Openen om naar een bestand te zoeken op een bepaalde lokatie.](images/common/workbook-open.png){#fig-workbook-open}
 
@@ -154,8 +154,8 @@ Via de aangeboden keuzes kun je naar het te openen bestand bladeren. Bij het bla
 
 De meest gebruikte methodes om een werkmap op te slaan zijn die via
 
--   [Bestand \> Opslaan]{.uicontrol}
--   [Werkbalk Snelle Toegang \> knop Opslaan]{.uicontrol}.
+- [Bestand \> Opslaan]{.uicontrol}
+- [Werkbalk Snelle Toegang \> knop Opslaan]{.uicontrol}.
 
 Wanneer je een bestaande werkmap opnieuw opslaat wordt de vorige versie van de werkmap overschreven. Wanneer je een werkmap voor de eerste keer gaat opslaan toont Excel het dialoogvenster [Opslaan als]{.uicontrol}.
 
@@ -164,8 +164,8 @@ Wanneer je een bestaande werkmap opnieuw opslaat wordt de vorige versie van de w
 
 Er kunnen zich nu twee situaties voordoen, afhankelijk van of de werkmap al eens een keer is opgeslagen en dus al bestaat.
 
--   Bij een reeds bestaande werkmap wordt de vorige versie van de werkmap overschreven. De stappen hierna kunnen dan worden overgeslagen.
--   Bij een nieuwe werkmap verschijnt het dialoogvenster Opslaan als. De stappen hierna moeten dan nog worden uitgevoerd.
+- Bij een reeds bestaande werkmap wordt de vorige versie van de werkmap overschreven. De stappen hierna kunnen dan worden overgeslagen.
+- Bij een nieuwe werkmap verschijnt het dialoogvenster Opslaan als. De stappen hierna moeten dan nog worden uitgevoerd.
 
 2.  Selecteer de gewenste opslagplaats.
 
@@ -180,7 +180,7 @@ Naast de naam van het bestand kun je ook het op te slagen bestandsformaat specif
 
 ![Keuze bestandsformaat, de standaardkeuze is het bestandsformaat van Excel.](images/common/saveas-format-choice.png){#fig-saveas-format-choice}
 
-De mogelijke bestandsformaten zijn in @fig-saveas-formats) te zien.
+De mogelijke bestandsformaten zijn in @fig-saveas-formats te zien.
 
 ![Mogelijke bestandsformaten.](images/common/saveas-formats.png){#fig-saveas-formats}
 
@@ -192,30 +192,30 @@ Een overzicht van de nieuwe en oude bestandsformaten van Excel.
 
 XLSX
 
-:   Het standaardformaat voor bestanden. In dit bestandsformaat kunnen geen macro's voorkomen.
+: Het standaardformaat voor bestanden. In dit bestandsformaat kunnen geen macro's voorkomen.
 
 XLSM
 
-:   In dit bestandsformaat kan een werkmap met macro's worden opgeslagen.
+: In dit bestandsformaat kan een werkmap met macro's worden opgeslagen.
 
 XLSB
 
-:   Dit is een speciaal binair formaat voor zeer grote werkmappen met zeer veel gegevens.
+: Dit is een speciaal binair formaat voor zeer grote werkmappen met zeer veel gegevens.
 
 XLTX
 
-:   Een bestandsformaat voor sjabonen zonder macro's.
+: Een bestandsformaat voor sjabonen zonder macro's.
 
 XLTM
 
-:   Een bestandsformaat voor sjablonen met macro's.S Sjablonen kunnen gebruikt worden om nieuwe werkmappen aan te maken met dezelfde lay-out en inhoud als het sjabloon.
+: Een bestandsformaat voor sjablonen met macro's.S Sjablonen kunnen gebruikt worden om nieuwe werkmappen aan te maken met dezelfde lay-out en inhoud als het sjabloon.
 
 **Oude bestandsformaten**
 
 XLS
 
-:   Dit is het bestandsformaat voor Excel 2003 en eerder. Wanneer zo'n bestand in een nieuwere versie van Excel wordt geopend, dan opent Excel deze in de **Compatibiliteitsmodus**. In deze modus kun je wijzigingen aanbrengen, maar wanneer je het bestand wilt opslaan controleert Excel of de wijzigingen wel in het oude bestandsformaat ondersteund worden en toont eventueel een lijstje met onderdelen die niet ondersteund worden.
+: Dit is het bestandsformaat voor Excel 2003 en eerder. Wanneer zo'n bestand in een nieuwere versie van Excel wordt geopend, dan opent Excel deze in de **Compatibiliteitsmodus**. In deze modus kun je wijzigingen aanbrengen, maar wanneer je het bestand wilt opslaan controleert Excel of de wijzigingen wel in het oude bestandsformaat ondersteund worden en toont eventueel een lijstje met onderdelen die niet ondersteund worden.
 
 XLT
 
-:   Een bestandsformaat voor sjablonen.
+: Een bestandsformaat voor sjablonen.

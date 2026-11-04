@@ -15,39 +15,39 @@ Dit studieboek verschilt op meerdere manieren van andere studieboeken.
 
 Inhoud van de hoofdstukken.
 
-+ Hoofdstuk @sec-introductie: Kennismaking met spreadsheets en Excel. Wanneer je al gewend bent om met Excel te werken kun je dit hoofdstuk overslaan.
++ @sec-introductie: Kennismaking met spreadsheets en Excel. Wanneer je al gewend bent om met Excel te werken kun je dit hoofdstuk overslaan.
 
-+ Hoofdstuk @sec-worksheets: Gebruik van werkbladen.
++ @sec-worksheets: Gebruik van werkbladen.
 
-+ Hoofdstuk @sec-data: Invoer van gegevens en het verschil tussen inhoud en opmaak uit.
++ @sec-data: Invoer van gegevens en het verschil tussen inhoud en opmaak uit.
 
-+ Hoofdstuk @sec-formatting: Opmaak van werkblad en cellen, alsmede voorwaardelijke opmaak.
++ @sec-formatting: Opmaak van werkblad en cellen, alsmede voorwaardelijke opmaak.
 
-+ Hoofdstuk @sec-calculations: Formules, absolute en relatieve adressering, kopieren en naamgeving en het opzetten van een berekeningsmodel.
++ @sec-calculations: Formules, absolute en relatieve adressering, kopieren en naamgeving en het opzetten van een berekeningsmodel.
 
-+ Hoofdstuk @sec-functions: Ingebouwde functies.
++ @sec-functions: Ingebouwde functies.
 
-+ Hoofdstuk @sec-tables: Tabellen en bewerkingen.
++ @sec-tables: Tabellen en bewerkingen.
 
-+ Hoofdstuk @sec-arrays: Matrixformules en dynamische matrices.
++ @sec-arrays: Matrixformules en dynamische matrices.
 
-+ Hoofdstuk @sec-charts: Grafieken maken.
++ @sec-charts: Grafieken maken.
 
-+ Hoofdstuk @sec-charttype: Grafieksoorten.
++ @sec-charttype: Grafieksoorten.
 
-+ Hoofdstuk @sec-scenarios: Scenario's.
++ @sec-scenarios: Scenario's.
 
-+ Hoofdstuk @sec-datatables: Gegevenstabellen.
++ @sec-datatables: Gegevenstabellen.
 
-+ Hoofdstuk @sec-pivots: Draaitabellen, draaigrafieken, slicers en tijdlijnen.
++ @sec-pivots: Draaitabellen, draaigrafieken, slicers en tijdlijnen.
 
-+ Hoofdstuk @sec-goalseek: Doelzoeken
++ @sec-goalseek: Doelzoeken
 
-+ Hoofdstuk @sec-solver: Oplosser
++ @sec-solver: Oplosser
 
-+ Hoofdstuk @sec-macros: Macro's
++ @sec-macros: Macro's
 
-+ Hoofdstuk @sec-measurements: Meetresultaten verwerken, lineaire relaties.
++ @sec-measurements: Meetresultaten verwerken, lineaire relaties.
 
 ## Software {.unnumbered}
 

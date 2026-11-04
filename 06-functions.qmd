@@ -132,7 +132,7 @@ Algemenere functies zijn die voor het afronden van getallen. Excel kent maar lie
 ::: {#prp-function-math}
 [Bestand]{.smallcaps}: `Afronden.xlsx`
 
-In @fig-example-rounding) zijn de resultaten te zien van een een aantal afrondfuncties. In kolom C is aangegeven welke formules voor kolom B gebruikt zijn.
+In @fig-example-rounding zijn de resultaten te zien van een een aantal afrondfuncties. In kolom C is aangegeven welke formules voor kolom B gebruikt zijn.
 
 ![Voorbeelden van afronden](images/functions/example-rounding.png){#fig-example-rounding}
 
@@ -301,7 +301,7 @@ In kolom D heb je nu de voornamen.
 Het rechtergedeelte met een bepaalde lengte van een tekst kun je bepalen met de functie `RECHTS`. In dit voorbeeld is de achternaam het rechtergedeelte.
 
 :::: {#prp-function-right}
-1.  Selecteer cel E2, voeg de functie `RECHTS` in en specificeer de argumenten zoals in @fig-example-text-right) is aangegeven.
+1.  Selecteer cel E2, voeg de functie `RECHTS` in en specificeer de argumenten zoals in @fig-example-text-right is aangegeven.
 
 ![Argumenten voor de functie RECHTS.](images/functions/example-text-right.png){#fig-example-text-right}
 
@@ -461,7 +461,7 @@ Betalingen worden als negatieve getallen ingevoerd.
 
 1.  Open het bestand.
 
-2.  Selecteer cel B4, voeg de functie `NPER` (categorie [Financieel]{.uicontrol}) in en specificeer de argumenten zoals in @fig-example-nper-arguments) is aangegeven.
+2.  Selecteer cel B4, voeg de functie `NPER` (categorie [Financieel]{.uicontrol}) in en specificeer de argumenten zoals in @fig-example-nper-arguments is aangegeven.
 
 ![Argumenten voor de functie NPER.](images/functions/example-nper-arguments.png){#fig-example-nper-arguments}
 
